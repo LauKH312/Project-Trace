@@ -1,0 +1,32 @@
+# General
+*.log
+*.tmp
+*.cache
+build/
+dist/
+*.swp
+.DS_Store
+
+# Compilers
+*.o
+*.elf
+*.bin
+*.hex
+*.map
+
+# Python / tools
+__pycache__/
+.venv/
+
+# KiCad
+*-bak
+*.kicad_prl
+*.kicad_pcb-bak
+*.net
+*.zip
+outputs/
+plots/
+
+# IDEs
+.vscode/
+.idea/
