@@ -349,6 +349,12 @@
           "show": true
         },
         {
+          "group_by": false,
+          "label": "MouserPN",
+          "name": "MouserPN",
+          "show": true
+        },
+        {
           "group_by": true,
           "label": "Footprint",
           "name": "Footprint",
@@ -376,12 +382,6 @@
           "group_by": true,
           "label": "Extra",
           "name": "Extra",
-          "show": true
-        },
-        {
-          "group_by": false,
-          "label": "MouserPN",
-          "name": "MouserPN",
           "show": true
         }
       ],
