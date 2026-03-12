@@ -2,9 +2,95 @@
 	(version 20250114)
 	(generator "eeschema")
 	(generator_version "9.0")
-	(uuid af51f4e5-b952-4b0e-baf2-78a72fb86fcd)
+	(uuid "af51f4e5-b952-4b0e-baf2-78a72fb86fcd")
 	(paper "A4")
 	(lib_symbols)
+	(sheet
+		(at 57.15 69.85)
+		(size 19.05 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+			(color 0 0 0 0.6)
+		)
+		(fill
+			(color 215 236 255 1.0000)
+		)
+		(uuid "9b26f668-c4b4-4b55-bc2a-8936f081d498")
+		(property "Sheetname" "Inputs"
+			(at 57.15 69.1384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Inputs.kicad_sch"
+			(at 57.15 89.4846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "project_trace_kicad"
+				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 82.55 69.85)
+		(size 19.05 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+			(color 0 0 0 0.6)
+		)
+		(fill
+			(color 215 236 255 1.0000)
+		)
+		(uuid "c8768e42-4f8f-4bd7-9d37-7c06182de827")
+		(property "Sheetname" "Analog Anti-Aliasing Filter"
+			(at 82.55 69.1384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "AAAF.kicad_sch"
+			(at 82.55 89.4846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "project_trace_kicad"
+				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd"
+					(page "3")
+				)
+			)
+		)
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")
