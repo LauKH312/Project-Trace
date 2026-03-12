@@ -26,7 +26,14 @@ __pycache__/
 *.zip
 outputs/
 plots/
+sym-lib-table
+*.kicad_sch.lck
+*/libraries/*.bak
 
 # IDEs
 .vscode/
 .idea/
+
+# Other additions
+\#auto_saved_files\#
+
