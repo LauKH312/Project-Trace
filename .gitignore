@@ -28,6 +28,8 @@ outputs/
 plots/
 sym-lib-table
 *.kicad_sch.lck
+*.kicad_pcb.lck
+fp-info-cache
 */libraries/*.bak
 
 # IDEs
