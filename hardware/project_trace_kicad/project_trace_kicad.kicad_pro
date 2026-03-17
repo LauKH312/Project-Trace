@@ -676,8 +676,12 @@
       "Inputs"
     ],
     [
-      "c8768e42-4f8f-4bd7-9d37-7c06182de827",
-      "Analog Anti-Aliasing Filter"
+      "ac2add4a-2a5e-456c-897d-914b794115d5",
+      "Data Acquisition: AC"
+    ],
+    [
+      "7092c42a-4d0c-4280-9741-17b5ca422e8f",
+      "Data Acquisition: DC"
     ]
   ],
   "text_variables": {}

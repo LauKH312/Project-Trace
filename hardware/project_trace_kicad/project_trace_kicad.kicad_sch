@@ -6,6 +6,49 @@
 	(paper "A4")
 	(lib_symbols)
 	(sheet
+		(at 95.25 50.8)
+		(size 38.1 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+			(color 0 0 0 0.6)
+		)
+		(fill
+			(color 215 236 255 1.0000)
+		)
+		(uuid "7092c42a-4d0c-4280-9741-17b5ca422e8f")
+		(property "Sheetname" "Data Acquisition: DC"
+			(at 95.25 50.0884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "DAQ_DC.kicad_sch"
+			(at 95.25 64.0846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "project_trace_kicad"
+				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 57.15 69.85)
 		(size 19.05 19.05)
 		(exclude_from_sim no)
@@ -49,8 +92,8 @@
 		)
 	)
 	(sheet
-		(at 82.55 69.85)
-		(size 19.05 19.05)
+		(at 95.25 82.55)
+		(size 38.1 12.7)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -64,9 +107,9 @@
 		(fill
 			(color 215 236 255 1.0000)
 		)
-		(uuid "c8768e42-4f8f-4bd7-9d37-7c06182de827")
-		(property "Sheetname" "Analog Anti-Aliasing Filter"
-			(at 82.55 69.1384 0)
+		(uuid "ac2add4a-2a5e-456c-897d-914b794115d5")
+		(property "Sheetname" "Data Acquisition: AC"
+			(at 95.25 81.8384 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -74,8 +117,8 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "AAAF.kicad_sch"
-			(at 82.55 89.4846 0)
+		(property "Sheetfile" "DAQ_AC.kicad_sch"
+			(at 95.25 95.8346 0)
 			(effects
 				(font
 					(size 1.27 1.27)
