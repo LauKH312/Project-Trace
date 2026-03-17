@@ -1,0 +1,2 @@
+# Instrumentation Amplifier
+We chose the Analog Devices AD8421 due to its high bandwidth (10MHz@G=0dB) and because we have SPICE models, which we can use for simulation. We considered assembling our own InAmp from higher bandwidth precision op-amps and diff-amps, but chose against this due to uncertainties around component tolerances. It also was unclear whether the higher bandwidth would be spent when chaining together multiple amps.

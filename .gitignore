@@ -35,6 +35,7 @@ fp-info-cache
 # IDEs
 .vscode/
 .idea/
+.obsidian
 
 # Other additions
 \#auto_saved_files\#
