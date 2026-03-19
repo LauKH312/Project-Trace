@@ -617,6 +617,24 @@
           "label": "Extra",
           "name": "Extra",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Device",
+          "name": "Sim.Device",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Type",
+          "name": "Sim.Type",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -686,6 +704,10 @@
     [
       "aebaf62e-54ce-46f5-a91f-d86d07c0b2fa",
       "Measurement and Analysis Module"
+    ],
+    [
+      "12a73351-c59a-4c39-a723-2f90ff2520c9",
+      "Power"
     ]
   ],
   "text_variables": {}
