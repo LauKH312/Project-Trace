@@ -617,6 +617,24 @@
           "label": "Extra",
           "name": "Extra",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Device",
+          "name": "Sim.Device",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Type",
+          "name": "Sim.Type",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -682,6 +700,10 @@
     [
       "7092c42a-4d0c-4280-9741-17b5ca422e8f",
       "Data Acquisition: DC"
+    ],
+    [
+      "12a73351-c59a-4c39-a723-2f90ff2520c9",
+      "Power"
     ]
   ],
   "text_variables": {}
