@@ -682,6 +682,10 @@
     [
       "7092c42a-4d0c-4280-9741-17b5ca422e8f",
       "Data Acquisition: DC"
+    ],
+    [
+      "aebaf62e-54ce-46f5-a91f-d86d07c0b2fa",
+      "Measurement and Analysis Module"
     ]
   ],
   "text_variables": {}

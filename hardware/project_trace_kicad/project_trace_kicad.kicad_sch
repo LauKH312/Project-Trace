@@ -134,6 +134,49 @@
 			)
 		)
 	)
+	(sheet
+		(at 152.4 50.8)
+		(size 19.05 44.45)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+			(color 0 0 0 0.6)
+		)
+		(fill
+			(color 215 236 255 1.0000)
+		)
+		(uuid "aebaf62e-54ce-46f5-a91f-d86d07c0b2fa")
+		(property "Sheetname" "Measurement and Analysis Module"
+			(at 152.4 50.0884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "MAM.kicad_sch"
+			(at 152.4 95.8346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "project_trace_kicad"
+				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd"
+					(page "5")
+				)
+			)
+		)
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")
