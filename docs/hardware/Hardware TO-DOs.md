@@ -15,7 +15,7 @@
 - [ ] Compensate for on-resistance of switches?
 - [ ] Design AC-Coupling Circuit
 ## Digital
-### MAM (Measurement and Analysis Module)
+### DAQAM (Data Acquisition and Analysis Module)
 - [ ] Decide which Nucleo board to use
 - [ ] Create Symbols and Footprint if necessary
 - [x] Find SRAM IC
@@ -28,4 +28,4 @@ Use provided Nucleo-G board
 ## Power
 _With BMS_
 - [ ] Decide on battery charging solution
-- [ ] Add screw-terminals
+- [x] Add screw-terminals
