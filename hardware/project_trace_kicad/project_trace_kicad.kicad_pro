@@ -702,12 +702,12 @@
       "Data Acquisition: DC"
     ],
     [
-      "aebaf62e-54ce-46f5-a91f-d86d07c0b2fa",
-      "Measurement and Analysis Module"
-    ],
-    [
       "12a73351-c59a-4c39-a723-2f90ff2520c9",
       "Power"
+    ],
+    [
+      "aebaf62e-54ce-46f5-a91f-d86d07c0b2fa",
+      "Measurement and Analysis Module"
     ]
   ],
   "text_variables": {}
