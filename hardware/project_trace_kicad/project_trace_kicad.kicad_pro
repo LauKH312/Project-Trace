@@ -480,7 +480,9 @@
     }
   },
   "libraries": {
-    "pinned_footprint_libs": [],
+    "pinned_footprint_libs": [
+      "ProjectTraceFootprints"
+    ],
     "pinned_symbol_libs": []
   },
   "meta": {
@@ -589,6 +591,12 @@
           "show": true
         },
         {
+          "group_by": false,
+          "label": "DigikeyPN",
+          "name": "DigikeyPN",
+          "show": true
+        },
+        {
           "group_by": true,
           "label": "Footprint",
           "name": "Footprint",
@@ -641,8 +649,8 @@
       "group_symbols": true,
       "include_excluded_from_bom": true,
       "name": "",
-      "sort_asc": true,
-      "sort_field": "Reference"
+      "sort_asc": false,
+      "sort_field": "MouserPN"
     },
     "connection_grid_size": 50.0,
     "drawing": {
