@@ -483,7 +483,9 @@
     "pinned_footprint_libs": [
       "ProjectTraceFootprints"
     ],
-    "pinned_symbol_libs": []
+    "pinned_symbol_libs": [
+      "ProjectTraceSymbols"
+    ]
   },
   "meta": {
     "filename": "project_trace_kicad.kicad_pro",
@@ -598,6 +600,12 @@
         },
         {
           "group_by": true,
+          "label": "Extra",
+          "name": "Extra",
+          "show": true
+        },
+        {
+          "group_by": true,
           "label": "Footprint",
           "name": "Footprint",
           "show": true
@@ -619,12 +627,6 @@
           "label": "#",
           "name": "${ITEM_NUMBER}",
           "show": false
-        },
-        {
-          "group_by": true,
-          "label": "Extra",
-          "name": "Extra",
-          "show": true
         },
         {
           "group_by": false,
@@ -649,8 +651,8 @@
       "group_symbols": true,
       "include_excluded_from_bom": true,
       "name": "",
-      "sort_asc": false,
-      "sort_field": "MouserPN"
+      "sort_asc": true,
+      "sort_field": "Footprint"
     },
     "connection_grid_size": 50.0,
     "drawing": {
@@ -703,11 +705,7 @@
     ],
     [
       "ac2add4a-2a5e-456c-897d-914b794115d5",
-      "Data Acquisition: AC"
-    ],
-    [
-      "7092c42a-4d0c-4280-9741-17b5ca422e8f",
-      "Data Acquisition: DC"
+      "ADC"
     ],
     [
       "12a73351-c59a-4c39-a723-2f90ff2520c9",
