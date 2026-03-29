@@ -5,10 +5,11 @@
 	(uuid "12a050a8-1e19-43a3-967c-45258e9a52eb")
 	(paper "A4")
 	(title_block
-		(title "Power")
+		(title "Multilloscope - Power")
 		(date "2026-03-19")
 		(rev "1")
-		(company "Alexander Nybo Olsen")
+		(comment 1 "Laurits K. Hillemann")
+		(comment 2 "Alexander N. Olsen")
 	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x02_Pin"
@@ -2521,7 +2522,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigikeyPN" ""
+		(property "DigikeyPN" "N/A"
 			(at 86.36 107.95 0)
 			(effects
 				(font
@@ -2780,7 +2781,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigikeyPN" ""
+		(property "DigikeyPN" "N/A"
 			(at 86.36 97.79 0)
 			(effects
 				(font
@@ -3043,7 +3044,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigikeyPN" ""
+		(property "DigikeyPN" "N/A"
 			(at 105.41 101.6 0)
 			(effects
 				(font
