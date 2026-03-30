@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20250114)
+	(version 20260306)
 	(generator "eeschema")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(uuid "af51f4e5-b952-4b0e-baf2-78a72fb86fcd")
 	(paper "A4")
 	(title_block
@@ -13,7 +13,7 @@
 	(lib_symbols)
 	(wire
 		(pts
-			(xy 66.04 72.39) (xy 88.9 72.39)
+			(xy 63.5 72.39) (xy 88.9 72.39)
 		)
 		(stroke
 			(width 0)
@@ -34,11 +34,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "12a73351-c59a-4c39-a723-2f90ff2520c9")
 		(property "Sheetname" "Power"
 			(at 50.8 113.5884 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48,6 +50,8 @@
 		)
 		(property "Sheetfile" "Power.kicad_sch"
 			(at 50.8 140.2846 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -64,8 +68,8 @@
 		)
 	)
 	(sheet
-		(at 50.8 69.85)
-		(size 15.24 29.21)
+		(at 44.45 69.85)
+		(size 19.05 29.21)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -74,14 +78,15 @@
 		(stroke
 			(width 0.1524)
 			(type solid)
-			(color 0 0 0 0.6)
 		)
 		(fill
-			(color 215 236 255 1.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "9b26f668-c4b4-4b55-bc2a-8936f081d498")
 		(property "Sheetname" "Inputs"
-			(at 50.8 69.1384 0)
+			(at 44.45 69.1384 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -90,7 +95,9 @@
 			)
 		)
 		(property "Sheetfile" "Inputs.kicad_sch"
-			(at 50.8 99.6446 0)
+			(at 44.45 99.6446 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -99,7 +106,7 @@
 			)
 		)
 		(pin "ACCouple.EN" input
-			(at 66.04 83.82 0)
+			(at 63.5 83.82 0)
 			(uuid "4fc1c14b-2c31-43f8-9140-bc1c4db922d0")
 			(effects
 				(font
@@ -109,7 +116,7 @@
 			)
 		)
 		(pin "Ammeter.EN" input
-			(at 66.04 80.01 0)
+			(at 63.5 80.01 0)
 			(uuid "58daeada-b3bc-410d-97cb-e7e1b867806b")
 			(effects
 				(font
@@ -119,7 +126,7 @@
 			)
 		)
 		(pin "Voltmeter.EN" input
-			(at 66.04 77.47 0)
+			(at 63.5 77.47 0)
 			(uuid "9eab2f63-aedc-4abd-8229-ff92f460d2f6")
 			(effects
 				(font
@@ -129,7 +136,7 @@
 			)
 		)
 		(pin "-20dBAtten.~{EN}" input
-			(at 66.04 93.98 0)
+			(at 63.5 93.98 0)
 			(uuid "03ac05c6-1a2e-4b5e-be46-3ecac929b737")
 			(effects
 				(font
@@ -139,7 +146,7 @@
 			)
 		)
 		(pin "-40dBAtten.~{EN}" input
-			(at 66.04 96.52 0)
+			(at 63.5 96.52 0)
 			(uuid "f0bdedd9-81de-4e84-b87e-dcae09fbbbb0")
 			(effects
 				(font
@@ -149,7 +156,7 @@
 			)
 		)
 		(pin "0dBAtten.~{EN}" input
-			(at 66.04 91.44 0)
+			(at 63.5 91.44 0)
 			(uuid "6b9a6deb-a91b-477d-a1c9-41e32a292a6e")
 			(effects
 				(font
@@ -159,7 +166,7 @@
 			)
 		)
 		(pin "20dBGain.EN" input
-			(at 66.04 87.63 0)
+			(at 63.5 87.63 0)
 			(uuid "ba053b23-2a0b-4841-8606-eebaf98f647b")
 			(effects
 				(font
@@ -169,7 +176,7 @@
 			)
 		)
 		(pin "Signal.Out" output
-			(at 66.04 72.39 0)
+			(at 63.5 72.39 0)
 			(uuid "7eb69860-f8f5-4a50-b06c-2d6d8a25cdcc")
 			(effects
 				(font
@@ -188,7 +195,7 @@
 	)
 	(sheet
 		(at 88.9 69.85)
-		(size 20.32 29.21)
+		(size 20.32 22.225)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -197,14 +204,15 @@
 		(stroke
 			(width 0.1524)
 			(type solid)
-			(color 0 0 0 0.6)
 		)
 		(fill
-			(color 215 236 255 1.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "ac2add4a-2a5e-456c-897d-914b794115d5")
 		(property "Sheetname" "ADC"
 			(at 88.9 69.1384 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -213,7 +221,9 @@
 			)
 		)
 		(property "Sheetfile" "DAQ_AC.kicad_sch"
-			(at 88.9 99.6446 0)
+			(at 88.9 92.6596 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -222,7 +232,7 @@
 			)
 		)
 		(pin "CLK" input
-			(at 109.22 96.52 0)
+			(at 109.22 90.17 0)
 			(uuid "fe376504-f8d7-4908-a687-7c331b349c57")
 			(effects
 				(font
@@ -232,7 +242,7 @@
 			)
 		)
 		(pin "DOUT" output
-			(at 109.22 88.9 0)
+			(at 109.22 82.55 0)
 			(uuid "5b2c609f-e7e0-41ff-8494-8e218219cc1b")
 			(effects
 				(font
@@ -242,7 +252,7 @@
 			)
 		)
 		(pin "FSO" output
-			(at 109.22 91.44 0)
+			(at 109.22 85.09 0)
 			(uuid "cbd7e148-86c8-4d11-bd28-eac13a489ef2")
 			(effects
 				(font
@@ -252,7 +262,7 @@
 			)
 		)
 		(pin "SCLK" input
-			(at 109.22 86.36 0)
+			(at 109.22 80.01 0)
 			(uuid "f9e65dcb-ba5e-41e6-a9b5-afcee3692149")
 			(effects
 				(font
@@ -272,7 +282,7 @@
 			)
 		)
 		(pin "SYNC" input
-			(at 109.22 83.82 0)
+			(at 109.22 77.47 0)
 			(uuid "b73ea157-ac53-4302-8ced-74ca38c7b56a")
 			(effects
 				(font
@@ -310,14 +320,15 @@
 		(stroke
 			(width 0.1524)
 			(type solid)
-			(color 0 0 0 0.6)
 		)
 		(fill
-			(color 215 236 255 1.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "aebaf62e-54ce-46f5-a91f-d86d07c0b2fa")
 		(property "Sheetname" "Measurement and Analysis Module"
 			(at 152.4 50.0884 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -327,6 +338,8 @@
 		)
 		(property "Sheetfile" "MAM.kicad_sch"
 			(at 152.4 95.8346 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
