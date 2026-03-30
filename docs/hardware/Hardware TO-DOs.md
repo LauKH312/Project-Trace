@@ -1,31 +1,33 @@
 # TO-DO List - Hardware
 ## General
 - [ ] Create and assign handsolder versions for all used applicable footprints
-- [ ] Assign Mouser Partnumbers to all parts ordered from Mouser
-- [ ] Consider using Global Sourcing for Mouser Parts for PCBA
-- [ ] Assign JLCPCB Partnumbers to all parts ordered for assembly
+- [x] Assign Digikey Partnumbers to all parts ordered from Mouser
+%% - [ ] Consider using Global Sourcing for Mouser Parts for PCBA %%
+%% - [ ] Assign JLCPCB Partnumbers to all parts ordered for assembly %%
 ## Front-End
-### AAAF
-- [ ] Decide requirements for AC-ADC AAAF.
-- [ ] Implement AC-ADC AAAF.
-- [ ] Decide requirements for DC-ADC AAAF.
-- [ ] Implement DC-ADC AAAF.
 ### Inputs & InAmp
-- [ ] Decide new gain-setting/settings
-- [ ] Compensate for on-resistance of switches?
-- [ ] Design AC-Coupling Circuit
+- [-] Decide new gain-setting/settings
+- [-] Compensate for on-resistance of switches?
+- [x] Design AC-Coupling Circuit
+- [ ] Implement circuit using new 
 ## Digital
-### DAQAM (Data Acquisition and Analysis Module)
-- [ ] Decide which Nucleo board to use
-- [ ] Create Symbols and Footprint if necessary
+### ADC
+- [x] Find voltage references
+
+- Decided against creating a external clock source.
+### User Interface
+- [x] Decide upon interface
+Use two rotary encoders,  two pushbuttons (off-(on)), power switch. Visual feedback with screen (128x64).
+- [ ] Integrate display
+- [ ] Connect buttons and encoders
+
+### MCU
+- [x] Decide which Nucleo board to use
+- [x] Create Symbols
+- [x] Create Footprint
 - [x] Find SRAM IC
 - [x] Create symbol and footprint for SRAM if necessary
-### GRAVIM (Graphics, Visualization & Interactivity Module)
-- [x] Decide which Nucleo board to use
-Use provided Nucleo-G board
-- [ ] Decide on needed user controls and suitable layout
-- [ ] Find suitable display (has minimum refresh-rate, resolution and appropriate power requirements)
 ## Power
 _With BMS_
-- [ ] Decide on battery charging solution
+- [x] Decide on battery charging solution
 - [x] Add screw-terminals
