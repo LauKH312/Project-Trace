@@ -35,7 +35,7 @@
 					)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "ProjectTraceFootprints:LQFP-48_7x7_Pitch0.5mm - PFB0048A"
 				(at 0 3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1028,7 +1028,7 @@
 					)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "ProjectTraceFootprints:LQFP-48_7x7_Pitch0.5mm - PFB0048A"
 				(at 0 3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3246,7 +3246,7 @@
 					)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "ProjectTraceFootprints:LQFP-48_7x7_Pitch0.5mm - PFB0048A"
 				(at 0 3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -6119,6 +6119,12 @@
 		(uuid "82201bfa-8f19-46e5-a0b7-0fe6e9e8cab1")
 	)
 	(junction
+		(at 171.45 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0a9931d3-c3dd-42da-82e1-7c7cd5f508c2")
+	)
+	(junction
 		(at 140.97 137.16)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6135,18 +6141,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "139a6c3f-899a-475b-9c41-4f25a827e340")
-	)
-	(junction
-		(at 279.4 151.13)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "19bab3c2-0f74-4684-8067-fbd17473e4db")
-	)
-	(junction
-		(at 161.29 43.18)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1d893478-d86b-49c5-a227-114fe0434d22")
 	)
 	(junction
 		(at 243.84 140.97)
@@ -6177,6 +6171,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2c371d03-dcd2-4d4d-9753-2b1207b26d76")
+	)
+	(junction
+		(at 279.4 151.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2e16aecb-1210-4d9d-92a1-12254eebad1c")
 	)
 	(junction
 		(at 186.69 144.78)
@@ -6581,16 +6581,6 @@
 			(type default)
 		)
 		(uuid "0a6f1d37-e48a-444c-a1d7-b64e96de8bd0")
-	)
-	(wire
-		(pts
-			(xy 161.29 41.91) (xy 161.29 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0b10598b-7873-4aed-a144-d2bd5b9e587e")
 	)
 	(wire
 		(pts
@@ -8374,6 +8364,16 @@
 	)
 	(wire
 		(pts
+			(xy 171.45 52.07) (xy 171.45 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf0e98ab-45b1-4386-92c4-cd03bf7a399f")
+	)
+	(wire
+		(pts
 			(xy 110.49 124.46) (xy 105.41 124.46)
 		)
 		(stroke
@@ -10054,7 +10054,7 @@
 	)
 	(symbol
 		(lib_id "power:+4V")
-		(at 161.29 41.91 0)
+		(at 171.45 52.07 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10065,7 +10065,7 @@
 		(fields_autoplaced yes)
 		(uuid "22fbf7a4-7a7c-4794-8b0c-5d6976b2e8ef")
 		(property "Reference" "#PWR0327"
-			(at 161.29 45.72 0)
+			(at 171.45 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10076,7 +10076,7 @@
 			)
 		)
 		(property "Value" "+4V"
-			(at 162.687 40.64 0)
+			(at 172.847 50.8 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10087,7 +10087,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 161.29 41.91 0)
+			(at 171.45 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10098,7 +10098,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 161.29 41.91 0)
+			(at 171.45 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10109,7 +10109,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+4V\""
-			(at 161.29 41.91 0)
+			(at 171.45 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12885,7 +12885,7 @@
 		)
 	)
 	(symbol
-		(lib_name "ADS1602_2")
+		(lib_name "ADS1602_1")
 		(lib_id "ProjectTraceSymbols:ADS1602")
 		(at 153.67 149.86 0)
 		(unit 3)
@@ -12917,7 +12917,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "ProjectTraceFootprints:LQFP-48_7x7_Pitch0.5mm - PFB0048A"
 			(at 153.67 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -14261,7 +14261,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "ProjectTraceFootprints:LQFP-48_7x7_Pitch0.5mm - PFB0048A"
 			(at 147.32 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -17016,7 +17016,7 @@
 		)
 	)
 	(symbol
-		(lib_name "ADS1602_1")
+		(lib_name "ADS1602_2")
 		(lib_id "ProjectTraceSymbols:ADS1602")
 		(at 55.88 120.65 0)
 		(unit 2)
@@ -17048,7 +17048,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "ProjectTraceFootprints:LQFP-48_7x7_Pitch0.5mm - PFB0048A"
 			(at 55.88 116.84 0)
 			(hide yes)
 			(show_name no)

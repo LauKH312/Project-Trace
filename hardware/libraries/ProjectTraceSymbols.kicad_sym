@@ -840,7 +840,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "ProjectTraceFootprints:LQFP-48_7x7_Pitch0.5mm - PFB0048A"
 			(at 0 3.81 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5969,7 +5969,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "ProjectTraceFootprints:OPA2837IRUNT-Handsolder"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)

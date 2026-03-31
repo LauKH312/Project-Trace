@@ -3959,7 +3959,7 @@
 					)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "ProjectTraceFootprints:OPA2837IRUNT"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -8931,7 +8931,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:VSSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "ProjectTraceFootprints:SOIC-10 - DGS0010A"
 			(at 196.85 95.885 0)
 			(hide yes)
 			(show_name no)
@@ -10325,7 +10325,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "ProjectTraceFootprints:OPA2837IRUNT"
 			(at 157.48 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -10348,6 +10348,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 157.48 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "296-53042-1-ND"
 			(at 157.48 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -11549,7 +11560,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "ProjectTraceFootprints:OPA2837IRUNT"
 			(at 123.19 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -11572,6 +11583,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 123.19 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "296-53042-1-ND"
 			(at 123.19 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -12241,7 +12263,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "ProjectTraceFootprints:OPA2837IRUNT"
 			(at 123.19 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -12274,35 +12296,46 @@
 				)
 			)
 		)
+		(property "DigikeyPN" "296-53042-1-ND"
+			(at 123.19 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "6"
-			(uuid "e018693a-3674-4299-b993-b130abf048ec")
+			(uuid "e018693a-3674-4299-b993-b130abf048ed")
 		)
 		(pin "2"
-			(uuid "00efe3e0-34dc-4cea-8c89-6a348117104d")
+			(uuid "00efe3e0-34dc-4cea-8c89-6a348117104e")
 		)
 		(pin "3"
-			(uuid "6a6aad28-90b1-4268-851d-6ef9f5d2fc24")
+			(uuid "6a6aad28-90b1-4268-851d-6ef9f5d2fc25")
 		)
 		(pin "1"
-			(uuid "2f50a7a3-d26d-4f05-b737-1c7904aa5642")
+			(uuid "2f50a7a3-d26d-4f05-b737-1c7904aa5643")
 		)
 		(pin "4"
-			(uuid "9b20db09-2650-4e08-ac04-2f2d694755ad")
+			(uuid "9b20db09-2650-4e08-ac04-2f2d694755ae")
 		)
 		(pin "5"
-			(uuid "87542fd3-80fa-487b-911e-e15997891ca7")
+			(uuid "87542fd3-80fa-487b-911e-e15997891ca8")
 		)
 		(pin "8"
-			(uuid "bd0c1084-241b-4514-a318-73c657289eca")
+			(uuid "bd0c1084-241b-4514-a318-73c657289ecb")
 		)
 		(pin "7"
-			(uuid "f6a569b5-8b14-47f8-b218-a4317fc2d269")
+			(uuid "f6a569b5-8b14-47f8-b218-a4317fc2d26a")
 		)
 		(pin "9"
-			(uuid "f44fb924-7c30-4ed0-82bf-dfbf8a42940a")
+			(uuid "f44fb924-7c30-4ed0-82bf-dfbf8a42940b")
 		)
 		(pin "10"
-			(uuid "f8729f8a-f550-4dee-ace7-0779040e68ce")
+			(uuid "f8729f8a-f550-4dee-ace7-0779040e68cf")
 		)
 		(instances
 			(project "project_trace_kicad"
@@ -12781,7 +12814,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "ProjectTraceFootprints:OPA2837IRUNT"
 			(at 245.11 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -12814,35 +12847,46 @@
 				)
 			)
 		)
+		(property "DigikeyPN" "296-53042-1-ND"
+			(at 245.11 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "10"
-			(uuid "188391b9-4c69-4875-a3bf-5b963e034882")
+			(uuid "188391b9-4c69-4875-a3bf-5b963e034883")
 		)
 		(pin "9"
-			(uuid "5008f1ed-98e1-406d-b9dd-c58e294443b0")
+			(uuid "5008f1ed-98e1-406d-b9dd-c58e294443b1")
 		)
 		(pin "5"
-			(uuid "eb5670ad-299e-47fe-ac09-12a1241bbb26")
+			(uuid "eb5670ad-299e-47fe-ac09-12a1241bbb27")
 		)
 		(pin "3"
-			(uuid "93f85e71-b68b-46c6-9d03-fafc0604ded2")
+			(uuid "93f85e71-b68b-46c6-9d03-fafc0604ded3")
 		)
 		(pin "6"
-			(uuid "ba1525c4-8ab1-4390-9ed6-47c856b34a00")
+			(uuid "ba1525c4-8ab1-4390-9ed6-47c856b34a01")
 		)
 		(pin "7"
-			(uuid "f0b6b438-d5d8-4b50-af9b-59ab83e6fec2")
+			(uuid "f0b6b438-d5d8-4b50-af9b-59ab83e6fec3")
 		)
 		(pin "8"
-			(uuid "c7991d5c-e563-4d7d-b038-b7d9fb08fdad")
+			(uuid "c7991d5c-e563-4d7d-b038-b7d9fb08fdae")
 		)
 		(pin "1"
-			(uuid "3244d5df-1588-4acf-965e-5c59789af485")
+			(uuid "3244d5df-1588-4acf-965e-5c59789af486")
 		)
 		(pin "2"
-			(uuid "4c728dbd-8130-41c4-a1d0-b3616dd1c792")
+			(uuid "4c728dbd-8130-41c4-a1d0-b3616dd1c793")
 		)
 		(pin "4"
-			(uuid "8fb3bd78-9bb0-4203-bd1c-94e4e64bc697")
+			(uuid "8fb3bd78-9bb0-4203-bd1c-94e4e64bc698")
 		)
 		(instances
 			(project "project_trace_kicad"
@@ -13398,7 +13442,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:VSSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "ProjectTraceFootprints:SOIC-10 - DGS0010A"
 			(at 158.75 73.025 0)
 			(hide yes)
 			(show_name no)
@@ -13594,7 +13638,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "ProjectTraceFootprints:OPA2837IRUNT"
 			(at 189.23 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -13627,35 +13671,46 @@
 				)
 			)
 		)
+		(property "DigikeyPN" "296-53042-1-ND"
+			(at 189.23 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "10"
-			(uuid "188391b9-4c69-4875-a3bf-5b963e034882")
+			(uuid "188391b9-4c69-4875-a3bf-5b963e034884")
 		)
 		(pin "9"
-			(uuid "5008f1ed-98e1-406d-b9dd-c58e294443b0")
+			(uuid "5008f1ed-98e1-406d-b9dd-c58e294443b2")
 		)
 		(pin "5"
-			(uuid "eb5670ad-299e-47fe-ac09-12a1241bbb26")
+			(uuid "eb5670ad-299e-47fe-ac09-12a1241bbb28")
 		)
 		(pin "3"
-			(uuid "93f85e71-b68b-46c6-9d03-fafc0604ded2")
+			(uuid "93f85e71-b68b-46c6-9d03-fafc0604ded4")
 		)
 		(pin "6"
-			(uuid "ba1525c4-8ab1-4390-9ed6-47c856b34a00")
+			(uuid "ba1525c4-8ab1-4390-9ed6-47c856b34a02")
 		)
 		(pin "7"
-			(uuid "f0b6b438-d5d8-4b50-af9b-59ab83e6fec2")
+			(uuid "f0b6b438-d5d8-4b50-af9b-59ab83e6fec4")
 		)
 		(pin "8"
-			(uuid "c7991d5c-e563-4d7d-b038-b7d9fb08fdad")
+			(uuid "c7991d5c-e563-4d7d-b038-b7d9fb08fdaf")
 		)
 		(pin "1"
-			(uuid "3244d5df-1588-4acf-965e-5c59789af485")
+			(uuid "3244d5df-1588-4acf-965e-5c59789af487")
 		)
 		(pin "2"
-			(uuid "4c728dbd-8130-41c4-a1d0-b3616dd1c792")
+			(uuid "4c728dbd-8130-41c4-a1d0-b3616dd1c794")
 		)
 		(pin "4"
-			(uuid "8fb3bd78-9bb0-4203-bd1c-94e4e64bc697")
+			(uuid "8fb3bd78-9bb0-4203-bd1c-94e4e64bc699")
 		)
 		(instances
 			(project "project_trace_kicad"
@@ -14153,7 +14208,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_SO:VSSOP-10_3x3mm_P0.5mm"
+		(property "Footprint" "ProjectTraceFootprints:SOIC-10 - DGS0010A"
 			(at 252.73 158.115 0)
 			(hide yes)
 			(show_name no)
@@ -14446,7 +14501,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "ProjectTraceFootprints:OPA2837IRUNT"
 			(at 191.77 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -14479,35 +14534,46 @@
 				)
 			)
 		)
+		(property "DigikeyPN" "296-53042-1-ND"
+			(at 191.77 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "6"
-			(uuid "e018693a-3674-4299-b993-b130abf048ec")
+			(uuid "e018693a-3674-4299-b993-b130abf048ee")
 		)
 		(pin "2"
-			(uuid "00efe3e0-34dc-4cea-8c89-6a348117104d")
+			(uuid "00efe3e0-34dc-4cea-8c89-6a348117104f")
 		)
 		(pin "3"
-			(uuid "6a6aad28-90b1-4268-851d-6ef9f5d2fc24")
+			(uuid "6a6aad28-90b1-4268-851d-6ef9f5d2fc26")
 		)
 		(pin "1"
-			(uuid "2f50a7a3-d26d-4f05-b737-1c7904aa5642")
+			(uuid "2f50a7a3-d26d-4f05-b737-1c7904aa5644")
 		)
 		(pin "4"
-			(uuid "9b20db09-2650-4e08-ac04-2f2d694755ad")
+			(uuid "9b20db09-2650-4e08-ac04-2f2d694755af")
 		)
 		(pin "5"
-			(uuid "87542fd3-80fa-487b-911e-e15997891ca7")
+			(uuid "87542fd3-80fa-487b-911e-e15997891ca9")
 		)
 		(pin "8"
-			(uuid "bd0c1084-241b-4514-a318-73c657289eca")
+			(uuid "bd0c1084-241b-4514-a318-73c657289ecc")
 		)
 		(pin "7"
-			(uuid "f6a569b5-8b14-47f8-b218-a4317fc2d269")
+			(uuid "f6a569b5-8b14-47f8-b218-a4317fc2d26b")
 		)
 		(pin "9"
-			(uuid "f44fb924-7c30-4ed0-82bf-dfbf8a42940a")
+			(uuid "f44fb924-7c30-4ed0-82bf-dfbf8a42940c")
 		)
 		(pin "10"
-			(uuid "f8729f8a-f550-4dee-ace7-0779040e68ce")
+			(uuid "f8729f8a-f550-4dee-ace7-0779040e68d0")
 		)
 		(instances
 			(project "project_trace_kicad"
