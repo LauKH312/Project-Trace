@@ -3959,7 +3959,7 @@
 					)
 				)
 			)
-			(property "Footprint" "ProjectTraceFootprints:OPA2837IRUNT"
+			(property "Footprint" "ProjectTraceFootprints:OPA2837IRUNT-Handsolder"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -10325,7 +10325,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ProjectTraceFootprints:OPA2837IRUNT"
+		(property "Footprint" "ProjectTraceFootprints:OPA2837IRUNT-Handsolder"
 			(at 157.48 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -11560,7 +11560,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ProjectTraceFootprints:OPA2837IRUNT"
+		(property "Footprint" "ProjectTraceFootprints:OPA2837IRUNT-Handsolder"
 			(at 123.19 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -12263,7 +12263,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ProjectTraceFootprints:OPA2837IRUNT"
+		(property "Footprint" "ProjectTraceFootprints:OPA2837IRUNT-Handsolder"
 			(at 123.19 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -12814,7 +12814,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ProjectTraceFootprints:OPA2837IRUNT"
+		(property "Footprint" "ProjectTraceFootprints:OPA2837IRUNT-Handsolder"
 			(at 245.11 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -13638,7 +13638,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ProjectTraceFootprints:OPA2837IRUNT"
+		(property "Footprint" "ProjectTraceFootprints:OPA2837IRUNT-Handsolder"
 			(at 189.23 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -14501,7 +14501,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ProjectTraceFootprints:OPA2837IRUNT"
+		(property "Footprint" "ProjectTraceFootprints:OPA2837IRUNT-Handsolder"
 			(at 191.77 142.24 0)
 			(hide yes)
 			(show_name no)
