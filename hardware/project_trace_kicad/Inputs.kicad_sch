@@ -5618,6 +5618,16 @@
 		)
 		(uuid "7f6d2e06-f758-4e33-8859-51a4fe460749")
 	)
+	(text "TODO choose smaller values?"
+		(exclude_from_sim no)
+		(at 186.69 102.108 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "a6b7cad5-ed8a-4e8a-80ec-19af0ed0f28b")
+	)
 	(text "SIGNAL PATH"
 		(exclude_from_sim no)
 		(at 78.74 186.944 0)
