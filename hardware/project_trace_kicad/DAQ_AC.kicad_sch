@@ -9154,7 +9154,7 @@
 		(uuid "ffce8dc9-d39a-4ade-abe7-c6b0dde45b45")
 	)
 	(hierarchical_label "SCLK"
-		(shape input)
+		(shape output)
 		(at 71.12 110.49 0)
 		(effects
 			(font

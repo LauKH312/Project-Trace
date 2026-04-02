@@ -753,6 +753,10 @@
     [
       "aebaf62e-54ce-46f5-a91f-d86d07c0b2fa",
       "Measurement and Analysis Module"
+    ],
+    [
+      "9647d892-1f14-4449-8bb1-1c7676664973",
+      "UserInterface"
     ]
   ],
   "text_variables": {},
