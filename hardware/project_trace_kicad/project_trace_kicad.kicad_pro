@@ -678,7 +678,7 @@
       "group_symbols": true,
       "include_excluded_from_bom": true,
       "name": "",
-      "sort_asc": true,
+      "sort_asc": false,
       "sort_field": "DigikeyPN"
     },
     "bus_aliases": {},
@@ -730,7 +730,7 @@
         "uuid": "af51f4e5-b952-4b0e-baf2-78a72fb86fcd"
       }
     ],
-    "used_designators": "#PWR312",
+    "used_designators": "C208-210,C501-504",
     "variants": []
   },
   "sheets": [

@@ -1,7 +1,4 @@
 (version 1)
-(rule Courtyard_clearance_1
-	(constraint courtyard_clearance (min 0.25mm))
-)
 (rule Copper_to_edge_clearance_1
 	(constraint edge_clearance (min 0.3mm))
 )
@@ -26,9 +23,6 @@
 (rule Minimum_annular_width_1
 	(constraint annular_width (min 0.2mm))
 )
-(rule Minimum_drill_size_1
-	(constraint hole_size (min 0.3mm))
-)
 (rule Hole_to_hole_distance_1
 	(constraint hole_to_hole (min 0.25mm))
 )
@@ -49,4 +43,7 @@
 )
 (rule Soldermask_expansion_1
 	(constraint solder_mask_expansion (min 0.05mm))
+)
+(rule Courtyard_clearance_1
+	(constraint courtyard_clearance (min 0.25mm))
 )
