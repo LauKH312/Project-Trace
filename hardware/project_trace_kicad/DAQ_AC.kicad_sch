@@ -6070,12 +6070,6 @@
 		(uuid "0c9713bf-4e85-49df-ade0-511ce0642b28")
 	)
 	(junction
-		(at 252.73 102.87)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "139a6c3f-899a-475b-9c41-4f25a827e340")
-	)
-	(junction
 		(at 243.84 140.97)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8792,16 +8786,6 @@
 			(type default)
 		)
 		(uuid "dfa24e18-c4ce-4870-996c-d2a3a876e30e")
-	)
-	(wire
-		(pts
-			(xy 252.73 102.87) (xy 252.73 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e2177c74-d4e9-4d88-8f60-71909290ad23")
 	)
 	(wire
 		(pts
@@ -13133,7 +13117,7 @@
 	)
 	(symbol
 		(lib_id "ProjectTraceSymbols:MCP6499T")
-		(at 264.16 95.25 0)
+		(at 270.51 151.13 0)
 		(unit 4)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13144,7 +13128,7 @@
 		(fields_autoplaced yes)
 		(uuid "69cc9768-dbe7-4c39-88a0-c7997acf4e2c")
 		(property "Reference" "U304"
-			(at 264.16 86.4106 0)
+			(at 270.51 142.2906 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13154,7 +13138,7 @@
 			)
 		)
 		(property "Value" "MCP6499T"
-			(at 264.16 88.5782 0)
+			(at 270.51 144.4582 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13164,7 +13148,7 @@
 			)
 		)
 		(property "Footprint" "ProjectTraceFootprints:SOIC-14_3.9x8.7mm_P1.27mm_Handsolder"
-			(at 262.89 92.71 0)
+			(at 269.24 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13175,7 +13159,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf"
-			(at 265.43 90.17 0)
+			(at 271.78 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13186,7 +13170,7 @@
 			)
 		)
 		(property "Description" "Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14"
-			(at 264.16 95.25 0)
+			(at 270.51 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13197,7 +13181,7 @@
 			)
 		)
 		(property "DigikeyPN" "150-MCP6499T-E/SLCT-ND"
-			(at 264.16 95.25 0)
+			(at 270.51 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15763,7 +15747,7 @@
 	)
 	(symbol
 		(lib_id "ProjectTraceSymbols:MCP6499T")
-		(at 270.51 151.13 0)
+		(at 264.16 95.25 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15774,7 +15758,7 @@
 		(fields_autoplaced yes)
 		(uuid "a88a247a-2bf5-404c-bcc8-47e50adc4585")
 		(property "Reference" "U304"
-			(at 270.51 142.2906 0)
+			(at 264.16 86.4106 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15784,7 +15768,7 @@
 			)
 		)
 		(property "Value" "MCP6499T"
-			(at 270.51 144.4582 0)
+			(at 264.16 88.5782 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15794,7 +15778,7 @@
 			)
 		)
 		(property "Footprint" "ProjectTraceFootprints:SOIC-14_3.9x8.7mm_P1.27mm_Handsolder"
-			(at 269.24 148.59 0)
+			(at 262.89 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15805,7 +15789,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf"
-			(at 271.78 146.05 0)
+			(at 265.43 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15816,7 +15800,7 @@
 			)
 		)
 		(property "Description" "Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14"
-			(at 270.51 151.13 0)
+			(at 264.16 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15827,7 +15811,7 @@
 			)
 		)
 		(property "DigikeyPN" "150-MCP6499T-E/SLCT-ND"
-			(at 270.51 151.13 0)
+			(at 264.16 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

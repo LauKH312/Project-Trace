@@ -5,9 +5,6 @@
 (rule Minimum_clearance_1
 	(constraint clearance (min 0.127mm))
 )
-(rule Physical_clearance_1
-	(constraint physical_clearance (min 0.2mm))
-)
 (rule Creepage_distance_1
 	(constraint creepage (min 0.4mm))
 )

@@ -240,6 +240,10 @@
           "drill": 0.3
         },
         {
+          "diameter": 0.6,
+          "drill": 0.3
+        },
+        {
           "diameter": 0.7,
           "drill": 0.5
         },
@@ -730,7 +734,7 @@
         "uuid": "af51f4e5-b952-4b0e-baf2-78a72fb86fcd"
       }
     ],
-    "used_designators": "C208-210,C501-504",
+    "used_designators": "C208-212,C501-504,#PWR227,U503",
     "variants": []
   },
   "sheets": [
