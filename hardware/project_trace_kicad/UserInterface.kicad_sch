@@ -2729,6 +2729,17 @@
 				)
 			)
 		)
+		(property "DigikeyPN" "YAG1236CT-ND"
+			(at 195.58 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "b86aab32-7cbd-492c-9f46-d5467dd133d8")
 		)
@@ -3075,6 +3086,17 @@
 				)
 			)
 		)
+		(property "DigikeyPN" "YAG1236CT-ND"
+			(at 210.82 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "69635048-8b6e-40f2-8ab5-8651db1fc350")
 		)
@@ -3380,6 +3402,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 195.58 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "YAG1236CT-ND"
 			(at 195.58 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -3995,6 +4028,17 @@
 				)
 			)
 		)
+		(property "DigikeyPN" "YAG1236CT-ND"
+			(at 210.82 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "ca0cdfe6-dd70-4f7e-af7b-b61574f8ae36")
 		)
@@ -4067,6 +4111,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 195.58 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "YAG1236CT-ND"
 			(at 195.58 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -4383,6 +4438,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 195.58 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "YAG1236CT-ND"
 			(at 195.58 52.07 0)
 			(hide yes)
 			(show_name no)

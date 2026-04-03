@@ -9388,6 +9388,17 @@
 				)
 			)
 		)
+		(property "DigikeyPN" "YAG1237CT-ND"
+			(at 99.06 71.12 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "89b47eac-a87e-4634-85fe-f46de2ed5768")
 		)
@@ -9460,6 +9471,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 86.36 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "YAG1638CT-ND"
+			(at 86.36 71.12 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9630,6 +9652,17 @@
 		)
 		(property "Extra" "0.1%"
 			(at 99.06 41.8422 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "YAG1237CT-ND"
+			(at 99.06 44.45 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10168,6 +10201,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 118.11 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "YAG4511CT-ND"
+			(at 118.11 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11773,6 +11817,17 @@
 				)
 			)
 		)
+		(property "DigikeyPN" "YAG1638CT-ND"
+			(at 86.36 44.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d3f41c5b-840d-4e9f-b657-a244c04e0ff7")
 		)
@@ -12298,6 +12353,17 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "DigikeyPN" "311-1069-1-ND"
+			(at 127 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -14254,6 +14320,17 @@
 				)
 			)
 		)
+		(property "DigikeyPN" "YAG4511CT-ND"
+			(at 119.38 71.12 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "429e6baa-365d-43bf-88af-7502fa098d7e")
 		)
@@ -14345,6 +14422,17 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "DigikeyPN" "311-1069-1-ND"
+			(at 127 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -15235,6 +15323,17 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+		(property "DigikeyPN" "311-1069-1-ND"
+			(at 127 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"

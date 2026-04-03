@@ -541,16 +541,6 @@
 				(justify left top)
 			)
 		)
-		(pin "ACCouple.EN" input
-			(at 69.85 90.17 0)
-			(uuid "4fc1c14b-2c31-43f8-9140-bc1c4db922d0")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "Ammeter.EN" input
 			(at 69.85 86.36 0)
 			(uuid "58daeada-b3bc-410d-97cb-e7e1b867806b")
@@ -614,6 +604,16 @@
 		(pin "Signal.Out" output
 			(at 69.85 78.74 0)
 			(uuid "7eb69860-f8f5-4a50-b06c-2d6d8a25cdcc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "ACCouple.~{EN}" input
+			(at 69.85 90.17 0)
+			(uuid "5f4ba9b7-a5c9-4f21-93ca-213338e1a975")
 			(effects
 				(font
 					(size 1.27 1.27)
