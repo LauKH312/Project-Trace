@@ -683,7 +683,7 @@
       "include_excluded_from_bom": true,
       "name": "",
       "sort_asc": true,
-      "sort_field": "DigikeyPN"
+      "sort_field": "Footprint"
     },
     "bus_aliases": {},
     "connection_grid_size": 50.0,
@@ -734,7 +734,7 @@
         "uuid": "af51f4e5-b952-4b0e-baf2-78a72fb86fcd"
       }
     ],
-    "used_designators": "C201,C213,R206,R211-213,#PWR228",
+    "used_designators": "#PWR401",
     "variants": []
   },
   "sheets": [
