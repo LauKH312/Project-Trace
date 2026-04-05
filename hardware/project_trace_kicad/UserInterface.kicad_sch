@@ -1946,12 +1946,6 @@
 		(uuid "90c2a1ba-51be-4333-b8d5-9153204fd3f7")
 	)
 	(junction
-		(at 210.82 139.7)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9ff65a60-184f-4ffa-91a1-f16282e35184")
-	)
-	(junction
 		(at 195.58 46.99)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1962,6 +1956,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c16eaf1e-87db-438a-9fac-b7aefbe2f733")
+	)
+	(junction
+		(at 210.82 139.7)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cb8be159-c87d-48bf-9ea6-ace9475c37dc")
 	)
 	(wire
 		(pts
@@ -2035,23 +2035,13 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 139.7) (xy 214.63 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2a964750-11a5-4c50-b3f5-b8ea9d66cf7c")
-	)
-	(wire
-		(pts
 			(xy 209.55 139.7) (xy 210.82 139.7)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "31fe5968-87c3-491c-a254-319dae028ee4")
+		(uuid "2a964750-11a5-4c50-b3f5-b8ea9d66cf7c")
 	)
 	(wire
 		(pts
@@ -2062,6 +2052,16 @@
 			(type default)
 		)
 		(uuid "369e206c-3ef0-42ca-b0ac-4b6b9c476100")
+	)
+	(wire
+		(pts
+			(xy 210.82 139.7) (xy 214.63 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d1b60a8-835f-4929-9eab-e2772b704da8")
 	)
 	(wire
 		(pts
@@ -2664,7 +2664,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 195.58 90.17 0)
+		(at 195.58 74.93 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2673,9 +2673,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "2d33250e-91c6-44bd-8c06-7c984637cce0")
-		(property "Reference" "R3"
-			(at 197.358 88.9578 0)
+		(uuid "21ad42b3-dc95-401f-9c38-205b0d43df9f")
+		(property "Reference" "R603"
+			(at 197.358 73.7178 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2686,7 +2686,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 197.358 91.3821 0)
+			(at 197.358 76.1421 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2696,8 +2696,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 193.802 90.17 90)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 193.802 74.93 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2708,7 +2708,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 195.58 90.17 0)
+			(at 195.58 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2719,7 +2719,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 195.58 90.17 0)
+			(at 195.58 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2741,15 +2741,15 @@
 			)
 		)
 		(pin "2"
-			(uuid "b86aab32-7cbd-492c-9f46-d5467dd133d8")
+			(uuid "6abc6a26-4856-4344-80e6-21c80da48ac0")
 		)
 		(pin "1"
-			(uuid "3582b043-0dea-494f-9a1c-25fe1f0789d3")
+			(uuid "384a4845-1849-48b9-9726-88da89255c12")
 		)
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
-					(reference "R3")
+					(reference "R603")
 					(unit 1)
 				)
 			)
@@ -3031,7 +3031,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5f0422f3-ada4-4bbe-b32f-aae7013ca644")
-		(property "Reference" "R5"
+		(property "Reference" "R600"
 			(at 212.598 114.3578 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3053,7 +3053,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 209.042 115.57 90)
 			(hide yes)
 			(show_name no)
@@ -3106,7 +3106,89 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
-					(reference "R5")
+					(reference "R600")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 195.58 52.07 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6554a788-8091-4480-8081-4d1901de22d2")
+		(property "Reference" "R604"
+			(at 197.358 50.8578 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 197.358 53.2821 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 193.802 52.07 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 195.58 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 195.58 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "dd047e9d-efef-4d6c-bad3-a4f432c3d0fe")
+		)
+		(pin "1"
+			(uuid "4ceb5600-1bde-41e2-990d-e4f3cef0afba")
+		)
+		(instances
+			(project "project_trace_kicad"
+				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
+					(reference "R604")
 					(unit 1)
 				)
 			)
@@ -3268,6 +3350,88 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 195.58 90.17 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7a2bdf52-6889-402f-b9c6-9f4f1332044e")
+		(property "Reference" "R602"
+			(at 197.358 88.9578 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 197.358 91.3821 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 193.802 90.17 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 195.58 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 195.58 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "9fbc6cb8-7d8c-4f26-b66d-723986ceca39")
+		)
+		(pin "1"
+			(uuid "2b4b580f-443f-4e92-bc54-93577d4c1ced")
+		)
+		(instances
+			(project "project_trace_kicad"
+				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
+					(reference "R602")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 194.31 110.49 0)
 		(unit 1)
@@ -3340,99 +3504,6 @@
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
 					(reference "#PWR03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 195.58 36.83 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8af5f9b0-c1d0-4f01-846b-d4554d642de9")
-		(property "Reference" "R4"
-			(at 197.358 35.6178 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 197.358 38.0421 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 193.802 36.83 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 195.58 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 195.58 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DigikeyPN" "YAG1236CT-ND"
-			(at 195.58 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "fabb89b4-b202-43b7-b0fd-f8d5cafa904e")
-		)
-		(pin "1"
-			(uuid "f149ca1a-0fea-4b78-ac5a-c34174375dce")
-		)
-		(instances
-			(project "project_trace_kicad"
-				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
-					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -3690,6 +3761,88 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 210.82 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9a253534-7221-4d70-8aaa-e6bdb0890fa8")
+		(property "Reference" "R601"
+			(at 212.598 142.2978 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 212.598 144.7221 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 209.042 143.51 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 210.82 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 210.82 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "a6cc0fba-97d7-4405-a539-a2a4be135c35")
+		)
+		(pin "1"
+			(uuid "36b13864-abd3-4a3b-bc5d-8d6bf1c4a140")
+		)
+		(instances
+			(project "project_trace_kicad"
+				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
+					(reference "R601")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:RotaryEncoder")
 		(at 208.28 82.55 0)
 		(unit 1)
@@ -3864,6 +4017,88 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 195.58 36.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "aa5ea136-9e44-487d-b5b8-889488565e40")
+		(property "Reference" "R605"
+			(at 197.358 35.6178 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 197.358 38.0421 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 193.802 36.83 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 195.58 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 195.58 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "e5e82721-f8c8-4eeb-bb50-a9218015c545")
+		)
+		(pin "1"
+			(uuid "ba1171b7-ef2d-4622-89aa-196fcccbf52f")
+		)
+		(instances
+			(project "project_trace_kicad"
+				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
+					(reference "R605")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_01x07_Socket")
 		(at 80.01 64.77 0)
 		(mirror x)
@@ -3956,192 +4191,6 @@
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
 					(reference "J5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 210.82 143.51 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c94b4f63-ce76-4a9e-a4cc-68588245ea83")
-		(property "Reference" "R6"
-			(at 212.598 142.2978 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 212.598 144.7221 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 209.042 143.51 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 210.82 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 210.82 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DigikeyPN" "YAG1236CT-ND"
-			(at 210.82 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "ca0cdfe6-dd70-4f7e-af7b-b61574f8ae36")
-		)
-		(pin "1"
-			(uuid "e7d60c01-46df-4aa4-a107-38cd48410ca6")
-		)
-		(instances
-			(project "project_trace_kicad"
-				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
-					(reference "R6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 195.58 74.93 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cf9ef3c4-1063-4fb4-83e9-2ab58e742718")
-		(property "Reference" "R2"
-			(at 197.358 73.7178 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 197.358 76.1421 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 193.802 74.93 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 195.58 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 195.58 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DigikeyPN" "YAG1236CT-ND"
-			(at 195.58 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "40db8080-858b-43bf-9c9b-b09c3b8415bf")
-		)
-		(pin "1"
-			(uuid "455cdad0-706f-46f9-af63-a8b1f02e84e8")
-		)
-		(instances
-			(project "project_trace_kicad"
-				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
-					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -4376,99 +4425,6 @@
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
 					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 195.58 52.07 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e92c75af-d169-43c2-9ff3-5b4250acc5e4")
-		(property "Reference" "R1"
-			(at 197.358 50.8578 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 197.358 53.2821 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 193.802 52.07 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 195.58 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 195.58 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DigikeyPN" "YAG1236CT-ND"
-			(at 195.58 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "62ae4dae-e345-4ad0-8fb6-b6f67f3c63f4")
-		)
-		(pin "1"
-			(uuid "2bdd8959-fa38-41a2-8ccf-133c4b6946af")
-		)
-		(instances
-			(project "project_trace_kicad"
-				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
-					(reference "R1")
 					(unit 1)
 				)
 			)
