@@ -11577,17 +11577,6 @@
 				)
 			)
 		)
-		(property "DigikeyPN" "4654-FCR144635-ND"
-			(at 21.59 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "75a9f031-5746-433a-837e-0a8e6eb193d0")
 		)
@@ -11659,17 +11648,6 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x01, script generated"
-			(at 21.59 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DigikeyPN" "4654-FCR144635-ND"
 			(at 21.59 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -13738,17 +13716,6 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x01, script generated"
-			(at 21.59 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DigikeyPN" "4654-FCR144635-ND"
 			(at 21.59 121.92 0)
 			(hide yes)
 			(show_name no)
