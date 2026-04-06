@@ -10524,6 +10524,10 @@
 		(uuid "3e64f606-8cc4-4dc5-8bb6-b5815fa40605")
 	)
 	(no_connect
+		(at 130.81 124.46)
+		(uuid "3fcc9469-ede2-4add-b989-f53a2621aa7c")
+	)
+	(no_connect
 		(at 161.29 40.64)
 		(uuid "43ca5e2d-74b8-4e34-95c8-7f8ae2eae7a4")
 	)
@@ -10650,6 +10654,10 @@
 	(no_connect
 		(at 194.31 128.27)
 		(uuid "c0c1e133-79bb-4430-96b6-5ec34677933e")
+	)
+	(no_connect
+		(at 130.81 137.16)
+		(uuid "c2c12f1e-9199-4d7b-8c74-940a9be2d1c5")
 	)
 	(no_connect
 		(at 161.29 63.5)
@@ -11811,7 +11819,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5138f0d0-bc5c-47fc-8b0c-7b44f97468fd")
-		(property "Reference" "PH2"
+		(property "Reference" "PH502"
 			(at 128.524 138.43 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11880,7 +11888,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/aebaf62e-54ce-46f5-a91f-d86d07c0b2fa"
-					(reference "PH2")
+					(reference "PH502")
 					(unit 1)
 				)
 			)
@@ -13523,7 +13531,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b648a462-5a97-4a00-b1bd-332fdb0cbfcb")
-		(property "Reference" "PH"
+		(property "Reference" "PH501"
 			(at 128.524 125.73 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13592,7 +13600,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/aebaf62e-54ce-46f5-a91f-d86d07c0b2fa"
-					(reference "PH")
+					(reference "PH501")
 					(unit 1)
 				)
 			)
