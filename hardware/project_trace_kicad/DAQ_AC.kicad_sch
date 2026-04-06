@@ -12869,7 +12869,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "83e8db9b-8414-4f69-ada1-b1c04f0dbb9f")
 		(property "Reference" "C303"
 			(at 35.179 136.4572 0)
@@ -16399,7 +16399,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "e1628432-d428-4406-a0da-d0c3c2c947a9")
 		(property "Reference" "C304"
 			(at 47.879 136.4572 0)
