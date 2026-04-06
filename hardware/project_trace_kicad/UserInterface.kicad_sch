@@ -3587,7 +3587,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "21ad42b3-dc95-401f-9c38-205b0d43df9f")
-		(property "Reference" "R603"
+		(property "Reference" "R3"
 			(at 147.32 68.4995 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3943,17 +3943,6 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 147.32 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DigikeyPN" "N/A"
 			(at 147.32 106.68 0)
 			(hide yes)
 			(show_name no)
