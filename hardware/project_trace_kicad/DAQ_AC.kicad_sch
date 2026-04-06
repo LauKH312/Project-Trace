@@ -9536,7 +9536,7 @@
 		(fields_autoplaced yes)
 		(uuid "037af4fd-2e02-48a9-8e8c-140cbd9f8b9d")
 		(property "Reference" "R305"
-			(at 39.37 56.1846 90)
+			(at 39.37 54.017 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9546,7 +9546,7 @@
 			)
 		)
 		(property "Value" "330R"
-			(at 39.37 58.3522 90)
+			(at 39.37 56.1846 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9591,6 +9591,16 @@
 		(property "DigikeyPN" "YAG1638CT-ND"
 			(at 39.37 60.96 90)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Extra" "0.1%"
+			(at 39.37 58.3522 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11864,7 +11874,7 @@
 		(fields_autoplaced yes)
 		(uuid "46c53baf-b3d8-47be-8835-19fd8de4e284")
 		(property "Reference" "R304"
-			(at 39.37 29.5146 90)
+			(at 39.37 27.347 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11874,7 +11884,7 @@
 			)
 		)
 		(property "Value" "330R"
-			(at 39.37 31.6822 90)
+			(at 39.37 29.5146 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11919,6 +11929,16 @@
 		(property "DigikeyPN" "YAG1638CT-ND"
 			(at 39.37 34.29 90)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Extra" "0.1%"
+			(at 39.37 31.6822 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19314,6 +19334,7 @@
 	(symbol
 		(lib_id "Device:C_Small")
 		(at 114.3 59.69 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -19321,10 +19342,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "f774a92e-0a30-491c-a457-8e3ec7a388fe")
 		(property "Reference" "C317"
-			(at 116.6241 58.6125 0)
+			(at 111.9759 58.6125 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19335,7 +19355,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 116.6241 60.7801 0)
+			(at 111.9759 60.7801 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

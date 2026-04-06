@@ -63,16 +63,6 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 54.61) (xy 120.65 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2f8c24b9-fe4f-4b27-b1d0-d4489e3589d0")
-	)
-	(wire
-		(pts
 			(xy 146.05 98.425) (xy 146.05 115.57)
 		)
 		(stroke
@@ -611,26 +601,6 @@
 				(justify left top)
 			)
 		)
-		(pin "Ammeter.EN" input
-			(at 82.55 54.61 0)
-			(uuid "58daeada-b3bc-410d-97cb-e7e1b867806b")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "Voltmeter.EN" input
-			(at 82.55 52.07 0)
-			(uuid "9eab2f63-aedc-4abd-8229-ff92f460d2f6")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "-20dBAtten.~{EN}" input
 			(at 82.55 68.58 0)
 			(uuid "03ac05c6-1a2e-4b5e-be46-3ecac929b737")
@@ -681,9 +651,19 @@
 				(justify right)
 			)
 		)
+		(pin "VOLT{slash}~{AMP}" input
+			(at 82.55 52.07 0)
+			(uuid "0520908b-1827-4aa9-b7d5-57bab3c6fa05")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(pin "ACCouple.~{EN}" input
 			(at 82.55 58.42 0)
-			(uuid "5f4ba9b7-a5c9-4f21-93ca-213338e1a975")
+			(uuid "77451dd4-85c0-465d-889f-46529450fc70")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -991,16 +971,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-			)
-		)
-		(pin "A.meter" output
-			(at 120.65 54.61 180)
-			(uuid "947e4ca9-229b-4554-ac43-f9748ee2fbee")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "ACCouple" output

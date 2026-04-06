@@ -6340,6 +6340,12 @@
 		(uuid "69420e8f-31b1-4f14-bfe5-43319ca410e4")
 	)
 	(junction
+		(at 67.31 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6e14fa96-4f5f-4f77-afe3-52a763a5f071")
+	)
+	(junction
 		(at 129.54 167.64)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7117,7 +7123,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 30.48) (xy 116.84 30.48)
+			(xy 102.87 30.48) (xy 116.84 30.48)
 		)
 		(stroke
 			(width 0)
@@ -7237,7 +7243,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 69.85) (xy 124.46 68.58)
+			(xy 124.46 71.12) (xy 124.46 68.58)
 		)
 		(stroke
 			(width 0)
@@ -7777,7 +7783,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 39.37) (xy 124.46 38.1)
+			(xy 124.46 38.1) (xy 124.46 41.91)
 		)
 		(stroke
 			(width 0)
@@ -8117,7 +8123,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 69.85) (xy 124.46 69.85)
+			(xy 123.19 71.12) (xy 124.46 71.12)
 		)
 		(stroke
 			(width 0)
@@ -8164,6 +8170,16 @@
 			(type default)
 		)
 		(uuid "ab260c85-e190-469e-adb2-6da48e6e8348")
+	)
+	(wire
+		(pts
+			(xy 67.31 30.48) (xy 67.31 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab53eeaa-f6e0-4eb1-9544-76ad48f75653")
 	)
 	(wire
 		(pts
@@ -8464,6 +8480,16 @@
 			(type default)
 		)
 		(uuid "cc031695-b858-43e9-bd91-c872e7d8e2ae")
+	)
+	(wire
+		(pts
+			(xy 102.87 41.91) (xy 124.46 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cdf046a3-7081-4154-99ee-29a0d0be6d95")
 	)
 	(wire
 		(pts
@@ -8827,16 +8853,6 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 39.37) (xy 123.19 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fbbb93ba-43c3-429f-b872-e4500289550f")
-	)
-	(wire
-		(pts
 			(xy 107.95 96.52) (xy 111.76 96.52)
 		)
 		(stroke
@@ -8885,6 +8901,16 @@
 		)
 		(uuid "0438afde-9204-4cde-8d14-9b333871a114")
 	)
+	(label "Ammeter.EN"
+		(at 102.87 41.91 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "11e49be9-01d3-4f9c-b60c-87dd01b4abed")
+	)
 	(label "Ammeter.In"
 		(at 85.09 119.38 180)
 		(effects
@@ -8896,7 +8922,7 @@
 		(uuid "2cdca561-cc6d-415e-a684-549ee219b06a")
 	)
 	(label "Ammeter.In"
-		(at 105.41 30.48 0)
+		(at 102.87 30.48 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8956,17 +8982,6 @@
 		)
 		(uuid "0475c097-a244-480a-bf67-d5dff51836ba")
 	)
-	(hierarchical_label "Ammeter.EN"
-		(shape input)
-		(at 123.19 39.37 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "2ef9cef9-a3cb-41ab-bc80-b2819494cf68")
-	)
 	(hierarchical_label "-40dBAtten.~{EN}"
 		(shape input)
 		(at 132.08 124.46 0)
@@ -9000,17 +9015,6 @@
 		)
 		(uuid "58942ab0-ba43-4aac-a3f0-0ae86493a5c0")
 	)
-	(hierarchical_label "Voltmeter.EN"
-		(shape input)
-		(at 123.19 69.85 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "5b86f327-0616-4b68-accb-cff9f85d1c95")
-	)
 	(hierarchical_label "Signal.Out"
 		(shape output)
 		(at 260.35 66.04 0)
@@ -9033,7 +9037,18 @@
 		)
 		(uuid "c3923435-759f-457a-a665-292a8ba254ba")
 	)
-	(hierarchical_label "Voltmeter.EN"
+	(hierarchical_label "VOLT{slash}~{AMP}"
+		(shape input)
+		(at 123.19 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ec2b835d-3235-4726-9f5d-f68796f3ae8a")
+	)
+	(hierarchical_label "VOLT{slash}~{AMP}"
 		(shape input)
 		(at 55.88 50.8 180)
 		(effects
@@ -9967,6 +9982,17 @@
 			)
 		)
 		(property "Description" "Dual schmitt inverter, VCC from 1.65 to 5.5 V, SOT-23"
+			(at 67.31 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "296-13010-1-ND"
 			(at 67.31 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -12008,6 +12034,84 @@
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9b26f668-c4b4-4b55-bc2a-8936f081d498"
 					(reference "U204")
 					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 67.31 30.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "54b2c9fe-0db3-4874-b259-b0747cbc7ec9")
+		(property "Reference" "#PWR0233"
+			(at 67.31 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 67.31 26.4752 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 67.31 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 67.31 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 67.31 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "962b9765-26d6-4e50-aae6-82397c8b53d1")
+		)
+		(instances
+			(project "project_trace_kicad"
+				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9b26f668-c4b4-4b55-bc2a-8936f081d498"
+					(reference "#PWR0233")
+					(unit 1)
 				)
 			)
 		)
