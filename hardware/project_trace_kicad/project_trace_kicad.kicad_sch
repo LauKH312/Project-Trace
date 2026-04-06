@@ -63,7 +63,7 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 98.425) (xy 146.05 115.57)
+			(xy 146.05 101.6) (xy 146.05 115.57)
 		)
 		(stroke
 			(width 0)
@@ -73,7 +73,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 95.25) (xy 120.65 95.25)
+			(xy 109.22 96.52) (xy 120.65 96.52)
 		)
 		(stroke
 			(width 0)
@@ -83,7 +83,7 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 86.995) (xy 186.69 105.41)
+			(xy 186.69 86.36) (xy 186.69 105.41)
 		)
 		(stroke
 			(width 0)
@@ -133,7 +133,7 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 86.995) (xy 194.31 113.03)
+			(xy 194.31 86.36) (xy 194.31 113.03)
 		)
 		(stroke
 			(width 0)
@@ -153,7 +153,7 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 86.995) (xy 196.85 115.57)
+			(xy 196.85 86.36) (xy 196.85 115.57)
 		)
 		(stroke
 			(width 0)
@@ -163,7 +163,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.735 81.28) (xy 171.45 81.28)
+			(xy 165.1 81.28) (xy 171.45 81.28)
 		)
 		(stroke
 			(width 0)
@@ -173,7 +173,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.735 73.66) (xy 171.45 73.66)
+			(xy 165.1 73.66) (xy 171.45 73.66)
 		)
 		(stroke
 			(width 0)
@@ -183,7 +183,7 @@
 	)
 	(wire
 		(pts
-			(xy 191.77 86.995) (xy 191.77 110.49)
+			(xy 191.77 86.36) (xy 191.77 110.49)
 		)
 		(stroke
 			(width 0)
@@ -223,7 +223,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.735 66.04) (xy 171.45 66.04)
+			(xy 165.1 66.04) (xy 171.45 66.04)
 		)
 		(stroke
 			(width 0)
@@ -253,7 +253,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 86.995) (xy 184.15 102.87)
+			(xy 184.15 86.36) (xy 184.15 102.87)
 		)
 		(stroke
 			(width 0)
@@ -293,7 +293,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.735 71.12) (xy 171.45 71.12)
+			(xy 165.1 71.12) (xy 171.45 71.12)
 		)
 		(stroke
 			(width 0)
@@ -303,7 +303,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.735 68.58) (xy 171.45 68.58)
+			(xy 165.1 68.58) (xy 171.45 68.58)
 		)
 		(stroke
 			(width 0)
@@ -343,7 +343,7 @@
 	)
 	(wire
 		(pts
-			(xy 189.23 86.995) (xy 189.23 107.95)
+			(xy 189.23 86.36) (xy 189.23 107.95)
 		)
 		(stroke
 			(width 0)
@@ -419,7 +419,7 @@
 	)
 	(sheet
 		(at 171.45 63.5)
-		(size 31.75 23.495)
+		(size 31.75 22.86)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -506,7 +506,7 @@
 			)
 		)
 		(pin "SW1" output
-			(at 196.85 86.995 270)
+			(at 196.85 86.36 270)
 			(uuid "286a9d5a-7867-4b41-8500-2dc8158025e9")
 			(effects
 				(font
@@ -516,7 +516,7 @@
 			)
 		)
 		(pin "SW2" output
-			(at 194.31 86.995 270)
+			(at 194.31 86.36 270)
 			(uuid "228b125b-9cd0-4c1f-aa53-7fd053abc21b")
 			(effects
 				(font
@@ -526,7 +526,7 @@
 			)
 		)
 		(pin "SW3.A" output
-			(at 191.77 86.995 270)
+			(at 191.77 86.36 270)
 			(uuid "8d9c4526-0ad7-43f0-ad2f-0c18b9ab6af8")
 			(effects
 				(font
@@ -536,7 +536,7 @@
 			)
 		)
 		(pin "SW3.B" output
-			(at 189.23 86.995 270)
+			(at 189.23 86.36 270)
 			(uuid "74c65591-2b71-496d-993f-c59ccc0546ba")
 			(effects
 				(font
@@ -546,7 +546,7 @@
 			)
 		)
 		(pin "SW4.A" output
-			(at 186.69 86.995 270)
+			(at 186.69 86.36 270)
 			(uuid "aad7877c-a493-4908-a1a1-75fbd2612fb5")
 			(effects
 				(font
@@ -556,7 +556,7 @@
 			)
 		)
 		(pin "SW4.B" output
-			(at 184.15 86.995 270)
+			(at 184.15 86.36 270)
 			(uuid "1f21f1dc-9680-4c8d-9af4-fd32e68c0e1d")
 			(effects
 				(font
@@ -777,16 +777,6 @@
 				(justify right)
 			)
 		)
-		(pin "~{RESET}" input
-			(at 109.22 78.74 0)
-			(uuid "fb3d5a79-6db5-4a4c-98b2-a5b435137f91")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "CLK.BAC" input
 			(at 109.22 99.06 0)
 			(uuid "6a25f319-28d9-42b5-b2a9-04004f5baeb9")
@@ -798,7 +788,7 @@
 			)
 		)
 		(pin "CLK.EN" input
-			(at 109.22 95.25 0)
+			(at 109.22 96.52 0)
 			(uuid "d7e786bb-4fca-4ea5-ad53-10400cde1846")
 			(effects
 				(font
@@ -817,7 +807,7 @@
 	)
 	(sheet
 		(at 120.65 47.625)
-		(size 45.085 53.975)
+		(size 44.45 53.975)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -954,7 +944,7 @@
 			)
 		)
 		(pin "Disp.DC" output
-			(at 165.735 66.04 0)
+			(at 165.1 66.04 0)
 			(uuid "b59d47aa-90dd-48b2-8988-699e77dc69bb")
 			(effects
 				(font
@@ -964,7 +954,7 @@
 			)
 		)
 		(pin "Disp.RES" output
-			(at 165.735 71.12 0)
+			(at 165.1 71.12 0)
 			(uuid "aa63a597-a0ec-4099-a6cb-855b19f9a51f")
 			(effects
 				(font
@@ -974,7 +964,7 @@
 			)
 		)
 		(pin "Disp.~{CS}" output
-			(at 165.735 73.66 0)
+			(at 165.1 73.66 0)
 			(uuid "b9b28f5f-93b6-4960-9498-5334b5c3e724")
 			(effects
 				(font
@@ -984,7 +974,7 @@
 			)
 		)
 		(pin "SPI3.MOSI" output
-			(at 165.735 68.58 0)
+			(at 165.1 68.58 0)
 			(uuid "42d5d396-dfd3-4cc4-bf97-334ee1f263d6")
 			(effects
 				(font
@@ -994,63 +984,13 @@
 			)
 		)
 		(pin "SPI3.SCK" output
-			(at 165.735 81.28 0)
+			(at 165.1 81.28 0)
 			(uuid "ff157d79-0644-4cac-845d-c1b74aff18d1")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
-			)
-		)
-		(pin "ACCouple" output
-			(at 120.65 58.42 180)
-			(uuid "66ab7cfb-6ec8-44d7-8088-f30cc71aa514")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "Rang.1" output
-			(at 120.65 62.23 180)
-			(uuid "419d9b12-6e70-4a2f-8f9e-5413b5c46b82")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "Rang.2" output
-			(at 120.65 66.04 180)
-			(uuid "615dedb7-7f7e-4cee-ac40-6df367e70512")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "Rang.3" output
-			(at 120.65 68.58 180)
-			(uuid "cd21e3d7-3f7c-4154-952e-b5b423db6748")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "Rang.4" output
-			(at 120.65 71.12 180)
-			(uuid "690351fc-1b4e-458a-a492-6e4c92d8dee9")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "V.meter" output
@@ -1074,8 +1014,58 @@
 			)
 		)
 		(pin "CLK.EN" output
-			(at 120.65 95.25 180)
+			(at 120.65 96.52 180)
 			(uuid "0443d35a-c7e0-4049-ad0b-ec45d90c7bd1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "ACCouple.~{EN}" output
+			(at 120.65 58.42 180)
+			(uuid "146c9a32-4608-4ee4-a12a-4b61c4974154")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Range.Att.~{0dB}" output
+			(at 120.65 66.04 180)
+			(uuid "441388d5-a958-4109-af3b-1036169548fc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Range.Att.~{20dB}" output
+			(at 120.65 68.58 180)
+			(uuid "5d583466-3d59-458b-82c6-2c7c6a121116")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Range.Att.~{40dB}" output
+			(at 120.65 71.12 180)
+			(uuid "7c590645-e117-4e15-833f-2b66827d5884")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Range.Gain.~{20dB}" output
+			(at 120.65 62.23 180)
+			(uuid "e788d538-4c1c-4701-bcc8-0f387b5ef83e")
 			(effects
 				(font
 					(size 1.27 1.27)

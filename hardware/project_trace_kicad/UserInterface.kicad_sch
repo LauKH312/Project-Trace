@@ -2624,6 +2624,14 @@
 		(color 0 0 0 0)
 		(uuid "f015cd8a-42ef-4e68-b77f-b6d07e36ec66")
 	)
+	(no_connect
+		(at 102.87 100.33)
+		(uuid "38177cb9-9e7f-4514-b962-fa9d3d0211d1")
+	)
+	(no_connect
+		(at 69.85 100.33)
+		(uuid "fb61256d-8a4d-4e40-a107-a2f47c80129a")
+	)
 	(wire
 		(pts
 			(xy 119.38 114.3) (xy 147.32 114.3)
@@ -3587,7 +3595,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "21ad42b3-dc95-401f-9c38-205b0d43df9f")
-		(property "Reference" "R3"
+		(property "Reference" "R603"
 			(at 147.32 68.4995 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3649,7 +3657,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
-					(reference "R3")
+					(reference "R603")
 					(unit 1)
 				)
 			)
@@ -3667,7 +3675,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4396898a-a245-4cd0-9cd8-8ab6bdff6820")
-		(property "Reference" "J602"
+		(property "Reference" "J601"
 			(at 75.184 98.806 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3778,7 +3786,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
-					(reference "J602")
+					(reference "J601")
 					(unit 1)
 				)
 			)
@@ -3796,7 +3804,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4b15b17f-e388-4dea-987c-dd325977a4b4")
-		(property "Reference" "SW2"
+		(property "Reference" "SW602"
 			(at 164.846 111.8757 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3858,7 +3866,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
-					(reference "SW2")
+					(reference "SW602")
 					(unit 1)
 				)
 			)
@@ -3876,7 +3884,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5f0422f3-ada4-4bbe-b32f-aae7013ca644")
-		(property "Reference" "R600"
+		(property "Reference" "R605"
 			(at 149.098 105.4678 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3940,7 +3948,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
-					(reference "R600")
+					(reference "R605")
 					(unit 1)
 				)
 			)
@@ -3958,7 +3966,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6554a788-8091-4480-8081-4d1901de22d2")
-		(property "Reference" "R604"
+		(property "Reference" "R602"
 			(at 147.32 59.6095 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4020,7 +4028,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
-					(reference "R604")
+					(reference "R602")
 					(unit 1)
 				)
 			)
@@ -4038,7 +4046,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7a2bdf52-6889-402f-b9c6-9f4f1332044e")
-		(property "Reference" "R602"
+		(property "Reference" "R604"
 			(at 147.32 87.5495 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4100,7 +4108,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
-					(reference "R602")
+					(reference "R604")
 					(unit 1)
 				)
 			)
@@ -4118,7 +4126,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8dc3aed1-ef85-407e-97c1-9f094b54130c")
-		(property "Reference" "SW3"
+		(property "Reference" "SW603"
 			(at 170.942 52.1278 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4185,7 +4193,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
-					(reference "SW3")
+					(reference "SW603")
 					(unit 1)
 				)
 			)
@@ -4203,7 +4211,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9a253534-7221-4d70-8aaa-e6bdb0890fa8")
-		(property "Reference" "R601"
+		(property "Reference" "R606"
 			(at 149.098 119.3222 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4267,7 +4275,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
-					(reference "R601")
+					(reference "R606")
 					(unit 1)
 				)
 			)
@@ -4285,7 +4293,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a05f8374-3fe7-4c9e-8caa-118423d9ec33")
-		(property "Reference" "SW4"
+		(property "Reference" "SW604"
 			(at 170.942 81.3378 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4352,7 +4360,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
-					(reference "SW4")
+					(reference "SW604")
 					(unit 1)
 				)
 			)
@@ -4370,7 +4378,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a75676e6-177d-4b90-ab77-f36557aca135")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR0601"
 			(at 52.07 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -4430,7 +4438,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
-					(reference "#PWR07")
+					(reference "#PWR0601")
 					(unit 1)
 				)
 			)
@@ -4448,7 +4456,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "aa5ea136-9e44-487d-b5b8-889488565e40")
-		(property "Reference" "R605"
+		(property "Reference" "R601"
 			(at 147.32 39.2895 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4510,7 +4518,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
-					(reference "R605")
+					(reference "R601")
 					(unit 1)
 				)
 			)
@@ -4528,7 +4536,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dbc7275a-b607-4dd1-9b71-2be5b106e051")
-		(property "Reference" "J601"
+		(property "Reference" "J602"
 			(at 98.425 137.5707 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4637,7 +4645,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
-					(reference "J601")
+					(reference "J602")
 					(unit 1)
 				)
 			)
@@ -4656,7 +4664,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e86dfb04-af57-4409-ba8b-4a82a3f7e0f2")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR0602"
 			(at 68.58 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -4716,7 +4724,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
-					(reference "#PWR06")
+					(reference "#PWR0602")
 					(unit 1)
 				)
 			)
@@ -4733,7 +4741,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f21c6b21-744c-4288-90a5-3e8ae99dcab4")
-		(property "Reference" "U1"
+		(property "Reference" "U601"
 			(at 123.19 139.192 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4812,7 +4820,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
-					(reference "U1")
+					(reference "U601")
 					(unit 1)
 				)
 			)
@@ -4829,7 +4837,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fe920d68-fb34-40c2-92f0-76cbd64e7c5e")
-		(property "Reference" "SW1"
+		(property "Reference" "SW601"
 			(at 165.354 99.1757 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4891,7 +4899,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9647d892-1f14-4449-8bb1-1c7676664973"
-					(reference "SW1")
+					(reference "SW601")
 					(unit 1)
 				)
 			)

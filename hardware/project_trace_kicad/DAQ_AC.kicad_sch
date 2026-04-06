@@ -9,1992 +9,6 @@
 		(comment 1 "Laurits K. Hillemann")
 	)
 	(lib_symbols
-		(symbol "ADS1602_1"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 -1.778 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "ADS1602"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "ProjectTraceFootprints:LQFP-48_7x7_Pitch0.5mm - PFB0048A"
-				(at 0 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/ads1602.pdf"
-				(at 0 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "ADS1602_1_1_1"
-				(polyline
-					(pts
-						(xy -7.62 7.62) (xy 10.16 7.62) (xy 10.16 -7.62) (xy -7.62 -7.62) (xy -12.7 0) (xy -7.62 7.62)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin input line
-					(at -12.7 -3.81 0)
-					(length 2.54)
-					(name "AINN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -12.7 3.81 0)
-					(length 2.54)
-					(name "AINP"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 -5.08 180)
-					(length 2.54)
-					(name "VREFN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "44"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 -2.54 180)
-					(length 2.54)
-					(name "VREFN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "45"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 0 180)
-					(length 2.54)
-					(name "VMID"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "46"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 2.54 180)
-					(length 2.54)
-					(name "VREFP"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "47"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 5.08 180)
-					(length 2.54)
-					(name "VREFP"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "48"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "ADS1602_1_2_1"
-				(rectangle
-					(start -11.43 19.05)
-					(end 11.43 -19.05)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin passive line
-					(at 13.97 -13.97 180)
-					(length 2.54)
-					(name "RBIAS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -13.97 5.08 0)
-					(length 2.54)
-					(name "~{REF.EN}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -13.97 -3.81 0)
-					(length 2.54)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -13.97 16.51 0)
-					(length 2.54)
-					(name "RPULLUP"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -13.97 -6.35 0)
-					(length 2.54)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -13.97 10.16 0)
-					(length 2.54)
-					(name "~{PD}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -13.97 7.62 0)
-					(length 2.54)
-					(name "~{RESET}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "20"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 13.97 16.51 180)
-					(length 2.54)
-					(name "SYNC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "20"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at -13.97 12.7 0)
-					(length 2.54)
-					(name "OTR"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "21"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -13.97 -8.89 0)
-					(length 2.54)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "24"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -13.97 -11.43 0)
-					(length 2.54)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "25"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -13.97 -13.97 0)
-					(length 2.54)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "26"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 13.97 12.7 180)
-					(length 2.54)
-					(name "~{SCLK}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "27"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 13.97 10.16 180)
-					(length 2.54)
-					(name "SCLK"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "28"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 13.97 6.35 180)
-					(length 2.54)
-					(name "~{DOUT}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "29"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 13.97 3.81 180)
-					(length 2.54)
-					(name "DOUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "30"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 13.97 0 180)
-					(length 2.54)
-					(name "~{FSO}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "31"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 13.97 -2.54 180)
-					(length 2.54)
-					(name "FSO"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "32"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -13.97 -16.51 0)
-					(length 2.54)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "35"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 13.97 -6.35 180)
-					(length 2.54)
-					(name "CLK"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "40"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 13.97 -16.51 180)
-					(length 2.54)
-					(name "VCAP"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "43"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "ADS1602_1_3_1"
-				(rectangle
-					(start -8.89 17.78)
-					(end 8.89 -17.78)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin power_in line
-					(at -11.43 0 0)
-					(length 2.54)
-					(name "AGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 15.24 0)
-					(length 2.54)
-					(name "AVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 -2.54 0)
-					(length 2.54)
-					(name "AGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 -5.08 0)
-					(length 2.54)
-					(name "AGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 12.7 0)
-					(length 2.54)
-					(name "AVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 -7.62 0)
-					(length 2.54)
-					(name "AGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 10.16 0)
-					(length 2.54)
-					(name "AVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 -10.16 0)
-					(length 2.54)
-					(name "AGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 7.62 0)
-					(length 2.54)
-					(name "AVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 11.43 10.16 180)
-					(length 2.54)
-					(name "DVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "18"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 11.43 -5.08 180)
-					(length 2.54)
-					(name "DGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "19"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 11.43 -7.62 180)
-					(length 2.54)
-					(name "DGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "22"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 11.43 7.62 180)
-					(length 2.54)
-					(name "DVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "23"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 11.43 -10.16 180)
-					(length 2.54)
-					(name "DGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "33"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 11.43 5.08 180)
-					(length 2.54)
-					(name "DVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "34"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 11.43 -12.7 180)
-					(length 2.54)
-					(name "DGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "36"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 11.43 15.24 180)
-					(length 2.54)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "37"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 11.43 -15.24 180)
-					(length 2.54)
-					(name "DGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "38"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 -12.7 0)
-					(length 2.54)
-					(name "AGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "39"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 -15.24 0)
-					(length 2.54)
-					(name "AGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "41"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 5.08 0)
-					(length 2.54)
-					(name "AVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "42"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "ADS1602_2"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 -1.778 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "ADS1602"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "ProjectTraceFootprints:LQFP-48_7x7_Pitch0.5mm - PFB0048A"
-				(at 0 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/ads1602.pdf"
-				(at 0 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "ADS1602_2_1_1"
-				(polyline
-					(pts
-						(xy -7.62 7.62) (xy 10.16 7.62) (xy 10.16 -7.62) (xy -7.62 -7.62) (xy -12.7 0) (xy -7.62 7.62)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin input line
-					(at -12.7 -3.81 0)
-					(length 2.54)
-					(name "AINN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -12.7 3.81 0)
-					(length 2.54)
-					(name "AINP"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 -5.08 180)
-					(length 2.54)
-					(name "VREFN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "44"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 -2.54 180)
-					(length 2.54)
-					(name "VREFN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "45"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 0 180)
-					(length 2.54)
-					(name "VMID"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "46"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 2.54 180)
-					(length 2.54)
-					(name "VREFP"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "47"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 5.08 180)
-					(length 2.54)
-					(name "VREFP"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "48"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "ADS1602_2_2_1"
-				(rectangle
-					(start -11.43 19.05)
-					(end 11.43 -19.05)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin passive line
-					(at 13.97 -13.97 180)
-					(length 2.54)
-					(name "RBIAS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -13.97 5.08 0)
-					(length 2.54)
-					(name "~{REF.EN}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -13.97 -3.81 0)
-					(length 2.54)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -13.97 16.51 0)
-					(length 2.54)
-					(name "RPULLUP"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -13.97 -6.35 0)
-					(length 2.54)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -13.97 10.16 0)
-					(length 2.54)
-					(name "~{PD}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -13.97 7.62 0)
-					(length 2.54)
-					(name "~{RESET}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "20"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 13.97 16.51 180)
-					(length 2.54)
-					(name "SYNC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "20"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at -13.97 12.7 0)
-					(length 2.54)
-					(name "OTR"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "21"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -13.97 -8.89 0)
-					(length 2.54)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "24"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -13.97 -11.43 0)
-					(length 2.54)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "25"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -13.97 -13.97 0)
-					(length 2.54)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "26"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 13.97 12.7 180)
-					(length 2.54)
-					(name "~{SCLK}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "27"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 13.97 10.16 180)
-					(length 2.54)
-					(name "SCLK"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "28"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 13.97 6.35 180)
-					(length 2.54)
-					(name "~{DOUT}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "29"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 13.97 3.81 180)
-					(length 2.54)
-					(name "DOUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "30"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 13.97 0 180)
-					(length 2.54)
-					(name "~{FSO}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "31"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 13.97 -2.54 180)
-					(length 2.54)
-					(name "FSO"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "32"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -13.97 -16.51 0)
-					(length 2.54)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "35"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 13.97 -6.35 180)
-					(length 2.54)
-					(name "CLK"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "40"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 13.97 -16.51 180)
-					(length 2.54)
-					(name "VCAP"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "43"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "ADS1602_2_3_1"
-				(rectangle
-					(start -8.89 17.78)
-					(end 8.89 -17.78)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin power_in line
-					(at -11.43 0 0)
-					(length 2.54)
-					(name "AGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 15.24 0)
-					(length 2.54)
-					(name "AVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 -2.54 0)
-					(length 2.54)
-					(name "AGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 -5.08 0)
-					(length 2.54)
-					(name "AGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 12.7 0)
-					(length 2.54)
-					(name "AVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 -7.62 0)
-					(length 2.54)
-					(name "AGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 10.16 0)
-					(length 2.54)
-					(name "AVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 -10.16 0)
-					(length 2.54)
-					(name "AGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 7.62 0)
-					(length 2.54)
-					(name "AVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 11.43 10.16 180)
-					(length 2.54)
-					(name "DVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "18"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 11.43 -5.08 180)
-					(length 2.54)
-					(name "DGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "19"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 11.43 -7.62 180)
-					(length 2.54)
-					(name "DGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "22"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 11.43 7.62 180)
-					(length 2.54)
-					(name "DVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "23"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 11.43 -10.16 180)
-					(length 2.54)
-					(name "DGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "33"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 11.43 5.08 180)
-					(length 2.54)
-					(name "DVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "34"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 11.43 -12.7 180)
-					(length 2.54)
-					(name "DGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "36"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 11.43 15.24 180)
-					(length 2.54)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "37"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 11.43 -15.24 180)
-					(length 2.54)
-					(name "DGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "38"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 -12.7 0)
-					(length 2.54)
-					(name "AGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "39"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 -15.24 0)
-					(length 2.54)
-					(name "AGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "41"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 5.08 0)
-					(length 2.54)
-					(name "AVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "42"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Connector:TestPoint"
 			(pin_numbers
 				(hide yes)
@@ -3637,24 +1651,6 @@
 					)
 				)
 				(pin input line
-					(at -13.97 7.62 0)
-					(length 2.54)
-					(name "~{RESET}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "20"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
 					(at 13.97 16.51 180)
 					(length 2.54)
 					(name "SYNC"
@@ -4331,7 +2327,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "ProjectTraceFootprints:SOIC-14_3.9x8.7mm_P1.27mm_Handsolder"
 				(at -1.27 2.54 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4353,7 +2349,7 @@
 					)
 				)
 			)
-			(property "Description" "Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14"
+			(property "Description" "Low-Power, Quad-Operational Amplifiers"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -6441,6 +4437,12 @@
 		(uuid "5e252752-8848-456b-a762-c8558d0c595d")
 	)
 	(junction
+		(at 154.94 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5f9b377f-e4c3-4cc2-a5fe-50d98b33b25e")
+	)
+	(junction
 		(at 118.11 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6463,6 +4465,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "72b9812d-bff7-4617-bdf8-33ee6a63fc75")
+	)
+	(junction
+		(at 201.93 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "778557f1-3a48-45f6-87a3-c54d99f4494f")
 	)
 	(junction
 		(at 76.2 127)
@@ -6876,7 +4884,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 124.46) (xy 205.74 124.46)
+			(xy 200.66 124.46) (xy 201.93 124.46)
 		)
 		(stroke
 			(width 0)
@@ -6903,16 +4911,6 @@
 			(type default)
 		)
 		(uuid "10d13d9a-d825-47a0-9973-7aea3732d291")
-	)
-	(wire
-		(pts
-			(xy 53.34 55.88) (xy 53.34 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "119bcdbe-6a77-4608-a66e-f24b492e4ae7")
 	)
 	(wire
 		(pts
@@ -7103,6 +5101,16 @@
 			(type default)
 		)
 		(uuid "212c8ecc-b72b-4f56-a35a-272927f3e994")
+	)
+	(wire
+		(pts
+			(xy 201.93 124.46) (xy 201.93 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21955f31-d120-4cd4-8920-1f032902e1b5")
 	)
 	(wire
 		(pts
@@ -7726,16 +5734,6 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 40.64) (xy 185.42 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "60327186-224b-4e69-b88f-2834da4ad6b7")
-	)
-	(wire
-		(pts
 			(xy 58.42 60.96) (xy 66.04 60.96)
 		)
 		(stroke
@@ -7866,6 +5864,16 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 113.03) (xy 160.02 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70789454-c65f-472e-a0bd-ec81555d466b")
+	)
+	(wire
+		(pts
 			(xy 50.8 100.33) (xy 50.8 101.6)
 		)
 		(stroke
@@ -7933,6 +5941,16 @@
 			(type default)
 		)
 		(uuid "7634cc7f-1672-4496-839e-8fb380806179")
+	)
+	(wire
+		(pts
+			(xy 201.93 124.46) (xy 205.74 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "764d1974-d118-4efc-9249-7f362679b344")
 	)
 	(wire
 		(pts
@@ -8426,6 +6444,16 @@
 	)
 	(wire
 		(pts
+			(xy 53.34 55.88) (xy 53.34 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae944644-437f-40d1-ae0c-2cb8e9b7eae9")
+	)
+	(wire
+		(pts
 			(xy 133.35 52.07) (xy 133.35 53.34)
 		)
 		(stroke
@@ -8473,16 +6501,6 @@
 			(type default)
 		)
 		(uuid "b21487a9-1bb8-4656-bd50-5530f53d9361")
-	)
-	(wire
-		(pts
-			(xy 139.7 165.1) (xy 142.24 165.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b2807cd4-c12c-458c-bf9a-6c045f5fe945")
 	)
 	(wire
 		(pts
@@ -8636,6 +6654,16 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 113.03) (xy 154.94 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c13c6366-f4f6-4757-8e12-f394c5841d2f")
+	)
+	(wire
+		(pts
 			(xy 33.02 60.96) (xy 33.02 71.12)
 		)
 		(stroke
@@ -8756,7 +6784,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 55.88) (xy 53.34 55.88)
+			(xy 55.88 55.88) (xy 53.34 55.88)
 		)
 		(stroke
 			(width 0)
@@ -9016,7 +7044,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 113.03) (xy 160.02 113.03)
+			(xy 149.86 113.03) (xy 154.94 113.03)
 		)
 		(stroke
 			(width 0)
@@ -9113,6 +7141,16 @@
 			(type default)
 		)
 		(uuid "ef081acf-429e-41de-9fb7-1f2ea11ae0e1")
+	)
+	(wire
+		(pts
+			(xy 55.88 55.88) (xy 55.88 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef0ba188-4e0b-4864-aaae-55cdd7076d25")
 	)
 	(wire
 		(pts
@@ -9345,17 +7383,6 @@
 		)
 		(uuid "15b4a203-434f-4b07-b2c0-efb890a12154")
 	)
-	(hierarchical_label "~{RESET}"
-		(shape input)
-		(at 184.15 40.64 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "2145dabb-6197-4675-8d82-8a8f119210c4")
-	)
 	(hierarchical_label "DOUT"
 		(shape output)
 		(at 214.63 44.45 0)
@@ -9433,7 +7460,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "03700a17-f50e-4a1e-a295-d3b821614a09")
-		(property "Reference" "R307"
+		(property "Reference" "R304"
 			(at 54.61 63.8724 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9516,7 +7543,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "R307")
+					(reference "R304")
 					(unit 1)
 				)
 			)
@@ -9535,7 +7562,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "037af4fd-2e02-48a9-8e8c-140cbd9f8b9d")
-		(property "Reference" "R305"
+		(property "Reference" "R302"
 			(at 39.37 54.017 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9618,7 +7645,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "R305")
+					(reference "R302")
 					(unit 1)
 				)
 			)
@@ -9715,7 +7742,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "06d653d4-28f2-4aee-bb71-e4729556310e")
-		(property "Reference" "R306"
+		(property "Reference" "R303"
 			(at 52.07 27.347 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9798,7 +7825,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "R306")
+					(reference "R303")
 					(unit 1)
 				)
 			)
@@ -9920,7 +7947,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0d718b10-d6ef-4048-b3c1-20a6a222de25")
-		(property "Reference" "#PWR0316"
+		(property "Reference" "#PWR0314"
 			(at 86.36 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -9981,7 +8008,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0316")
+					(reference "#PWR0314")
 					(unit 1)
 				)
 			)
@@ -9999,7 +8026,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1326bf18-0436-4fcd-9fd1-f601a71cd0f1")
-		(property "Reference" "#PWR0345"
+		(property "Reference" "#PWR0308"
 			(at 50.8 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -10060,7 +8087,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0345")
+					(reference "#PWR0308")
 					(unit 1)
 				)
 			)
@@ -10078,7 +8105,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "14d10fd3-d2bd-4359-9873-40be8f7a7bef")
-		(property "Reference" "R308"
+		(property "Reference" "R305"
 			(at 71.12 29.5146 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10151,7 +8178,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "R308")
+					(reference "R305")
 					(unit 1)
 				)
 			)
@@ -10263,7 +8290,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "19e54cf5-0d17-4222-a872-79d00d345de4")
-		(property "Reference" "U302"
+		(property "Reference" "U305"
 			(at 251.46 45.2699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10342,7 +8369,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "U302")
+					(reference "U305")
 					(unit 1)
 				)
 			)
@@ -10360,7 +8387,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1c6e82f5-e6e1-4ba3-a122-877003611ca2")
-		(property "Reference" "#PWR0311"
+		(property "Reference" "#PWR0334"
 			(at 215.9 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -10421,7 +8448,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0311")
+					(reference "#PWR0334")
 					(unit 1)
 				)
 			)
@@ -10439,7 +8466,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1e58fa95-c379-4216-940e-8face6cdb4d1")
-		(property "Reference" "C325"
+		(property "Reference" "C321"
 			(at 141.1859 44.6425 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10525,7 +8552,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "C325")
+					(reference "C321")
 					(unit 1)
 				)
 			)
@@ -10544,7 +8571,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1fc34a37-be31-47f1-b14b-63d878daf187")
-		(property "Reference" "#PWR0346"
+		(property "Reference" "#PWR0347"
 			(at 264.16 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -10605,7 +8632,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0346")
+					(reference "#PWR0347")
 					(unit 1)
 				)
 			)
@@ -10623,7 +8650,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1ff8c61e-8f5b-4362-83c0-9ed2c875c30e")
-		(property "Reference" "R310"
+		(property "Reference" "R311"
 			(at 240.538 105.5962 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10719,7 +8746,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "R310")
+					(reference "R311")
 					(unit 1)
 				)
 			)
@@ -10737,7 +8764,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "22fbf7a4-7a7c-4794-8b0c-5d6976b2e8ef")
-		(property "Reference" "#PWR0327"
+		(property "Reference" "#PWR0321"
 			(at 124.46 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -10798,7 +8825,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0327")
+					(reference "#PWR0321")
 					(unit 1)
 				)
 			)
@@ -10907,7 +8934,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "29bfce47-6851-4625-94e1-0726f6f0210f")
-		(property "Reference" "#PWR0323"
+		(property "Reference" "#PWR0317"
 			(at 114.3 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -10968,7 +8995,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0323")
+					(reference "#PWR0317")
 					(unit 1)
 				)
 			)
@@ -10986,7 +9013,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2b183e5b-5cdc-4725-aac3-82448281fab1")
-		(property "Reference" "#PWR0303"
+		(property "Reference" "#PWR0330"
 			(at 182.88 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -11047,7 +9074,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0303")
+					(reference "#PWR0330")
 					(unit 1)
 				)
 			)
@@ -11169,7 +9196,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "30e5db8e-5cf9-4660-8eb8-37a3e9f0a398")
-		(property "Reference" "#PWR0330"
+		(property "Reference" "#PWR0324"
 			(at 143.51 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -11230,7 +9257,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0330")
+					(reference "#PWR0324")
 					(unit 1)
 				)
 			)
@@ -11352,7 +9379,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "32a7036d-0c2c-4f8f-be78-227b4e626a35")
-		(property "Reference" "#PWR0333"
+		(property "Reference" "#PWR0338"
 			(at 238.76 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -11412,7 +9439,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0333")
+					(reference "#PWR0338")
 					(unit 1)
 				)
 			)
@@ -11429,7 +9456,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3975cbb9-f7dd-481e-b5ab-4d97b2ef797e")
-		(property "Reference" "U306"
+		(property "Reference" "U304"
 			(at 199.9234 128.4562 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11509,7 +9536,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "U306")
+					(reference "U304")
 					(unit 1)
 				)
 			)
@@ -11528,7 +9555,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3c0c4f4b-a285-4789-91c7-831ea98caedf")
-		(property "Reference" "R303"
+		(property "Reference" "R310"
 			(at 225.298 70.0362 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11603,7 +9630,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "R303")
+					(reference "R310")
 					(unit 1)
 				)
 			)
@@ -11622,7 +9649,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "436e46a6-4e99-4eed-aec5-0acf85e06844")
-		(property "Reference" "C307"
+		(property "Reference" "C310"
 			(at 80.8991 106.8662 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11697,7 +9724,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "C307")
+					(reference "C310")
 					(unit 1)
 				)
 			)
@@ -11715,7 +9742,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "440c97dc-3c25-495c-aa34-4cf069347bd2")
-		(property "Reference" "#PWR0332"
+		(property "Reference" "#PWR0329"
 			(at 172.72 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -11776,7 +9803,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0332")
+					(reference "#PWR0329")
 					(unit 1)
 				)
 			)
@@ -11794,7 +9821,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "462a00c0-eb8b-4855-8050-d2372b70fe1e")
-		(property "Reference" "#PWR0340"
+		(property "Reference" "#PWR0303"
 			(at 38.1 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -11855,7 +9882,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0340")
+					(reference "#PWR0303")
 					(unit 1)
 				)
 			)
@@ -11873,7 +9900,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "46c53baf-b3d8-47be-8835-19fd8de4e284")
-		(property "Reference" "R304"
+		(property "Reference" "R301"
 			(at 39.37 27.347 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11956,7 +9983,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "R304")
+					(reference "R301")
 					(unit 1)
 				)
 			)
@@ -12079,7 +10106,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "49a15172-6004-4b6b-bfd7-609abd586649")
-		(property "Reference" "#PWR0304"
+		(property "Reference" "#PWR0341"
 			(at 238.76 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -12139,7 +10166,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0304")
+					(reference "#PWR0341")
 					(unit 1)
 				)
 			)
@@ -12251,7 +10278,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "50d9d03b-dda8-4b01-aa07-3c2f7995168a")
-		(property "Reference" "#PWR0326"
+		(property "Reference" "#PWR0327"
 			(at 146.05 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -12312,7 +10339,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0326")
+					(reference "#PWR0327")
 					(unit 1)
 				)
 			)
@@ -12330,7 +10357,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "53330334-c482-4fa3-9d20-ab6ba98c0ab9")
-		(property "Reference" "#PWR0341"
+		(property "Reference" "#PWR0304"
 			(at 38.1 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -12391,7 +10418,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0341")
+					(reference "#PWR0304")
 					(unit 1)
 				)
 			)
@@ -12409,7 +10436,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "54badd10-b290-4f5e-98b5-d945dc273d8c")
-		(property "Reference" "C311"
+		(property "Reference" "C309"
 			(at 82.931 65.1424 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12495,7 +10522,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "C311")
+					(reference "C309")
 					(unit 1)
 				)
 			)
@@ -12513,7 +10540,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5954802e-98a2-4269-b578-fab742b0997d")
-		(property "Reference" "#PWR0312"
+		(property "Reference" "#PWR0301"
 			(at 33.02 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -12574,7 +10601,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0312")
+					(reference "#PWR0301")
 					(unit 1)
 				)
 			)
@@ -12592,7 +10619,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5b1d0d02-c702-4e02-9a7e-08ae20822a9a")
-		(property "Reference" "#PWR0319"
+		(property "Reference" "#PWR0313"
 			(at 82.55 19.05 0)
 			(hide yes)
 			(show_name no)
@@ -12653,7 +10680,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0319")
+					(reference "#PWR0313")
 					(unit 1)
 				)
 			)
@@ -12672,7 +10699,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5c15d920-fa0b-49ad-9d26-6a9ec4b20f97")
-		(property "Reference" "R302"
+		(property "Reference" "R308"
 			(at 185.928 25.5862 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12747,7 +10774,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "R302")
+					(reference "R308")
 					(unit 1)
 				)
 			)
@@ -12765,7 +10792,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5ef32580-cdbb-4f62-9b43-d3008df860d8")
-		(property "Reference" "#PWR0348"
+		(property "Reference" "#PWR0345"
 			(at 264.16 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -12826,7 +10853,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0348")
+					(reference "#PWR0345")
 					(unit 1)
 				)
 			)
@@ -12949,7 +10976,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5ff54b6b-2130-444c-88d2-63d111c26e73")
-		(property "Reference" "#PWR0343"
+		(property "Reference" "#PWR0344"
 			(at 262.89 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -13009,7 +11036,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0343")
+					(reference "#PWR0344")
 					(unit 1)
 				)
 			)
@@ -13027,7 +11054,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "60828c92-5fd8-40a0-8849-fca8891cff75")
-		(property "Reference" "C324"
+		(property "Reference" "C326"
 			(at 165.1 124.968 0)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -13111,7 +11138,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "C324")
+					(reference "C326")
 					(unit 1)
 				)
 			)
@@ -13129,7 +11156,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "646d8a0b-b95c-4259-b667-f847d88152a5")
-		(property "Reference" "#PWR0301"
+		(property "Reference" "#PWR0302"
 			(at 33.02 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -13190,7 +11217,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0301")
+					(reference "#PWR0302")
 					(unit 1)
 				)
 			)
@@ -13208,7 +11235,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "69cc9768-dbe7-4c39-88a0-c7997acf4e2c")
-		(property "Reference" "U304"
+		(property "Reference" "U302"
 			(at 255.27 92.7606 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13250,7 +11277,7 @@
 				)
 			)
 		)
-		(property "Description" "Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14"
+		(property "Description" "Low-Power, Quad-Operational Amplifiers"
 			(at 255.27 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -13317,7 +11344,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "U304")
+					(reference "U302")
 					(unit 4)
 				)
 			)
@@ -13335,7 +11362,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6a0ddda0-6e66-4549-b8d4-223197e35591")
-		(property "Reference" "U304"
+		(property "Reference" "U302"
 			(at 213.36 118.1606 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13377,7 +11404,7 @@
 				)
 			)
 		)
-		(property "Description" "Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14"
+		(property "Description" "Low-Power, Quad-Operational Amplifiers"
 			(at 213.36 127 0)
 			(hide yes)
 			(show_name no)
@@ -13444,7 +11471,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "U304")
+					(reference "U302")
 					(unit 3)
 				)
 			)
@@ -13462,7 +11489,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6a0de07f-25e6-4f66-9de3-7864b9cb4f45")
-		(property "Reference" "#PWR0338"
+		(property "Reference" "#PWR0335"
 			(at 222.25 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -13523,7 +11550,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0338")
+					(reference "#PWR0335")
 					(unit 1)
 				)
 			)
@@ -13541,7 +11568,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6b602b1c-3b44-490b-847a-e73d84fa7b9f")
-		(property "Reference" "#PWR0317"
+		(property "Reference" "#PWR0315"
 			(at 86.36 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -13602,7 +11629,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0317")
+					(reference "#PWR0315")
 					(unit 1)
 				)
 			)
@@ -13620,7 +11647,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6b65e73c-97a3-4c57-9d0e-14cd0b47f9b1")
-		(property "Reference" "#PWR0307"
+		(property "Reference" "#PWR0331"
 			(at 184.15 26.67 0)
 			(hide yes)
 			(show_name no)
@@ -13681,14 +11708,13 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0307")
+					(reference "#PWR0331")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_name "ADS1602_1")
 		(lib_id "ProjectTraceSymbols:ADS1602")
 		(at 132.08 128.27 0)
 		(unit 3)
@@ -13905,9 +11931,6 @@
 		(pin "41"
 			(uuid "14f52fa8-a232-49dc-852d-37af396d5d7f")
 		)
-		(pin "20"
-			(uuid "de7b0c2d-8c48-4208-b38d-4589bfb574cb")
-		)
 		(pin "10"
 			(uuid "4610d06e-1c86-4a3d-b8d6-25a6a560304c")
 		)
@@ -13932,7 +11955,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "70091a29-987e-4b73-a35d-d4ac0a490319")
-		(property "Reference" "#PWR0325"
+		(property "Reference" "#PWR0326"
 			(at 144.78 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -13993,7 +12016,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0325")
+					(reference "#PWR0326")
 					(unit 1)
 				)
 			)
@@ -14101,7 +12124,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "74525376-f14e-4dfd-bef6-32981404341c")
-		(property "Reference" "#PWR0344"
+		(property "Reference" "#PWR0307"
 			(at 50.8 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -14162,7 +12185,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0344")
+					(reference "#PWR0307")
 					(unit 1)
 				)
 			)
@@ -14180,7 +12203,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "752c45fe-58b4-4e5b-9e37-ee9d2ab81234")
-		(property "Reference" "C322"
+		(property "Reference" "C324"
 			(at 154.94 124.968 0)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -14264,7 +12287,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "C322")
+					(reference "C324")
 					(unit 1)
 				)
 			)
@@ -14282,7 +12305,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "753d610c-b355-47ac-b2fe-8f0486e5aecd")
-		(property "Reference" "R309"
+		(property "Reference" "R306"
 			(at 72.39 56.1846 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14355,7 +12378,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "R309")
+					(reference "R306")
 					(unit 1)
 				)
 			)
@@ -14373,7 +12396,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "79f531fc-1da8-4612-9773-440ca2431aa9")
-		(property "Reference" "C310"
+		(property "Reference" "C308"
 			(at 82.931 46.0924 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14459,7 +12482,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "C310")
+					(reference "C308")
 					(unit 1)
 				)
 			)
@@ -14720,7 +12743,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "826e4fdb-e921-4cc3-a1d8-ef3242b74c7e")
-		(property "Reference" "U304"
+		(property "Reference" "U302"
 			(at 86.995 134.8062 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14764,7 +12787,7 @@
 				)
 			)
 		)
-		(property "Description" "Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14"
+		(property "Description" "Low-Power, Quad-Operational Amplifiers"
 			(at 88.9 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -14831,7 +12854,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "U304")
+					(reference "U302")
 					(unit 5)
 				)
 			)
@@ -14848,7 +12871,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "83e8db9b-8414-4f69-ada1-b1c04f0dbb9f")
-		(property "Reference" "C328"
+		(property "Reference" "C303"
 			(at 35.179 136.4572 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14923,7 +12946,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "C328")
+					(reference "C303")
 					(unit 1)
 				)
 			)
@@ -14941,7 +12964,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "86fbf7f1-afeb-402b-940a-2534ce309a9c")
-		(property "Reference" "#PWR0320"
+		(property "Reference" "#PWR0316"
 			(at 110.49 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -15002,7 +13025,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0320")
+					(reference "#PWR0316")
 					(unit 1)
 				)
 			)
@@ -15020,7 +13043,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8aa1679e-4cca-454b-b403-89376f80e8f0")
-		(property "Reference" "#PWR0329"
+		(property "Reference" "#PWR0323"
 			(at 133.35 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -15081,7 +13104,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0329")
+					(reference "#PWR0323")
 					(unit 1)
 				)
 			)
@@ -15098,7 +13121,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8e4c7c6d-e56a-4f6a-9278-b706087f4430")
-		(property "Reference" "R301"
+		(property "Reference" "R307"
 			(at 181.102 48.4462 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15173,7 +13196,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "R301")
+					(reference "R307")
 					(unit 1)
 				)
 			)
@@ -15303,7 +13326,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8f3ee3e8-c09e-4c28-b292-e0436f322a1c")
-		(property "Reference" "#PWR0308"
+		(property "Reference" "#PWR0336"
 			(at 238.76 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -15363,7 +13386,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0308")
+					(reference "#PWR0336")
 					(unit 1)
 				)
 			)
@@ -15381,7 +13404,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8fd7dbaa-dbf7-4329-8b8c-f7fa5c0d6216")
-		(property "Reference" "C304"
+		(property "Reference" "C328"
 			(at 218.821 70.0362 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15467,7 +13490,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "C304")
+					(reference "C328")
 					(unit 1)
 				)
 			)
@@ -15486,7 +13509,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "914c3e1b-7f7e-4fb8-918c-b5a6e3b5b360")
-		(property "Reference" "C309"
+		(property "Reference" "C307"
 			(at 82.931 27.0424 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15572,7 +13595,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "C309")
+					(reference "C307")
 					(unit 1)
 				)
 			)
@@ -15591,7 +13614,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "939c3394-a52d-4665-b236-1e4fbb09599b")
-		(property "Reference" "#PWR0309"
+		(property "Reference" "#PWR0339"
 			(at 238.76 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -15651,7 +13674,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0309")
+					(reference "#PWR0339")
 					(unit 1)
 				)
 			)
@@ -15760,7 +13783,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "97189d29-7f8f-47c5-9374-9af76da02cea")
-		(property "Reference" "#PWR0334"
+		(property "Reference" "#PWR0340"
 			(at 238.76 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -15820,7 +13843,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0334")
+					(reference "#PWR0340")
 					(unit 1)
 				)
 			)
@@ -16042,9 +14065,6 @@
 		)
 		(pin "41"
 			(uuid "14f52fa8-a232-49dc-852d-37af396d5d80")
-		)
-		(pin "20"
-			(uuid "de7b0c2d-8c48-4208-b38d-4589bfb574cc")
 		)
 		(pin "10"
 			(uuid "4610d06e-1c86-4a3d-b8d6-25a6a560304d")
@@ -16382,7 +14402,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a6177d43-1349-4c7f-a719-c4504500a4db")
-		(property "Reference" "C323"
+		(property "Reference" "C325"
 			(at 160.02 124.968 0)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -16466,7 +14486,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "C323")
+					(reference "C325")
 					(unit 1)
 				)
 			)
@@ -16484,7 +14504,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a88a247a-2bf5-404c-bcc8-47e50adc4585")
-		(property "Reference" "U304"
+		(property "Reference" "U302"
 			(at 254 141.0206 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16526,7 +14546,7 @@
 				)
 			)
 		)
-		(property "Description" "Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14"
+		(property "Description" "Low-Power, Quad-Operational Amplifiers"
 			(at 254 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -16593,7 +14613,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "U304")
+					(reference "U302")
 					(unit 1)
 				)
 			)
@@ -16702,7 +14722,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ab99961f-fb9a-4976-918d-c306268e6fd4")
-		(property "Reference" "#PWR0318"
+		(property "Reference" "#PWR0312"
 			(at 80.01 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -16763,7 +14783,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0318")
+					(reference "#PWR0312")
 					(unit 1)
 				)
 			)
@@ -16781,7 +14801,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "abf0ba3f-ae80-41e5-b2aa-117c4c14a9a7")
-		(property "Reference" "#PWR0314"
+		(property "Reference" "#PWR0311"
 			(at 73.66 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -16842,7 +14862,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0314")
+					(reference "#PWR0311")
 					(unit 1)
 				)
 			)
@@ -16970,7 +14990,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ad77b032-eafd-4d71-a1df-570c6bee9eee")
-		(property "Reference" "#PWR0310"
+		(property "Reference" "#PWR0337"
 			(at 238.76 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -17030,7 +15050,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0310")
+					(reference "#PWR0337")
 					(unit 1)
 				)
 			)
@@ -17048,7 +15068,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "aed4ebb7-6fc3-420a-a3dc-4d45c273f2a5")
-		(property "Reference" "#PWR0337"
+		(property "Reference" "#PWR0346"
 			(at 264.16 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -17109,7 +15129,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0337")
+					(reference "#PWR0346")
 					(unit 1)
 				)
 			)
@@ -17127,7 +15147,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b2226ccf-f4c2-44f5-ad6e-93d57cd46fa1")
-		(property "Reference" "#PWR0339"
+		(property "Reference" "#PWR0343"
 			(at 245.11 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -17187,7 +15207,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0339")
+					(reference "#PWR0343")
 					(unit 1)
 				)
 			)
@@ -17195,7 +15215,7 @@
 	)
 	(symbol
 		(lib_id "power:+2V5")
-		(at 54.61 55.88 270)
+		(at 55.88 54.61 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17205,8 +15225,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b4455702-c046-4b98-a58c-0595565fa9bf")
-		(property "Reference" "#PWR0315"
-			(at 50.8 55.88 0)
+		(property "Reference" "#PWR0309"
+			(at 55.88 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17217,7 +15237,7 @@
 			)
 		)
 		(property "Value" "+2V5"
-			(at 57.785 55.88 90)
+			(at 57.277 53.34 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17228,7 +15248,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 54.61 55.88 0)
+			(at 55.88 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17239,7 +15259,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 54.61 55.88 0)
+			(at 55.88 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17250,7 +15270,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+2V5\""
-			(at 54.61 55.88 0)
+			(at 55.88 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17266,7 +15286,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0315")
+					(reference "#PWR0309")
 					(unit 1)
 				)
 			)
@@ -17424,7 +15444,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "baccbacd-5008-49b9-90fc-e7432d5dacbe")
-		(property "Reference" "#PWR0324"
+		(property "Reference" "#PWR0318"
 			(at 116.84 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -17485,7 +15505,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0324")
+					(reference "#PWR0318")
 					(unit 1)
 				)
 			)
@@ -17504,7 +15524,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bbb9eae2-43d3-4298-a8cf-e333dfe5be4e")
-		(property "Reference" "C327"
+		(property "Reference" "C322"
 			(at 149.6441 44.6425 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17579,7 +15599,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "C327")
+					(reference "C322")
 					(unit 1)
 				)
 			)
@@ -17598,7 +15618,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bc416e4c-cddc-424f-b282-1ac5da7c64ab")
-		(property "Reference" "#PWR0336"
+		(property "Reference" "#PWR0333"
 			(at 201.93 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -17659,7 +15679,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0336")
+					(reference "#PWR0333")
 					(unit 1)
 				)
 			)
@@ -17677,7 +15697,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bf3be519-0bea-4440-b225-f82020834796")
-		(property "Reference" "#PWR0321"
+		(property "Reference" "#PWR0319"
 			(at 118.11 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -17738,7 +15758,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0321")
+					(reference "#PWR0319")
 					(unit 1)
 				)
 			)
@@ -17834,7 +15854,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c0968812-b0a3-40fa-9dc9-928b11374d6f")
-		(property "Reference" "C308"
+		(property "Reference" "C311"
 			(at 91.8209 106.8662 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17920,7 +15940,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "C308")
+					(reference "C311")
 					(unit 1)
 				)
 			)
@@ -17938,7 +15958,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ce8673b6-c868-4f5d-ae06-075b12b0b57d")
-		(property "Reference" "#PWR0313"
+		(property "Reference" "#PWR0310"
 			(at 71.12 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -17999,7 +16019,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0313")
+					(reference "#PWR0310")
 					(unit 1)
 				)
 			)
@@ -18017,7 +16037,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cf2eafc4-c036-4f32-8013-de1443d8f6b2")
-		(property "Reference" "C321"
+		(property "Reference" "C323"
 			(at 149.86 124.968 0)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -18101,7 +16121,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "C321")
+					(reference "C323")
 					(unit 1)
 				)
 			)
@@ -18119,7 +16139,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d846e0a8-9649-434f-b8e0-5632a6ff2d06")
-		(property "Reference" "#PWR0328"
+		(property "Reference" "#PWR0322"
 			(at 127 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -18180,7 +16200,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0328")
+					(reference "#PWR0322")
 					(unit 1)
 				)
 			)
@@ -18198,7 +16218,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dba8e7f3-6afc-48d2-90d3-027b232791e5")
-		(property "Reference" "#PWR0302"
+		(property "Reference" "#PWR0328"
 			(at 171.45 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -18259,7 +16279,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0302")
+					(reference "#PWR0328")
 					(unit 1)
 				)
 			)
@@ -18381,7 +16401,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e1628432-d428-4406-a0da-d0c3c2c947a9")
-		(property "Reference" "C329"
+		(property "Reference" "C304"
 			(at 47.879 136.4572 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18456,7 +16476,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "C329")
+					(reference "C304")
 					(unit 1)
 				)
 			)
@@ -18755,7 +16775,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ebe3e266-1b4e-41f2-9eed-cfbffac54c4f")
-		(property "Reference" "#PWR0331"
+		(property "Reference" "#PWR0325"
 			(at 143.51 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -18816,7 +16836,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0331")
+					(reference "#PWR0325")
 					(unit 1)
 				)
 			)
@@ -18834,7 +16854,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "efe1e66c-0947-40b8-93d2-01ee4fb295a8")
-		(property "Reference" "#PWR0322"
+		(property "Reference" "#PWR0320"
 			(at 119.38 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -18895,7 +16915,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0322")
+					(reference "#PWR0320")
 					(unit 1)
 				)
 			)
@@ -18913,7 +16933,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f068a927-1531-4b94-a908-9538f504d789")
-		(property "Reference" "C326"
+		(property "Reference" "C327"
 			(at 175.641 117.0262 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18988,14 +17008,13 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "C326")
+					(reference "C327")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_name "ADS1602_2")
 		(lib_id "ProjectTraceSymbols:ADS1602")
 		(at 199.39 48.26 0)
 		(unit 2)
@@ -19211,9 +17230,6 @@
 		)
 		(pin "41"
 			(uuid "14f52fa8-a232-49dc-852d-37af396d5d81")
-		)
-		(pin "20"
-			(uuid "de7b0c2d-8c48-4208-b38d-4589bfb574cd")
 		)
 		(pin "10"
 			(uuid "4610d06e-1c86-4a3d-b8d6-25a6a560304e")
@@ -19447,7 +17463,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fbcc76d3-1418-4330-9b79-2c3100d58fc1")
-		(property "Reference" "U304"
+		(property "Reference" "U302"
 			(at 254 120.7006 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19489,7 +17505,7 @@
 				)
 			)
 		)
-		(property "Description" "Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14"
+		(property "Description" "Low-Power, Quad-Operational Amplifiers"
 			(at 254 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -19556,7 +17572,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "U304")
+					(reference "U302")
 					(unit 2)
 				)
 			)
@@ -19574,7 +17590,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fc2a8754-eed5-408f-bc25-5b99d3c0459c")
-		(property "Reference" "#PWR0335"
+		(property "Reference" "#PWR0332"
 			(at 191.77 127 0)
 			(hide yes)
 			(show_name no)
@@ -19635,7 +17651,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "#PWR0335")
+					(reference "#PWR0332")
 					(unit 1)
 				)
 			)
@@ -19652,7 +17668,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fc505be6-38f0-4a49-a7b8-99d26c63e67f")
-		(property "Reference" "C303"
+		(property "Reference" "C329"
 			(at 248.031 35.7462 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19738,7 +17754,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "C303")
+					(reference "C329")
 					(unit 1)
 				)
 			)
@@ -19850,7 +17866,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fe5c5795-7ae0-46fd-9025-cd52c03723ff")
-		(property "Reference" "R311"
+		(property "Reference" "R309"
 			(at 196.85 119.6846 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19944,7 +17960,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
-					(reference "R311")
+					(reference "R309")
 					(unit 1)
 				)
 			)
