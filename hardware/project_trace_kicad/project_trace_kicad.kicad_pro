@@ -240,10 +240,6 @@
           "drill": 0.3
         },
         {
-          "diameter": 0.6,
-          "drill": 0.3
-        },
-        {
           "diameter": 0.7,
           "drill": 0.5
         },
@@ -683,7 +679,7 @@
       "include_excluded_from_bom": true,
       "name": "",
       "sort_asc": true,
-      "sort_field": "Footprint"
+      "sort_field": "DigikeyPN"
     },
     "bus_aliases": {},
     "connection_grid_size": 50.0,
@@ -734,7 +730,7 @@
         "uuid": "af51f4e5-b952-4b0e-baf2-78a72fb86fcd"
       }
     ],
-    "used_designators": "JP303,#PWR339,#PWR342-343,C303",
+    "used_designators": "R501",
     "variants": []
   },
   "sheets": [

@@ -11,6 +11,146 @@
 		(company "Alexander N. Olsen")
 	)
 	(lib_symbols
+		(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "ProjectTraceSymbols:NUCLEO-H753ZI_Module"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2149,16 +2289,6 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 63.5) (xy 163.83 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0833fd77-8db4-4b1e-b313-430c556ce177")
-	)
-	(wire
-		(pts
 			(xy 59.69 57.15) (xy 59.69 59.69)
 		)
 		(stroke
@@ -2176,6 +2306,16 @@
 			(type default)
 		)
 		(uuid "1d377d6d-3e34-430e-aa1f-87390a90644b")
+	)
+	(wire
+		(pts
+			(xy 227.33 49.53) (xy 238.76 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "454c2567-452a-4b6f-b79f-c62f6a47c4b6")
 	)
 	(wire
 		(pts
@@ -2209,6 +2349,16 @@
 	)
 	(wire
 		(pts
+			(xy 246.38 49.53) (xy 247.65 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d4963cc-0489-4897-bf04-4798891008b0")
+	)
+	(wire
+		(pts
 			(xy 59.69 39.37) (xy 62.23 39.37)
 		)
 		(stroke
@@ -2216,16 +2366,6 @@
 			(type default)
 		)
 		(uuid "52de5001-2924-4205-8d90-84a9ef9b1514")
-	)
-	(wire
-		(pts
-			(xy 161.29 53.34) (xy 163.83 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "562c594f-c48c-4e2b-99a3-b0ecb7ca7ab3")
 	)
 	(wire
 		(pts
@@ -2389,7 +2529,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 52.07) (xy 231.14 52.07)
+			(xy 227.33 52.07) (xy 228.6 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2489,16 +2629,6 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 128.27) (xy 198.12 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d3cfd03d-7798-4b3f-b5d9-4bc1bb45012f")
-	)
-	(wire
-		(pts
 			(xy 129.54 60.96) (xy 133.35 60.96)
 		)
 		(stroke
@@ -2529,13 +2659,13 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 125.73) (xy 198.12 125.73)
+			(xy 227.33 46.99) (xy 228.6 46.99)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e948c34e-3628-4c02-bc9f-ea5ae2d67035")
+		(uuid "e06bbd02-34db-4a14-86c3-853356c281dc")
 	)
 	(wire
 		(pts
@@ -2591,6 +2721,17 @@
 		)
 		(uuid "279ace32-0bdf-4080-bf19-02b17165a654")
 	)
+	(hierarchical_label "CLK.EN"
+		(shape output)
+		(at 228.6 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2deaddf8-9901-42c7-a219-4303e99fed2e")
+	)
 	(hierarchical_label "SPI3.MOSI"
 		(shape output)
 		(at 62.23 116.84 180)
@@ -2601,6 +2742,17 @@
 			(justify right)
 		)
 		(uuid "4be5abee-a615-4176-bf7a-a365e4f4ffd4")
+	)
+	(hierarchical_label "40MHz.CLK.Out"
+		(shape output)
+		(at 247.65 49.53 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5ee4a9a7-0855-4a1f-be3a-e2adb5f9d3f9")
 	)
 	(hierarchical_label "SW3.B"
 		(shape input)
@@ -2626,7 +2778,7 @@
 	)
 	(hierarchical_label "SPI3.SCK"
 		(shape output)
-		(at 231.14 52.07 0)
+		(at 228.6 52.07 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4728,6 +4880,97 @@
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/aebaf62e-54ce-46f5-a91f-d86d07c0b2fa"
 					(reference "U503")
 					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 242.57 49.53 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d351c055-e645-4730-80fc-a28aaa8a8555")
+		(property "Reference" "R501"
+			(at 242.57 44.3695 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100"
+			(at 242.57 46.7938 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "ProjectTraceFootprints:RN73R2ATTD1000B25"
+			(at 242.57 51.308 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 242.57 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 242.57 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "2019-RN73R2ATTD1000B25CT-ND"
+			(at 242.57 49.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5a2434dd-7dae-45de-be81-e9333425a587")
+		)
+		(pin "2"
+			(uuid "6c48e7a9-3687-4f7f-8ee3-84ff534ad262")
+		)
+		(instances
+			(project "project_trace_kicad"
+				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/aebaf62e-54ce-46f5-a91f-d86d07c0b2fa"
+					(reference "R501")
+					(unit 1)
 				)
 			)
 		)
