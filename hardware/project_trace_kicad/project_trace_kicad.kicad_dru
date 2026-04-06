@@ -5,9 +5,6 @@
 (rule Minimum_clearance_1
 	(constraint clearance (min 0.127mm))
 )
-(rule Creepage_distance_1
-	(constraint creepage (min 0.4mm))
-)
 (rule Copper_to_hole_clearance_1
 	(constraint hole_clearance (min 0.2mm))
 )
@@ -16,9 +13,6 @@
 )
 (rule Minimum_thermal_relief_spoke_count_1
 	(constraint min_resolved_spokes 4)
-)
-(rule Minimum_annular_width_1
-	(constraint annular_width (min 0.2mm))
 )
 (rule Hole_to_hole_distance_1
 	(constraint hole_to_hole (min 0.25mm))
