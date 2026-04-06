@@ -11487,17 +11487,6 @@
 				)
 			)
 		)
-		(property "DigikeyPN" "2057-PH2-80-UA-ND AND 2057-PH2-20-UA-ND"
-			(at 77.47 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "9_12"
 			(uuid "07c212bd-ac4a-41e0-bc6e-2bf0c142aa2e")
 		)
@@ -11871,7 +11860,7 @@
 				)
 			)
 		)
-		(property "DIgikeyPN" "2057-PH2-80-UA-ND"
+		(property "DigikeyPN" "2057-PH2-80-UA-ND"
 			(at 125.73 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -11952,17 +11941,6 @@
 		)
 		(property "Description" "Nucleo 144 Development Board with STM32F429ZIT6 MCU, 256kB RAM, 1Mb FLASH"
 			(at 179.07 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DigikeyPN" "2057-PH2-80-UA-ND AND 2057-PH2-20-UA-ND"
-			(at 179.07 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12338,17 +12316,6 @@
 		)
 		(property "Description" "Nucleo 144 Development Board with STM32F429ZIT6 MCU, 256kB RAM, 1Mb FLASH"
 			(at 147.32 -49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DigikeyPN" "2057-PH2-80-UA-ND AND 2057-PH2-20-UA-ND"
-			(at 147.32 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12813,17 +12780,6 @@
 				)
 			)
 		)
-		(property "DigikeyPN" "2057-PH2-80-UA-ND AND 2057-PH2-20-UA-ND"
-			(at 80.01 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "9_12"
 			(uuid "07c212bd-ac4a-41e0-bc6e-2bf0c142aa31")
 		)
@@ -13191,17 +13147,6 @@
 		)
 		(property "Description" "Nucleo 144 Development Board with STM32F429ZIT6 MCU, 256kB RAM, 1Mb FLASH"
 			(at 213.36 -45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DigikeyPN" "2057-PH2-80-UA-ND AND 2057-PH2-20-UA-ND"
-			(at 213.36 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13583,7 +13528,7 @@
 				)
 			)
 		)
-		(property "DIgikeyPN" "2057-PH2-80-UA-ND"
+		(property "DigikeyPN" "2057-PH2-80-UA-ND"
 			(at 125.73 124.46 0)
 			(hide yes)
 			(show_name no)

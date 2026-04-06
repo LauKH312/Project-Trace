@@ -672,6 +672,12 @@
           "label": "Sim.Type",
           "name": "Sim.Type",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "DIgikeyPN",
+          "name": "DIgikeyPN",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -730,7 +736,7 @@
         "uuid": "af51f4e5-b952-4b0e-baf2-78a72fb86fcd"
       }
     ],
-    "used_designators": "J201-205,J401-403,J601-602,R201-212,R301-311,R501,R601-606,#FLG401-402,DZ201-202,D201,BT401-402,#PWR201-233,#PWR301-347,#PWR401-406,#PWR501-502,#PWR601-602,A401,C201-213,C301-329,C401-404,JP201-205,JP301-303,PH501-502,RV301-303,SW601-604,TP201-205,TP301-304,U201-207,U301-305,U401-402,U501,U601",
+    "used_designators": "PH501,J501",
     "variants": []
   },
   "sheets": [
