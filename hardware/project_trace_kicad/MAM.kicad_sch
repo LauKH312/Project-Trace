@@ -2229,6 +2229,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "TODO fix digikeyPN for headers\n"
+		(exclude_from_sim no)
+		(at 129.032 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "b8f7ec63-84c4-4564-a094-99185bbf12e4")
+	)
 	(junction
 		(at 59.69 59.69)
 		(diameter 0)
@@ -2941,6 +2951,17 @@
 				)
 			)
 		)
+		(property "DigikeyPN" "2057-PH2-80-UA-ND AND 2057-PH2-20-UA-ND"
+			(at 77.47 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "9_12"
 			(uuid "07c212bd-ac4a-41e0-bc6e-2bf0c142aa2e")
 		)
@@ -3316,6 +3337,17 @@
 				)
 			)
 		)
+		(property "DigikeyPN" "2057-PH2-80-UA-ND AND 2057-PH2-20-UA-ND"
+			(at 179.07 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "9_12"
 			(uuid "07c212bd-ac4a-41e0-bc6e-2bf0c142aa2f")
 		)
@@ -3682,6 +3714,17 @@
 		)
 		(property "Description" "Nucleo 144 Development Board with STM32F429ZIT6 MCU, 256kB RAM, 1Mb FLASH"
 			(at 147.32 -49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "2057-PH2-80-UA-ND AND 2057-PH2-20-UA-ND"
+			(at 147.32 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4145,6 +4188,17 @@
 				)
 			)
 		)
+		(property "DigikeyPN" "2057-PH2-80-UA-ND AND 2057-PH2-20-UA-ND"
+			(at 80.01 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "9_12"
 			(uuid "07c212bd-ac4a-41e0-bc6e-2bf0c142aa31")
 		)
@@ -4511,6 +4565,17 @@
 		)
 		(property "Description" "Nucleo 144 Development Board with STM32F429ZIT6 MCU, 256kB RAM, 1Mb FLASH"
 			(at 213.36 -45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "2057-PH2-80-UA-ND AND 2057-PH2-20-UA-ND"
+			(at 213.36 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
