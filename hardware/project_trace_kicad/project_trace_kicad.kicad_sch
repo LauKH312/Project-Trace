@@ -13,7 +13,7 @@
 	(lib_symbols)
 	(wire
 		(pts
-			(xy 153.67 98.425) (xy 153.67 107.95)
+			(xy 153.67 101.6) (xy 153.67 107.95)
 		)
 		(stroke
 			(width 0)
@@ -73,6 +73,16 @@
 	)
 	(wire
 		(pts
+			(xy 109.22 95.25) (xy 120.65 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34417b6c-50c4-4fd3-8418-c42055f2620c")
+	)
+	(wire
+		(pts
 			(xy 186.69 86.995) (xy 186.69 105.41)
 		)
 		(stroke
@@ -83,7 +93,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 98.425) (xy 156.21 105.41)
+			(xy 156.21 101.6) (xy 156.21 105.41)
 		)
 		(stroke
 			(width 0)
@@ -103,7 +113,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 98.425) (xy 158.75 102.87)
+			(xy 158.75 101.6) (xy 158.75 102.87)
 		)
 		(stroke
 			(width 0)
@@ -183,7 +193,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 98.425) (xy 151.13 110.49)
+			(xy 151.13 101.6) (xy 151.13 110.49)
 		)
 		(stroke
 			(width 0)
@@ -253,7 +263,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 98.425) (xy 148.59 113.03)
+			(xy 148.59 101.6) (xy 148.59 113.03)
 		)
 		(stroke
 			(width 0)
@@ -313,7 +323,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 96.52) (xy 120.65 96.52)
+			(xy 109.22 99.06) (xy 120.65 99.06)
 		)
 		(stroke
 			(width 0)
@@ -681,7 +691,7 @@
 	)
 	(sheet
 		(at 88.9 76.2)
-		(size 20.32 22.225)
+		(size 20.32 25.4)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -707,7 +717,7 @@
 			)
 		)
 		(property "Sheetfile" "DAQ_AC.kicad_sch"
-			(at 88.9 99.0096 0)
+			(at 88.9 102.1846 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -777,6 +787,26 @@
 				(justify right)
 			)
 		)
+		(pin "CLK.BAC" input
+			(at 109.22 99.06 0)
+			(uuid "6a25f319-28d9-42b5-b2a9-04004f5baeb9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CLK.EN" input
+			(at 109.22 95.25 0)
+			(uuid "d7e786bb-4fca-4ea5-ad53-10400cde1846")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd"
@@ -787,7 +817,7 @@
 	)
 	(sheet
 		(at 120.65 47.625)
-		(size 45.085 50.8)
+		(size 45.085 53.975)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -813,7 +843,7 @@
 			)
 		)
 		(property "Sheetfile" "MAM.kicad_sch"
-			(at 120.65 99.0096 0)
+			(at 120.65 102.1846 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -834,7 +864,7 @@
 			)
 		)
 		(pin "SW1" input
-			(at 146.05 98.425 270)
+			(at 146.05 101.6 270)
 			(uuid "2a0a99c4-f863-4383-92b3-f770a32fbde0")
 			(effects
 				(font
@@ -844,7 +874,7 @@
 			)
 		)
 		(pin "SW2" input
-			(at 148.59 98.425 270)
+			(at 148.59 101.6 270)
 			(uuid "a7facb99-4b11-4825-b9ff-56af9d9cc365")
 			(effects
 				(font
@@ -854,7 +884,7 @@
 			)
 		)
 		(pin "SW3.A" input
-			(at 151.13 98.425 270)
+			(at 151.13 101.6 270)
 			(uuid "763313ea-8403-4d0f-8cdb-b56ad4cdb1ab")
 			(effects
 				(font
@@ -864,7 +894,7 @@
 			)
 		)
 		(pin "SW3.B" input
-			(at 153.67 98.425 270)
+			(at 153.67 101.6 270)
 			(uuid "847e8c61-ef0a-4dec-8382-ae38f4ba151d")
 			(effects
 				(font
@@ -874,7 +904,7 @@
 			)
 		)
 		(pin "SW4.A" input
-			(at 156.21 98.425 270)
+			(at 156.21 101.6 270)
 			(uuid "15926963-e859-44b7-97d1-961cc6cb2667")
 			(effects
 				(font
@@ -884,7 +914,7 @@
 			)
 		)
 		(pin "SW4.B" input
-			(at 158.75 98.425 270)
+			(at 158.75 101.6 270)
 			(uuid "2f19de1b-c8d9-43c2-ac9e-0165f251e9f6")
 			(effects
 				(font
@@ -1026,6 +1056,26 @@
 		(pin "V.meter" output
 			(at 120.65 52.07 180)
 			(uuid "4087eed2-7e60-477b-98bc-e5fb400916fc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "40MHz.CLK.Out" output
+			(at 120.65 99.06 180)
+			(uuid "a8af80a5-15a4-4951-9d40-8006ed386881")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CLK.EN" output
+			(at 120.65 95.25 180)
+			(uuid "0443d35a-c7e0-4049-ad0b-ec45d90c7bd1")
 			(effects
 				(font
 					(size 1.27 1.27)
