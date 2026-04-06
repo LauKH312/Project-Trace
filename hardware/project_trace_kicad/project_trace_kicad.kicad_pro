@@ -240,6 +240,10 @@
           "drill": 0.3
         },
         {
+          "diameter": 0.6,
+          "drill": 0.3
+        },
+        {
           "diameter": 0.7,
           "drill": 0.5
         },
@@ -671,6 +675,12 @@
           "group_by": false,
           "label": "Sim.Type",
           "name": "Sim.Type",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "DIgikeyPN",
+          "name": "DIgikeyPN",
           "show": false
         }
       ],

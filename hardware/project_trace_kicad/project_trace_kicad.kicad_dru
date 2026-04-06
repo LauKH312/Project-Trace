@@ -18,8 +18,8 @@
 	(constraint hole_to_hole (min 0.25mm))
 )
 (rule Via_style_1
-	(constraint via_diameter (min 0.6mm) (max 0.6mm))
-	(constraint hole_size (min 0.3mm) (max 0.3mm))
+	(constraint via_diameter (min 0.6mm) (max 10mm))
+	(constraint hole_size (min 0.3mm) (max 6.3mm))
 )
 (rule Silk_to_silk_clearance_1
 	(constraint silk_clearance (min 0.15mm))
@@ -34,7 +34,4 @@
 )
 (rule Soldermask_expansion_1
 	(constraint solder_mask_expansion (min 0.05mm))
-)
-(rule Courtyard_clearance_1
-	(constraint courtyard_clearance (min 0.25mm))
 )
