@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "Multilloscope - Power")
-		(date "2026-03-19")
+		(date "2026-04-06")
 		(rev "1")
 		(comment 1 "Laurits K. Hillemann")
 		(comment 2 "Alexander N. Olsen")
@@ -3216,7 +3216,7 @@
 		(in_bom yes)
 		(on_board no)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "6b5cbb82-e4b5-46f8-beec-85759721316c")
 		(property "Reference" "J501"
@@ -3320,7 +3320,7 @@
 		(in_bom yes)
 		(on_board no)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "7845720d-7b5f-4e7b-8f79-5b1d0a2de916")
 		(property "Reference" "BT502"
@@ -3796,7 +3796,7 @@
 		(in_bom yes)
 		(on_board no)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "abad0728-6a18-4c04-90ca-b5c44be6e071")
 		(property "Reference" "BT501"

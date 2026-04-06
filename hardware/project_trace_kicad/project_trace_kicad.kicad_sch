@@ -667,16 +667,6 @@
 				(justify left top)
 			)
 		)
-		(pin "CLK" input
-			(at 109.22 96.52 0)
-			(uuid "fe376504-f8d7-4908-a687-7c331b349c57")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "DOUT" output
 			(at 109.22 88.9 0)
 			(uuid "5b2c609f-e7e0-41ff-8494-8e218219cc1b")
@@ -781,16 +771,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
-			)
-		)
-		(pin "40MHz.clk.out" output
-			(at 120.65 96.52 180)
-			(uuid "3016b389-5c70-46f4-8c8d-8afbce38579d")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "SPI1.NSS" output

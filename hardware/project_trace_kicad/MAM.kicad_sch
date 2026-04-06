@@ -2339,13 +2339,23 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 49.53) (xy 231.14 49.53)
+			(xy 130.81 50.8) (xy 133.35 50.8)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "97732a0f-79a5-4f8e-80be-2bde01547f8b")
+		(uuid "9aed71f1-06a9-4965-af47-137226748700")
+	)
+	(wire
+		(pts
+			(xy 130.81 58.42) (xy 133.35 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1ff3024-4dcb-4a76-9fc2-a85dc206977e")
 	)
 	(wire
 		(pts
@@ -2625,16 +2635,16 @@
 		)
 		(uuid "93e7f8ab-bbd3-4e17-974a-bf74468915ab")
 	)
-	(hierarchical_label "40MHz.clk.out"
+	(hierarchical_label "V.meter"
 		(shape output)
-		(at 231.14 49.53 0)
+		(at 130.81 43.18 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
-		(uuid "a3fe6951-141f-45be-910f-93f26ff2c30e")
+		(uuid "9ec7013f-d84d-4a6c-8b90-2176f84ad63b")
 	)
 	(hierarchical_label "SW2"
 		(shape input)
