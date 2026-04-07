@@ -2016,183 +2016,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:C_Polarized"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "C"
-				(at 0.635 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "C_Polarized"
-				(at 0.635 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0.9652 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Polarized capacitor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "cap capacitor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "CP_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "C_Polarized_0_1"
-				(rectangle
-					(start -2.286 0.508)
-					(end 2.286 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 2.286) (xy -0.762 2.286)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 2.794) (xy -1.27 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 2.286 -0.508)
-					(end -2.286 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-			)
-			(symbol "C_Polarized_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:D_Zener_Filled"
 			(pin_numbers
 				(hide yes)
@@ -6102,6 +5925,16 @@
 		)
 		(uuid "4d7c654f-2e73-49de-b746-55545d878192")
 	)
+	(text "Achieve 5uF with MLCCs we can get cheap"
+		(exclude_from_sim no)
+		(at 73.152 179.832 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "5a3857bf-e086-448a-a082-7d93c4bf81cd")
+	)
 	(text "Note on RON\nAQW280SX has Rontyp = 25R\nAQW282SX has Rontyp = 2R5"
 		(exclude_from_sim no)
 		(at 119.126 130.81 0)
@@ -7063,16 +6896,6 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 170.18) (xy 48.26 175.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "45252dfd-c382-4a4d-97aa-6f8cfdeecba4")
-	)
-	(wire
-		(pts
 			(xy 55.88 125.73) (xy 55.88 124.46)
 		)
 		(stroke
@@ -7460,16 +7283,6 @@
 			(type default)
 		)
 		(uuid "678d9e6f-0409-45c5-a828-c27e1f64d73b")
-	)
-	(wire
-		(pts
-			(xy 48.26 182.88) (xy 48.26 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "67a374bb-4ce6-4bdd-b775-88e72b112f83")
 	)
 	(polyline
 		(pts
@@ -8050,6 +7863,16 @@
 			(type default)
 		)
 		(uuid "9ef9eba0-95c0-4a80-8617-b27454d2876a")
+	)
+	(wire
+		(pts
+			(xy 48.26 170.18) (xy 48.26 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a03fbca5-eefd-4284-b5bc-840dbb047e7d")
 	)
 	(wire
 		(pts
@@ -11431,8 +11254,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 48.26 185.42 0)
+		(lib_id "Device:C")
+		(at 48.26 184.15 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11440,31 +11263,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "46f1033b-d5bf-4a08-8d88-feb0b454963d")
-		(property "Reference" "#PWR0205"
-			(at 48.26 191.77 0)
-			(hide yes)
+		(uuid "44e0783d-5214-4988-b224-9dad88928683")
+		(property "Reference" "C214"
+			(at 51.1809 183.0662 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "GND"
-			(at 48.26 189.4248 0)
+		(property "Value" "10u"
+			(at 51.1809 185.2338 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 48.26 185.42 0)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 47.2948 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11475,7 +11298,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 48.26 185.42 0)
+			(at 48.26 184.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11485,8 +11308,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 48.26 185.42 0)
+		(property "Description" "Unpolarized capacitor"
+			(at 48.26 184.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11495,14 +11318,28 @@
 					(size 1.27 1.27)
 				)
 			)
+		)
+		(property "DigikeyPN" "490-10516-1-ND"
+			(at 48.26 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "24f388fb-de95-4d86-894a-3414e101873d")
 		)
 		(pin "1"
-			(uuid "20a209e8-9e6f-4251-a3c4-054e170e9c51")
+			(uuid "e26841f5-ce9f-4237-aec1-d3e0fbed5c84")
 		)
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9b26f668-c4b4-4b55-bc2a-8936f081d498"
-					(reference "#PWR0205")
+					(reference "C214")
 					(unit 1)
 				)
 			)
@@ -13824,6 +13661,98 @@
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9b26f668-c4b4-4b55-bc2a-8936f081d498"
 					(reference "R205")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 48.26 176.53 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "89908c2b-e533-4e70-b581-53cb3db3f5e3")
+		(property "Reference" "C203"
+			(at 51.1809 175.4462 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10u"
+			(at 51.1809 177.6138 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 47.2948 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 48.26 176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "490-10516-1-ND"
+			(at 48.26 176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "b257f768-12e1-4e62-ae38-0dde105b5c79")
+		)
+		(pin "1"
+			(uuid "f859eff0-d540-4868-93c8-b71c5147257d")
+		)
+		(instances
+			(project "project_trace_kicad"
+				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9b26f668-c4b4-4b55-bc2a-8936f081d498"
+					(reference "C203")
 					(unit 1)
 				)
 			)
@@ -17202,99 +17131,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 48.26 179.07 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "eda6d0e0-2cf3-45ab-860a-1dbed022c24f")
-		(property "Reference" "C203"
-			(at 51.181 177.0972 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "4u7"
-			(at 51.181 179.2648 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
-			(at 49.2252 182.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 48.26 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Polarized capacitor"
-			(at 48.26 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DigikeyPN" "N/A"
-			(at 48.26 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "cf8d4fc4-9d8b-4c0a-aff9-d604fd162441")
-		)
-		(pin "1"
-			(uuid "a858f1f3-c26f-4b3d-9a5d-9bf72e547a3b")
-		)
-		(instances
-			(project "project_trace_kicad"
-				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9b26f668-c4b4-4b55-bc2a-8936f081d498"
-					(reference "C203")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 20.32 179.07 0)
 		(mirror x)
@@ -17474,6 +17310,84 @@
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9b26f668-c4b4-4b55-bc2a-8936f081d498"
 					(reference "R212")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 48.26 187.96 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f5830d5f-f1db-4a71-bfb3-d165acd06938")
+		(property "Reference" "#PWR0205"
+			(at 48.26 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 48.26 191.9648 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 48.26 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ca6deb19-41e2-44f3-b6cb-35ae98387446")
+		)
+		(instances
+			(project "project_trace_kicad"
+				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/9b26f668-c4b4-4b55-bc2a-8936f081d498"
+					(reference "#PWR0205")
 					(unit 1)
 				)
 			)

@@ -11421,6 +11421,97 @@
 		(uuid "ff329757-c03e-4bbe-a619-ddb146e86431")
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 242.57 49.53 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3287312e-0740-4c14-817d-0f5e9aa87100")
+		(property "Reference" "R501"
+			(at 242.57 44.7546 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "24R9"
+			(at 242.57 46.9222 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 242.57 51.308 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 242.57 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 242.57 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "YAG4511CT-ND"
+			(at 242.57 49.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "49e767fd-a48f-43e5-ad8b-35176f144b22")
+		)
+		(pin "2"
+			(uuid "ccd3e701-c2a5-4874-b638-748e03ce7f76")
+		)
+		(instances
+			(project "project_trace_kicad"
+				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/aebaf62e-54ce-46f5-a91f-d86d07c0b2fa"
+					(reference "R501")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "NUCLEO-H753ZI_Module_1")
 		(lib_id "ProjectTraceSymbols:NUCLEO-H753ZI_Module")
 		(at 77.47 49.53 0)
@@ -13546,97 +13637,6 @@
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/aebaf62e-54ce-46f5-a91f-d86d07c0b2fa"
 					(reference "PH501")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 242.57 49.53 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d351c055-e645-4730-80fc-a28aaa8a8555")
-		(property "Reference" "R501"
-			(at 242.57 44.3695 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100"
-			(at 242.57 46.7938 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "ProjectTraceFootprints:RN73R2ATTD1000B25"
-			(at 242.57 51.308 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 242.57 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 242.57 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DigikeyPN" "2019-RN73R2ATTD1000B25CT-ND"
-			(at 242.57 49.53 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5a2434dd-7dae-45de-be81-e9333425a587")
-		)
-		(pin "2"
-			(uuid "6c48e7a9-3687-4f7f-8ee3-84ff534ad262")
-		)
-		(instances
-			(project "project_trace_kicad"
-				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/aebaf62e-54ce-46f5-a91f-d86d07c0b2fa"
-					(reference "R501")
 					(unit 1)
 				)
 			)

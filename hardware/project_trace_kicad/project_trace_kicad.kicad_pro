@@ -83,8 +83,8 @@
         "footprint_symbol_mismatch": "warning",
         "footprint_type_mismatch": "ignore",
         "hole_clearance": "error",
-        "hole_to_hole": "warning",
-        "holes_co_located": "warning",
+        "hole_to_hole": "error",
+        "holes_co_located": "error",
         "invalid_outline": "error",
         "isolated_copper": "warning",
         "item_on_disabled_layer": "error",
@@ -689,7 +689,7 @@
       "include_excluded_from_bom": true,
       "name": "",
       "sort_asc": true,
-      "sort_field": "Footprint"
+      "sort_field": "Value"
     },
     "bus_aliases": {},
     "connection_grid_size": 50.0,
@@ -740,7 +740,7 @@
         "uuid": "af51f4e5-b952-4b0e-baf2-78a72fb86fcd"
       }
     ],
-    "used_designators": "PH501,J501",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
