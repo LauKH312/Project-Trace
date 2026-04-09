@@ -9007,6 +9007,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 147.32 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "d7bf408d-1fd8-467c-baaf-c618a1061423")
 		)
@@ -9121,6 +9132,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 93.98 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "08c73a63-c8ea-4a32-95fc-95616367ec91")
 		)
@@ -9214,6 +9236,17 @@
 			)
 		)
 		(property "DigikeyPN" "732-691210910004-ND"
+			(at 49.53 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 49.53 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -9403,6 +9436,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 142.24 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "e85727e7-eef4-4bc0-8ccf-45be1c4275de")
 		)
@@ -9487,6 +9531,17 @@
 			)
 		)
 		(property "DigikeyPN" "N/A"
+			(at 173.99 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 173.99 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -9589,6 +9644,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 201.93 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "ef709505-01cc-42b1-a9ca-82ae47df14b9")
 		)
@@ -9681,6 +9747,17 @@
 			)
 		)
 		(property "DigikeyPN" "YAG1237CT-ND"
+			(at 180.34 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 180.34 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -9862,6 +9939,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 67.31 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "5"
 			(uuid "ce59f1a8-f12a-4ce4-8f25-54631672020c")
 		)
@@ -9956,6 +10044,17 @@
 			)
 		)
 		(property "DigikeyPN" "255-AQW282SXCT-ND"
+			(at 138.43 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 138.43 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -10236,6 +10335,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 132.08 54.61 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "58760706-1c5b-4d4c-8ab7-8d2cd2d7dee0")
 		)
@@ -10316,6 +10426,17 @@
 			)
 		)
 		(property "DigikeyPN" "296-18598-1-ND"
+			(at 163.83 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 163.83 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -10606,6 +10727,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 146.05 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5d21067c-deeb-4f7f-a8d9-8333e6f94142")
 		)
@@ -10690,6 +10822,17 @@
 			)
 		)
 		(property "DigikeyPN" "N/A"
+			(at 107.95 116.84 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 107.95 116.84 90)
 			(hide yes)
 			(show_name no)
@@ -10881,6 +11024,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 119.38 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "7"
 			(uuid "81e74958-2d0f-4fa5-b472-e7629bf8ec6b")
 		)
@@ -10999,6 +11153,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 91.44 109.22 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "6938a7e1-d0b7-434d-86ee-bc3773576d09")
 		)
@@ -11102,6 +11267,17 @@
 			)
 		)
 		(property "DigikeyPN" "2019-SLW1TTER100DCT-ND"
+			(at 71.12 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 71.12 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -11367,6 +11543,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 48.26 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "24f388fb-de95-4d86-894a-3414e101873d")
 		)
@@ -11451,6 +11638,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 21.59 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "75a9f031-5746-433a-837e-0a8e6eb193d0")
 		)
@@ -11522,6 +11720,17 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 21.59 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 21.59 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -11622,6 +11831,17 @@
 			)
 		)
 		(property "DigikeyPN" "255-5713-1-ND"
+			(at 119.38 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 119.38 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -11758,6 +11978,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 124.46 44.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "c5809198-4ec7-4855-9a03-2af48c3189a0")
 		)
@@ -11841,6 +12072,17 @@
 			)
 		)
 		(property "DigikeyPN" "296-53042-1-ND"
+			(at 157.48 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 157.48 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -12123,6 +12365,17 @@
 			)
 		)
 		(property "DigikeyPN" "311-1425-1-ND"
+			(at 238.76 58.42 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 238.76 58.42 90)
 			(hide yes)
 			(show_name no)
@@ -12552,6 +12805,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 74.93 139.7 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "748023d9-2caa-4ebd-8f69-cabdfa1868aa")
 		)
@@ -12663,6 +12927,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 232.41 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "abad40d4-7ae3-4a70-b4a7-587ecb452893")
 		)
@@ -12758,6 +13033,17 @@
 			)
 		)
 		(property "DigikeyPN" "WM14063-ND"
+			(at 50.8 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 50.8 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -12955,6 +13241,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 140.97 62.23 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "21fdeac2-b6aa-4c16-abec-b07ca80ac05a")
 		)
@@ -13039,6 +13336,17 @@
 			)
 		)
 		(property "DigikeyPN" "N/A"
+			(at 53.34 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 53.34 168.91 0)
 			(hide yes)
 			(show_name no)
@@ -13208,6 +13516,17 @@
 			)
 		)
 		(property "DigikeyPN" "13-SMAJ250A/TR13CT-ND"
+			(at 63.5 101.6 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 63.5 101.6 90)
 			(hide yes)
 			(show_name no)
@@ -13388,6 +13707,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 123.19 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "6"
 			(uuid "e018693a-3674-4299-b993-b130abf048ec")
 		)
@@ -13516,6 +13846,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 133.35 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "0b04d613-e39f-44c1-9188-a16437d6c38d")
 		)
@@ -13620,6 +13961,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 186.69 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "7b2f2435-38c5-42e3-a6c2-42b70dd1c9a1")
 		)
@@ -13694,6 +14046,17 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 21.59 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 21.59 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -13792,6 +14155,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 109.22 44.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "176c3b54-dbd8-493b-9f59-9802ce16438d")
 		)
@@ -13874,6 +14248,17 @@
 			)
 		)
 		(property "DigikeyPN" "490-10516-1-ND"
+			(at 48.26 176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 48.26 176.53 0)
 			(hide yes)
 			(show_name no)
@@ -14054,6 +14439,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 119.38 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "5"
 			(uuid "226e8632-e3cd-4e9c-bfbd-4b588d2d28eb")
 		)
@@ -14165,6 +14561,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 154.94 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "87943040-f56b-4d9e-929d-20b3a02bbf38")
 		)
@@ -14246,6 +14653,17 @@
 			)
 		)
 		(property "DigikeyPN" "296-53042-1-ND"
+			(at 123.19 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 123.19 33.02 0)
 			(hide yes)
 			(show_name no)
@@ -14364,6 +14782,17 @@
 			)
 		)
 		(property "DigikeyPN" "490-10516-1-ND"
+			(at 236.22 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 236.22 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -14701,6 +15130,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 215.9 67.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b74f3f88-f8ec-45bc-a52a-12b7725059c0")
 		)
@@ -14785,6 +15225,17 @@
 			)
 		)
 		(property "DigikeyPN" "490-10516-1-ND"
+			(at 181.61 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 181.61 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -14909,6 +15360,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 129.54 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "e547448f-f357-46c5-898f-745305d29802")
 		)
@@ -14996,6 +15458,17 @@
 			)
 		)
 		(property "DigikeyPN" "296-53042-1-ND"
+			(at 245.11 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 245.11 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -15202,6 +15675,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 36.83 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "57615374-148e-44aa-9cf8-42cbbf009bea")
 		)
@@ -15309,6 +15793,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 241.3 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "6be982ee-7b9e-470a-9199-375b25d1bbb6")
 		)
@@ -15404,6 +15899,17 @@
 			)
 		)
 		(property "DigikeyPN" "P13682CT-ND"
+			(at 71.12 139.7 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 71.12 139.7 90)
 			(hide yes)
 			(show_name no)
@@ -15536,6 +16042,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 93.98 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "49a53297-3a25-4d43-aea7-67891a0ee915")
 		)
@@ -15626,6 +16143,17 @@
 			)
 		)
 		(property "DigikeyPN" "296-18598-1-ND"
+			(at 198.12 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 198.12 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -15820,6 +16348,17 @@
 			)
 		)
 		(property "DigikeyPN" "296-53042-1-ND"
+			(at 189.23 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 189.23 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -16115,6 +16654,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 63.5 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "b2099723-f8ce-4aa9-8cbc-69abd7314d63")
 		)
@@ -16231,6 +16781,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 93.98 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "66d68533-7f3f-43d8-b04a-9f51b5888135")
 		)
@@ -16321,6 +16882,17 @@
 			)
 		)
 		(property "DigikeyPN" "N/A"
+			(at 107.95 104.14 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 107.95 104.14 90)
 			(hide yes)
 			(show_name no)
@@ -16506,6 +17078,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 254 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "6"
 			(uuid "c04bce98-e848-4658-93fd-a61448cdad0f")
 		)
@@ -16616,6 +17199,17 @@
 		)
 		(property "DigikeyPN" "N/A"
 			(at 143.51 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
+			(at 143.51 73.66 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16797,6 +17391,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 196.85 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "6"
 			(uuid "e018693a-3674-4299-b993-b130abf048ee")
 		)
@@ -16905,6 +17510,17 @@
 			)
 		)
 		(property "DigikeyPN" "N/A"
+			(at 107.95 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 107.95 91.44 90)
 			(hide yes)
 			(show_name no)
@@ -17088,6 +17704,17 @@
 			)
 		)
 		(property "Extra" "25V"
+			(at 25.4 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 25.4 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -17350,6 +17977,17 @@
 				)
 			)
 		)
+		(property "DIgikeyPN" ""
+			(at 20.32 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "cbac8d70-b300-4978-b75a-ddddcd511cd5")
 		)
@@ -17431,6 +18069,17 @@
 			)
 		)
 		(property "DigikeyPN" "13-RT0603DRE07193RLCT-ND"
+			(at 226.06 67.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
 			(at 226.06 67.31 90)
 			(hide yes)
 			(show_name no)
@@ -17695,6 +18344,17 @@
 		)
 		(property "DigikeyPN" "13-RT0603BRD078K98LCT-ND"
 			(at 185.42 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
+			(at 185.42 90.17 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
