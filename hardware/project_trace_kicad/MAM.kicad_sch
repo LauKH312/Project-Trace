@@ -11677,7 +11677,7 @@
 		)
 		(uuid "93e7f8ab-bbd3-4e17-974a-bf74468915ab")
 	)
-	(hierarchical_label "V.meter"
+	(hierarchical_label "VOLT{slash}~{AMP}"
 		(shape output)
 		(at 132.08 43.18 180)
 		(effects

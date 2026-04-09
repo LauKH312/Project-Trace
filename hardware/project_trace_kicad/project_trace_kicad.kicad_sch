@@ -313,7 +313,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 52.07) (xy 120.65 52.07)
+			(xy 82.55 54.61) (xy 120.65 54.61)
 		)
 		(stroke
 			(width 0)
@@ -574,8 +574,8 @@
 		)
 	)
 	(sheet
-		(at 62.23 46.99)
-		(size 20.32 33.655)
+		(at 62.23 50.8)
+		(size 20.32 29.845)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -590,7 +590,7 @@
 		)
 		(uuid "9b26f668-c4b4-4b55-bc2a-8936f081d498")
 		(property "Sheetname" "Inputs"
-			(at 62.23 46.2784 0)
+			(at 62.23 50.0884 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -662,7 +662,7 @@
 			)
 		)
 		(pin "VOLT{slash}~{AMP}" input
-			(at 82.55 52.07 0)
+			(at 82.55 54.61 0)
 			(uuid "0520908b-1827-4aa9-b7d5-57bab3c6fa05")
 			(effects
 				(font
@@ -806,8 +806,8 @@
 		)
 	)
 	(sheet
-		(at 120.65 47.625)
-		(size 44.45 53.975)
+		(at 120.65 50.8)
+		(size 44.45 50.8)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -822,7 +822,7 @@
 		)
 		(uuid "aebaf62e-54ce-46f5-a91f-d86d07c0b2fa")
 		(property "Sheetname" "Measurement and Analysis Module"
-			(at 120.65 46.9134 0)
+			(at 120.65 50.0884 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -993,16 +993,6 @@
 				(justify right)
 			)
 		)
-		(pin "V.meter" output
-			(at 120.65 52.07 180)
-			(uuid "4087eed2-7e60-477b-98bc-e5fb400916fc")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "40MHz.CLK.Out" output
 			(at 120.65 99.06 180)
 			(uuid "a8af80a5-15a4-4951-9d40-8006ed386881")
@@ -1066,6 +1056,16 @@
 		(pin "Range.Gain.~{20dB}" output
 			(at 120.65 62.23 180)
 			(uuid "e788d538-4c1c-4701-bcc8-0f387b5ef83e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VOLT{slash}~{AMP}" output
+			(at 120.65 54.61 180)
+			(uuid "b3ef67fd-4d33-4440-b838-c6f88b616a04")
 			(effects
 				(font
 					(size 1.27 1.27)
