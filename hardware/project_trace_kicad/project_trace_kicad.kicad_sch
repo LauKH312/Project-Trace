@@ -843,7 +843,7 @@
 				(justify left top)
 			)
 		)
-		(pin "SPI1.NSS" output
+		(pin "SPI1.SYNC" output
 			(at 120.65 83.82 180)
 			(uuid "cbb40b84-d20f-4290-bc91-8766c23f31ad")
 			(effects
@@ -933,7 +933,7 @@
 				(justify left)
 			)
 		)
-		(pin "SPI1.SCK" output
+		(pin "SPI1.SCK" input
 			(at 120.65 86.36 180)
 			(uuid "f52d7424-a818-4506-ad06-535617d7f209")
 			(effects

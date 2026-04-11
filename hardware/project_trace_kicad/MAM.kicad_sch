@@ -11117,6 +11117,16 @@
 	)
 	(wire
 		(pts
+			(xy 132.08 60.96) (xy 133.35 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38053e0d-3e0c-496b-8e20-0e7796793337")
+	)
+	(wire
+		(pts
 			(xy 96.52 45.72) (xy 96.52 46.99)
 		)
 		(stroke
@@ -11568,9 +11578,9 @@
 		)
 		(uuid "22d0b93b-3a03-4e2b-b0d3-b2f77e95406e")
 	)
-	(hierarchical_label "SPI1.NSS"
+	(hierarchical_label "SPI1.SYNC"
 		(shape output)
-		(at 128.27 60.96 180)
+		(at 132.08 60.96 180)
 		(effects
 			(font
 				(size 1.27 1.27)
