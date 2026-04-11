@@ -4403,6 +4403,16 @@
 		)
 		(uuid "1d2a0c12-6308-4ddd-abc1-98b246521abf")
 	)
+	(text "5Vpp"
+		(exclude_from_sim no)
+		(at 43.942 43.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "30c465f6-70ea-41c2-bde4-4c3ffca1775f")
+	)
 	(text "Default Soldered"
 		(exclude_from_sim no)
 		(at 230.886 63.754 0)
@@ -4976,20 +4986,20 @@
 		(uuid "fba2783a-09c9-4f77-8acd-bc26d55d9c3d")
 	)
 	(no_connect
-		(at 48.26 50.8)
-		(uuid "11db8631-190f-4dfb-9988-78ce946b9858")
-	)
-	(no_connect
-		(at 48.26 45.72)
-		(uuid "317f7046-e7a3-4533-bd74-373b3f7b24db")
-	)
-	(no_connect
 		(at 213.36 48.26)
 		(uuid "87338d2c-03ac-498f-8eb8-3fd6eac0e1e8")
 	)
 	(no_connect
 		(at 213.36 41.91)
 		(uuid "aed078e4-2f03-4ddf-b474-9b7617bf7f16")
+	)
+	(no_connect
+		(at 48.26 43.18)
+		(uuid "e5675dfa-87e7-40e2-8483-86038c6cfa5b")
+	)
+	(no_connect
+		(at 48.26 53.34)
+		(uuid "f95b1b01-8b5e-400f-b639-7346bda8fbb8")
 	)
 	(no_connect
 		(at 213.36 35.56)
@@ -5767,7 +5777,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 53.34) (xy 48.26 53.34)
+			(xy 46.99 50.8) (xy 48.26 50.8)
 		)
 		(stroke
 			(width 0)
@@ -6147,7 +6157,7 @@
 	)
 	(wire
 		(pts
-			(xy 213.36 54.61) (xy 223.52 54.61)
+			(xy 213.36 54.61) (xy 232.41 54.61)
 		)
 		(stroke
 			(width 0)
@@ -6277,7 +6287,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 43.18) (xy 48.26 43.18)
+			(xy 35.56 45.72) (xy 48.26 45.72)
 		)
 		(stroke
 			(width 0)
@@ -7017,16 +7027,6 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 54.61) (xy 241.3 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b383e1eb-4147-49aa-83ea-ab7cc4b114a7")
-	)
-	(wire
-		(pts
 			(xy 215.9 64.77) (xy 213.36 64.77)
 		)
 		(stroke
@@ -7084,6 +7084,16 @@
 			(type default)
 		)
 		(uuid "b8b90d62-69a4-4537-b3c0-c2edbea9ebc2")
+	)
+	(wire
+		(pts
+			(xy 240.03 54.61) (xy 241.3 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8fc2f79-dd7d-4ea4-b6d8-fc0a647d89fc")
 	)
 	(wire
 		(pts
@@ -7197,7 +7207,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 43.18) (xy 44.45 44.45)
+			(xy 35.56 45.72) (xy 35.56 49.53)
 		)
 		(stroke
 			(width 0)
@@ -8066,7 +8076,7 @@
 		(uuid "fd158cfd-bcd7-4217-b3df-d084cd1763d1")
 	)
 	(label "ADC.CLK_IN"
-		(at 226.06 54.61 0)
+		(at 214.63 54.61 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8121,7 +8131,7 @@
 	)
 	(hierarchical_label "Signal.In"
 		(shape input)
-		(at 45.72 53.34 180)
+		(at 46.99 50.8 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11660,7 +11670,7 @@
 	)
 	(symbol
 		(lib_id "power:VCOM")
-		(at 44.45 44.45 0)
+		(at 35.56 49.53 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -11671,7 +11681,7 @@
 		(dnp no)
 		(uuid "5954802e-98a2-4269-b578-fab742b0997d")
 		(property "Reference" "#PWR0301"
-			(at 44.45 40.64 0)
+			(at 35.56 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11682,7 +11692,7 @@
 			)
 		)
 		(property "Value" "VCOM"
-			(at 43.053 45.72 0)
+			(at 34.163 50.8 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11693,7 +11703,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 44.45 44.45 0)
+			(at 35.56 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11704,7 +11714,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 44.45 44.45 0)
+			(at 35.56 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11715,7 +11725,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCOM\""
-			(at 44.45 44.45 0)
+			(at 35.56 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11916,6 +11926,108 @@
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
 					(reference "R308")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 236.22 54.61 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5ee0e14e-df75-44c1-bc1f-d92648dd3f24")
+		(property "Reference" "R301"
+			(at 236.22 49.8346 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "24R9"
+			(at 236.22 52.0022 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 236.22 56.388 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 236.22 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 236.22 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "YAG4511CT-ND"
+			(at 236.22 54.61 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
+			(at 236.22 54.61 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e0314484-e4f9-4c09-9cb6-5fa85f0c5368")
+		)
+		(pin "2"
+			(uuid "115f0cbe-03a0-467f-b40b-3723085f2b7a")
+		)
+		(instances
+			(project "project_trace_kicad"
+				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
+					(reference "R301")
 					(unit 1)
 				)
 			)
@@ -14894,7 +15006,8 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 215.9 71.12 180)
+		(at 215.9 71.12 0)
+		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14902,10 +15015,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "8fd7dbaa-dbf7-4329-8b8c-f7fa5c0d6216")
 		(property "Reference" "C328"
-			(at 218.821 70.0362 0)
+			(at 212.979 70.0362 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14916,7 +15028,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 218.821 72.2038 0)
+			(at 212.979 72.2038 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14927,7 +15039,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 214.9348 67.31 0)
+			(at 216.8652 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

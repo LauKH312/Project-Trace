@@ -5978,7 +5978,7 @@
 	)
 	(text "5Vpp"
 		(exclude_from_sim no)
-		(at 73.914 94.996 0)
+		(at 112.776 63.5 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6060,6 +6060,16 @@
 			(justify left bottom)
 		)
 		(uuid "c7029e5d-c540-4661-96b5-f74aabe57293")
+	)
+	(text "5Vpp"
+		(exclude_from_sim no)
+		(at 198.374 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "cd2c5d32-db0a-4d73-84d5-d926c7c8153d")
 	)
 	(text "Connected to screw terminal"
 		(exclude_from_sim no)
