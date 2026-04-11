@@ -5883,16 +5883,6 @@
 		)
 		(uuid "2e259140-a2ee-41c3-b88c-0a4579a243d5")
 	)
-	(text "TODO: Verify Footprint"
-		(exclude_from_sim no)
-		(at 268.224 138.43 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "2ebfe32e-3d0c-4b8b-99df-c0b2299a9323")
-	)
 	(text "VCOM"
 		(exclude_from_sim no)
 		(at 47.498 122.428 0)
@@ -5914,16 +5904,6 @@
 			(justify left)
 		)
 		(uuid "485b4571-0188-43b1-ba60-c56e07276619")
-	)
-	(text "TODO: Connect new ammeter.en"
-		(exclude_from_sim no)
-		(at 83.566 32.512 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "4d7c654f-2e73-49de-b746-55545d878192")
 	)
 	(text "Achieve 5uF with MLCCs we can get cheap"
 		(exclude_from_sim no)
@@ -6029,16 +6009,6 @@
 			(justify left bottom)
 		)
 		(uuid "a0348cfc-e64c-4710-ac98-70ff6f5ae3db")
-	)
-	(text "TODO choose smaller values?"
-		(exclude_from_sim no)
-		(at 186.69 105.918 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "a6b7cad5-ed8a-4e8a-80ec-19af0ed0f28b")
 	)
 	(text "SIGNAL PATH"
 		(exclude_from_sim no)
