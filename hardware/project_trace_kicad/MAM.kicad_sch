@@ -12412,7 +12412,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3287312e-0740-4c14-817d-0f5e9aa87100")
-		(property "Reference" "R501"
+		(property "Reference" "R503"
 			(at 266.7 42.2146 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12496,7 +12496,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/aebaf62e-54ce-46f5-a91f-d86d07c0b2fa"
-					(reference "R501")
+					(reference "R503")
 					(unit 1)
 				)
 			)
@@ -13956,7 +13956,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9421a477-d45f-41fd-87c8-01c382c73a95")
-		(property "Reference" "R503"
+		(property "Reference" "R501"
 			(at 145.288 31.9362 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14020,7 +14020,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/aebaf62e-54ce-46f5-a91f-d86d07c0b2fa"
-					(reference "R503")
+					(reference "R501")
 					(unit 1)
 				)
 			)
@@ -15002,7 +15002,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bdac2939-f4fd-47e4-8114-6de71264a045")
-		(property "Reference" "D501"
+		(property "Reference" "D504"
 			(at 165.481 43.6837 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15078,7 +15078,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/aebaf62e-54ce-46f5-a91f-d86d07c0b2fa"
-					(reference "D501")
+					(reference "D504")
 					(unit 1)
 				)
 			)
@@ -15346,7 +15346,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fc8bfcef-90e3-4287-a760-36cc25196af8")
-		(property "Reference" "D504"
+		(property "Reference" "D501"
 			(at 140.589 43.6837 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15422,7 +15422,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/aebaf62e-54ce-46f5-a91f-d86d07c0b2fa"
-					(reference "D504")
+					(reference "D501")
 					(unit 1)
 				)
 			)
