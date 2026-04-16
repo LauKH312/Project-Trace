@@ -4415,7 +4415,7 @@
 	)
 	(text "Default Soldered"
 		(exclude_from_sim no)
-		(at 230.886 63.754 0)
+		(at 224.282 64.516 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5037,6 +5037,16 @@
 	)
 	(wire
 		(pts
+			(xy 227.33 44.45) (xy 213.36 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "040f05a7-26e6-4b9d-9f19-65e2de837a31")
+	)
+	(wire
+		(pts
 			(xy 240.03 127) (xy 243.84 127)
 		)
 		(stroke
@@ -5084,6 +5094,16 @@
 			(type default)
 		)
 		(uuid "06f81f18-d91b-47a1-b2bf-02c1ce31825f")
+	)
+	(wire
+		(pts
+			(xy 214.63 31.75) (xy 213.36 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "072bc7f1-4dbe-4e85-a665-c8c27ad0496a")
 	)
 	(wire
 		(pts
@@ -5257,16 +5277,6 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 44.45) (xy 213.36 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "15b8b1e1-148b-401b-b413-56f5d39ee125")
-	)
-	(wire
-		(pts
 			(xy 171.45 33.02) (xy 171.45 38.1)
 		)
 		(stroke
@@ -5284,16 +5294,6 @@
 			(type default)
 		)
 		(uuid "17f98345-facf-4d60-bca7-864910aa3b82")
-	)
-	(wire
-		(pts
-			(xy 214.63 38.1) (xy 213.36 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "181534fc-423f-4d56-83de-3ddb1997cc23")
 	)
 	(wire
 		(pts
@@ -5447,6 +5447,16 @@
 	)
 	(wire
 		(pts
+			(xy 223.52 36.83) (xy 223.52 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27cfbc54-f282-47d3-9006-79d6c4c7de78")
+	)
+	(wire
+		(pts
 			(xy 110.49 135.89) (xy 113.03 135.89)
 		)
 		(stroke
@@ -5554,6 +5564,16 @@
 			(type default)
 		)
 		(uuid "2fa756db-c480-4860-bac0-2a7a86dfd60a")
+	)
+	(wire
+		(pts
+			(xy 223.52 27.94) (xy 223.52 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ffde967-0267-478d-ad10-edab601ba545")
 	)
 	(wire
 		(pts
@@ -5684,6 +5704,16 @@
 			(type default)
 		)
 		(uuid "3750f937-7775-4f22-a3da-53a9020f0f63")
+	)
+	(wire
+		(pts
+			(xy 227.33 43.18) (xy 227.33 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38afcbd4-23c1-4ba9-9bd1-6a7da4819e6b")
 	)
 	(wire
 		(pts
@@ -5987,6 +6017,16 @@
 	)
 	(wire
 		(pts
+			(xy 223.52 38.1) (xy 213.36 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c62ca3d-3cd7-4b43-b668-dc66e996d091")
+	)
+	(wire
+		(pts
 			(xy 236.22 151.13) (xy 236.22 152.4)
 		)
 		(stroke
@@ -5994,16 +6034,6 @@
 			(type default)
 		)
 		(uuid "4c99deeb-87bb-4acc-8935-8b2be316d76e")
-	)
-	(wire
-		(pts
-			(xy 214.63 31.75) (xy 213.36 31.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4d004ee9-269f-409d-9988-ae7a1d2a9ce4")
 	)
 	(wire
 		(pts
@@ -6107,6 +6137,26 @@
 	)
 	(wire
 		(pts
+			(xy 231.14 49.53) (xy 231.14 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5537a047-5da5-4116-8171-46157281ae13")
+	)
+	(wire
+		(pts
+			(xy 227.33 27.94) (xy 227.33 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "558bdab9-b6eb-491e-b4c8-5c4a390137fe")
+	)
+	(wire
+		(pts
 			(xy 80.01 63.5) (xy 80.01 60.96)
 		)
 		(stroke
@@ -6114,6 +6164,16 @@
 			(type default)
 		)
 		(uuid "576bd9f4-b833-4f75-9a4a-1884dff39302")
+	)
+	(wire
+		(pts
+			(xy 231.14 50.8) (xy 213.36 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "58e93f47-68d7-4694-92f1-c6b0c1137693")
 	)
 	(wire
 		(pts
@@ -6177,16 +6237,6 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 50.8) (xy 213.36 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "63f1b927-745c-4fc0-8082-b3d36a72b9a4")
-	)
-	(wire
-		(pts
 			(xy 123.19 144.78) (xy 123.19 146.05)
 		)
 		(stroke
@@ -6194,6 +6244,16 @@
 			(type default)
 		)
 		(uuid "64796c53-3b57-42dc-9c3b-f3b741d6efc5")
+	)
+	(wire
+		(pts
+			(xy 214.63 29.21) (xy 214.63 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6528411c-a19f-4ed1-a558-8b452c21e13e")
 	)
 	(wire
 		(pts
@@ -6244,6 +6304,16 @@
 			(type default)
 		)
 		(uuid "68f6f3e3-9761-4a7a-a2a3-f005b68238a2")
+	)
+	(wire
+		(pts
+			(xy 231.14 27.94) (xy 231.14 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6914ed83-22b1-4e8b-b0aa-71d890960c2f")
 	)
 	(wire
 		(pts
@@ -8087,7 +8157,7 @@
 	)
 	(hierarchical_label "SCLK"
 		(shape output)
-		(at 214.63 38.1 0)
+		(at 223.52 27.94 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8098,7 +8168,7 @@
 	)
 	(hierarchical_label "DOUT"
 		(shape output)
-		(at 214.63 44.45 0)
+		(at 227.33 27.94 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8109,7 +8179,7 @@
 	)
 	(hierarchical_label "FSO"
 		(shape output)
-		(at 214.63 50.8 0)
+		(at 231.14 27.94 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8120,7 +8190,7 @@
 	)
 	(hierarchical_label "SYNC"
 		(shape input)
-		(at 214.63 31.75 0)
+		(at 214.63 29.21 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8467,6 +8537,110 @@
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
 					(reference "#PWR0313")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 231.14 45.72 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "13a5fcb0-5a1b-43e7-967f-437ad93aeaa9")
+		(property "Reference" "R311"
+			(at 229.616 46.228 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "24R9"
+			(at 229.616 48.6523 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 229.362 45.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 231.14 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 231.14 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "YAG4511CT-ND"
+			(at 231.14 45.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
+			(at 231.14 45.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4147eddb-8b47-4cd7-941f-d685f87b0143")
+		)
+		(pin "2"
+			(uuid "0b673664-544e-435e-b5b7-13da8baf069f")
+		)
+		(instances
+			(project "project_trace_kicad"
+				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
+					(reference "R311")
 					(unit 1)
 				)
 			)
@@ -9449,6 +9623,7 @@
 	(symbol
 		(lib_id "power:GND")
 		(at 182.88 53.34 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9456,7 +9631,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "2b183e5b-5cdc-4725-aac3-82448281fab1")
 		(property "Reference" "#PWR0334"
 			(at 182.88 59.69 0)
@@ -9470,7 +9644,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 184.785 54.61 0)
+			(at 180.975 54.61 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14359,6 +14533,110 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 227.33 39.37 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8383a1f5-78a0-44aa-96e7-57634c6f0ff4")
+		(property "Reference" "R310"
+			(at 225.552 39.7397 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "24R9"
+			(at 225.552 42.164 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 225.552 39.37 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 227.33 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 227.33 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "YAG4511CT-ND"
+			(at 227.33 39.37 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
+			(at 227.33 39.37 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c6490a81-ec58-4271-b15f-4c6178701600")
+		)
+		(pin "2"
+			(uuid "ab7718ad-1af0-44b8-9c5c-b779ae8da4b4")
+		)
+		(instances
+			(project "project_trace_kicad"
+				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
+					(reference "R310")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 72.39 139.7 180)
 		(unit 1)
@@ -18279,6 +18557,110 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 223.52 33.02 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d378505a-b5c7-41ba-aa26-f2f167434b2d")
+		(property "Reference" "R309"
+			(at 221.742 31.8078 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "24R9"
+			(at 221.742 34.2321 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 221.742 33.02 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 223.52 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 223.52 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "YAG4511CT-ND"
+			(at 223.52 33.02 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
+			(at 223.52 33.02 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9c478cc4-8a80-4599-a32f-af623a6b5210")
+		)
+		(pin "2"
+			(uuid "ce878b1c-c1c5-494a-8f3e-fa57aeb131d1")
+		)
+		(instances
+			(project "project_trace_kicad"
+				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/ac2add4a-2a5e-456c-897d-914b794115d5"
+					(reference "R309")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 127 34.29 0)
 		(unit 1)
@@ -18360,6 +18742,7 @@
 	(symbol
 		(lib_id "power:+3V3")
 		(at 171.45 33.02 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -18367,7 +18750,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "dba8e7f3-6afc-48d2-90d3-027b232791e5")
 		(property "Reference" "#PWR0333"
 			(at 171.45 36.83 0)
@@ -18381,7 +18763,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 172.847 31.75 0)
+			(at 170.053 31.75 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

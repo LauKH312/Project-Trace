@@ -688,6 +688,129 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:Battery_Cell"
 			(pin_numbers
 				(hide yes)
@@ -2252,6 +2375,18 @@
 		(uuid "6e6ef27f-090e-427d-91a2-e8ecf0634e96")
 	)
 	(junction
+		(at 215.9 114.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7260e278-bf32-4518-bbf4-30b8e844a90c")
+	)
+	(junction
+		(at 215.9 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "72d9da2b-ca2b-4971-be47-d8aafd271c47")
+	)
+	(junction
 		(at 198.12 124.46)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2351,6 +2486,16 @@
 	)
 	(wire
 		(pts
+			(xy 220.98 87.63) (xy 220.98 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f5eadd0-5e58-4580-8551-f94bb808cff4")
+	)
+	(wire
+		(pts
 			(xy 198.12 97.79) (xy 198.12 99.06)
 		)
 		(stroke
@@ -2358,6 +2503,16 @@
 			(type default)
 		)
 		(uuid "1949c5e5-ee75-49bb-a9df-63b6bd827d4e")
+	)
+	(wire
+		(pts
+			(xy 215.9 87.63) (xy 220.98 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b5d03e1-05f1-491d-82d6-7e06a82b2b5a")
 	)
 	(wire
 		(pts
@@ -2411,7 +2566,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 87.63) (xy 215.9 86.36)
+			(xy 215.9 87.63) (xy 215.9 85.09)
 		)
 		(stroke
 			(width 0)
@@ -2781,13 +2936,23 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 114.3) (xy 215.9 113.03)
+			(xy 215.9 114.3) (xy 215.9 111.76)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "de15a413-1d73-44f9-b78b-e6ca00a79c4a")
+	)
+	(wire
+		(pts
+			(xy 215.9 114.3) (xy 219.71 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef156015-62ce-4d4b-b422-3799991dc2c1")
 	)
 	(wire
 		(pts
@@ -2808,6 +2973,16 @@
 			(type default)
 		)
 		(uuid "f0318c6e-deec-439d-a5c9-c4135a18deba")
+	)
+	(wire
+		(pts
+			(xy 219.71 114.3) (xy 219.71 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0547df9-ef08-41bc-940a-26713845f5ad")
 	)
 	(wire
 		(pts
@@ -3104,6 +3279,108 @@
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/12a73351-c59a-4c39-a723-2f90ff2520c9"
 					(reference "C402")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 219.71 113.03 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "268b1d78-f128-4c50-a47d-58673cf309e1")
+		(property "Reference" "TP401"
+			(at 221.107 109.728 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 218.6262 108.331 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.5x1.5mm"
+			(at 224.79 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 224.79 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 219.71 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "N/A"
+			(at 219.71 113.03 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
+			(at 219.71 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f6cf2408-7551-438f-996c-cc66157d0c9e")
+		)
+		(instances
+			(project "project_trace_kicad"
+				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/12a73351-c59a-4c39-a723-2f90ff2520c9"
+					(reference "TP401")
 					(unit 1)
 				)
 			)
@@ -3814,7 +4091,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 215.9 86.36 0)
+		(at 215.9 85.09 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3825,7 +4102,7 @@
 		(fields_autoplaced yes)
 		(uuid "971c62c8-da2a-4e70-9db9-bed99e1c58ea")
 		(property "Reference" "#PWR0405"
-			(at 215.9 90.17 0)
+			(at 215.9 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3836,7 +4113,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 215.9 82.2269 0)
+			(at 215.9 80.9569 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3846,7 +4123,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 215.9 86.36 0)
+			(at 215.9 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3857,7 +4134,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 215.9 86.36 0)
+			(at 215.9 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3868,7 +4145,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 215.9 86.36 0)
+			(at 215.9 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4228,8 +4505,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 215.9 113.03 0)
+		(lib_id "Connector:TestPoint")
+		(at 220.98 86.36 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4238,9 +4515,20 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "cec8160d-3e2a-4fc7-9eda-121d6342b9b1")
-		(property "Reference" "#PWR0406"
-			(at 215.9 116.84 0)
+		(uuid "c5ab1e7b-892d-4f99-b189-4bccb6e01dbc")
+		(property "Reference" "TP402"
+			(at 222.377 83.058 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 219.8962 81.661 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4248,20 +4536,11 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "+5V"
-			(at 215.9 108.8969 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 215.9 113.03 0)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.5x1.5mm"
+			(at 226.06 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4272,7 +4551,107 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 215.9 113.03 0)
+			(at 226.06 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 220.98 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "N/A"
+			(at 220.98 86.36 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIgikeyPN" ""
+			(at 220.98 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a13b502e-ebba-4244-b535-8319a01a936c")
+		)
+		(instances
+			(project "project_trace_kicad"
+				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/12a73351-c59a-4c39-a723-2f90ff2520c9"
+					(reference "TP402")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 215.9 111.76 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cec8160d-3e2a-4fc7-9eda-121d6342b9b1")
+		(property "Reference" "#PWR0406"
+			(at 215.9 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 215.9 107.6269 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 215.9 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 215.9 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4283,7 +4662,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 215.9 113.03 0)
+			(at 215.9 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
