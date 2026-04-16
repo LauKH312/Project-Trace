@@ -1,0 +1,37 @@
+(version 1)
+(rule Copper_to_edge_clearance_1
+	(constraint edge_clearance (min 0.3mm))
+)
+(rule Minimum_clearance_1
+	(constraint clearance (min 0.127mm))
+)
+(rule Copper_to_hole_clearance_1
+	(constraint hole_clearance (min 0.2mm))
+)
+(rule Minimum_connection_width_1
+	(constraint connection_width (min 0.127mm))
+)
+(rule Minimum_thermal_relief_spoke_count_1
+	(constraint min_resolved_spokes 4)
+)
+(rule Hole_to_hole_distance_1
+	(constraint hole_to_hole (min 0.25mm))
+)
+(rule Via_style_1
+	(constraint via_diameter (min 0.6mm) (max 10mm))
+	(constraint hole_size (min 0.3mm) (max 6.3mm))
+)
+(rule Silk_to_silk_clearance_1
+	(constraint silk_clearance (min 0.15mm))
+	(condition "L == 'F.SilkS' || L == 'B.SilkS'")
+)
+(rule Silk_to_soldermask_clearance_1
+	(constraint silk_clearance (min 0.13mm))
+	(condition "L == 'F.Mask' || L == 'B.Mask'")
+)
+(rule Minimum_soldermask_sliver_1
+	(constraint solder_mask_sliver (min 0.1mm))
+)
+(rule Soldermask_expansion_1
+	(constraint solder_mask_expansion (min 0.05mm))
+)
