@@ -6,6 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "Multilloscope")
+		(date "2026-04-19")
 		(comment 1 "Marius H. Tyson")
 		(comment 2 "Alexander N. Olsen")
 		(comment 3 "Laurits K. Hillemann")
@@ -538,6 +539,17 @@
 				)
 			)
 		)
+		(property "DigikeyPN" "N/A"
+			(at 105.41 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd"
@@ -614,6 +626,17 @@
 				)
 			)
 		)
+		(property "DigikeyPN" "N/A"
+			(at 105.41 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd"
@@ -680,6 +703,17 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
+			(at 105.41 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "N/A"
 			(at 105.41 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -1381,9 +1415,9 @@
 				(justify left)
 			)
 		)
-		(pin "Range.Gain.~{20dB}" output
-			(at 120.65 62.23 180)
-			(uuid "e788d538-4c1c-4701-bcc8-0f387b5ef83e")
+		(pin "VOLT{slash}~{AMP}" output
+			(at 120.65 54.61 180)
+			(uuid "b3ef67fd-4d33-4440-b838-c6f88b616a04")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1391,9 +1425,9 @@
 				(justify left)
 			)
 		)
-		(pin "VOLT{slash}~{AMP}" output
-			(at 120.65 54.61 180)
-			(uuid "b3ef67fd-4d33-4440-b838-c6f88b616a04")
+		(pin "Range.Gain.20dB" output
+			(at 120.65 62.23 180)
+			(uuid "0ecad31c-960c-47ec-850e-021239f4f05c")
 			(effects
 				(font
 					(size 1.27 1.27)

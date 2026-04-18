@@ -6,8 +6,10 @@
 	(paper "A4")
 	(title_block
 		(title "Multilloscope - UserInterface")
-		(date "2026-04-06")
-		(comment 1 "Alexander N. Olsen")
+		(date "2026-04-19")
+		(rev "2")
+		(comment 1 "Reviewed by Laurits K. Hillemann")
+		(comment 2 "Alexander N. Olsen")
 	)
 	(lib_symbols
 		(symbol "Connector:TestPoint"
@@ -1341,8 +1343,8 @@
 		(uuid "3a6a1151-d32f-4567-8654-1e33c00d93f6")
 	)
 	(rectangle
-		(start 146.685 48.26)
-		(end 182.88 72.39)
+		(start 146.05 48.26)
+		(end 181.61 72.39)
 		(stroke
 			(width 0)
 			(type default)
@@ -1353,8 +1355,8 @@
 		(uuid "3d01b141-760e-4d47-b570-9ef31530cad9")
 	)
 	(rectangle
-		(start 226.695 49.53)
-		(end 261.62 73.66)
+		(start 226.06 49.53)
+		(end 260.35 73.66)
 		(stroke
 			(width 0)
 			(type default)
@@ -3145,6 +3147,17 @@
 				)
 			)
 		)
+		(property "DigikeyPN" "N/A"
+			(at 172.72 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "17f9471a-a17c-4c19-b045-9403935fbbb9")
 		)
@@ -3789,7 +3802,7 @@
 		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board no)
+		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -3816,7 +3829,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 129.032 69.85 90)
 			(hide yes)
 			(show_name no)
@@ -3851,6 +3864,17 @@
 		)
 		(property "DIgikeyPN" ""
 			(at 130.81 69.85 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "YAG1236CT-ND"
+			(at 130.81 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4211,6 +4235,17 @@
 				)
 			)
 		)
+		(property "DigikeyPN" "N/A"
+			(at 162.56 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "B"
 			(uuid "46a755e5-338d-4771-862e-b1e3a23b56f7")
 		)
@@ -4386,6 +4421,17 @@
 				)
 			)
 		)
+		(property "DigikeyPN" "N/A"
+			(at 241.3 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "B"
 			(uuid "5576a984-142d-4070-951a-f957d06899da")
 		)
@@ -4412,7 +4458,7 @@
 		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board no)
+		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -4439,7 +4485,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 209.042 68.58 90)
 			(hide yes)
 			(show_name no)
@@ -4474,6 +4520,17 @@
 		)
 		(property "DIgikeyPN" ""
 			(at 210.82 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "YAG1236CT-ND"
+			(at 210.82 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4867,7 +4924,7 @@
 		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board no)
+		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -4894,7 +4951,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 129.032 52.07 90)
 			(hide yes)
 			(show_name no)
@@ -4929,6 +4986,17 @@
 		)
 		(property "DIgikeyPN" ""
 			(at 130.81 52.07 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "YAG1236CT-ND"
+			(at 130.81 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5052,7 +5120,7 @@
 		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board no)
+		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -5079,7 +5147,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 212.598 53.34 90)
 			(hide yes)
 			(show_name no)
@@ -5114,6 +5182,17 @@
 		)
 		(property "DIgikeyPN" ""
 			(at 210.82 53.34 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "YAG1236CT-ND"
+			(at 210.82 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5568,6 +5647,17 @@
 				)
 			)
 		)
+		(property "DigikeyPN" "N/A"
+			(at 116.84 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "4"
 			(uuid "56a53727-226b-4e0a-88d5-ec5f8b15380b")
 		)
@@ -5753,6 +5843,17 @@
 			)
 		)
 		(property "DIgikeyPN" ""
+			(at 237.49 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "N/A"
 			(at 237.49 91.44 0)
 			(hide yes)
 			(show_name no)

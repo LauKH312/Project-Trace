@@ -9,7 +9,7 @@
 - [-] Decide new gain-setting/settings
 - [-] Compensate for on-resistance of switches?
 - [x] Design AC-Coupling Circuit
-- [ ] Implement circuit using new 
+- [x] Implement circuit using new 
 ## Digital
 ### ADC
 - [x] Find voltage references
@@ -18,8 +18,8 @@
 ### User Interface
 - [x] Decide upon interface
 Use two rotary encoders,  two pushbuttons (off-(on)), power switch. Visual feedback with screen (128x64).
-- [ ] Integrate display
-- [ ] Connect buttons and encoders
+- [x] Integrate display
+- [x] Connect buttons and encoders
 
 ### MCU
 - [x] Decide which Nucleo board to use
@@ -31,3 +31,6 @@ Use two rotary encoders,  two pushbuttons (off-(on)), power switch. Visual feedb
 _With BMS_
 - [x] Decide on battery charging solution
 - [x] Add screw-terminals
+
+## Docs
+- [ ] Update docs where applicable (rev2)

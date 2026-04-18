@@ -18,7 +18,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "625L3C040M00000"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28,7 +28,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "ProjectTraceFootprints:IC_625L3C040M00000_CTS-M"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7222,7 +7222,6 @@
 			(pin bidirectional line
 				(at -13.97 -1.27 0)
 				(length 5.08)
-				(hide yes)
 				(name "NC"
 					(effects
 						(font

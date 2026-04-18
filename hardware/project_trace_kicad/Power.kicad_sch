@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "Multilloscope - Power")
-		(date "2026-04-06")
-		(rev "1")
+		(date "2026-04-19")
+		(rev "2")
 		(comment 1 "Laurits K. Hillemann")
 		(comment 2 "Alexander N. Olsen")
 	)
@@ -3676,6 +3676,17 @@
 				)
 			)
 		)
+		(property "DigikeyPN" "N/A"
+			(at 121.92 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "33d3c60a-035d-4bab-8bb8-1ba8735a338b")
 		)
@@ -3792,6 +3803,17 @@
 			)
 		)
 		(property "DIgikeyPN" ""
+			(at 86.36 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "N/A"
 			(at 86.36 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -3960,6 +3982,17 @@
 			)
 		)
 		(property "DIgikeyPN" ""
+			(at 144.78 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "N/A"
 			(at 144.78 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -4278,6 +4311,17 @@
 				)
 			)
 		)
+		(property "DigikeyPN" "N/A"
+			(at 86.36 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "53d96a34-5c89-4828-974f-fe9f3553f86d")
 		)
@@ -4470,6 +4514,17 @@
 			)
 		)
 		(property "DIgikeyPN" ""
+			(at 105.41 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigikeyPN" "N/A"
 			(at 105.41 101.6 0)
 			(hide yes)
 			(show_name no)
