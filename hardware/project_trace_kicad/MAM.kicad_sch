@@ -4464,7 +4464,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "155d6b1e-15f0-4346-a357-ebb7e0e127f4")
-		(property "Reference" "R505"
+		(property "Reference" "R504"
 			(at 240.03 50.9961 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4548,7 +4548,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/aebaf62e-54ce-46f5-a91f-d86d07c0b2fa"
-					(reference "R505")
+					(reference "R504")
 					(unit 1)
 				)
 			)
@@ -4566,7 +4566,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "190d7673-2d71-4599-8e7c-3f86c6667d84")
-		(property "Reference" "R502"
+		(property "Reference" "R503"
 			(at 140.208 30.5378 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4641,7 +4641,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/aebaf62e-54ce-46f5-a91f-d86d07c0b2fa"
-					(reference "R502")
+					(reference "R503")
 					(unit 1)
 				)
 			)
@@ -4659,7 +4659,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3287312e-0740-4c14-817d-0f5e9aa87100")
-		(property "Reference" "R503"
+		(property "Reference" "R505"
 			(at 247.65 40.5595 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4743,7 +4743,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/aebaf62e-54ce-46f5-a91f-d86d07c0b2fa"
-					(reference "R503")
+					(reference "R505")
 					(unit 1)
 				)
 			)
@@ -5762,7 +5762,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6b2963d3-1e83-4abd-8113-6a568e1956f5")
-		(property "Reference" "R504"
+		(property "Reference" "R501"
 			(at 59.69 111.6795 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5846,7 +5846,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/aebaf62e-54ce-46f5-a91f-d86d07c0b2fa"
-					(reference "R504")
+					(reference "R501")
 					(unit 1)
 				)
 			)
@@ -6340,7 +6340,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9421a477-d45f-41fd-87c8-01c382c73a95")
-		(property "Reference" "R501"
+		(property "Reference" "R502"
 			(at 117.348 30.5378 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6415,7 +6415,7 @@
 		(instances
 			(project "project_trace_kicad"
 				(path "/af51f4e5-b952-4b0e-baf2-78a72fb86fcd/aebaf62e-54ce-46f5-a91f-d86d07c0b2fa"
-					(reference "R501")
+					(reference "R502")
 					(unit 1)
 				)
 			)
