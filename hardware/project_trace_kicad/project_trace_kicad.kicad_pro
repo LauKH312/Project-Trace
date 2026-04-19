@@ -567,7 +567,7 @@
       "method": 1,
       "sort_order": 0
     },
-    "bom_export_filename": "${PROJECTNAME}.csv",
+    "bom_export_filename": "bom/${PROJECTNAME}.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -741,7 +741,7 @@
         "uuid": "af51f4e5-b952-4b0e-baf2-78a72fb86fcd"
       }
     ],
-    "used_designators": "UIC601-621,TP201-205,TP301-304,TP401-402,SW601-604,R201-213,R301-312,R501-505,R601-604,JP201-205,JP301-303,JP501,#PWR201-233,#PWR301-339,#PWR401-406,#PWR501-504,#PWR601-607,C201-214,C301-339,C401-404,U201-207,U301-305,U401-402,U501,U601,D201,D501-504,BT401-402,H101-103,A401,DZ201-202,J201-205,J401-403,#FLG401-402,#FLG601-602,PH501-502,RV301-303",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
