@@ -1,0 +1,51 @@
+/*
+ * gpio_set.c
+ *
+ *  Created on: 20 Apr 2026
+ *      Author: Marius H. Tyson
+ */
+
+
+void set_GPIO_xMODER(char x, int bit, char mode ) {
+	// x is the letter of the GPIO you are changing,
+
+
+    // Refer to right GPIO letter pin
+    GPIO_TypeDef *GPIOx; // Defines pointer to typedef so it can be changed later
+    switch (x) {
+        case 'A': GPIOx = GPIOA; break;
+        case 'B': GPIOx = GPIOB; break;
+        case 'C': GPIOx = GPIOC; break;
+        case 'D': GPIOx = GPIOD; break;
+        case 'E': GPIOx = GPIOD; break;
+        case 'F': GPIOx = GPIOD; break;
+        case 'G': GPIOx = GPIOD; break;
+        case 'H': GPIOx = GPIOD; break;
+        case 'M': GPIOx = GPIOD; break;
+        case 'O': GPIOx = GPIOD; break;
+        case 'P': GPIOx = GPIOD; break;
+
+        default:
+        	return 0; // TODO: improve error handling
+        	break;
+    }
+
+    switch (mode) {
+    case 'I':
+    	GPIOx ->MODER &= ~(0x3UL << (bit * 2));
+    	break;
+    case 'O':
+    	GPIOx ->MODER &= ~(0x3 << (bit * 2));
+        GPIOx ->MODER |=  (0x1 << (bit * 2));
+    case 'Al':
+    	GPIOx ->MODER &= ~(0x3 << (bit * 2));
+    	GPIOx ->MODER |=  (0x2 << (bit * 2));
+    case 'An':
+    	GPIOx ->MODER &= ~(0x3 << (bit * 2));
+    	GPIOx ->MODER |=  (0x3 << (bit * 2));
+
+    default:
+           return 0; // TODO: improve error handling
+           break;
+    }
+}
