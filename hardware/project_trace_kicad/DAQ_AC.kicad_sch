@@ -4221,6 +4221,18 @@
 		)
 	)
 	(rectangle
+		(start 19.05 82.55)
+		(end 177.8 194.31)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "30638f36-c77a-4e74-8e94-e5aba138b241")
+	)
+	(rectangle
 		(start 19.05 17.78)
 		(end 273.05 82.55)
 		(stroke
@@ -4304,7 +4316,7 @@
 		)
 		(uuid "c3012d38-0c55-4f90-a135-279943be1d46")
 	)
-	(text "Signal Path"
+	(text "Sampling"
 		(exclude_from_sim no)
 		(at 31.496 22.098 0)
 		(effects
