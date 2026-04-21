@@ -37,6 +37,12 @@ fp-info-cache
 .idea/
 .obsidian
 
+.metadata/
+.settings/
+[Rr]elease
+[Dd]ebug
+*.launch
+
 # Other additions
 \#auto_saved_files\#
 
