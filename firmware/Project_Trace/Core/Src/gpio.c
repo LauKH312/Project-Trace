@@ -4,6 +4,9 @@
  *  Created on: 20 Apr 2026
  *      Author: Marius H. Tyson
  */
+#include <gpio.h>
+#include <stm32h7xx_it.h>
+
 
 // TODO: Review this is almost certainly wrong in some way first lines for the project
 // TODO: There is a lot of repeated code perhaps replace with functions
@@ -20,9 +23,11 @@ void set_GPIOx_MODER(char x, int bit, char mode ) {
         case 'F': GPIOx = GPIOF; break;
         case 'G': GPIOx = GPIOG; break;
         case 'H': GPIOx = GPIOH; break;
-        case 'M': GPIOx = GPIOM; break;
-        case 'O': GPIOx = GPIOO; break;
-        case 'P': GPIOx = GPIOP; break;
+
+        // TODO NOTE: These registers do not exist (or at least don't have banks defined)
+        //case 'M': GPIOx = GPIOM; break;
+        //case 'O': GPIOx = GPIOO; break;
+        //case 'P': GPIOx = GPIOP; break;
 
         default:
         	//return 0; // TODO: improve error handling
@@ -63,9 +68,9 @@ void set_GPIOx_OTYPER(char x, int bit, char mode) {
 	        case 'F': GPIOx = GPIOF; break;
 	        case 'G': GPIOx = GPIOG; break;
 	        case 'H': GPIOx = GPIOH; break;
-	        case 'M': GPIOx = GPIOM; break;
-	        case 'O': GPIOx = GPIOO; break;
-	        case 'P': GPIOx = GPIOP; break;
+	        //case 'M': GPIOx = GPIOM; break;
+	        //case 'O': GPIOx = GPIOO; break;
+	        //case 'P': GPIOx = GPIOP; break;
 
 	        default:
 	        	//return 0; // TODO: improve error handling
@@ -83,6 +88,7 @@ void set_GPIOx_OTYPER(char x, int bit, char mode) {
 	        default:
 	               //return 0; // TODO: improve error handling
 	               break;
+	    }
 
 }
 void set_GPIOx_OSPEEDR(char x, int bit, char mode) {
@@ -96,9 +102,9 @@ void set_GPIOx_OSPEEDR(char x, int bit, char mode) {
 		        case 'F': GPIOx = GPIOF; break;
 		        case 'G': GPIOx = GPIOG; break;
 		        case 'H': GPIOx = GPIOH; break;
-		        case 'M': GPIOx = GPIOM; break;
-		        case 'O': GPIOx = GPIOO; break;
-		        case 'P': GPIOx = GPIOP; break;
+		        //case 'M': GPIOx = GPIOM; break;
+		        //case 'O': GPIOx = GPIOO; break;
+		        //case 'P': GPIOx = GPIOP; break;
 
 		        default:
 		        	//return 0; // TODO: improve error handling
@@ -106,22 +112,26 @@ void set_GPIOx_OSPEEDR(char x, int bit, char mode) {
 		    }
 		    switch (mode) {
 		   	        case 'L': // low speed
-		   	        	GPIOx ->OSPEEDR &= ~(0x3 << (bit*2));
+		   	        	GPIOx->OSPEEDR &= ~(0x3 << (bit*2));
 		   	        	break;
 		   	        case 'M': // med speed
-		   	        	GPIOx ->OSPEEDR &= ~(0x3 << (bit*2));
-		   	            GPIOx ->OSPEEDR |=  (0x1 << (bit*2));
+		   	        	GPIOx->OSPEEDR &= ~(0x3 << (bit*2));
+		   	            GPIOx->OSPEEDR |=  (0x1 << (bit*2));
 		   	            break;
 		   	        case 'H': // high speed
-		   	        	GPIOx ->OSPEEDR &= ~(0x3 << (bit*2));
-		   	            GPIOx ->OSPEEDR |=  (0x2 << (bit*2));
+		   	        	GPIOx->OSPEEDR &= ~(0x3 << (bit*2));
+		   	            GPIOx->OSPEEDR |=  (0x2 << (bit*2));
+		   	            break;
 		   	        case 'V': // very high speed
-		   	        	GPIOx ->OSPEEDR &= ~(0x3 << (bit*2));
-		   	            GPIOx ->OSPEEDR |=  (0x3 << (bit*2));
+		   	        	GPIOx->OSPEEDR &= ~(0x3 << (bit*2));
+		   	            GPIOx->OSPEEDR |=  (0x3 << (bit*2));
+		   	            break;
 		   	        default:
 		   	               //return 0; // TODO: improve error handling
 		   	        	 break;
+		    }
 }
+
 void set_GPIOx_PUPDR(char x, int bit, char mode) {
 	GPIO_TypeDef *GPIOx; // Defines pointer to typedef so it can be changed later
 			    switch (x) {
@@ -133,9 +143,9 @@ void set_GPIOx_PUPDR(char x, int bit, char mode) {
 			        case 'F': GPIOx = GPIOF; break;
 			        case 'G': GPIOx = GPIOG; break;
 			        case 'H': GPIOx = GPIOH; break;
-			        case 'M': GPIOx = GPIOM; break;
-			        case 'O': GPIOx = GPIOO; break;
-			        case 'P': GPIOx = GPIOP; break;
+			        //case 'M': GPIOx = GPIOM; break;
+			        //case 'O': GPIOx = GPIOO; break;
+			        //ase 'P': GPIOx = GPIOP; break;
 
 			        default:
 			        	//return 0; // TODO: improve error handling
@@ -160,5 +170,5 @@ void set_GPIOx_PUPDR(char x, int bit, char mode) {
 			       default:
 			    	   //return 0; // TODO: improve error handling
 			    	   break;
+			    }
 }
-void
