@@ -10,45 +10,46 @@
 
 // TODO: Review this is almost certainly wrong in some way first lines for the project
 // TODO: There is a lot of repeated code perhaps replace with functions
-void set_GPIOx_MODER(char x, int bit, char mode ) {
-	// x is the letter of the GPIO you are changing, bit is the number of the bit you are changing, char is the state and can have 4 states:
-	// 'I' for input, 'O' for output, 'L' for alternative mode and 'N' for analog mode TODO: better name for last 2?
-	GPIO_TypeDef *GPIOx; // Defines pointer to typedef so it can be changed later
+
+
+
+
+GPIO_TypeDef *gpio_bank(enum gpio_GPIObank x) {
     switch (x) {
-        case 'A': GPIOx = GPIOA; break;
-        case 'B': GPIOx = GPIOB; break;
-        case 'C': GPIOx = GPIOC; break;
-        case 'D': GPIOx = GPIOD; break;
-        case 'E': GPIOx = GPIOE; break;
-        case 'F': GPIOx = GPIOF; break;
-        case 'G': GPIOx = GPIOG; break;
-        case 'H': GPIOx = GPIOH; break;
-
-        // TODO NOTE: These registers do not exist (or at least don't have banks defined)
-        //case 'M': GPIOx = GPIOM; break;
-        //case 'O': GPIOx = GPIOO; break;
-        //case 'P': GPIOx = GPIOP; break;
-
+        case GPIO_A: return GPIOA;
+        case GPIO_B: return GPIOB;
+        case GPIO_C: return GPIOC;
+        case GPIO_D: return GPIOD;
+        case GPIO_E: return GPIOE;
+        case GPIO_F: return GPIOF;
+        case GPIO_G: return GPIOG;
+        case GPIO_H: return GPIOH;
         default:
-        	//return 0; // TODO: improve error handling
-        	break;
+        	return NULL; // TODO: improve error handling
     }
+    //TODO: Reference manual says there are more banks, but they can't be found here. add more banks if needed
+}
 
-    switch (mode) {
-    case 'I':
-    	GPIOx ->MODER &= ~(0x3 << (bit * 2));
+
+void gpio_set_moder(enum gpio_GPIObank x, int pin, enum gpio_MODER mode ) {
+	 GPIO_TypeDef *GPIOx = gpio_bank(x);
+	 //  if (GPIOx == NULL) return; // TODO: improve error handling
+
+	switch (mode) {
+    case input:
+    	GPIOx ->MODER &= ~(0x3 << (pin * 2));
     	break;
-    case 'O':
-    	GPIOx ->MODER &= ~(0x3 << (bit * 2));
-        GPIOx ->MODER |=  (0x1 << (bit * 2));
+    case output:
+    	GPIOx ->MODER &= ~(0x3 << (pin * 2));
+        GPIOx ->MODER |=  (0x1 << (pin * 2));
         break;
-    case 'L':
-    	GPIOx ->MODER &= ~(0x3 << (bit * 2));
-    	GPIOx ->MODER |=  (0x2 << (bit * 2));
+    case alternative :
+    	GPIOx ->MODER &= ~(0x3 << (pin * 2));
+    	GPIOx ->MODER |=  (0x2 << (pin * 2));
     	break;
-    case 'N':
-    	GPIOx ->MODER &= ~(0x3 << (bit * 2));
-    	GPIOx ->MODER |=  (0x3 << (bit * 2));
+    case analog:
+    	GPIOx ->MODER &= ~(0x3 << (pin * 2));
+    	GPIOx ->MODER |=  (0x3 << (pin * 2));
     	break;
 
     default:
@@ -57,74 +58,39 @@ void set_GPIOx_MODER(char x, int bit, char mode ) {
     }
 }
 
-void set_GPIOx_OTYPER(char x, int bit, char mode) {
-	  GPIO_TypeDef *GPIOx; // Defines pointer to typedef so it can be changed later
-	    switch (x) {
-	        case 'A': GPIOx = GPIOA; break;
-	        case 'B': GPIOx = GPIOB; break;
-	        case 'C': GPIOx = GPIOC; break;
-	        case 'D': GPIOx = GPIOD; break;
-	        case 'E': GPIOx = GPIOE; break;
-	        case 'F': GPIOx = GPIOF; break;
-	        case 'G': GPIOx = GPIOG; break;
-	        case 'H': GPIOx = GPIOH; break;
-	        //case 'M': GPIOx = GPIOM; break;
-	        //case 'O': GPIOx = GPIOO; break;
-	        //case 'P': GPIOx = GPIOP; break;
-
-	        default:
-	        	//return 0; // TODO: improve error handling
-	        	break;
-	    }
+void gpio_set_pushpullactive(enum gpio_GPIObank x, int pin,  enum gpio_pushpullactive mode) {
+	 GPIO_TypeDef *GPIOx = gpio_bank(x);
 	    switch (mode) {
-	        case 'P': // push pull
-	        	GPIOx ->OTYPER &= ~(0x3 << (bit));
+	        case pushpull :
+	        	GPIOx ->OTYPER &= ~(0x1 << (pin));
 	        	break;
-	        case 'D': // open drain
-	        	GPIOx ->OTYPER &= ~(0x3 << (bit));
-	            GPIOx ->OTYPER |=  (0x1 << (bit));
+	        case open_drain:
+	        	GPIOx ->OTYPER &= ~(0x1 << (pin));
+	            GPIOx ->OTYPER |=  (0x1 << (pin));
 	            break;
 
 	        default:
 	               //return 0; // TODO: improve error handling
 	               break;
 	    }
-
 }
-void set_GPIOx_OSPEEDR(char x, int bit, char mode) {
-	GPIO_TypeDef *GPIOx; // Defines pointer to typedef so it can be changed later
-		    switch (x) {
-		        case 'A': GPIOx = GPIOA; break;
-		        case 'B': GPIOx = GPIOB; break;
-		        case 'C': GPIOx = GPIOC; break;
-		        case 'D': GPIOx = GPIOD; break;
-		        case 'E': GPIOx = GPIOE; break;
-		        case 'F': GPIOx = GPIOF; break;
-		        case 'G': GPIOx = GPIOG; break;
-		        case 'H': GPIOx = GPIOH; break;
-		        //case 'M': GPIOx = GPIOM; break;
-		        //case 'O': GPIOx = GPIOO; break;
-		        //case 'P': GPIOx = GPIOP; break;
-
-		        default:
-		        	//return 0; // TODO: improve error handling
-		        	break;
-		    }
+void gpio_set_speed(enum gpio_GPIObank x, int pin,  enum gpio_speed mode) {
+	GPIO_TypeDef *GPIOx = gpio_bank(x);
 		    switch (mode) {
-		   	        case 'L': // low speed
-		   	        	GPIOx->OSPEEDR &= ~(0x3 << (bit*2));
+		   	        case low: // low speed
+		   	        	GPIOx->OSPEEDR &= ~(0x3 << (pin*2));
 		   	        	break;
-		   	        case 'M': // med speed
-		   	        	GPIOx->OSPEEDR &= ~(0x3 << (bit*2));
-		   	            GPIOx->OSPEEDR |=  (0x1 << (bit*2));
+		   	        case med: // med speed
+		   	        	GPIOx->OSPEEDR &= ~(0x3 << (pin*2));
+		   	            GPIOx->OSPEEDR |=  (0x1 << (pin*2));
 		   	            break;
-		   	        case 'H': // high speed
-		   	        	GPIOx->OSPEEDR &= ~(0x3 << (bit*2));
-		   	            GPIOx->OSPEEDR |=  (0x2 << (bit*2));
+		   	        case high: // high speed
+		   	        	GPIOx->OSPEEDR &= ~(0x3 << (pin*2));
+		   	            GPIOx->OSPEEDR |=  (0x2 << (pin*2));
 		   	            break;
-		   	        case 'V': // very high speed
-		   	        	GPIOx->OSPEEDR &= ~(0x3 << (bit*2));
-		   	            GPIOx->OSPEEDR |=  (0x3 << (bit*2));
+		   	        case very_high: // very high speed
+		   	        	GPIOx->OSPEEDR &= ~(0x3 << (pin*2));
+		   	            GPIOx->OSPEEDR |=  (0x3 << (pin*2));
 		   	            break;
 		   	        default:
 		   	               //return 0; // TODO: improve error handling
@@ -132,43 +98,87 @@ void set_GPIOx_OSPEEDR(char x, int bit, char mode) {
 		    }
 }
 
-void set_GPIOx_PUPDR(char x, int bit, char mode) {
-	GPIO_TypeDef *GPIOx; // Defines pointer to typedef so it can be changed later
-			    switch (x) {
-			        case 'A': GPIOx = GPIOA; break;
-			        case 'B': GPIOx = GPIOB; break;
-			        case 'C': GPIOx = GPIOC; break;
-			        case 'D': GPIOx = GPIOD; break;
-			        case 'E': GPIOx = GPIOE; break;
-			        case 'F': GPIOx = GPIOF; break;
-			        case 'G': GPIOx = GPIOG; break;
-			        case 'H': GPIOx = GPIOH; break;
-			        //case 'M': GPIOx = GPIOM; break;
-			        //case 'O': GPIOx = GPIOO; break;
-			        //ase 'P': GPIOx = GPIOP; break;
-
-			        default:
-			        	//return 0; // TODO: improve error handling
-			        	break;
-			    }
+void gpio_set_pullupdown(enum gpio_GPIObank x, int pin, enum gpio_pullupdown mode) {
+	GPIO_TypeDef *GPIOx = gpio_bank(x);
 			    switch (mode) {
-			       case 'N': // no pull up
-			    	   GPIOx ->PUPDR &= ~(0x3 << (bit*2));
+			       case nothing: // no pull up
+			    	   GPIOx ->PUPDR &= ~(0x3 << (pin*2));
 			    		   	        	break;
-			       case 'U': // only pull up
-			    	   GPIOx ->PUPDR &= ~(0x3 << (bit*2));
-			    	   GPIOx ->PUPDR |=  (0x1 << (bit*2));
+			       case pull_up: // only pull up
+			    	   GPIOx ->PUPDR &= ~(0x3 << (pin*2));
+			    	   GPIOx ->PUPDR |=  (0x1 << (pin*2));
 			    		   	            break;
-			       case 'D': // only pull down
-			    	   GPIOx ->PUPDR &= ~(0x3 << (bit*2));
-			    	   GPIOx ->PUPDR |=  (0x2 << (bit*2));
+			       case pull_down: // only pull down
+			    	   GPIOx ->PUPDR &= ~(0x3 << (pin*2));
+			    	   GPIOx ->PUPDR |=  (0x2 << (pin*2));
 			    	   	   	   	   	    break;
-			       case 'A': // both pull up and pull down
-			    	   GPIOx ->PUPDR &= ~(0x3 << (bit*2));
-			    	   GPIOx ->PUPDR |=  (0x3 << (bit*2));
+			       case pull_updown: // both pull up and pull down
+			    	   GPIOx ->PUPDR &= ~(0x3 << (pin*2));
+			    	   GPIOx ->PUPDR |=  (0x3 << (pin*2));
 			    	   	   	   	   	    break;
 			       default:
 			    	   //return 0; // TODO: improve error handling
 			    	   break;
 			    }
+}
+void gpio_enable_clock(enum gpio_GPIObank x, enum gpio_clock state) { //TODO: Marius check pins are set correctly
+    switch (x) {
+        case GPIO_A:
+            switch (state) {
+                case enable:  RCC->AHB4ENR |=  RCC_AHB4ENR_GPIOAEN; break;
+                case disable: RCC->AHB4ENR &= ~RCC_AHB4ENR_GPIOAEN; break;
+                default: break;
+            }
+            break;
+        case GPIO_B:
+            switch (state) {
+                case enable:  RCC->AHB4ENR |=  RCC_AHB4ENR_GPIOBEN; break;
+                case disable: RCC->AHB4ENR &= ~RCC_AHB4ENR_GPIOBEN; break;
+                default: break;
+            }
+            break;
+        case GPIO_C:
+            switch (state) {
+                case enable:  RCC->AHB4ENR |=  RCC_AHB4ENR_GPIOCEN; break;
+                case disable: RCC->AHB4ENR &= ~RCC_AHB4ENR_GPIOCEN; break;
+                default: break;
+            }
+            break;
+        case GPIO_D:
+            switch (state) {
+                case enable:  RCC->AHB4ENR |=  RCC_AHB4ENR_GPIODEN; break;
+                case disable: RCC->AHB4ENR &= ~RCC_AHB4ENR_GPIODEN; break;
+                default: break;
+            }
+            break;
+        case GPIO_E:
+            switch (state) {
+                case enable:  RCC->AHB4ENR |=  RCC_AHB4ENR_GPIOEEN; break;
+                case disable: RCC->AHB4ENR &= ~RCC_AHB4ENR_GPIOEEN; break;
+                default: break;
+            }
+            break;
+        case GPIO_F:
+            switch (state) {
+                case enable:  RCC->AHB4ENR |=  RCC_AHB4ENR_GPIOFEN; break;
+                case disable: RCC->AHB4ENR &= ~RCC_AHB4ENR_GPIOFEN; break;
+                default: break;
+            }
+            break;
+        case GPIO_G:
+            switch (state) {
+                case enable:  RCC->AHB4ENR |=  RCC_AHB4ENR_GPIOGEN; break;
+                case disable: RCC->AHB4ENR &= ~RCC_AHB4ENR_GPIOGEN; break;
+                default: break;
+            }
+            break;
+        case GPIO_H:
+            switch (state) {
+                case enable:  RCC->AHB4ENR |=  RCC_AHB4ENR_GPIOHEN; break;
+                case disable: RCC->AHB4ENR &= ~RCC_AHB4ENR_GPIOHEN; break;
+                default: break;
+            }
+            break;
+        default: break; // TODO: improve error handling
+    }
 }
