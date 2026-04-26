@@ -4,7 +4,7 @@
  *  Created on: 20 Apr 2026
  *      Author: Marius H. Tyson
  */
-#include <gpio.h>
+#include <hal_gpio.h>
 #include <stm32h7xx_it.h>
 
 
@@ -31,7 +31,7 @@ GPIO_TypeDef *gpio_bank(enum gpio_GPIObank x) {
 }
 
 
-void gpio_set_moder(enum gpio_GPIObank x, int pin, enum gpio_MODER mode ) {
+void hal_gpio_set_moder(enum gpio_GPIObank x, int pin, enum gpio_MODER mode ) {
 	 GPIO_TypeDef *GPIOx = gpio_bank(x);
 	 //  if (GPIOx == NULL) return; // TODO: improve error handling
 
@@ -58,7 +58,7 @@ void gpio_set_moder(enum gpio_GPIObank x, int pin, enum gpio_MODER mode ) {
     }
 }
 
-void gpio_set_pushpullactive(enum gpio_GPIObank x, int pin,  enum gpio_pushpullactive mode) {
+void hal_gpio_set_pushpullactive(enum gpio_GPIObank x, int pin,  enum gpio_pushpullactive mode) {
 	 GPIO_TypeDef *GPIOx = gpio_bank(x);
 	    switch (mode) {
 	        case pushpull :
@@ -74,7 +74,7 @@ void gpio_set_pushpullactive(enum gpio_GPIObank x, int pin,  enum gpio_pushpulla
 	               break;
 	    }
 }
-void gpio_set_speed(enum gpio_GPIObank x, int pin,  enum gpio_speed mode) {
+void hal_gpio_set_speed(enum gpio_GPIObank x, int pin,  enum gpio_speed mode) {
 	GPIO_TypeDef *GPIOx = gpio_bank(x);
 		    switch (mode) {
 		   	        case low: // low speed
@@ -98,7 +98,7 @@ void gpio_set_speed(enum gpio_GPIObank x, int pin,  enum gpio_speed mode) {
 		    }
 }
 
-void gpio_set_pullupdown(enum gpio_GPIObank x, int pin, enum gpio_pullupdown mode) {
+void hal_gpio_set_pullupdown(enum gpio_GPIObank x, int pin, enum gpio_pullupdown mode) {
 	GPIO_TypeDef *GPIOx = gpio_bank(x);
 			    switch (mode) {
 			       case nothing: // no pull up
@@ -121,7 +121,7 @@ void gpio_set_pullupdown(enum gpio_GPIObank x, int pin, enum gpio_pullupdown mod
 			    	   break;
 			    }
 }
-void gpio_enable_clock(enum gpio_GPIObank x, enum gpio_clock state) { //TODO: Marius check pins are set correctly
+void hal_gpio_enable_clock(enum gpio_GPIObank x, enum gpio_clock state) { //TODO: Marius check pins are set correctly
     switch (x) {
         case GPIO_A:
             switch (state) {

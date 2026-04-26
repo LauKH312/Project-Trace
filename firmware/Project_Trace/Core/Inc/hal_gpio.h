@@ -5,8 +5,8 @@
  *      Author: Marius H. Tyson
  */
 
-#ifndef INC_GPIO_H_
-#define INC_GPIO_H_
+#ifndef INC_HAL_GPIO_H_
+#define INC_HAL_GPIO_H_
 #include <main.h>
 
 // TODO: Review this is almost certainly wrong in some way first lines for the project
@@ -54,14 +54,14 @@ enum gpio_clock{
 	enable = 1,
 };
 
-void gpio_enable_clock(enum gpio_GPIObank x, enum gpio_clock state); // MUST RUN FIRST, takes the letter of the bank you wish to use x and the state you wish refer above
-void gpio_set_moder(enum gpio_GPIObank x, int pin, enum gpio_MODER mode ); // takes the letter of the bank you wish to use, the pin you need,
-void gpio_set_pushpullactive(enum gpio_GPIObank x, int pin,  enum gpio_pushpullactive mode);
-void gpio_set_speed(enum gpio_GPIObank x, int pin,  enum gpio_speed mode);
-void gpio_set_pullupdown(enum gpio_GPIObank x, int pin, enum gpio_pullupdown mode);
+void hal_gpio_enable_clock(enum gpio_GPIObank x, enum gpio_clock state); // MUST RUN FIRST, takes the letter of the bank you wish to use x and the state you wish refer above
+void hal_gpio_set_moder(enum gpio_GPIObank x, int pin, enum gpio_MODER mode ); // takes the letter of the bank you wish to use, the pin you need,
+void hal_gpio_set_pushpullactive(enum gpio_GPIObank x, int pin,  enum gpio_pushpullactive mode);
+void hal_gpio_set_speed(enum gpio_GPIObank x, int pin,  enum gpio_speed mode);
+void hal_gpio_set_pullupdown(enum gpio_GPIObank x, int pin, enum gpio_pullupdown mode);
 
 
 
 
 
-#endif /* INC_GPIO_H_ */
+#endif /* INC_HAL_GPIO_H_ */
