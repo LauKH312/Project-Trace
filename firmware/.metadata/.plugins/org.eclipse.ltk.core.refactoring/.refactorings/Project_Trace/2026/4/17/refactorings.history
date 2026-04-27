@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;Project_Trace/Core/Inc/Hal_signal_path.h&apos; to &apos;hal_signal_path.h&apos;" description="Rename resource &apos;Hal_signal_path.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/Hal_signal_path.h" name="hal_signal_path.h" stamp="1776706555079" updateReferences="true"/>
-</session>
