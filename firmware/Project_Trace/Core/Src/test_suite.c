@@ -6,7 +6,12 @@
  */
 
 #include <test_suite.h>
+#include <stdio.h>
+#include <attounit.h>
 
+
+TEST_MAIN();
 void test_suite(void) {
-	(void)0;
+	int code = attomain();
+	printf("Attotest exited with code %d\n", code);
 }
