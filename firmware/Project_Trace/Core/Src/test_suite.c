@@ -10,7 +10,7 @@
 #include <attounit.h>
 
 
-TEST_MAIN();
+TEST_MAIN()
 void test_suite(void) {
 	int code = attomain();
 	printf("Attotest exited with code %d\n", code);

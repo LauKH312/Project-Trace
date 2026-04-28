@@ -30,8 +30,10 @@
 #include <sys/time.h>
 #include <sys/times.h>
 
+#include <stm32h7xx.h>
 
 /* Variables */
+extern UART_HandleTypeDef huart3;
 extern int __io_putchar(int ch) __attribute__((weak));
 extern int __io_getchar(void) __attribute__((weak));
 
@@ -80,14 +82,20 @@ return len;
 
 __attribute__((weak)) int _write(int file, char *ptr, int len)
 {
+
+	//(void)file;
+
+	//int DataIdx;
+
+	//for (DataIdx = 0; DataIdx < len; DataIdx++)
+	//{
+	//	__io_putchar(*ptr++);
+	//	//ITM_SendChar(ptr[DataIdx]);
+	//}
+	//return len;
+
 	(void)file;
-
-	int DataIdx;
-
-	for (DataIdx = 0; DataIdx < len; DataIdx++)
-	{
-		__io_putchar(*ptr++);
-	}
+	HAL_UART_Transmit(&huart3, (uint8_t*)ptr, len, HAL_MAX_DELAY);
 	return len;
 }
 

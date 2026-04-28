@@ -13,7 +13,7 @@
 #include <fixpoint.h>
 #include <attounit.h>
 
-TEST_SUITE(fixpoint);
+TEST_SUITE(fixpoint)
 BEFORE_EACH() {}
 AFTER_EACH() {}
 
@@ -145,7 +145,7 @@ fix1_15 fix1_15_powi(fix1_15 base, int16_t exponent) {
     if (exponent == 0) return fix1_15_int(1);
     if (exponent == 1) return base;
 
-    if ((exponent & 0b1) == 0) {
+    if ((exponent & 1) == 0) {
         const fix1_15 tmp = fix1_15_powi(base, exponent / 2);
         return fix1_15_mul(tmp, tmp);
     } else {
