@@ -212,14 +212,23 @@ fix9_23 fix9_23_from_f32(float f) {
 
 
 fix9_23 fix9_23_tau() {
-	return fix9_23_from_f32(6.2831853072f);
+	// return fix9_23_from_f32(6.2831853072f);
+    return fix9_23_from_raw(52707178);
 }
 
 
 fix9_23 fix9_23_pi() {
-	return fix9_23_from_f32(3.141592654f);
+//	return fix9_23_from_f32(3.141592654f);
+	// return fix9_23_frac(355,113);
+    return fix9_23_from_raw(26353589);
 }
 
+fix9_23 fix9_23_abs(fix9_23 x) {
+    if(x.raw < 0) 
+        return fix9_23_neg(x);
+    else
+        return x;
+}
 
 fix9_23 fix9_23_add(fix9_23 a, fix9_23 b) {
     return (fix9_23){.raw = a.raw + b.raw};
@@ -245,12 +254,37 @@ fix9_23 fix9_23_sub(fix9_23 a, fix9_23 b) {
     return (fix9_23){.raw = a.raw - b.raw};
 }
 
+fix9_23 fix9_23_neg(fix9_23 a) {
+    return (fix9_23){.raw = -a.raw};
+}
+
 fix9_23 fix9_23_mul(fix9_23 a, fix9_23 b) {
     return (fix9_23){.raw = (int32_t)(((int64_t)a.raw * (int64_t)b.raw) >> FIX9_23_DEC_BITS)};
 }
 
+
+fix9_23 fix9_23_mul_int(fix9_23 a, int32_t b) {
+	return (fix9_23){.raw = a.raw * b};
+}
+
 fix9_23 fix9_23_div(fix9_23 a, fix9_23 b) {
     return (fix9_23){.raw = (int32_t)((((int64_t)a.raw) << FIX9_23_DEC_BITS) / b.raw)};
+}
+
+
+fix9_23 fix9_23_div_int(fix9_23 a, int32_t b) {
+	return (fix9_23){.raw = a.raw / b};
+}
+
+#define POWI_STACK_SIZE 32
+#define POWI_MAX_ITER 128
+
+size_t max_lesser_idx(int16_t* exponent_buf, size_t exponent_buf_len, int16_t exponent) {
+    int16_t max_exponent = 0;
+    for (size_t i = 0; i < exponent_buf_len; i++) {
+        if (exponent_buf[i] < exponent) max_exponent = exponent_buf[i]; 
+    }
+    return max_exponent;
 }
 
 fix9_23 fix9_23_powi(fix9_23 base, int16_t exponent) {
@@ -258,14 +292,98 @@ fix9_23 fix9_23_powi(fix9_23 base, int16_t exponent) {
     if (exponent == 0) return fix9_23_int(1);
     if (exponent == 1) return base;
 
-    if ((exponent & 0b1) == 0) {
-        const fix9_23 tmp = fix9_23_powi(base, exponent / 2);
-        return fix9_23_mul(tmp, tmp);
-    } else {
-        const fix9_23 tmp = fix9_23_powi(base, (exponent - 1) / 2);
-        return fix9_23_mul(fix9_23_mul(base, tmp), tmp);
+    fix9_23 acc = fix9_23_int(1);
+    //exponent--;
+
+    for(int32_t i = 0; i < POWI_MAX_ITER && exponent > 0; i++) {
+    	if (exponent == 1) return fix9_23_mul(acc,base);
+
+    	if (exponent % 2 == 0) {
+    		//acc = fix9_23_mul(acc,base);
+    		base = fix9_23_sqr(base);
+    		exponent /= 2;
+    	} else {
+    		acc = fix9_23_mul(acc, base);
+    		base = fix9_23_sqr(base);
+    		exponent = (exponent-1)/2;
+    		//acc = fix9_23_mul(acc, base);
+    		//exponent--;
+    	}
     }
+
+    return acc;
 }
+
+/*
+fix9_23 fix9_23_powi(fix9_23 base, int16_t exponent) {
+    if (exponent < 0) return fix9_23_div(fix9_23_int(1), fix9_23_powi(base,-exponent));
+    if (exponent == 0) return fix9_23_int(1);
+    if (exponent == 1) return base;
+
+    // TODO: use exponentiation by squaring?
+
+    fix9_23 powstack[POWI_STACK_SIZE] = {0};
+    int16_t exponent_stack[POWI_STACK_SIZE] = {0};
+    size_t topidx = 0;
+
+    powstack[topidx] = fix9_23_int(1);
+    exponent_stack[topidx] = 0;
+    topidx++;
+
+    powstack[topidx] = base;
+    exponent_stack[topidx] = 1;
+    topidx++;
+    
+    fix9_23 acc = base;
+    int16_t pow2 = 1;
+
+    for (int i = 0; i < POWI_MAX_ITER; i++) {
+        if (pow2*2 >= exponent) break;
+
+        acc = fix9_23_mul(acc,acc);
+        pow2 *= 2;
+        powstack[topidx] = acc;
+        exponent_stack[topidx] = pow2;
+        topidx++;
+    }
+    exponent -= pow2;
+
+    for (int i = 0; i < POWI_MAX_ITER; i++) {
+        if (exponent <= 1) break;
+        int16_t powidx = max_lesser_idx(exponent_stack, topidx, exponent);
+        acc = fix9_23_mul(acc, powstack[powidx]);
+        exponent -= exponent_stack[powidx];
+    }
+    if (exponent == 1) acc = fix9_23_mul(acc, base);
+    return acc;
+}
+*/
+
+TEST_CASE(fix9_23_powi_test) {
+    fix9_23 x = fix9_23_powi(fix9_23_int(2), 3);
+    ASSERT_TRUE(x.raw == fix9_23_int(8).raw);
+
+    x = fix9_23_powi(fix9_23_frac(1,4), 3);
+    ASSERT_TRUE(x.raw == fix9_23_frac(1,64).raw);
+
+    x = fix9_23_powi(fix9_23_int(2), -3);
+    ASSERT_TRUE(x.raw == fix9_23_frac(1,8).raw);
+}
+
+
+// fix9_23 fix9_23_powi(fix9_23 base, int16_t exponent) {
+//     if (exponent < 0) return fix9_23_div(fix9_23_int(1), fix9_23_powi(base,-exponent));
+//     if (exponent == 0) return fix9_23_int(1);
+//     if (exponent == 1) return base;
+
+//     if ((exponent & 0b1) == 0) {
+//         const fix9_23 tmp = fix9_23_powi(base, exponent / 2);
+//         return fix9_23_mul(tmp, tmp);
+//     } else {
+//         const fix9_23 tmp = fix9_23_powi(base, (exponent - 1) / 2);
+//         return fix9_23_mul(fix9_23_mul(base, tmp), tmp);
+//     }
+// }
 
 TEST_CASE(Unity) {
 	ASSERT_EQUAL(1,1);
@@ -286,6 +404,10 @@ fix9_23 fix9_23_sqrt(fix9_23 x) {
     }
 
     return root;
+}
+
+fix9_23 fix9_23_sqr(fix9_23 x) {
+	return fix9_23_mul(x,x);
 }
 
 enum CosineQuadrant {
@@ -370,23 +492,97 @@ fix9_23 fix9_23_cos(fix9_23 x) {
 }
 
 fix9_23 fix9_23_sin(fix9_23 x) {
-	const fix9_23 HALF_PI = fix9_23_from_raw(fix9_23_pi().raw / 2);
+	const fix9_23 HALF_PI = fix9_23_div_int(fix9_23_pi(),  2);
 	return fix9_23_cos(fix9_23_sub(x, HALF_PI));
 }
 
-enum FixPointResult fix9_23_format(fix9_23 i, char* buffer, size_t len) {
+_Bool fix9_23_approx_eq(fix9_23 a, fix9_23 b, fix9_23 tol) {
+    if (tol.raw == 0) tol.raw = 1;
+    const fix9_23 diff = fix9_23_sub(a,b);
+    return fix9_23_abs(diff).raw < tol.raw;
+}
+
+fix9_23 fix9_23_exp(fix9_23 x) {
+
+    const int32_t DEGREE = 7;
+    const int32_t FACT[8] = { 1, 1, 2, 6, 24, 5*24, 6*5*24, 7*6*5*24 };
+
+    const fix9_23 x0 = fix9_23_frac(-8,1);
+    const fix9_23 x1 = fix9_23_frac(-31,10);
+    const fix9_23 x2 = fix9_23_int(0);
+    const fix9_23 x3 = fix9_23_frac(21,10);
+    
+    const fix9_23 bound0 = fix9_23_frac(-49,10);
+    const fix9_23 bound1 = fix9_23_frac(-129,100);
+    const fix9_23 bound2 = fix9_23_frac(117,100);
+
+    const fix9_23 expx0 = fix9_23_frac(335, 1000000);
+    const fix9_23 expx1 = fix9_23_frac(450, 10000);
+    const fix9_23 expx2 = fix9_23_int(1);
+    const fix9_23 expx3 = fix9_23_frac(817, 100);
+
+    if (x.raw < bound0.raw) {
+        // Taylor expansion @x0
+        const fix9_23 diff = fix9_23_sub(x, x0);
+        fix9_23 accum = expx0;
+        fix9_23 diff_accum = diff;
+        for (int i = 1; i <= DEGREE; i++) {
+            const fix9_23 term = fix9_23_div_int(fix9_23_mul(expx0, diff_accum), FACT[i]);
+            accum.raw += term.raw;
+            diff_accum = fix9_23_mul(diff_accum, diff_accum);
+        }
+        return accum;
+    } else if (x.raw < bound1.raw) {
+        // Taylor expansion @x1
+        const fix9_23 diff = fix9_23_sub(x, x1);
+        fix9_23 accum = expx1;
+        fix9_23 diff_accum = diff;
+        for (int i = 1; i <= DEGREE; i++) {
+            const fix9_23 term = fix9_23_div_int(fix9_23_mul(expx1, diff_accum), FACT[i]);
+            accum.raw += term.raw;
+            diff_accum = fix9_23_mul(diff_accum, diff_accum);
+        }
+        return accum;
+    } else if (x.raw < bound2.raw) {
+        // Taylor expansion @x2
+        const fix9_23 diff = fix9_23_sub(x, x2);
+        fix9_23 accum = expx2;
+        fix9_23 diff_accum = diff;
+        for (int i = 1; i <= DEGREE; i++) {
+            const fix9_23 term = fix9_23_div_int(fix9_23_mul(expx2, diff_accum), FACT[i]);
+            accum.raw += term.raw;
+            diff_accum = fix9_23_mul(diff_accum, diff_accum);
+        }
+        return accum;
+    } else {
+        // Taylor expansion @x3
+        const fix9_23 diff = fix9_23_sub(x, x3);
+        fix9_23 accum = expx3;
+        fix9_23 diff_accum = diff;
+        for (int i = 1; i <= DEGREE; i++) {
+            const fix9_23 term = fix9_23_div_int(fix9_23_mul(expx3, diff_accum), FACT[i]);
+            accum.raw += term.raw;
+            diff_accum = fix9_23_mul(diff_accum, diff_accum);
+        }
+        return accum;
+    }
+}
+
+
+int fix9_23_format(fix9_23 x, char* buffer, size_t len) {
     // TODO error handling
     //if (len < )
-    const int32_t DECIMAL_MASK = 8388607L;
+    const int64_t DECIMAL_MASK = 8388607L;
+    const int64_t DECIMAL_MULTIPLIER = 10000000LL;
     //const int32_t sign_bit_mask = 8388608L;
 
-    if (i.raw < 0) {
-        i.raw = ~i.raw + 1;
-        (void)snprintf(buffer, len, "-%ld.%07lld", i.raw >> FIX9_23_DEC_BITS,  ((int64_t)(i.raw & DECIMAL_MASK) * 10000000LL) >> FIX9_23_DEC_BITS);
+    if (x.raw < 0) {
+        x.raw = ~x.raw + 1;
+        return snprintf(buffer, len, "-%ld.%07ld", x.raw >> FIX9_23_DEC_BITS,  (int32_t)((((int64_t)x.raw & DECIMAL_MASK) * DECIMAL_MULTIPLIER) >> (int64_t)FIX9_23_DEC_BITS));
     }
     else {
-        (void)snprintf(buffer, len, "%ld.%07lld",i.raw >> FIX9_23_DEC_BITS, ((int64_t)(i.raw & DECIMAL_MASK) * 10000000LL) >> FIX9_23_DEC_BITS);
+        return snprintf(buffer, len, "%ld.%07ld", x.raw >> FIX9_23_DEC_BITS, (int32_t)((((int64_t)x.raw & DECIMAL_MASK) * DECIMAL_MULTIPLIER) >> (int64_t)FIX9_23_DEC_BITS));
     }
     //(void)snprintf(buffer, len, "%1d.%5d", i.raw >> FIX9_23_DEC_BITS, ((int32_t)(i.raw & DECIMAL_MASK) * 100000) >> FIX9_23_DEC_BITS);
-    return FIX_Ok;
+    // return FIX_Ok;
 }
