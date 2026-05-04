@@ -90,6 +90,14 @@ Complex9_23 complex9_23_conj(Complex9_23 z) {
     return complex9_23_new(z.re, fix9_23_neg(z.im));
 }
 
+fix9_23 complex9_23_abs_sqr(Complex9_23 z) {
+    return complex9_23_mul(z, complex9_23_conj(z)).re;
+}
+
+fix9_23 complex9_23_abs(Complex9_23 z) {
+    return fix9_23_sqrt(complex9_23_abs_sqr(z));
+}
+
 Complex9_23 complex9_23_euler(fix9_23 x) {
     return (Complex9_23) {
         .re = fix9_23_cos(x),

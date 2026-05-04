@@ -79,6 +79,12 @@ struct fix1_15
 };
 typedef struct fix1_15 fix1_15;
 
+struct fix9_23
+{
+    int32_t raw;
+};
+typedef struct fix9_23 fix9_23;
+
 enum FixPointResult {
     FIX_Ok = 0,
     FIX_FormatBufferTooSmall,
@@ -86,6 +92,7 @@ enum FixPointResult {
 
 fix1_15 fix1_15_int(int16_t n);
 fix1_15 fix1_15_from_raw(int16_t raw);
+fix1_15 fix1_15_from_f9_23(fix9_23 x);
 fix1_15 fix1_15_frac(int16_t num, int16_t denom);
 
 fix1_15 fix1_15_add(fix1_15 a, fix1_15 b);
@@ -97,13 +104,6 @@ fix1_15 fix1_15_powi(fix1_15 base, int16_t exponent);
 fix1_15 fix1_15_sqrt(fix1_15 x);
 
 enum FixPointResult fix1_15_format(fix1_15 i, char* buffer, size_t len);
-
-struct fix9_23
-{
-    int32_t raw;
-};
-typedef struct fix9_23 fix9_23;
-
 
 /**
  * @brief Creates fix9.23 number from the integer `n`.
@@ -138,6 +138,8 @@ fix9_23 fix9_23_frac(int32_t num, int32_t denom);
  */
 fix9_23 fix9_23_from_f32(float f);
 
+fix9_23 fix9_23_from_f1_15(fix1_15 x);
+
 /**
  * @brief Returns tau = 2*pi
  * 
@@ -162,10 +164,6 @@ fix9_23 fix9_23_abs(fix9_23 x);
 
 /**
  * @brief Computes `a + b`
- * 
- * @param a 
- * @param b 
- * @return fix9_23 
  */
 fix9_23 fix9_23_add(fix9_23 a, fix9_23 b);
 
@@ -180,10 +178,6 @@ fix9_23 fix9_23_sum(int argc, ...);
 
 /**
  * @brief Computes `a - b`
- * 
- * @param a 
- * @param b 
- * @return fix9_23 
  */
 fix9_23 fix9_23_sub(fix9_23 a, fix9_23 b);
 
@@ -197,37 +191,21 @@ fix9_23 fix9_23_neg(fix9_23 a);
 
 /**
  * @brief Computes `a * b`
- * 
- * @param a 
- * @param b 
- * @return fix9_23 
  */
 fix9_23 fix9_23_mul(fix9_23 a, fix9_23 b);
 
 /**
  * @brief Computes `a * b`, where `b` is an integer.
- * 
- * @param a 
- * @param b 
- * @return fix9_23 
  */
 fix9_23 fix9_23_mul_int(fix9_23 a, int32_t b);
 
 /**
  * @brief Computes `a / b`
- * 
- * @param a 
- * @param b 
- * @return fix9_23 
  */
 fix9_23 fix9_23_div(fix9_23 a, fix9_23 b);
 
 /**
  * @brief Computes `a / b`, where `b` is an integer
- * 
- * @param a 
- * @param b 
- * @return fix9_23 
  */
 fix9_23 fix9_23_div_int(fix9_23 a, int32_t b);
 
@@ -299,6 +277,5 @@ _Bool fix9_23_approx_eq(fix9_23 a, fix9_23 b, fix9_23 tol);
  * @return `int` The number of bytes written to buffer
  */
 int fix9_23_format(fix9_23 x, char* buffer, size_t len);
-
 
 #endif /* INC_FIXPOINT_H_ */

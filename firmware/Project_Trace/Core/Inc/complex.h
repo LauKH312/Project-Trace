@@ -126,6 +126,23 @@ Complex9_23 complex9_23_div_int(Complex9_23 z, int32_t x);
 Complex9_23 complex9_23_conj(Complex9_23 z);
 
 /**
+ * @brief Computes the square of the modulus of `z`
+ * 
+ * @param z 
+ * @return Complex9_23 
+ */
+fix9_23 complex9_23_abs_sqr(Complex9_23 z);
+
+/**
+ * @brief Computes the modulus of `z`
+ * 
+ * @param z 
+ * @return Complex9_23 
+ */
+fix9_23 complex9_23_abs(Complex9_23 z);
+
+
+/**
  * @brief The euler function exp(i*x) = cos(x) + i * sin(x)
  * 
  * @param x 

@@ -120,6 +120,10 @@ fix1_15 fix1_15_from_raw(int16_t raw) {
     return (fix1_15){.raw = raw};
 }
 
+fix1_15 fix1_15_from_f9_23(fix9_23 x) {
+    return fix1_15_from_raw((int16_t)(x.raw >> (FIX9_23_DEC_BITS - FIX1_15_DEC_BITS)));
+}
+
 fix1_15 fix1_15_frac(int16_t num, int16_t denom) {
     return fix1_15_from_raw(((int32_t)num << FIX1_15_DEC_BITS) / denom);
 }
@@ -210,6 +214,9 @@ fix9_23 fix9_23_from_f32(float f) {
 	return fix9_23_from_raw((int32_t) (f*MULTIPLIER));
 }
 
+fix9_23 fix9_23_from_f1_15(fix1_15 x) {
+    return fix9_23_from_raw((int32_t)(x.raw) << (FIX9_23_DEC_BITS - FIX1_15_DEC_BITS));
+}
 
 fix9_23 fix9_23_tau() {
 	// return fix9_23_from_f32(6.2831853072f);
