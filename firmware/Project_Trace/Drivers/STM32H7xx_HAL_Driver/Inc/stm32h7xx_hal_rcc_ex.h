@@ -24,7 +24,8 @@
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-#include "stm32h7xx_hal_def.h"
+#include <stm32h7xx_hal_def.h>
+//#include <stm32h7xx_hal.h>
 
 /** @addtogroup STM32H7xx_HAL_Driver
   * @{
