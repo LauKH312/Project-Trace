@@ -1,7 +1,8 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <string.h>
-#include <stm32h7xx_hal_gpio.h>
+#include <stm32h7xx_hal.h>
+#include <adc.h>
 
 /*TODO: set SPI data size to 16 bits*/
 /*TODO: peripheral-to-memory mode for DMA*/
@@ -28,6 +29,8 @@ GPIO_Pin == GPIO_PIN_14;
 */
 /*HAL_GPIO_TogglePin(PA4_GPIO_Port,PA4_Pin);
     HAL_Delay(500);*/
+
+extern SPI_HandleTypeDef hspi1;
 
 #define ADC_BUFFER_SIZE 256
 
@@ -65,7 +68,7 @@ void adc_init(void)
     buffer_a.status = BUFFER_EMPTY;
     buffer_b.status = BUFFER_EMPTY;
 
-    const GPIO_TypeDef* SYNC_BANK = GPIOA;
+    GPIO_TypeDef* SYNC_BANK = GPIOA;
 	const uint16_t SYNC_PIN = GPIO_PIN_4;
 
     HAL_GPIO_WritePin(SYNC_BANK, SYNC_PIN, GPIO_PIN_RESET);
