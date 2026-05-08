@@ -19,7 +19,7 @@ fix9_23 meas_average(fix1_15* buf, size_t buffer_length, fix9_23 unit) {
         acc += x.raw;
     } 
     acc /= (int64_t) buffer_length;
-    return fix9_23_from_raw((int32_t) acc); 
+    return FIX9_23_RAW((int32_t) acc);
 }
 
 // fix9_23 meas_rms(fix1_15* buf, size_t buffer_length, fix9_23 unit) {
@@ -27,7 +27,7 @@ fix9_23 meas_average(fix1_15* buf, size_t buffer_length, fix9_23 unit) {
 // }
 
 fix9_23 meas_max(fix1_15* buf, size_t buffer_length, fix9_23 unit) {
-    fix9_23 max = fix9_23_from_raw(INT32_MIN);
+    fix9_23 max = FIX9_23_RAW(INT32_MIN);
 
     for (size_t i = 0; i < buffer_length; i++) {
         const fix9_23 x = meas_scale_sample(buf[i], unit);
@@ -39,7 +39,7 @@ fix9_23 meas_max(fix1_15* buf, size_t buffer_length, fix9_23 unit) {
 }
 
 fix9_23 meas_min(fix1_15* buf, size_t buffer_length, fix9_23 unit) {
-    fix9_23 min = fix9_23_from_raw(INT32_MAX);
+    fix9_23 min = FIX9_23_RAW(INT32_MAX);
 
     for (size_t i = 0; i < buffer_length; i++) {
         const fix9_23 x = meas_scale_sample(buf[i], unit);
@@ -47,4 +47,18 @@ fix9_23 meas_min(fix1_15* buf, size_t buffer_length, fix9_23 unit) {
     }
 
     return min;
+}
+
+_Bool rising_edge(fix1_15* buf, size_t buffer_length, fix1_15 threshold, size_t* rising_edge_idx) {
+	_Bool previous_below_thr = 0;
+	for (size_t i = 0; i < buffer_length; i++) {
+
+		if (buf[i].raw > threshold.raw && previous_below_thr) {
+			*rising_edge_idx = i;
+			return 1;
+		}
+
+		previous_below_thr = buf[i].raw < threshold.raw;
+	}
+	return 0;
 }

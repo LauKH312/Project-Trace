@@ -18,5 +18,6 @@ fix9_23 meas_average(fix1_15* buf, size_t buffer_length, fix9_23 unit);
 fix9_23 meas_max(fix1_15* buf, size_t buffer_length, fix9_23 unit);
 fix9_23 meas_min(fix1_15* buf, size_t buffer_length, fix9_23 unit);
 
+_Bool rising_edge(fix1_15* buf, size_t buffer_length, fix1_15 threshold, size_t* rising_edge_idx);
 
 #endif /* INC_MEAS_H_ */

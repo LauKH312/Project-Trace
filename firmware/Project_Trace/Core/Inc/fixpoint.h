@@ -18,8 +18,15 @@
 #define FIX1_15_INT_BITS 1
 #define FIX1_15_DEC_BITS 15
 
+#define FIX1_15_RAW(n) ((fix1_15){.raw = (n)})
+
 #define FIX9_23_INT_BITS 9LL
 #define FIX9_23_DEC_BITS 23LL
+
+#define FIX9_23_RAW(n) ((fix9_23){.raw = (n)})
+#define FIX9_23_PI ((fix9_23){.raw = 26353589L})
+#define FIX9_23_TAU ((fix9_23){.raw = 52707178L})
+
 
 //! All fix1616 stuff is derived from the final project submitted by Laurits K. Hillemann and Alexander N. Olsen for the earlier DTU course 'Programming Project' (30010)
 /// Archimedes' constant - π
@@ -91,7 +98,7 @@ enum FixPointResult {
 };
 
 fix1_15 fix1_15_int(int16_t n);
-fix1_15 fix1_15_from_raw(int16_t raw);
+//fix1_15 fix1_15_from_raw(int16_t raw);
 fix1_15 fix1_15_from_f9_23(fix9_23 x);
 fix1_15 fix1_15_frac(int16_t num, int16_t denom);
 
@@ -103,7 +110,7 @@ fix1_15 fix1_15_div(fix1_15 a, fix1_15 b);
 fix1_15 fix1_15_powi(fix1_15 base, int16_t exponent);
 fix1_15 fix1_15_sqrt(fix1_15 x);
 
-enum FixPointResult fix1_15_format(fix1_15 i, char* buffer, size_t len);
+int fix1_15_format(fix1_15 i, char* buffer, size_t len);
 
 /**
  * @brief Creates fix9.23 number from the integer `n`.
@@ -113,13 +120,14 @@ enum FixPointResult fix1_15_format(fix1_15 i, char* buffer, size_t len);
  */
 fix9_23 fix9_23_int(int32_t n);
 
+
 /**
  * @brief Creates fix9.23 number from its raw internal representation.
  * 
  * @param raw 
  * @return fix9_23 
- */
 fix9_23 fix9_23_from_raw(int32_t raw);
+ */
 
 /**
  * @brief Creates a fix9.23 number from a fraction.
@@ -139,20 +147,6 @@ fix9_23 fix9_23_frac(int32_t num, int32_t denom);
 fix9_23 fix9_23_from_f32(float f);
 
 fix9_23 fix9_23_from_f1_15(fix1_15 x);
-
-/**
- * @brief Returns tau = 2*pi
- * 
- * @return fix9_23 
- */
-fix9_23 fix9_23_tau();
-
-/**
- * @brief Returns pi
- * 
- * @return fix9_23 
- */
-fix9_23 fix9_23_pi();
 
 /**
  * @brief Returns the absolute value of `x`

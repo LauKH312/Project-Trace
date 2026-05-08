@@ -116,16 +116,18 @@ fix1_15 fix1_15_int(int16_t n)  {
     return (fix1_15){.raw = n << FIX1_15_DEC_BITS};
 }
 
+/*
 fix1_15 fix1_15_from_raw(int16_t raw) {
     return (fix1_15){.raw = raw};
 }
+*/
 
 fix1_15 fix1_15_from_f9_23(fix9_23 x) {
-    return fix1_15_from_raw((int16_t)(x.raw >> (FIX9_23_DEC_BITS - FIX1_15_DEC_BITS)));
+    return FIX1_15_RAW((int16_t)(x.raw >> (FIX9_23_DEC_BITS - FIX1_15_DEC_BITS)));
 }
 
 fix1_15 fix1_15_frac(int16_t num, int16_t denom) {
-    return fix1_15_from_raw(((int32_t)num << FIX1_15_DEC_BITS) / denom);
+    return FIX1_15_RAW(((int32_t)num << FIX1_15_DEC_BITS) / denom);
 }
 
 fix1_15 fix1_15_add(fix1_15 a, fix1_15 b) {
@@ -162,7 +164,7 @@ fix1_15 fix1_15_powi(fix1_15 base, int16_t exponent) {
 fix1_15 fix1_15_sqrt(fix1_15 x) {
     const int NUMBER_GUESSES = 8;
 
-    const fix1_15 initial_guess = fix1_15_from_raw(x.raw >> 1);
+    const fix1_15 initial_guess = FIX1_15_RAW(x.raw >> 1);
 
     // x = root^2
     // 0 = x - root^2
@@ -176,23 +178,18 @@ fix1_15 fix1_15_sqrt(fix1_15 x) {
     return root;
 }
 
-enum FixPointResult fix1_15_format(fix1_15 i, char* buffer, size_t len) {
-    // TODO error handling
-    //if (len < )
+int fix1_15_format(fix1_15 i, char* buffer, size_t len) {
     if (i.raw < 0) {
-        //printf("-");
         const int16_t sign_bit_mask = 0x8000;
         i.raw = ~i.raw + 1;
         if (i.raw & sign_bit_mask)
-        (void)snprintf(buffer, len, "-1.%5ld", ((int32_t)(i.raw & 0x7fff) * 100000) >> 15);
+        return snprintf(buffer, len, "-1.%5ld", ((int32_t)(i.raw & 0x7fff) * 100000) >> 15);
         else
-        (void)snprintf(buffer, len, "-0.%5ld", ((int32_t)(i.raw & 0x7fff) * 100000) >> 15);
+        return snprintf(buffer, len, "-0.%5ld", ((int32_t)(i.raw & 0x7fff) * 100000) >> 15);
     }
     else {
-        (void)snprintf(buffer, len, "0.%5ld", ((int32_t)(i.raw & 0x7fff) * 100000) >> 15);
+        return snprintf(buffer, len, "0.%5ld", ((int32_t)(i.raw & 0x7fff) * 100000) >> 15);
     }
-    //(void)snprintf(buffer, len, "%1d.%5d", i.raw >> 15, ((int32_t)(i.raw & 0x7fff) * 100000) >> 15);
-    return FIX_Ok;
 }
 
 // fix9.23
@@ -200,34 +197,25 @@ fix9_23 fix9_23_int(int32_t n)  {
     return (fix9_23){.raw = n << FIX9_23_DEC_BITS};
 }
 
+/*
 fix9_23 fix9_23_from_raw(int32_t raw) {
-    return (fix9_23){.raw = raw};
+    //return (fix9_23){.raw = raw};
+	return FIX9_23_RAW(raw);
 }
+*/
 
 fix9_23 fix9_23_frac(int32_t num, int32_t denom) {
-    return fix9_23_from_raw(((int64_t)num << FIX9_23_DEC_BITS) / denom);
+    return FIX9_23_RAW(((int64_t)num << FIX9_23_DEC_BITS) / denom);
 }
 
 
 fix9_23 fix9_23_from_f32(float f) {
 	const float MULTIPLIER = 8388608.0f;
-	return fix9_23_from_raw((int32_t) (f*MULTIPLIER));
+	return FIX9_23_RAW((int32_t) (f*MULTIPLIER));
 }
 
 fix9_23 fix9_23_from_f1_15(fix1_15 x) {
-    return fix9_23_from_raw((int32_t)(x.raw) << (FIX9_23_DEC_BITS - FIX1_15_DEC_BITS));
-}
-
-fix9_23 fix9_23_tau() {
-	// return fix9_23_from_f32(6.2831853072f);
-    return fix9_23_from_raw(52707178);
-}
-
-
-fix9_23 fix9_23_pi() {
-//	return fix9_23_from_f32(3.141592654f);
-	// return fix9_23_frac(355,113);
-    return fix9_23_from_raw(26353589);
+    return FIX9_23_RAW((int32_t)(x.raw) << (FIX9_23_DEC_BITS - FIX1_15_DEC_BITS));
 }
 
 fix9_23 fix9_23_abs(fix9_23 x) {
@@ -238,7 +226,7 @@ fix9_23 fix9_23_abs(fix9_23 x) {
 }
 
 fix9_23 fix9_23_add(fix9_23 a, fix9_23 b) {
-    return (fix9_23){.raw = a.raw + b.raw};
+    return FIX9_23_RAW(a.raw + b.raw);
 }
 
 fix9_23 fix9_23_sum(int argc, ...) {
@@ -258,11 +246,11 @@ fix9_23 fix9_23_sum(int argc, ...) {
 }
 
 fix9_23 fix9_23_sub(fix9_23 a, fix9_23 b) {
-    return (fix9_23){.raw = a.raw - b.raw};
+	return FIX9_23_RAW(a.raw - b.raw);
 }
 
 fix9_23 fix9_23_neg(fix9_23 a) {
-    return (fix9_23){.raw = -a.raw};
+    return FIX9_23_RAW(-a.raw);
 }
 
 fix9_23 fix9_23_mul(fix9_23 a, fix9_23 b) {
@@ -399,7 +387,7 @@ TEST_CASE(Unity) {
 fix9_23 fix9_23_sqrt(fix9_23 x) {
     const int NUMBER_GUESSES = 8;
 
-    const fix9_23 initial_guess = fix9_23_from_raw(x.raw >> 1);
+    const fix9_23 initial_guess = FIX9_23_RAW(x.raw >> 1);
 
     // x = root^2
     // f: x -> k - x^2
@@ -429,14 +417,14 @@ fix9_23 fix9_23_cos(fix9_23 x) {
 		x.raw = -x.raw;
 	}
 
-	const fix9_23 HALF_PI = fix9_23_from_raw(fix9_23_pi().raw / 2);
-	const fix9_23 PI = fix9_23_pi();
-	const fix9_23 THREE_HALF_PI = fix9_23_from_raw((fix9_23_pi().raw * 3) / 2);
-	const fix9_23 TWO_PI = fix9_23_tau();
+	const fix9_23 HALF_PI = FIX9_23_RAW(FIX9_23_PI.raw / 2);
+	const fix9_23 PI = FIX9_23_PI;
+	const fix9_23 THREE_HALF_PI = FIX9_23_RAW((FIX9_23_PI.raw * 3) / 2);
+	const fix9_23 TWO_PI = FIX9_23_TAU;
 
 	// Normalization step
 	// TODO: Imprecise bounds.
-	x.raw -= fix9_23_mul(fix9_23_tau(), fix9_23_int(x.raw / fix9_23_tau().raw)).raw;
+	x.raw -= fix9_23_mul(FIX9_23_TAU, fix9_23_int(x.raw / FIX9_23_TAU.raw)).raw;
 
 	enum CosineQuadrant xquad;
 
@@ -490,7 +478,7 @@ fix9_23 fix9_23_cos(fix9_23 x) {
 		break;
 	case CosQuad2:
 	case CosQuad3:
-		return fix9_23_from_raw(-sum.raw);
+		return FIX9_23_RAW(-sum.raw);
 		break;
 	default:
 		__builtin_unreachable();
@@ -499,7 +487,7 @@ fix9_23 fix9_23_cos(fix9_23 x) {
 }
 
 fix9_23 fix9_23_sin(fix9_23 x) {
-	const fix9_23 HALF_PI = fix9_23_div_int(fix9_23_pi(),  2);
+	const fix9_23 HALF_PI = fix9_23_div_int(FIX9_23_PI,  2);
 	return fix9_23_cos(fix9_23_sub(x, HALF_PI));
 }
 
@@ -509,6 +497,7 @@ _Bool fix9_23_approx_eq(fix9_23 a, fix9_23 b, fix9_23 tol) {
     return fix9_23_abs(diff).raw < tol.raw;
 }
 
+// TODO: improve accuracy
 fix9_23 fix9_23_exp(fix9_23 x) {
 
     const int32_t DEGREE = 7;
@@ -577,11 +566,8 @@ fix9_23 fix9_23_exp(fix9_23 x) {
 
 
 int fix9_23_format(fix9_23 x, char* buffer, size_t len) {
-    // TODO error handling
-    //if (len < )
     const int64_t DECIMAL_MASK = 8388607L;
     const int64_t DECIMAL_MULTIPLIER = 10000000LL;
-    //const int32_t sign_bit_mask = 8388608L;
 
     if (x.raw < 0) {
         x.raw = ~x.raw + 1;
@@ -590,6 +576,4 @@ int fix9_23_format(fix9_23 x, char* buffer, size_t len) {
     else {
         return snprintf(buffer, len, "%ld.%07ld", x.raw >> FIX9_23_DEC_BITS, (int32_t)((((int64_t)x.raw & DECIMAL_MASK) * DECIMAL_MULTIPLIER) >> (int64_t)FIX9_23_DEC_BITS));
     }
-    //(void)snprintf(buffer, len, "%1d.%5d", i.raw >> FIX9_23_DEC_BITS, ((int32_t)(i.raw & DECIMAL_MASK) * 100000) >> FIX9_23_DEC_BITS);
-    // return FIX_Ok;
 }
