@@ -13,8 +13,8 @@ typedef enum
 
 typedef struct
 {
-    volatile BufferStatus status;
-    int16_t data[ADC_BUFFER_SIZE];
+    BufferStatus status;
+    volatile int16_t data[ADC_BUFFER_SIZE];
 } ADCBuffer;
 
 /* Returns pointer to a full buffer.

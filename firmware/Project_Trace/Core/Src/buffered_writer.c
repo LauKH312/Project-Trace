@@ -16,7 +16,7 @@ BufferedWriter bw_new(FILE* stream, char* buffer, size_t buffer_len) {
     bw.capacity = buffer_len;
     return bw;
 }
-enum BWResult bw_write(BufferedWriter* bw, char* string, size_t string_len) {
+enum BWResult bw_write(BufferedWriter* bw, const char* string, size_t string_len) {
     if (bw->occupied + string_len > bw->capacity) {
         bw_flush(bw);
         size_t written = fwrite(string, 1, string_len, bw->stream);

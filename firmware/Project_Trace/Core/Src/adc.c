@@ -32,8 +32,6 @@ GPIO_Pin == GPIO_PIN_14;
 
 extern SPI_HandleTypeDef hspi1;
 
-#define ADC_BUFFER_SIZE 256
-
 /* Double buffers */
 ADCBuffer buffer_a = {0};
 ADCBuffer buffer_b = {0};
@@ -47,13 +45,13 @@ int16_t *adc_get_sample(void)
     if (buffer_a.status == BUFFER_FULL)
     {
         buffer_a.status = BUFFER_EMPTY;
-        return buffer_a.data;
+        return (int16_t*)buffer_a.data;
     }
 
     if (buffer_b.status == BUFFER_FULL)
     {
         buffer_b.status = BUFFER_EMPTY;
-        return buffer_b.data;
+        return (int16_t*)buffer_b.data;
     }
 
     return NULL;
@@ -62,8 +60,8 @@ int16_t *adc_get_sample(void)
 /* Initializes ADC sampling and DMA */
 void adc_init(void)
 {
-    memset(buffer_a.data, 0, sizeof(buffer_a.data));
-    memset(buffer_b.data, 0, sizeof(buffer_b.data));
+    memset((int16_t*)buffer_a.data, 0, sizeof(buffer_a.data));
+    memset((int16_t*)buffer_b.data, 0, sizeof(buffer_b.data));
 
     buffer_a.status = BUFFER_EMPTY;
     buffer_b.status = BUFFER_EMPTY;
