@@ -25,6 +25,7 @@
 #include <test_suite.h>
 #include <adc.h>
 #include <stm32h7xx_hal.h>
+#include <stdint.h>
 
 /* USER CODE END Includes */
 

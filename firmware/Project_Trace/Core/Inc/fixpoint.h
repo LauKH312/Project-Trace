@@ -252,6 +252,8 @@ fix9_23 fix9_23_sin(fix9_23 x);
  */
 fix9_23 fix9_23_exp(fix9_23 x);
 
+fix9_23 fix9_23_log2(fix9_23 x);
+
 /**
  * @brief Checks if `a` and `b` are equal within the tolerance `tol`
  * 

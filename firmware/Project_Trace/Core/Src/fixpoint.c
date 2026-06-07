@@ -497,6 +497,31 @@ _Bool fix9_23_approx_eq(fix9_23 a, fix9_23 b, fix9_23 tol) {
     return fix9_23_abs(diff).raw < tol.raw;
 }
 
+int32_t fix9_23_truncate(fix9_23 x) {
+    return x.raw >> FIX9_23_DEC_BITS;
+}
+
+
+const int32_t table_zero_idx = 16;
+const fix9_23 EXP_LUT[32] = {
+FIX9_23_RAW(1),FIX9_23_RAW(3),FIX9_23_RAW(7),FIX9_23_RAW(19),FIX9_23_RAW(52),FIX9_23_RAW(140),FIX9_23_RAW(381),FIX9_23_RAW(1035),FIX9_23_RAW(2814),FIX9_23_RAW(7649),FIX9_23_RAW(20793),FIX9_23_RAW(56522),FIX9_23_RAW(153643),FIX9_23_RAW(417644),FIX9_23_RAW(1135275),FIX9_23_RAW(3085996),FIX9_23_RAW(8388608),FIX9_23_RAW(22802601),FIX9_23_RAW(61983895),FIX9_23_RAW(168489696),FIX9_23_RAW(458002478),FIX9_23_RAW(1244979814),FIX9_23_RAW(3384206005), // FIX9_23_RAW(9199225686),FIX9_23_RAW(25006088018),FIX9_23_RAW(67973594660),FIX9_23_RAW(184771387178),FIX9_23_RAW(502260704185),FIX9_23_RAW(1365286145336),FIX9_23_RAW(3711232519513),FIX9_23_RAW(10088175918979),FIX9_23_RAW(27422505282859),
+};
+
+// Retrieved from https://github.com/nadavrot/fast_log.
+// Rewritten to use fix9_23 fixed-precision decimals.
+fix9_23 fix9_23_fast_exp(fix9_23 x) {
+    const int32_t integer = fix9_23_truncate(x);
+    x = fix9_23_sub(x, fix9_23_int(integer));
+
+    const fix9_23 coeffs[4] = {FIX9_23_RAW(2351638), FIX9_23_RAW(3567692), FIX9_23_RAW(8495449), FIX9_23_RAW(8390365)};
+    fix9_23 acc = fix9_23_add(coeffs[1], fix9_23_mul(x,coeffs[0]));
+    acc = fix9_23_add(coeffs[2], fix9_23_mul(x, acc));
+    acc = fix9_23_add(coeffs[3], fix9_23_mul(x, acc));
+    return fix9_23_mul(acc, EXP_LUT[integer + table_zero_idx]);
+    // acc = fix9_23_add(acc, )
+
+}
+
 // TODO: improve accuracy
 fix9_23 fix9_23_exp(fix9_23 x) {
 
@@ -564,6 +589,35 @@ fix9_23 fix9_23_exp(fix9_23 x) {
     }
 }
 
+
+const int32_t x0lut[32] = {1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576, 2097152, 4194304, 8388608, 16777216, 33554432, 67108864, 134217728, 268435456, 536870912, 1073741824, 2147483648};
+const fix9_23 ln2 = FIX9_23_RAW(5814540);
+// const fix9_23 ln2_recip = FIX9_23_RAW(12102203);
+// const fix9_23 log2_10 = FIX9_23_RAW(27866353);
+// const fix9_23 log2_e = FIX9_23_RAW(12102203);
+
+int32_t fastlog2i(fix9_23 x) {
+    return 31 - __builtin_clz(x.raw);
+}
+
+fix9_23 fix9_23_log2(fix9_23 x) {
+    const fix9_23 l2x = FIX9_23_RAW(fastlog2i(x));
+    const fix9_23 x0 = FIX9_23_RAW(x0lut[l2x.raw]);
+    
+    // const fix9_23 x0_recip = fix9_23_div(fix9_23_int(1), x0);
+    // const fix9_23 dx0 = 1/ln(2) * 1/x0;
+    const fix9_23 dx0 = fix9_23_div(fix9_23_int(1),fix9_23_mul(ln2, x0));
+
+    // Newton Raphson Method on 2^l = x
+    const fix9_23 deltax = fix9_23_sub(x,x0);
+
+    const fix9_23 guess = fix9_23_add(l2x, fix9_23_mul(dx0, deltax));
+
+    const fix9_23 newtexp = fix9_23_fast_exp(fix9_23_mul(guess, ln2));
+    const fix9_23 it1 = fix9_23_add(guess, fix9_23_div(fix9_23_sub(newtexp,x), fix9_23_mul(newtexp, ln2)));
+
+    return fix9_23_sub(it1, fix9_23_int(FIX9_23_DEC_BITS));
+}
 
 int fix9_23_format(fix9_23 x, char* buffer, size_t len) {
     const int64_t DECIMAL_MASK = 8388607L;
