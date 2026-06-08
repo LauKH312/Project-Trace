@@ -22,9 +22,16 @@ fix9_23 meas_average(fix1_15* buf, size_t buffer_length, fix9_23 unit) {
     return fix9_23_from_raw((int32_t) acc); 
 }
 
-// fix9_23 meas_rms(fix1_15* buf, size_t buffer_length, fix9_23 unit) {
+fix9_23 meas_rms(fix1_15* buf, size_t buffer_length, fix9_23 unit) {
+    int64_t acc = 0;
+    for (size_t i = 0; i < buffer_length; i++) {
+        const fix9_23 x = meas_scale_sample(buf[i], unit);
+        acc += fix9_23_sqr(x).raw;
+    }
 
-// }
+    acc /= buffer_length;
+    return fix9_23_sqrt(fix9_23_from_raw((int32_t) acc));
+}
 
 fix9_23 meas_max(fix1_15* buf, size_t buffer_length, fix9_23 unit) {
     fix9_23 max = fix9_23_from_raw(INT32_MIN);
