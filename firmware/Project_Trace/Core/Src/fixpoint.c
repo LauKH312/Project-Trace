@@ -116,16 +116,18 @@ fix1_15 fix1_15_int(int16_t n)  {
     return (fix1_15){.raw = n << FIX1_15_DEC_BITS};
 }
 
+/*
 fix1_15 fix1_15_from_raw(int16_t raw) {
     return (fix1_15){.raw = raw};
 }
+*/
 
 fix1_15 fix1_15_from_f9_23(fix9_23 x) {
-    return fix1_15_from_raw((int16_t)(x.raw >> (FIX9_23_DEC_BITS - FIX1_15_DEC_BITS)));
+    return FIX1_15_RAW((int16_t)(x.raw >> (FIX9_23_DEC_BITS - FIX1_15_DEC_BITS)));
 }
 
 fix1_15 fix1_15_frac(int16_t num, int16_t denom) {
-    return fix1_15_from_raw(((int32_t)num << FIX1_15_DEC_BITS) / denom);
+    return FIX1_15_RAW(((int32_t)num << FIX1_15_DEC_BITS) / denom);
 }
 
 fix1_15 fix1_15_add(fix1_15 a, fix1_15 b) {
@@ -162,7 +164,7 @@ fix1_15 fix1_15_powi(fix1_15 base, int16_t exponent) {
 fix1_15 fix1_15_sqrt(fix1_15 x) {
     const int NUMBER_GUESSES = 8;
 
-    const fix1_15 initial_guess = fix1_15_from_raw(x.raw >> 1);
+    const fix1_15 initial_guess = FIX1_15_RAW(x.raw >> 1);
 
     // x = root^2
     // 0 = x - root^2
@@ -176,23 +178,18 @@ fix1_15 fix1_15_sqrt(fix1_15 x) {
     return root;
 }
 
-enum FixPointResult fix1_15_format(fix1_15 i, char* buffer, size_t len) {
-    // TODO error handling
-    //if (len < )
+int fix1_15_format(fix1_15 i, char* buffer, size_t len) {
     if (i.raw < 0) {
-        //printf("-");
         const int16_t sign_bit_mask = 0x8000;
         i.raw = ~i.raw + 1;
         if (i.raw & sign_bit_mask)
-        (void)snprintf(buffer, len, "-1.%5ld", ((int32_t)(i.raw & 0x7fff) * 100000) >> 15);
+        return snprintf(buffer, len, "-1.%5ld", ((int32_t)(i.raw & 0x7fff) * 100000) >> 15);
         else
-        (void)snprintf(buffer, len, "-0.%5ld", ((int32_t)(i.raw & 0x7fff) * 100000) >> 15);
+        return snprintf(buffer, len, "-0.%5ld", ((int32_t)(i.raw & 0x7fff) * 100000) >> 15);
     }
     else {
-        (void)snprintf(buffer, len, "0.%5ld", ((int32_t)(i.raw & 0x7fff) * 100000) >> 15);
+        return snprintf(buffer, len, "0.%5ld", ((int32_t)(i.raw & 0x7fff) * 100000) >> 15);
     }
-    //(void)snprintf(buffer, len, "%1d.%5d", i.raw >> 15, ((int32_t)(i.raw & 0x7fff) * 100000) >> 15);
-    return FIX_Ok;
 }
 
 // fix9.23
@@ -200,34 +197,25 @@ fix9_23 fix9_23_int(int32_t n)  {
     return (fix9_23){.raw = n << FIX9_23_DEC_BITS};
 }
 
+/*
 fix9_23 fix9_23_from_raw(int32_t raw) {
-    return (fix9_23){.raw = raw};
+    //return (fix9_23){.raw = raw};
+	return FIX9_23_RAW(raw);
 }
+*/
 
 fix9_23 fix9_23_frac(int32_t num, int32_t denom) {
-    return fix9_23_from_raw(((int64_t)num << FIX9_23_DEC_BITS) / denom);
+    return FIX9_23_RAW(((int64_t)num << FIX9_23_DEC_BITS) / denom);
 }
 
 
 fix9_23 fix9_23_from_f32(float f) {
 	const float MULTIPLIER = 8388608.0f;
-	return fix9_23_from_raw((int32_t) (f*MULTIPLIER));
+	return FIX9_23_RAW((int32_t) (f*MULTIPLIER));
 }
 
 fix9_23 fix9_23_from_f1_15(fix1_15 x) {
-    return fix9_23_from_raw((int32_t)(x.raw) << (FIX9_23_DEC_BITS - FIX1_15_DEC_BITS));
-}
-
-fix9_23 fix9_23_tau() {
-	// return fix9_23_from_f32(6.2831853072f);
-    return fix9_23_from_raw(52707178);
-}
-
-
-fix9_23 fix9_23_pi() {
-//	return fix9_23_from_f32(3.141592654f);
-	// return fix9_23_frac(355,113);
-    return fix9_23_from_raw(26353589);
+    return FIX9_23_RAW((int32_t)(x.raw) << (FIX9_23_DEC_BITS - FIX1_15_DEC_BITS));
 }
 
 fix9_23 fix9_23_abs(fix9_23 x) {
@@ -238,7 +226,7 @@ fix9_23 fix9_23_abs(fix9_23 x) {
 }
 
 fix9_23 fix9_23_add(fix9_23 a, fix9_23 b) {
-    return (fix9_23){.raw = a.raw + b.raw};
+    return FIX9_23_RAW(a.raw + b.raw);
 }
 
 fix9_23 fix9_23_sum(int argc, ...) {
@@ -258,11 +246,11 @@ fix9_23 fix9_23_sum(int argc, ...) {
 }
 
 fix9_23 fix9_23_sub(fix9_23 a, fix9_23 b) {
-    return (fix9_23){.raw = a.raw - b.raw};
+	return FIX9_23_RAW(a.raw - b.raw);
 }
 
 fix9_23 fix9_23_neg(fix9_23 a) {
-    return (fix9_23){.raw = -a.raw};
+    return FIX9_23_RAW(-a.raw);
 }
 
 fix9_23 fix9_23_mul(fix9_23 a, fix9_23 b) {
@@ -399,7 +387,7 @@ TEST_CASE(Unity) {
 fix9_23 fix9_23_sqrt(fix9_23 x) {
     const int NUMBER_GUESSES = 8;
 
-    const fix9_23 initial_guess = fix9_23_from_raw(x.raw >> 1);
+    const fix9_23 initial_guess = FIX9_23_RAW(x.raw >> 1);
 
     // x = root^2
     // f: x -> k - x^2
@@ -429,14 +417,14 @@ fix9_23 fix9_23_cos(fix9_23 x) {
 		x.raw = -x.raw;
 	}
 
-	const fix9_23 HALF_PI = fix9_23_from_raw(fix9_23_pi().raw / 2);
-	const fix9_23 PI = fix9_23_pi();
-	const fix9_23 THREE_HALF_PI = fix9_23_from_raw((fix9_23_pi().raw * 3) / 2);
-	const fix9_23 TWO_PI = fix9_23_tau();
+	const fix9_23 HALF_PI = FIX9_23_RAW(FIX9_23_PI.raw / 2);
+	const fix9_23 PI = FIX9_23_PI;
+	const fix9_23 THREE_HALF_PI = FIX9_23_RAW((FIX9_23_PI.raw * 3) / 2);
+	const fix9_23 TWO_PI = FIX9_23_TAU;
 
 	// Normalization step
 	// TODO: Imprecise bounds.
-	x.raw -= fix9_23_mul(fix9_23_tau(), fix9_23_int(x.raw / fix9_23_tau().raw)).raw;
+	x.raw -= fix9_23_mul(FIX9_23_TAU, fix9_23_int(x.raw / FIX9_23_TAU.raw)).raw;
 
 	enum CosineQuadrant xquad;
 
@@ -490,7 +478,7 @@ fix9_23 fix9_23_cos(fix9_23 x) {
 		break;
 	case CosQuad2:
 	case CosQuad3:
-		return fix9_23_from_raw(-sum.raw);
+		return FIX9_23_RAW(-sum.raw);
 		break;
 	default:
 		__builtin_unreachable();
@@ -499,7 +487,7 @@ fix9_23 fix9_23_cos(fix9_23 x) {
 }
 
 fix9_23 fix9_23_sin(fix9_23 x) {
-	const fix9_23 HALF_PI = fix9_23_div_int(fix9_23_pi(),  2);
+	const fix9_23 HALF_PI = fix9_23_div_int(FIX9_23_PI,  2);
 	return fix9_23_cos(fix9_23_sub(x, HALF_PI));
 }
 
@@ -509,6 +497,32 @@ _Bool fix9_23_approx_eq(fix9_23 a, fix9_23 b, fix9_23 tol) {
     return fix9_23_abs(diff).raw < tol.raw;
 }
 
+int32_t fix9_23_truncate(fix9_23 x) {
+    return x.raw >> FIX9_23_DEC_BITS;
+}
+
+
+const int32_t table_zero_idx = 16;
+const fix9_23 EXP_LUT[32] = {
+FIX9_23_RAW(1),FIX9_23_RAW(3),FIX9_23_RAW(7),FIX9_23_RAW(19),FIX9_23_RAW(52),FIX9_23_RAW(140),FIX9_23_RAW(381),FIX9_23_RAW(1035),FIX9_23_RAW(2814),FIX9_23_RAW(7649),FIX9_23_RAW(20793),FIX9_23_RAW(56522),FIX9_23_RAW(153643),FIX9_23_RAW(417644),FIX9_23_RAW(1135275),FIX9_23_RAW(3085996),FIX9_23_RAW(8388608),FIX9_23_RAW(22802601),FIX9_23_RAW(61983895),FIX9_23_RAW(168489696),FIX9_23_RAW(458002478),FIX9_23_RAW(1244979814),FIX9_23_RAW(3384206005), // FIX9_23_RAW(9199225686),FIX9_23_RAW(25006088018),FIX9_23_RAW(67973594660),FIX9_23_RAW(184771387178),FIX9_23_RAW(502260704185),FIX9_23_RAW(1365286145336),FIX9_23_RAW(3711232519513),FIX9_23_RAW(10088175918979),FIX9_23_RAW(27422505282859),
+};
+
+// Retrieved from https://github.com/nadavrot/fast_log.
+// Rewritten to use fix9_23 fixed-precision decimals.
+fix9_23 fix9_23_fast_exp(fix9_23 x) {
+    const int32_t integer = fix9_23_truncate(x);
+    x = fix9_23_sub(x, fix9_23_int(integer));
+
+    const fix9_23 coeffs[4] = {FIX9_23_RAW(2351638), FIX9_23_RAW(3567692), FIX9_23_RAW(8495449), FIX9_23_RAW(8390365)};
+    fix9_23 acc = fix9_23_add(coeffs[1], fix9_23_mul(x,coeffs[0]));
+    acc = fix9_23_add(coeffs[2], fix9_23_mul(x, acc));
+    acc = fix9_23_add(coeffs[3], fix9_23_mul(x, acc));
+    return fix9_23_mul(acc, EXP_LUT[integer + table_zero_idx]);
+    // acc = fix9_23_add(acc, )
+
+}
+
+// TODO: improve accuracy
 fix9_23 fix9_23_exp(fix9_23 x) {
 
     const int32_t DEGREE = 7;
@@ -576,12 +590,38 @@ fix9_23 fix9_23_exp(fix9_23 x) {
 }
 
 
+const int32_t x0lut[32] = {1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576, 2097152, 4194304, 8388608, 16777216, 33554432, 67108864, 134217728, 268435456, 536870912, 1073741824, 2147483648};
+const fix9_23 ln2 = FIX9_23_RAW(5814540);
+// const fix9_23 ln2_recip = FIX9_23_RAW(12102203);
+// const fix9_23 log2_10 = FIX9_23_RAW(27866353);
+// const fix9_23 log2_e = FIX9_23_RAW(12102203);
+
+int32_t fastlog2i(fix9_23 x) {
+    return 31 - __builtin_clz(x.raw);
+}
+
+fix9_23 fix9_23_log2(fix9_23 x) {
+    const fix9_23 l2x = FIX9_23_RAW(fastlog2i(x));
+    const fix9_23 x0 = FIX9_23_RAW(x0lut[l2x.raw]);
+    
+    // const fix9_23 x0_recip = fix9_23_div(fix9_23_int(1), x0);
+    // const fix9_23 dx0 = 1/ln(2) * 1/x0;
+    const fix9_23 dx0 = fix9_23_div(fix9_23_int(1),fix9_23_mul(ln2, x0));
+
+    // Newton Raphson Method on 2^l = x
+    const fix9_23 deltax = fix9_23_sub(x,x0);
+
+    const fix9_23 guess = fix9_23_add(l2x, fix9_23_mul(dx0, deltax));
+
+    const fix9_23 newtexp = fix9_23_fast_exp(fix9_23_mul(guess, ln2));
+    const fix9_23 it1 = fix9_23_add(guess, fix9_23_div(fix9_23_sub(newtexp,x), fix9_23_mul(newtexp, ln2)));
+
+    return fix9_23_sub(it1, fix9_23_int(FIX9_23_DEC_BITS));
+}
+
 int fix9_23_format(fix9_23 x, char* buffer, size_t len) {
-    // TODO error handling
-    //if (len < )
     const int64_t DECIMAL_MASK = 8388607L;
     const int64_t DECIMAL_MULTIPLIER = 10000000LL;
-    //const int32_t sign_bit_mask = 8388608L;
 
     if (x.raw < 0) {
         x.raw = ~x.raw + 1;
@@ -590,6 +630,4 @@ int fix9_23_format(fix9_23 x, char* buffer, size_t len) {
     else {
         return snprintf(buffer, len, "%ld.%07ld", x.raw >> FIX9_23_DEC_BITS, (int32_t)((((int64_t)x.raw & DECIMAL_MASK) * DECIMAL_MULTIPLIER) >> (int64_t)FIX9_23_DEC_BITS));
     }
-    //(void)snprintf(buffer, len, "%1d.%5d", i.raw >> FIX9_23_DEC_BITS, ((int32_t)(i.raw & DECIMAL_MASK) * 100000) >> FIX9_23_DEC_BITS);
-    // return FIX_Ok;
 }
