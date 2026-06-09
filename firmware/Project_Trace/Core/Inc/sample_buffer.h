@@ -5,8 +5,8 @@
  *      Author: Laurits
  */
 
-#ifndef INC_SAMPLING_H_
-#define INC_SAMPLING_H_
+#ifndef INC_SAMPLE_BUFFER_H_
+#define INC_SAMPLE_BUFFER_H_
 
 #include <fixpoint.h>
 #include <stddef.h>
@@ -18,7 +18,8 @@
 typedef struct {
 	fix9_23 buf[SAMPLE_BUFFER_LEN];
 	size_t len;
-	_Bool ready_to_read;
+	size_t write_idx;
+	//_Bool ready_to_read;
 	int32_t samplerate;
 	// TODO - In the future, the buffer should be a union type, such we can store raw ADC samples if averaging is not used.
 
@@ -31,4 +32,8 @@ typedef struct {
 
 SampleBuffer sample_buffer;
 
-#endif /* INC_SAMPLING_H_ */
+void sample_buffer_init(SampleBuffer* sb, int32_t sample_rate);
+void sample_buffer_write_samples(SampleBuffer* sb, const fix9_23* samples, size_t samples_len);
+void sample_buffer_read_samples(SampleBuffer* sb, fix9_23* target, size_t target_len);
+
+#endif /* INC_SAMPLE_BUFFER_H_ */
