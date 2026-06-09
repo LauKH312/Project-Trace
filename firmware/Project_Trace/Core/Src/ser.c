@@ -67,6 +67,8 @@ enum SerResult ser_write_csv_header(FILE* stream, char** column_names, int ncols
 			if (bw_write(&bw, ",", 1) != BW_Ok) return Ser_IOError;
 		}
 	}
+	if(bw_write(&bw, "\n", 1) != BW_Ok) return Ser_IOError;
+    
 	if(bw_flush(&bw) != BW_Ok) return Ser_IOError;
 	return Ser_Ok;
 }
@@ -78,7 +80,7 @@ enum SerResult ser_write_csv_data(FILE* stream, void** column_data, size_t colum
 	BufferedWriter bw = bw_new(stream, writer_buf, WRITER_BUF_LEN);
 	int fmtlen;
 
-	for (size_t i = 0; i < column_length; i++)
+	for (size_t i = 0; i < column_length; i++) {
 	for (int col = 0; col < ncols; col++) {
 		switch (types[col]) {
 		case Ser_Fix9_23: {
@@ -92,16 +94,27 @@ enum SerResult ser_write_csv_data(FILE* stream, void** column_data, size_t colum
 		case Ser_Float: {
 			const float* column = column_data[col];
 			const float data = column[i];
-			fmtlen = snprintf(fmt_buf, FMT_BUF_LEN,"%f\n", data);
+			fmtlen = snprintf(fmt_buf, FMT_BUF_LEN,"%f", data);
 			break;
 		}
 		case Ser_Int32: {
 			const int32_t* column = column_data[col];
 			const int32_t data = column[i];
-			fmtlen = snprintf(fmt_buf, FMT_BUF_LEN,"%ld\n", data);
+			fmtlen = snprintf(fmt_buf, FMT_BUF_LEN,"%ld", data);
 			break;
 		}
-
+		case Ser_String: {
+			const char** column = column_data[col];
+			const char* data = column[i];
+			fmtlen = snprintf(fmt_buf, FMT_BUF_LEN,"%s", data);
+			break;
+		}
+		case Ser_Bool: {
+			const _Bool* column = column_data[col];
+			const _Bool data = column[i];
+			fmtlen = snprintf(fmt_buf, FMT_BUF_LEN,"%s", data ? "True" : "False");
+			break;
+		}
 		default:
 			__builtin_unreachable();
 		}
@@ -110,6 +123,8 @@ enum SerResult ser_write_csv_data(FILE* stream, void** column_data, size_t colum
 		if (col + 1 != ncols) {
 			if (bw_write(&bw, ",", 1) != BW_Ok) return Ser_IOError;
 		}
+	}
+		bw_write(&bw, "\n", 1);
 	}
 	if(bw_flush(&bw) != BW_Ok) return Ser_IOError;
 	return Ser_Ok;

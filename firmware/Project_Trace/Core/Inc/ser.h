@@ -26,6 +26,8 @@ enum SerDataType {
 	Ser_Fix9_23,
 	Ser_Int32,
 	Ser_Float,
+	Ser_String,
+	Ser_Bool,
 };
 
 enum SerResult ser_write_csv_header(FILE* stream, char** column_names, int ncols);
