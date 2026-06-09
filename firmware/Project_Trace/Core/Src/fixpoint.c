@@ -388,7 +388,14 @@ fix9_23 fix9_23_sqrt(fix9_23 x) {
     const int NUMBER_GUESSES = 8;
 
     const fix9_23 initial_guess = FIX9_23_RAW(x.raw >> 1);
+    const fix9_23 TWENTY_FIVE = fix9_23_int(25);
 
+
+    if (x.raw > TWENTY_FIVE.raw) {
+    	const fix9_23 DIV_FACTOR = fix9_23_div(x, TWENTY_FIVE);
+
+    	return fix9_23_mul(fix9_23_sqrt(DIV_FACTOR), fix9_23_sqrt(TWENTY_FIVE));
+    }
     // x = root^2
     // f: x -> k - x^2
     // f': x -> - 2x
@@ -458,17 +465,28 @@ fix9_23 fix9_23_cos(fix9_23 x) {
 	const fix9_23 x2 = fix9_23_mul(x,x);
 	const fix9_23 x4 = fix9_23_mul(x2,x2);
 	const fix9_23 x6 = fix9_23_mul(x2,x4);
+	const fix9_23 x8 = fix9_23_mul(x4,x4);
 
 	const fix9_23 coeff1 = fix9_23_int(1);
 	const fix9_23 coeff2 = fix9_23_frac(-1,2);
 	const fix9_23 coeff4 = fix9_23_frac(1,24);
 	const fix9_23 coeff6 = fix9_23_frac(-1,720);
+	const fix9_23 coeff8 = fix9_23_frac(1,720*7*8);
 
-	fix9_23 sum = fix9_23_sum(4,
+
+	// fix9_23 sum = fix9_23_sum(5,
+	// 	coeff1,
+	// 	fix9_23_mul(x2, coeff2),
+	// 	fix9_23_mul(x4, coeff4),
+	// 	fix9_23_mul(x6, coeff6),
+	// 	fix9_23_mul(x8, coeff8)
+	// );
+	fix9_23 sum = fix9_23_sum(5,
 		coeff1,
 		fix9_23_mul(x2, coeff2),
 		fix9_23_mul(x4, coeff4),
-		fix9_23_mul(x6, coeff6)
+		fix9_23_mul(x6, coeff6),
+		fix9_23_mul(x8, coeff8)
 	);
 
 	switch (xquad) {
@@ -504,12 +522,12 @@ int32_t fix9_23_truncate(fix9_23 x) {
 
 const int32_t table_zero_idx = 16;
 const fix9_23 EXP_LUT[32] = {
-FIX9_23_RAW(1),FIX9_23_RAW(3),FIX9_23_RAW(7),FIX9_23_RAW(19),FIX9_23_RAW(52),FIX9_23_RAW(140),FIX9_23_RAW(381),FIX9_23_RAW(1035),FIX9_23_RAW(2814),FIX9_23_RAW(7649),FIX9_23_RAW(20793),FIX9_23_RAW(56522),FIX9_23_RAW(153643),FIX9_23_RAW(417644),FIX9_23_RAW(1135275),FIX9_23_RAW(3085996),FIX9_23_RAW(8388608),FIX9_23_RAW(22802601),FIX9_23_RAW(61983895),FIX9_23_RAW(168489696),FIX9_23_RAW(458002478),FIX9_23_RAW(1244979814),FIX9_23_RAW(3384206005), // FIX9_23_RAW(9199225686),FIX9_23_RAW(25006088018),FIX9_23_RAW(67973594660),FIX9_23_RAW(184771387178),FIX9_23_RAW(502260704185),FIX9_23_RAW(1365286145336),FIX9_23_RAW(3711232519513),FIX9_23_RAW(10088175918979),FIX9_23_RAW(27422505282859),
+FIX9_23_RAW(1),FIX9_23_RAW(3),FIX9_23_RAW(7),FIX9_23_RAW(19),FIX9_23_RAW(52),FIX9_23_RAW(140),FIX9_23_RAW(381),FIX9_23_RAW(1035),FIX9_23_RAW(2814),FIX9_23_RAW(7649),FIX9_23_RAW(20793),FIX9_23_RAW(56522),FIX9_23_RAW(153643),FIX9_23_RAW(417644),FIX9_23_RAW(1135275),FIX9_23_RAW(3085996),FIX9_23_RAW(8388608),FIX9_23_RAW(22802601),FIX9_23_RAW(61983895),FIX9_23_RAW(168489696),FIX9_23_RAW(458002478),FIX9_23_RAW(1244979814), // FIX9_23_RAW(3384206005), // FIX9_23_RAW(9199225686),FIX9_23_RAW(25006088018),FIX9_23_RAW(67973594660),FIX9_23_RAW(184771387178),FIX9_23_RAW(502260704185),FIX9_23_RAW(1365286145336),FIX9_23_RAW(3711232519513),FIX9_23_RAW(10088175918979),FIX9_23_RAW(27422505282859),
 };
 
 // Retrieved from https://github.com/nadavrot/fast_log.
 // Rewritten to use fix9_23 fixed-precision decimals.
-fix9_23 fix9_23_fast_exp(fix9_23 x) {
+fix9_23 fix9_23_exp(fix9_23 x) {
     const int32_t integer = fix9_23_truncate(x);
     x = fix9_23_sub(x, fix9_23_int(integer));
 
@@ -522,6 +540,7 @@ fix9_23 fix9_23_fast_exp(fix9_23 x) {
 
 }
 
+/*
 // TODO: improve accuracy
 fix9_23 fix9_23_exp(fix9_23 x) {
 
@@ -588,7 +607,7 @@ fix9_23 fix9_23_exp(fix9_23 x) {
         return accum;
     }
 }
-
+*/
 
 const int32_t x0lut[32] = {1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576, 2097152, 4194304, 8388608, 16777216, 33554432, 67108864, 134217728, 268435456, 536870912, 1073741824, 2147483648};
 const fix9_23 ln2 = FIX9_23_RAW(5814540);
@@ -596,12 +615,13 @@ const fix9_23 ln2 = FIX9_23_RAW(5814540);
 // const fix9_23 log2_10 = FIX9_23_RAW(27866353);
 // const fix9_23 log2_e = FIX9_23_RAW(12102203);
 
-int32_t fastlog2i(fix9_23 x) {
-    return 31 - __builtin_clz(x.raw);
+int32_t fastlog2i(int32_t x) {
+    return 31 - __builtin_clzl(x);
 }
 
-fix9_23 fix9_23_log2(fix9_23 x) {
-    const fix9_23 l2x = FIX9_23_RAW(fastlog2i(x));
+// Hand derived
+/*fix9_23 fix9_23_log2(fix9_23 x) {
+    const fix9_23 l2x = FIX9_23_RAW(fastlog2i(x.raw));
     const fix9_23 x0 = FIX9_23_RAW(x0lut[l2x.raw]);
     
     // const fix9_23 x0_recip = fix9_23_div(fix9_23_int(1), x0);
@@ -609,14 +629,55 @@ fix9_23 fix9_23_log2(fix9_23 x) {
     const fix9_23 dx0 = fix9_23_div(fix9_23_int(1),fix9_23_mul(ln2, x0));
 
     // Newton Raphson Method on 2^l = x
-    const fix9_23 deltax = fix9_23_sub(x,x0);
+    const fix9_23 deltax = fix9_23_sub(x, x0);
 
     const fix9_23 guess = fix9_23_add(l2x, fix9_23_mul(dx0, deltax));
 
-    const fix9_23 newtexp = fix9_23_fast_exp(fix9_23_mul(guess, ln2));
+    const fix9_23 newtexp = fix9_23_exp(fix9_23_mul(guess, ln2));
     const fix9_23 it1 = fix9_23_add(guess, fix9_23_div(fix9_23_sub(newtexp,x), fix9_23_mul(newtexp, ln2)));
 
     return fix9_23_sub(it1, fix9_23_int(FIX9_23_DEC_BITS));
+}*/
+
+#define LOG2_NCOEFFS 5
+
+fix9_23 fix9_23_log2(fix9_23 x) {
+//	const int32_t int_part = fastlog2i(fix9_23_truncate(x));
+	const int32_t int_part = fastlog2i(x.raw) - FIX9_23_DEC_BITS;
+	const fix9_23 x0 = FIX9_23_RAW(x0lut[int_part + FIX9_23_DEC_BITS]);
+	const fix9_23 dx = fix9_23_sub(x, x0);
+
+	const int32_t DX_SCALE_FACTOR = 8; // Done to increase numerical accuracy.
+
+	const fix9_23 dx_scaled = fix9_23_mul_int(dx, DX_SCALE_FACTOR);
+
+	if (dx.raw < fix9_23_frac(255,DX_SCALE_FACTOR).raw)
+		x = fix9_23_add(fix9_23_div_int(fix9_23_div(dx_scaled, x0), DX_SCALE_FACTOR), fix9_23_int(1)); // Remove Integer part of log.
+	else
+		x = fix9_23_add(fix9_23_div(dx, x0), fix9_23_int(1));
+	assert(x.raw > 0);
+
+
+	//const fix9_23 COEFFS[LOG2_NCOEFFS] = {  FIX9_23_RAW(1333044), FIX9_23_RAW(-8826379), FIX9_23_RAW(25538082), FIX9_23_RAW(-18036197) };
+
+	// WORKS
+	//const fix9_23 COEFFS[LOG2_NCOEFFS] = { fix9_23_from_f32(0.15891118), fix9_23_from_f32(-1.0521864), fix9_23_from_f32(3.04437661), fix9_23_from_f32(-2.15008228)};
+	const fix9_23 COEFFS[LOG2_NCOEFFS] = { FIX9_23_RAW(-688806), FIX9_23_RAW(5425023), FIX9_23_RAW(-17792409), FIX9_23_RAW(34119948), FIX9_23_RAW(-21062541)};
+
+	//const int32_t COEFFS[LOG2_NCOEFFS] = { -688806 * M, 5425023 * M, -17792409 * M, 34119948 * M, -21062541 * M};
+
+	//char fmtbuf[64] = {0};
+	//fix9_23_format(x0, fmtbuf, 64);
+	//printf("[%s]\n", fmtbuf);
+
+	//int32_t acc = COEFFS[0];
+	fix9_23 acc = COEFFS[0];
+	for (int32_t i = 1; i < LOG2_NCOEFFS; i++) {
+		acc = fix9_23_add(COEFFS[i], fix9_23_mul(acc, x));
+		//acc = COEFFS[i] + FIX_MUL32(acc, _x, DEC_BITS);
+	}
+	//return fix9_23_add(fix9_23_int(int_part), FIX9_23_RAW(acc >> EXTRA_BITS));
+	return fix9_23_add(fix9_23_int(int_part), acc);
 }
 
 int fix9_23_format(fix9_23 x, char* buffer, size_t len) {

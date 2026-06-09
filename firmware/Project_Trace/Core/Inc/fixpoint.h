@@ -28,12 +28,16 @@
 #define FIX9_23_TAU ((fix9_23){.raw = 52707178L})
 
 
+
 //! All fix1616 stuff is derived from the final project submitted by Laurits K. Hillemann and Alexander N. Olsen for the earlier DTU course 'Programming Project' (30010)
 /// Archimedes' constant - π
 #define FIX16_PI fix1616_frac(355,113)
 #define FIX_INT(x, decimal_bits) ((x) << (decimal_bits))
-#define FIX_RATIONAL(a, b, decimal_bits) ((FIX_INT(a, decimal_bits) << (decimal_bits)) / (FIX_INT(b, decimal_bits)))
-
+#define FIX_RATIONAL(a, b, decimal_bits) ((FIX_INT((a), (decimal_bits)) << (decimal_bits)) / (FIX_INT((b), (decimal_bits))))
+#define FIX_DIV32(a, b, dec_bits) ((int32_t)((((int64_t)(a) << (int64_t)(dec_bits))) / ((int64_t)(b))))
+#define FIX_MUL32(a, b, dec_bits) ((int32_t)((int64_t)(a) * (int64_t)(b)) >> (dec_bits))
+//#define FIX_DIV64Unsafe(a, b, dec_bits) ((int32_t) (((int64_t) (a)) / ((int64_t) (b))) << dec_bits)
+//#define FIX_MUL64Unsafe(a, b, dec_bits) ((int32_t)((int64_t)(a) * (int64_t)(b)) >> dec_bits)
 /// Fixed point scalar in the format 16.16
 typedef int32_t fix1616;
 
@@ -155,6 +159,11 @@ fix9_23 fix9_23_from_f1_15(fix1_15 x);
  * @return fix9_23 
  */
 fix9_23 fix9_23_abs(fix9_23 x);
+
+/**
+ * @brief Returns the integer part of x.
+ */
+int32_t fix9_23_truncate(fix9_23 x);
 
 /**
  * @brief Computes `a + b`

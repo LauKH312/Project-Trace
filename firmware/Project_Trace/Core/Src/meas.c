@@ -30,7 +30,7 @@ fix9_23 meas_rms(fix1_15* buf, size_t buffer_length, fix9_23 unit) {
     }
 
     acc /= buffer_length;
-    return fix9_23_sqrt(fix9_23_from_raw((int32_t) acc));
+    return fix9_23_sqrt(FIX9_23_RAW((int32_t) acc));
 }
 
 fix9_23 meas_max(fix1_15* buf, size_t buffer_length, fix9_23 unit) {
