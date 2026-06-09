@@ -4,7 +4,7 @@
 #include <stm32h7xx_hal.h>
 #include <adc.h>
 
-#include <ser.h>
+#include <serialization.h>
 
 /*TODO: set SPI data size to 16 bits*/
 /*TODO: peripheral-to-memory mode for DMA*/

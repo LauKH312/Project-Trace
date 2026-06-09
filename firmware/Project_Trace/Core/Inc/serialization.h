@@ -5,8 +5,8 @@
  *      Author: Laurits
  */
 
-#ifndef INC_SER_H_
-#define INC_SER_H_
+#ifndef INC_SERIALIZATION_H_
+#define INC_SERIALIZATION_H_
 
 #include <stdint.h>
 #include <fixpoint.h>
@@ -33,4 +33,4 @@ enum SerDataType {
 enum SerResult ser_write_csv_header(FILE* stream, char** column_names, int ncols);
 enum SerResult ser_write_csv_data(FILE* stream, void** column_data, size_t column_length, enum SerDataType* types, int ncols);
 
-#endif /* INC_SER_H_ */
+#endif /* INC_SERIALIZATION_H_ */

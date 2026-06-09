@@ -8,7 +8,7 @@
 #include <string.h>
 
 #include <buffered_writer.h>
-#include <ser.h>
+#include <serialization.h>
 
 
 #define WRITER_BUF_LEN 1024
