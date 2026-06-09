@@ -2,7 +2,7 @@
 
 /*
     MultilloMono Bitfont
-        by Laurits Hillemann                     
+        by Laurits K. Hillemann                     
 */
                     
 #include <stdint.h>
