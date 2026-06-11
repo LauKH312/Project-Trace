@@ -10,6 +10,9 @@
 
 #include <bitfont.h>
 
+void graphics_draw_horizontal_line(int x1, int x2, int y);
+void graphics_draw_vertical_line(int x, int y1, int y2);
+
 void graphics_draw_line(int x1, int y1, int x2, int y2);
 void graphics_draw_rect(int x1, int y1, int x2, int y2);
 void graphics_draw_rect_rel(int x, int y, int w, int h);

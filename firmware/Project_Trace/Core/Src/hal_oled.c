@@ -5,7 +5,7 @@
  *      Author: Marius Tyson
  */
 #include <hal_oled.h>
-
+#include <assert.h>
 
 const GPIO_Pin_t hal_oled_CS  = { .bank = GPIOE, .pin = GPIO_PIN_5 };
 const GPIO_Pin_t hal_oled_DC  = { .bank = GPIOE, .pin = GPIO_PIN_6 };
@@ -17,6 +17,9 @@ extern SPI_HandleTypeDef hspi1;
 
 void hal_oled_drawpixel(int x, int y, enum HalOledDraw OnOff)
 {
+	if (x < 0 || x >= OLED_WIDTH) return;
+	if (y < 0 || y >= OLED_HEIGHT) return;
+
     switch(OnOff){
     case HalOledDrawOn : framebuffer[y / 8][x] |= (1 << (y % 8)); break;
     case HalOledDrawOff :  framebuffer[y / 8][x] &= ~(1 << (y % 8)); break;
