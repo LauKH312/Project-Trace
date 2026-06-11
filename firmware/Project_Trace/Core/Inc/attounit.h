@@ -17,7 +17,7 @@
 
 #define RED   "\x1B[1;31m"
 #define GREEN "\x1B[1;32m"
-#define RESET "\x1B[0m"
+#define ATTO_RESET "\x1B[0m"
 
 #define CHECK "\xE2\x9C\x93"
 #define X_MARK "\xE2\x9C\x97"
@@ -49,7 +49,7 @@ extern int curr_test_num;
   typeof(b) b_eval = b; \
   if (!(a_eval op b_eval)) { \
     num_failed_assertions ++; \
-    printf(RED X_MARK " Assertion failed" RESET " at %s:%d (%s/%s)\n", \
+    printf(RED X_MARK " Assertion failed" ATTO_RESET " at %s:%d (%s/%s)\n", \
       __FILE__, __LINE__, \
       tests[curr_test_num].suite_name, tests[curr_test_num].test_name); \
     printf("\t" #a " " #op " " #b "\n"); \
@@ -63,7 +63,7 @@ extern int curr_test_num;
   typeof(val) val_eval = val; \
   if (!(op val_eval)) { \
     num_failed_assertions ++; \
-    printf(RED X_MARK " Assertion failed" RESET " at %s:%d (%s/%s)\n", \
+    printf(RED X_MARK " Assertion failed" ATTO_RESET " at %s:%d (%s/%s)\n", \
       __FILE__, __LINE__, \
       tests[curr_test_num].suite_name, tests[curr_test_num].test_name); \
     printf("\t" #op #val "\n"); \
@@ -130,10 +130,10 @@ extern int curr_test_num;
       tests[curr_test_num].teardown(); \
     } \
     if (num_failed_assertions == 0) { \
-      printf(GREEN CHECK " All assertions passed" RESET " (%d assertions in %d test cases)\n", num_assertions, num_test_cases); \
+      printf(GREEN CHECK " All assertions passed" ATTO_RESET " (%d assertions in %d test cases)\n", num_assertions, num_test_cases); \
       return 0; \
     } else { \
-      printf(RED X_MARK " %d assertions failed\n" RESET, num_failed_assertions); \
+      printf(RED X_MARK " %d assertions failed\n" ATTO_RESET, num_failed_assertions); \
       return 1; \
     } \
   }
