@@ -10,4 +10,7 @@
 
 void test_suite(void);
 
+void test_output_framebuffer(void);
+void test_output_fixpoint_table(void);
+
 #endif /* INC_TEST_SUITE_H_ */
