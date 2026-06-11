@@ -309,6 +309,10 @@ fix9_23 fix9_23_powi(fix9_23 base, int16_t exponent) {
     return acc;
 }
 
+fix9_23 fix9_23_powf(fix9_23 base, fix9_23 exponent) {
+	return fix9_23_exp(fix9_23_mul(exponent, fix9_23_ln(base)));
+}
+
 /*
 fix9_23 fix9_23_powi(fix9_23 base, int16_t exponent) {
     if (exponent < 0) return fix9_23_div(fix9_23_int(1), fix9_23_powi(base,-exponent));
@@ -515,9 +519,23 @@ _Bool fix9_23_approx_eq(fix9_23 a, fix9_23 b, fix9_23 tol) {
     return fix9_23_abs(diff).raw < tol.raw;
 }
 
-int32_t fix9_23_truncate(fix9_23 x) {
+int32_t fix9_23_trunc(fix9_23 x) {
     return x.raw >> FIX9_23_DEC_BITS;
 }
+
+/**
+ * @brief Returns the integer part of x.
+ */
+int32_t fix9_23_round(fix9_23 x) {
+	const fix9_23 HALF = fix9_23_frac(1,2);
+
+	if (x.raw < 0) {
+		return fix9_23_trunc(fix9_23_sub(x, HALF));
+	} else {
+		return fix9_23_trunc(fix9_23_add(x, HALF));
+	}
+}
+
 
 
 const int32_t table_zero_idx = 16;
@@ -528,7 +546,7 @@ FIX9_23_RAW(1),FIX9_23_RAW(3),FIX9_23_RAW(7),FIX9_23_RAW(19),FIX9_23_RAW(52),FIX
 // Retrieved from https://github.com/nadavrot/fast_log.
 // Rewritten to use fix9_23 fixed-precision decimals.
 fix9_23 fix9_23_exp(fix9_23 x) {
-    const int32_t integer = fix9_23_truncate(x);
+    const int32_t integer = fix9_23_trunc(x);
     x = fix9_23_sub(x, fix9_23_int(integer));
 
     const fix9_23 coeffs[4] = {FIX9_23_RAW(2351638), FIX9_23_RAW(3567692), FIX9_23_RAW(8495449), FIX9_23_RAW(8390365)};
@@ -678,6 +696,10 @@ fix9_23 fix9_23_log2(fix9_23 x) {
 	}
 	//return fix9_23_add(fix9_23_int(int_part), FIX9_23_RAW(acc >> EXTRA_BITS));
 	return fix9_23_add(fix9_23_int(int_part), acc);
+}
+
+fix9_23 fix9_23_ln(fix9_23 x) {
+	return fix9_23_div(fix9_23_log2(x), FIX9_23_LOG2E);
 }
 
 int fix9_23_format(fix9_23 x, char* buffer, size_t len) {

@@ -36,6 +36,8 @@
 #define FIX_RATIONAL(a, b, decimal_bits) ((FIX_INT((a), (decimal_bits)) << (decimal_bits)) / (FIX_INT((b), (decimal_bits))))
 #define FIX_DIV32(a, b, dec_bits) ((int32_t)((((int64_t)(a) << (int64_t)(dec_bits))) / ((int64_t)(b))))
 #define FIX_MUL32(a, b, dec_bits) ((int32_t)((int64_t)(a) * (int64_t)(b)) >> (dec_bits))
+
+#define FIX9_23_LOG2E FIX9_23_RAW(12102203)
 //#define FIX_DIV64Unsafe(a, b, dec_bits) ((int32_t) (((int64_t) (a)) / ((int64_t) (b))) << dec_bits)
 //#define FIX_MUL64Unsafe(a, b, dec_bits) ((int32_t)((int64_t)(a) * (int64_t)(b)) >> dec_bits)
 /// Fixed point scalar in the format 16.16
@@ -163,7 +165,13 @@ fix9_23 fix9_23_abs(fix9_23 x);
 /**
  * @brief Returns the integer part of x.
  */
-int32_t fix9_23_truncate(fix9_23 x);
+int32_t fix9_23_trunc(fix9_23 x);
+
+/**
+ * @brief Rounds x to the nearest integer and returns the result.
+ */
+int32_t fix9_23_round(fix9_23 x);
+
 
 /**
  * @brief Computes `a + b`
@@ -222,6 +230,15 @@ fix9_23 fix9_23_div_int(fix9_23 a, int32_t b);
 fix9_23 fix9_23_powi(fix9_23 base, int16_t exponent);
 
 /**
+ * @brief The decimal power function. Computes `base^exponent`
+ *
+ * @param base
+ * @param exponent
+ * @return fix9_23
+ */
+fix9_23 fix9_23_powf(fix9_23 base, fix9_23 exponent);
+
+/**
  * @brief Computes the square root of `x`
  * 
  * @param x 
@@ -261,7 +278,15 @@ fix9_23 fix9_23_sin(fix9_23 x);
  */
 fix9_23 fix9_23_exp(fix9_23 x);
 
+/**
+ * @brief Computes log2 of `x`.
+ */
 fix9_23 fix9_23_log2(fix9_23 x);
+
+/**
+ * @brief Computes the natural logaritm ln of `x`.
+ */
+fix9_23 fix9_23_ln(fix9_23 x);
 
 /**
  * @brief Checks if `a` and `b` are equal within the tolerance `tol`
