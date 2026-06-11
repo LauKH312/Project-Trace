@@ -23,16 +23,7 @@
 //#define GAIN_20DB_PIN GPIO_PIN_6
 #include <stm32h7xx_hal.h>
 #include <stm32h7xx_hal_conf.h>
-#include <hal_signal_path.h>
 #include <hal_gpio.h>
-
-const GPIO_Pin_t ATTEN_0DB  = { .bank = GPIOA, .pin = GPIO_PIN_7 };
-const GPIO_Pin_t ATTEN_20DB = { .bank = GPIOB, .pin = GPIO_PIN_4 };
-const GPIO_Pin_t ATTEN_40DB = { .bank = GPIOC, .pin = GPIO_PIN_7 };
-const GPIO_Pin_t GAIN_20DB  = { .bank = GPIOC, .pin = GPIO_PIN_0 };
-
-
-
 
 enum SignalPathAtten {
 	SignalPathAtten_0db =  0,

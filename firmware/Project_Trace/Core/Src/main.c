@@ -27,6 +27,9 @@
 #include <stm32h7xx_hal.h>
 #include <stdint.h>
 
+#include <hal_oled.h>
+#include <hal_signal_path.h>
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -125,6 +128,11 @@ int main(void)
   test_suite();
   while(1){}
 #endif
+
+  adc_init();
+  hal_signal_path_attenuator_init();
+  hal_oled_init();
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
