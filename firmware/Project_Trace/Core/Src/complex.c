@@ -104,3 +104,30 @@ Complex9_23 complex9_23_euler(fix9_23 x) {
         .im = fix9_23_sin(x)
     };
 }
+
+int complex9_23_format(Complex9_23 z, char* buffer, size_t len) {
+    int real_len = fix9_23_format(z.re, buffer,len);
+    if (real_len <= 0) return -1; // TODO snprintf error value?
+    if ((size_t)real_len + 1 <= len) return -1;
+
+    int z_len = real_len;
+    
+    int imag_idx = real_len;
+
+    assert(imag_idx >= 0);
+
+    if (z.im.raw >= 0) {
+        buffer[real_len] = '+';
+        imag_idx = real_len+1;
+        z_len++;
+    }
+
+    assert((int32_t)len - imag_idx - 1 >= 0);
+
+    int imag_len = fix9_23_format(z.im, &buffer[imag_idx], len - imag_idx - 1);
+    if (imag_len <= 0) return -1;
+    z_len += imag_len;
+
+    return z_len;
+
+}

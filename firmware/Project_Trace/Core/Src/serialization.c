@@ -10,6 +10,8 @@
 #include <buffered_writer.h>
 #include <serialization.h>
 
+#include <complex.h>
+
 
 #define WRITER_BUF_LEN 1024
 #define FMT_BUF_LEN 32
@@ -87,7 +89,14 @@ enum SerResult ser_file_write_csv_data(FILE* stream, void** column_data, size_t 
 			const fix9_23* column = column_data[col];
 			const fix9_23 data = column[i];
 			fmtlen = fix9_23_format(data, fmt_buf, FMT_BUF_LEN);
-			if (fmtlen == 0) return Ser_FmtError;
+			if (fmtlen <= 0) return Ser_FmtError;
+			break;
+		}
+		case Ser_Complex9_23: {
+			const Complex9_23* column = column_data[col];
+			const Complex9_23 data = column[i];
+			fmtlen = complex9_23_format(data, fmt_buf, FMT_BUF_LEN);
+			if (fmtlen <= 0) return Ser_FmtError;
 			break;
 		}
 		case Ser_Float: {
