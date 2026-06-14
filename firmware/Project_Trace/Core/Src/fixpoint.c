@@ -13,6 +13,8 @@
 #include <fixpoint.h>
 #include <attounit.h>
 
+#include <math.h>
+
 TEST_SUITE(fixpoint)
 BEFORE_EACH() {}
 AFTER_EACH() {}
@@ -388,6 +390,7 @@ TEST_CASE(Unity) {
 	ASSERT_EQUAL(1,1);
 }
 
+/*
 fix9_23 fix9_23_sqrt(fix9_23 x) {
     const int NUMBER_GUESSES = 8;
 
@@ -410,6 +413,14 @@ fix9_23 fix9_23_sqrt(fix9_23 x) {
     }
 
     return root;
+}
+*/
+
+fix9_23 fix9_23_sqrt(fix9_23 x) {
+	float xsqrt = sqrt(x.raw);
+	float decimal_mult_sqrt = 2896.3093757400986599458585071815f; // sqrt(2^23).
+	x.raw = (int32_t)(decimal_mult_sqrt * xsqrt);
+	return x;
 }
 
 fix9_23 fix9_23_sqr(fix9_23 x) {
@@ -470,12 +481,14 @@ fix9_23 fix9_23_cos(fix9_23 x) {
 	const fix9_23 x4 = fix9_23_mul(x2,x2);
 	const fix9_23 x6 = fix9_23_mul(x2,x4);
 	const fix9_23 x8 = fix9_23_mul(x4,x4);
+	const fix9_23 x10 = fix9_23_mul(x8,x2);
 
 	const fix9_23 coeff1 = fix9_23_int(1);
 	const fix9_23 coeff2 = fix9_23_frac(-1,2);
 	const fix9_23 coeff4 = fix9_23_frac(1,24);
 	const fix9_23 coeff6 = fix9_23_frac(-1,720);
 	const fix9_23 coeff8 = fix9_23_frac(1,720*7*8);
+	const fix9_23 coeff10 = fix9_23_frac(-1,720*7*8*9*10);
 
 
 	// fix9_23 sum = fix9_23_sum(5,
@@ -485,12 +498,14 @@ fix9_23 fix9_23_cos(fix9_23 x) {
 	// 	fix9_23_mul(x6, coeff6),
 	// 	fix9_23_mul(x8, coeff8)
 	// );
-	fix9_23 sum = fix9_23_sum(5,
+
+	const fix9_23 sum = fix9_23_sum(6,
 		coeff1,
 		fix9_23_mul(x2, coeff2),
 		fix9_23_mul(x4, coeff4),
 		fix9_23_mul(x6, coeff6),
-		fix9_23_mul(x8, coeff8)
+		fix9_23_mul(x8, coeff8),
+		fix9_23_mul(x10, coeff10)
 	);
 
 	switch (xquad) {
@@ -549,12 +564,19 @@ fix9_23 fix9_23_exp(fix9_23 x) {
     const int32_t integer = fix9_23_trunc(x);
     x = fix9_23_sub(x, fix9_23_int(integer));
 
-    const fix9_23 coeffs[4] = {FIX9_23_RAW(2351638), FIX9_23_RAW(3567692), FIX9_23_RAW(8495449), FIX9_23_RAW(8390365)};
+    //const fix9_23 coeffs[4] = {FIX9_23_RAW(2351638), FIX9_23_RAW(3567692), FIX9_23_RAW(8495449), FIX9_23_RAW(8390365)};
+    //fix9_23 acc = fix9_23_add(coeffs[1], fix9_23_mul(x,coeffs[0]));
+    //acc = fix9_23_add(coeffs[2], fix9_23_mul(x, acc));
+    //acc = fix9_23_add(coeffs[3], fix9_23_mul(x, acc));
+    //return fix9_23_mul(acc, EXP_LUT[integer + table_zero_idx]);
+
+
+    const fix9_23 coeffs[5] = {FIX9_23_RAW(585781), FIX9_23_RAW(1180076), FIX9_23_RAW(4265307), FIX9_23_RAW(8383615), FIX9_23_RAW(8388241)};
     fix9_23 acc = fix9_23_add(coeffs[1], fix9_23_mul(x,coeffs[0]));
     acc = fix9_23_add(coeffs[2], fix9_23_mul(x, acc));
     acc = fix9_23_add(coeffs[3], fix9_23_mul(x, acc));
+    acc = fix9_23_add(coeffs[4], fix9_23_mul(x, acc));
     return fix9_23_mul(acc, EXP_LUT[integer + table_zero_idx]);
-    // acc = fix9_23_add(acc, )
 
 }
 
@@ -700,6 +722,47 @@ fix9_23 fix9_23_log2(fix9_23 x) {
 
 fix9_23 fix9_23_ln(fix9_23 x) {
 	return fix9_23_div(fix9_23_log2(x), FIX9_23_LOG2E);
+}
+
+fix9_23 fix9_23_lerp(fix9_23 t, fix9_23 a, fix9_23 b) {
+	fix9_23 delta = b;
+	delta.raw -= a.raw;
+	return fix9_23_add(a, fix9_23_mul(delta,t));
+}
+
+fix9_23 fix9_23_ilerp(fix9_23 v, fix9_23 a, fix9_23 b) {
+	const fix9_23 num = fix9_23_sub(v, a);
+	const fix9_23 denom = fix9_23_sub(b,a);
+
+	return fix9_23_div(num,denom);
+}
+
+fix9_23 fix9_23_map(fix9_23 v, fix9_23 from_a, fix9_23 from_b, fix9_23 to_a, fix9_23 to_b) {
+	return fix9_23_lerp(fix9_23_ilerp(v,from_a,from_b), to_a, to_b);
+}
+
+fix9_23 fix9_23_gain_to_db(fix9_23 g) {
+	const fix9_23 log2_of_10 = fix9_23_log2(fix9_23_int(10));
+	const fix9_23 frac = fix9_23_div(fix9_23_log2(g), log2_of_10);
+
+	return fix9_23_mul(fix9_23_int(20), frac);
+}
+
+
+fix9_23 fix9_23_blackman_harris(int32_t x, int32_t T) {
+	// Retrieved from https://ccrma.stanford.edu/~jos/sasp/Blackman_Harris_Window_Family.html
+	const fix9_23 COEFFS[3] = {FIX9_23_RAW(3559958), FIX9_23_RAW(4171995),  FIX9_23_RAW(656654)};
+
+	const fix9_23 OmegaM = fix9_23_div_int(FIX9_23_TAU, T);
+	const fix9_23 t2 = fix9_23_cos(fix9_23_mul_int(OmegaM, x));
+	const fix9_23 t3 = fix9_23_cos(fix9_23_mul_int(OmegaM, x*2));
+
+	// bharris = a0 + a1 * np.cos(OmegaM * x) + a2 * np.cos(2*OmegaM*x)
+	return fix9_23_sum(3,
+			COEFFS[0],
+			fix9_23_mul(COEFFS[1], t2),
+			fix9_23_mul(COEFFS[2], t3)
+	);
 }
 
 int fix9_23_format(fix9_23 x, char* buffer, size_t len) {

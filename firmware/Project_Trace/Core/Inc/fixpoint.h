@@ -288,6 +288,12 @@ fix9_23 fix9_23_log2(fix9_23 x);
  */
 fix9_23 fix9_23_ln(fix9_23 x);
 
+fix9_23 fix9_23_lerp(fix9_23 t, fix9_23 a, fix9_23 b);
+fix9_23 fix9_23_ilerp(fix9_23 v, fix9_23 a, fix9_23 b);
+fix9_23 fix9_23_map(fix9_23 v, fix9_23 from_a, fix9_23 from_b, fix9_23 to_a, fix9_23 to_b);
+
+fix9_23 fix9_23_gain_to_db(fix9_23 g);
+fix9_23 fix9_23_blackman_harris(int32_t x, int32_t T);
 /**
  * @brief Checks if `a` and `b` are equal within the tolerance `tol`
  * 
