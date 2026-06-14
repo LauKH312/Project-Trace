@@ -31,7 +31,7 @@ void hal_oled_drawpixel(int x, int y, enum HalOledDraw OnOff)
 void hal_oled_send_command(uint8_t cmd){
 	HAL_OLED_CS_LOW();   // Command mode
 	HAL_OLED_DC_LOW();
-	HAL_SPI_Transmit(&hspi1, &cmd, 1, HAL_MAX_DELAY);
+	HAL_SPI_Transmit_DMA(&hspi3, &cmd, 1, HAL_MAX_DELAY);
 	HAL_OLED_CS_HIGH();
 }
 
@@ -39,7 +39,7 @@ void hal_oled_send_data(uint8_t *data, uint16_t len)
 {
 	HAL_OLED_CS_LOW();   // enable, start transmission
 	HAL_OLED_DC_HIGH();  // data mode
-	HAL_SPI_Transmit(&hspi1, data, len, HAL_MAX_DELAY);
+	HAL_SPI_Transmit_DMA(&hspi3, data, len, HAL_MAX_DELAY);
 	HAL_OLED_CS_HIGH();  // return to idle
 }
 
