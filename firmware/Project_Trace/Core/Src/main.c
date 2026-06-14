@@ -22,13 +22,15 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
-#include <test_suite.h>
-#include <adc.h>
 #include <stm32h7xx_hal.h>
 #include <stdint.h>
 
+
+#include <adc.h>
 #include <hal_oled.h>
 #include <hal_signal_path.h>
+#include <test_suite.h>
+#include <sample_buffer.h>
 
 /* USER CODE END Includes */
 
@@ -129,8 +131,10 @@ int main(void)
   while(1){}
 #endif
 
-  adc_init();
   hal_signal_path_attenuator_init();
+  // sample_buffer_init();
+  adc_init();
+
   hal_oled_init();
 
   /* USER CODE END 2 */
@@ -420,7 +424,7 @@ static void MX_USART3_UART_Init(void)
 
   /* USER CODE END USART3_Init 1 */
   huart3.Instance = USART3;
-  huart3.Init.BaudRate = 115200;
+  huart3.Init.BaudRate = 921600;
   huart3.Init.WordLength = UART_WORDLENGTH_8B;
   huart3.Init.StopBits = UART_STOPBITS_1;
   huart3.Init.Parity = UART_PARITY_NONE;
