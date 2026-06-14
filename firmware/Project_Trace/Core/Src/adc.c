@@ -87,7 +87,7 @@ void adc_dma_done(void)
 {
 	// TODO: it is assumed this function will only be called when an ADC-related DMA transfer is complete.
 	ADCBuffer* active_buffer;
-	_Bool a_active;
+	_Bool a_active = 0;
     if (buffer_a.status == BUFFER_FILLING)
     {
         buffer_a.status = BUFFER_FULL;
