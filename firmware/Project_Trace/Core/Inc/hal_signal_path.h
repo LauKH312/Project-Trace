@@ -23,22 +23,31 @@
 //#define GAIN_20DB_PIN GPIO_PIN_6
 #include <stm32h7xx_hal.h>
 #include <stm32h7xx_hal_conf.h>
+#include <hal_signal_path.h>
 #include <hal_gpio.h>
 
+
 enum SignalPathAtten {
-	SignalPathAtten_0db =  0,
-	SignalPathAtten_20db,
-	SignalPathAtten_40db
+	SignalPatAtten_m20db = 0,
+	SignalPathAtten_0db,
+	SignalPathAtten_p20db,
+	SignalPathAtten_p40db
 };
 
-enum SignalPathGain {
-	SignalPathGain_0db = 0,
-	SignalPathGain_20db
-};
+// enum SignalPathAtten {
+// 	SignalPathAtten_0db =  0,
+// 	SignalPathAtten_20db,
+// 	SignalPathAtten_40db
+// };
+
+// enum SignalPathGain {
+// 	SignalPathGain_0db = 0,
+// 	SignalPathGain_20db
+// };
 
 void hal_signal_path_attenuator_init(void);
 void hal_signal_path_attenuator_set(enum SignalPathAtten range);
-void hal_signal_path_gain_set(enum SignalPathGain range);
+// void hal_signal_path_gain_set(enum SignalPathGain range);
 
 
 
