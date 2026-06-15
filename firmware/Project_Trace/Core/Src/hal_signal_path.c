@@ -55,7 +55,7 @@ void hal_signal_path_attenuator_set(enum SignalPathAtten range)
     HAL_GPIO_WritePin(GAIN_20DB_PIN.bank, ATTEN_40DB_PIN.pin, GPIO_PIN_RESET);
     
     switch (range){
-        case SignalPathATTEN_0DB_PIN:
+        case SignalPathAtten_0db:
             HAL_GPIO_WritePin(ATTEN_0DB_PIN.bank,  ATTEN_0DB_PIN.pin,  GPIO_PIN_SET);
             break;
         case SignalPathAtten_p20db:

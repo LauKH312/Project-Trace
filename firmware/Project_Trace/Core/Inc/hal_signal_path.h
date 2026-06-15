@@ -28,7 +28,7 @@
 
 
 enum SignalPathAtten {
-	SignalPatAtten_m20db = 0,
+	SignalPathAtten_m20db = 0,
 	SignalPathAtten_0db,
 	SignalPathAtten_p20db,
 	SignalPathAtten_p40db
