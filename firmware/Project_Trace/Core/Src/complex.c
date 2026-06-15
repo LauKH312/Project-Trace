@@ -6,8 +6,11 @@
  */
 
 
-#include <complex.h>
 #include <attounit.h>
+#include <math.h>
+
+#include <complex.h>
+
 
 
 Complex9_23 complex9_23_new(fix9_23 re, fix9_23 im) {
@@ -95,7 +98,15 @@ fix9_23 complex9_23_abs_sqr(Complex9_23 z) {
 }
 
 fix9_23 complex9_23_abs(Complex9_23 z) {
-    return fix9_23_sqrt(complex9_23_abs_sqr(z));
+
+	float zre = fix9_23_to_f32(z.re);
+	float zim = fix9_23_to_f32(z.im);
+
+	return fix9_23_from_f32(sqrtf(zre*zre+zim*zim));
+
+//    return fix9_23_sqrt(complex9_23_abs_sqr(z));
+
+
 }
 
 Complex9_23 complex9_23_euler(fix9_23 x) {

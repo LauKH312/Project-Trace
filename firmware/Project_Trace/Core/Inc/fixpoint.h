@@ -152,6 +152,8 @@ fix9_23 fix9_23_frac(int32_t num, int32_t denom);
  */
 fix9_23 fix9_23_from_f32(float f);
 
+float fix9_23_to_f32(fix9_23 f);
+
 fix9_23 fix9_23_from_f1_15(fix1_15 x);
 
 /**

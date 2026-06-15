@@ -9,7 +9,7 @@
 
 #define FFT_MAX_N 1024
 
-void bit_reverse_old(Complex9_23 *a, int n) {
+void bit_reverse(Complex9_23 *a, int n) {
     for (int i = 1, j = 0; i < n; i++) {
         int bit = n >> 1;
         for (; j & bit; bit >>= 1)
@@ -23,18 +23,18 @@ void bit_reverse_old(Complex9_23 *a, int n) {
     }
 }
 
-void bit_reverse(Complex9_23 *a, int n) {
-    // Reverse bits bytewise
-    for (int i = 0; i < n; i++) {
-        void* vre_ptr = (void*) &a->re;
-        void* vim_ptr = (void*) &a->im;
-        uint32_t* re_ptr = (uint32_t*)vre_ptr;
-        uint32_t* im_ptr = (uint32_t*)vim_ptr;
-
-        *re_ptr = __builtin_bswap32(*re_ptr);
-        *im_ptr = __builtin_bswap32(*im_ptr);
-    }
-}
+//void bit_reverse(Complex9_23 *a, int n) {
+//    // Reverse bits bytewise
+//    for (int i = 0; i < n; i++) {
+//        void* vre_ptr = (void*) &a->re;
+//        void* vim_ptr = (void*) &a->im;
+//        uint32_t* re_ptr = (uint32_t*)vre_ptr;
+//        uint32_t* im_ptr = (uint32_t*)vim_ptr;
+//
+//        *re_ptr = __builtin_bswap32(*re_ptr);
+//        *im_ptr = __builtin_bswap32(*im_ptr);
+//    }
+//}
 
 void fft_iterative(Complex9_23 *buf, int n, int invert) {
     bit_reverse(buf, n);
@@ -42,30 +42,21 @@ void fft_iterative(Complex9_23 *buf, int n, int invert) {
         fix9_23 angle = fix9_23_div_int(FIX9_23_TAU, len);
         if (!invert)
             angle = fix9_23_neg(angle);
-        
+
         for (int i = 0; i < n; i += len) {
             for (int j = 0; j < len / 2; j++) {
                 Complex9_23 w = complex9_23_euler(fix9_23_mul_int(angle, j));
                 Complex9_23 u = buf[i + j];
                 Complex9_23 v = complex9_23_mul(w, buf[i + j + len / 2]);
-                Complex9_23 a = complex9_23_add(u, v);
-                Complex9_23 b = complex9_23_sub(u, v);
 
-                //buf[i + j]           = complex9_23_add(u, v);
-                //buf[i + j + len / 2] = complex9_23_sub(u, v);
-                buf[i + j]           = complex9_23_div_int(a, 2);
-                buf[i + j + len / 2] = complex9_23_div_int(b, 2);
+                buf[i + j]           = complex9_23_div_int(complex9_23_add(u, v), 2);
+                buf[i + j + len / 2] = complex9_23_div_int(complex9_23_sub(u, v), 2);
             }
         }
     }
-    //if (invert) {
-    //    for (int i = 0; i < n; i++)
-    //        buf[i] = complex9_23_div_int(buf[i], n);
-    //}
-
     if (!invert) {
-    for (int i = 0; i < n; i++)
-    	buf[i] = complex9_23_mul_int(buf[i],n);
+        for (int i = 0; i < n; i++)
+            buf[i] = complex9_23_mul_int(buf[i], n);
     }
 }
 

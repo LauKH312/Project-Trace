@@ -2,7 +2,7 @@
  * test_suite.c
  *
  *  Created on: Apr 27, 2026
- *      Author: Alexander & Marius Tyson
+ *      Author: Alexander & Marius Tyson & Laurits
  */
 
 #include <math.h>
@@ -48,15 +48,21 @@ void test_suite(void) {
     Complex9_23 test_signal[FFT_N];
     for (int i = 0; i < FFT_N; i++) {
     	float T = (float) FFT_N;
-    	float x = 2.0f * 3.14159265359f * (float) i / T;
-    	test_signal[i] = complex9_23_new(fix9_23_cos(fix9_23_from_f32(x)), fix9_23_int(0));
-    	//test_signal[i] = complex9_23_mul_re(test_signal[i], fix9_23_blackman_harris(i, FFT_N));
+    	float x = 10.0f * 2.0f * 3.14159265359f * (float) i / T;
+    	test_signal[i] = complex9_23_new(fix9_23_from_f32(cosf(x)), fix9_23_int(0));
+    	test_signal[i] = complex9_23_mul_re(test_signal[i], fix9_23_blackman_harris(i, FFT_N));
     }
+
+   // test_output_complex923_buffer(test_signal, FFT_N);
 
     Complex9_23 test_fft_impulse_out[FFT_N] = {0};
     fft_fft(test_signal, test_fft_impulse_out, FFT_N);
-    plot_fft(test_fft_impulse_out, FFT_N/2, NULL, -80, 20);
+
+    test_output_complex923_buffer(test_fft_impulse_out, FFT_N);
+
+    plot_fft(test_fft_impulse_out, FFT_N/2, NULL, -80, 80);
     test_output_framebuffer();
+    test_output_FFT();
 
     // TEST complex9_23_format
     //Complex9_23 somez = complex9_23_i();
@@ -245,4 +251,24 @@ void test_fixpoint_performance(void) {
 	printf("log2: fix: %lu cycles, float: %lu cycles\n", log2_dur_fix, log2_dur_float);
 	printf("cos: fix: %lu cycles, float: %lu cycles\n", cos_dur_fix, cos_dur_float);
 	printf("exp: fix: %lu cycles, float: %lu cycles\n", exp_dur_fix, exp_dur_float);
+}
+
+void test_output_fix923_buffer(fix9_23* buf, size_t len) {
+    char* column_names[1] = { "x" };
+    (void)ser_file_write_csv_header(stdout, column_names, 1);
+
+    enum SerDataType column_types[1] = { Ser_Fix9_23 };
+
+	void* column_data[1] = { buf };
+	(void) ser_file_write_csv_data (stdout, column_data, len, column_types, 1);
+}
+
+void test_output_complex923_buffer(Complex9_23* buf, size_t len){
+    char* column_names[1] = { "z" };
+    (void)ser_file_write_csv_header(stdout, column_names, 1);
+
+    enum SerDataType column_types[1] = { Ser_Complex9_23 };
+
+	void* column_data[1] = { buf };
+	(void) ser_file_write_csv_data (stdout, column_data, len, column_types, 1);
 }

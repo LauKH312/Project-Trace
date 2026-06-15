@@ -216,6 +216,10 @@ fix9_23 fix9_23_from_f32(float f) {
 	return FIX9_23_RAW((int32_t) (f*MULTIPLIER));
 }
 
+float fix9_23_to_f32(fix9_23 f) {
+	return (float) f.raw / (float) (1 << 23);
+}
+
 fix9_23 fix9_23_from_f1_15(fix1_15 x) {
     return FIX9_23_RAW((int32_t)(x.raw) << (FIX9_23_DEC_BITS - FIX1_15_DEC_BITS));
 }
@@ -758,10 +762,11 @@ fix9_23 fix9_23_blackman_harris(int32_t x, int32_t T) {
 	const fix9_23 t3 = fix9_23_cos(fix9_23_mul_int(OmegaM, x*2));
 
 	// bharris = a0 + a1 * np.cos(OmegaM * x) + a2 * np.cos(2*OmegaM*x)
-	return fix9_23_sum(3,
+	return fix9_23_sum(4,
 			COEFFS[0],
 			fix9_23_mul(COEFFS[1], t2),
-			fix9_23_mul(COEFFS[2], t3)
+			fix9_23_mul(COEFFS[2], t3),
+			fix9_23_int(-1)
 	);
 }
 

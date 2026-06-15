@@ -16,14 +16,19 @@
 void plot_fft(Complex9_23* buckets, size_t nbuckets, fix9_23* bucket_frequencies, int32_t min_db, int32_t max_db) {
 	(void)bucket_frequencies;
 
-	//const int32_t MAXIMUM_Y = 20;
-	//const int32_t MINIMUM_Y = OLED_HEIGHT;
+	const int32_t MAXIMUM_Y = 20;
+	const int32_t MINIMUM_Y = OLED_HEIGHT;
 
-	const int32_t MINIMUM_Y = 20;
-	const int32_t MAXIMUM_Y = OLED_HEIGHT;
+	//const int32_t MINIMUM_Y = 20;
+	//const int32_t MAXIMUM_Y = OLED_HEIGHT;
 
 	for (size_t i = 0; i < nbuckets; i++) {
 		fix9_23 amp = complex9_23_abs(buckets[i]);
+
+		if (amp.raw < 1) {
+			amp.raw = 1;
+		}
+
 		fix9_23 amp_db = fix9_23_gain_to_db(amp);
 
 		fix9_23 y = fix9_23_map(amp_db, fix9_23_int(min_db), fix9_23_int(max_db), fix9_23_int(MINIMUM_Y), fix9_23_int(MAXIMUM_Y));
