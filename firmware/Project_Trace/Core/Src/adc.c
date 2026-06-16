@@ -2,6 +2,7 @@
 #include <stddef.h>
 #include <string.h>
 #include <stm32h7xx_hal.h>
+#include <hal_gpio.h>
 #include <adc.h>
 
 #include <meas.h>
@@ -35,6 +36,7 @@ GPIO_Pin == GPIO_PIN_14;
     HAL_Delay(500);*/
 
 extern SPI_HandleTypeDef hspi1;
+extern DMA_HandleTypeDef hdma_spi1_rx;
 
 /* Double buffers */
 ADCBuffer buffer_a = {0};
@@ -64,21 +66,26 @@ int16_t *adc_get_sample(void)
 /* Initializes ADC sampling and DMA */
 void adc_init(void)
 {
+
     memset((int16_t*)buffer_a.data, 0, sizeof(buffer_a.data));
     memset((int16_t*)buffer_b.data, 0, sizeof(buffer_b.data));
 
     buffer_a.status = BUFFER_EMPTY;
     buffer_b.status = BUFFER_EMPTY;
 
-    GPIO_TypeDef* SYNC_BANK = GPIOA;
-	const uint16_t SYNC_PIN = GPIO_PIN_4;
+	const GPIO_Pin_t SYNC = { GPIOA, GPIO_PIN_4 };
+	const GPIO_Pin_t CLK_EN = { GPIOC, GPIO_PIN_8 };
 
-    HAL_GPIO_WritePin(SYNC_BANK, SYNC_PIN, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(SYNC.bank, SYNC.pin, GPIO_PIN_RESET);
     HAL_Delay(10);
-    HAL_GPIO_WritePin(SYNC_BANK, SYNC_PIN, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(SYNC.bank, SYNC.pin, GPIO_PIN_SET);
+
+    HAL_GPIO_WritePin(CLK_EN.bank, CLK_EN.pin, GPIO_PIN_RESET);
 
     /* Start DMA into buffer A */
     buffer_a.status = BUFFER_FILLING;
+
+    HAL_DMA_Init(&hdma_spi1_rx);
     HAL_SPI_Receive_DMA(&hspi1,(uint8_t *)buffer_a.data,ADC_BUFFER_SIZE * sizeof(int16_t));
 }
 
@@ -130,6 +137,8 @@ void adc_dma_done(void)
     //void* columns[1] = { (void*) printbuf};
     void* columns[1] = { (void*) &mean};
 
+    char* header_labels[1] = { "x" };
+    (void)ser_file_write_csv_header(stdout, header_labels, 1);
     // enum SerResult res = ser_file_write_csv_data(stdout, columns, ADC_BUFFER_SIZE, column_types, 1);
     enum SerResult res = ser_file_write_csv_data(stdout, columns, 1, column_types, 1);
     (void) res;

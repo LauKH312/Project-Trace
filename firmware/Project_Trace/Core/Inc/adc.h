@@ -1,5 +1,8 @@
+#pragma once
+
 #include "main.h"
 #include <stdint.h>
+#include <stm32h7xx_hal.h>
 
 /* Buffer size in samples */
 #define ADC_BUFFER_SIZE 256

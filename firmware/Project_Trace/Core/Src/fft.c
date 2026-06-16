@@ -24,15 +24,16 @@ void bit_reverse(Complex9_23 *a, int n) {
 }
 
 //void bit_reverse(Complex9_23 *a, int n) {
-//    // Reverse bits bytewise
-//    for (int i = 0; i < n; i++) {
-//        void* vre_ptr = (void*) &a->re;
-//        void* vim_ptr = (void*) &a->im;
-//        uint32_t* re_ptr = (uint32_t*)vre_ptr;
-//        uint32_t* im_ptr = (uint32_t*)vim_ptr;
+//	assert(n >= 0);
 //
-//        *re_ptr = __builtin_bswap32(*re_ptr);
-//        *im_ptr = __builtin_bswap32(*im_ptr);
+//    // Reverse bits bytewise
+//    for (uint32_t i = 1; i < (uint32_t) n; i++) {
+//        uint32_t j = __builtin_bswap32(i);
+//
+//        if (j >= i) continue;
+//        Complex9_23 tmp = a[i];
+//		a[i] = a[j];
+//		a[j] = tmp;
 //    }
 //}
 
