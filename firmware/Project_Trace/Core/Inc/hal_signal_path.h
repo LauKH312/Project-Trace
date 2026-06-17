@@ -38,6 +38,7 @@ enum SignalPathGain {
 
 void hal_signal_path_attenuator_init(void);
 void hal_signal_path_attenuator_set(enum SignalPathAtten range);
+void hal_signal_path_gain_init(void);
 void hal_signal_path_gain_set(enum SignalPathGain range);
 
 

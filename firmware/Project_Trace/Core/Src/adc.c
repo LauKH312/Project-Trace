@@ -76,9 +76,9 @@ void adc_init(void)
 	const GPIO_Pin_t SYNC = { GPIOA, GPIO_PIN_4 };
 	const GPIO_Pin_t CLK_EN = { GPIOC, GPIO_PIN_8 };
 
-    HAL_GPIO_WritePin(SYNC.bank, SYNC.pin, GPIO_PIN_RESET);
-    HAL_Delay(10);
     HAL_GPIO_WritePin(SYNC.bank, SYNC.pin, GPIO_PIN_SET);
+    HAL_Delay(10);
+    HAL_GPIO_WritePin(SYNC.bank, SYNC.pin, GPIO_PIN_RESET);
 
     HAL_GPIO_WritePin(CLK_EN.bank, CLK_EN.pin, GPIO_PIN_RESET);
 

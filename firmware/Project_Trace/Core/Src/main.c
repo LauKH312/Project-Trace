@@ -137,6 +137,7 @@ int main(void)
 #endif
 
   hal_signal_path_attenuator_init();
+  hal_signal_path_gain_init();
   // sample_buffer_init();
   adc_init();
 
@@ -613,8 +614,8 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin : SPI1_SYNC_Pin */
   GPIO_InitStruct.Pin = SPI1_SYNC_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
   HAL_GPIO_Init(SPI1_SYNC_GPIO_Port, &GPIO_InitStruct);
 
@@ -631,12 +632,19 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(ADC_FS0_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : Range_gain_20db_Pin Range_att_0db_Pin CLK_EN_Pin */
-  GPIO_InitStruct.Pin = Range_gain_20db_Pin|Range_att_0db_Pin|CLK_EN_Pin;
+  /*Configure GPIO pins : Range_gain_20db_Pin Range_att_0db_Pin */
+  GPIO_InitStruct.Pin = Range_gain_20db_Pin|Range_att_0db_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : CLK_EN_Pin */
+  GPIO_InitStruct.Pin = CLK_EN_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(CLK_EN_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : SW2_Pin SW1_Pin */
   GPIO_InitStruct.Pin = SW2_Pin|SW1_Pin;
