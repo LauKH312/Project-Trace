@@ -66,7 +66,7 @@ int16_t *adc_get_sample(void)
 /* Initializes ADC sampling and DMA */
 void adc_init(void)
 {
-
+	printf("adc_init\n");
     memset((int16_t*)buffer_a.data, 0, sizeof(buffer_a.data));
     memset((int16_t*)buffer_b.data, 0, sizeof(buffer_b.data));
 
@@ -85,13 +85,14 @@ void adc_init(void)
     /* Start DMA into buffer A */
     buffer_a.status = BUFFER_FILLING;
 
-    HAL_DMA_Init(&hdma_spi1_rx);
+//    HAL_DMA_Init(&hdma_spi1_rx);
     HAL_SPI_Receive_DMA(&hspi1,(uint8_t *)buffer_a.data,ADC_BUFFER_SIZE * sizeof(int16_t));
 }
 
 /* Call when DMA finishes writing to a buffer */
 void adc_dma_done(void)
 {
+	printf("adc_done\n");
 	// TODO: it is assumed this function will only be called when an ADC-related DMA transfer is complete.
 	ADCBuffer* active_buffer;
 	_Bool a_active = 0;

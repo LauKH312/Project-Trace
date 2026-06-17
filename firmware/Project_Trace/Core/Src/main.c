@@ -128,6 +128,9 @@ int main(void)
   MX_USART3_UART_Init();
   MX_TIM8_Init();
   /* USER CODE BEGIN 2 */
+  //HAL_MspInit();
+  //HAL_SPI_MspInit(&hspi1);
+
 
   printf("Hello, There!\r\n");
 #ifdef RUN_TESTS
@@ -140,7 +143,6 @@ int main(void)
   hal_signal_path_gain_init();
   // sample_buffer_init();
   adc_init();
-
   hal_oled_init();
 
   //HAL_TIM_PWM_Start(&htim8, 4);
@@ -256,7 +258,7 @@ static void MX_SPI1_Init(void)
   hspi1.Init.Direction = SPI_DIRECTION_2LINES_RXONLY;
   hspi1.Init.DataSize = SPI_DATASIZE_16BIT;
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
-  hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
+  hspi1.Init.CLKPhase = SPI_PHASE_2EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
@@ -614,8 +616,8 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin : SPI1_SYNC_Pin */
   GPIO_InitStruct.Pin = SPI1_SYNC_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
   HAL_GPIO_Init(SPI1_SYNC_GPIO_Port, &GPIO_InitStruct);
 
@@ -632,19 +634,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(ADC_FS0_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : Range_gain_20db_Pin Range_att_0db_Pin */
-  GPIO_InitStruct.Pin = Range_gain_20db_Pin|Range_att_0db_Pin;
+  /*Configure GPIO pins : Range_gain_20db_Pin Range_att_0db_Pin CLK_EN_Pin */
+  GPIO_InitStruct.Pin = Range_gain_20db_Pin|Range_att_0db_Pin|CLK_EN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : CLK_EN_Pin */
-  GPIO_InitStruct.Pin = CLK_EN_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(CLK_EN_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : SW2_Pin SW1_Pin */
   GPIO_InitStruct.Pin = SW2_Pin|SW1_Pin;
