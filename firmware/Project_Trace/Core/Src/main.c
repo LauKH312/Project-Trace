@@ -32,6 +32,8 @@
 #include <test_suite.h>
 #include <sample_buffer.h>
 
+#include <serialization.h>
+
 #include <assert.h>
 
 /* USER CODE END Includes */
@@ -139,11 +141,13 @@ int main(void)
   while(1){}
 #endif
 
+  printf("Init Signal Path\n");
   hal_signal_path_attenuator_init();
   hal_signal_path_gain_init();
   // sample_buffer_init();
+  printf("Init ADC\n");
   adc_init();
-  hal_oled_init();
+  //hal_oled_init();
 
   //HAL_TIM_PWM_Start(&htim8, 4);
 
@@ -152,12 +156,16 @@ int main(void)
 
   _Bool is_clked = 0;
 
+  printf("Start ADC CLK\n");
   HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_4);
+
+  char* header_labels[1] = { "x" };
+  (void)ser_file_write_csv_header(stdout, header_labels, 1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-
+  printf("Enter Loop\n");
   while (1)
   {
     /* USER CODE END WHILE */
@@ -652,10 +660,12 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi)
 {
-	printf("HAL_SPI_RxCpltCallback\n");
+	//printf("HAL_SPI_RxCpltCallback\n");
 
     if (hspi->Instance == SPI1){
+        __disable_irq();
     	adc_dma_done();
+    	__enable_irq();
     }
     else if (hspi->Instance == SPI3){
     	// TODO add display SPI3

@@ -22,7 +22,7 @@ typedef struct
 
 /* Returns pointer to a full buffer.
  * Returns NULL if no buffer is ready. */
-int16_t *adc_get_sample(void);
+volatile int16_t *adc_get_sample(void);
 
 /* Initializes ADC sampling and DMA */
 void adc_init(void);
