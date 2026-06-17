@@ -1,5 +1,8 @@
+#pragma once
+
 #include "main.h"
 #include <stdint.h>
+#include <fixpoint.h>
 
 /* Buffer size in samples */
 #define ADC_BUFFER_SIZE 256
@@ -26,3 +29,4 @@ void adc_init(void);
 
 /* Call when DMA finishes writing to a buffer */
 void adc_dma_done(void);
+

@@ -3,6 +3,8 @@
 #include <string.h>
 #include <stm32h7xx_hal.h>
 #include <adc.h>
+#include <fixpoint.h>
+#include <main.h>
 
 #include <meas.h>
 
@@ -32,7 +34,8 @@ GPIO_Pin == GPIO_PIN_14;
 
 */
 /*HAL_GPIO_TogglePin(PA4_GPIO_Port,PA4_Pin);
-    HAL_Delay(500);*/
+HAL_Delay(500);*/
+
 
 extern SPI_HandleTypeDef hspi1;
 
@@ -133,4 +136,6 @@ void adc_dma_done(void)
     // enum SerResult res = ser_file_write_csv_data(stdout, columns, ADC_BUFFER_SIZE, column_types, 1);
     enum SerResult res = ser_file_write_csv_data(stdout, columns, 1, column_types, 1);
     (void) res;
+
+
 }

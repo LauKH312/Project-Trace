@@ -12,8 +12,8 @@
 #include <stddef.h>
 
 // TODO: choose proper value.
-#define SAMPLE_BUFFER_LEN 65536
-
+// #define SAMPLE_BUFFER_LEN 65536
+#define SAMPLE_BUFFER_LEN 16384
 
 typedef struct {
 	fix9_23 buf[SAMPLE_BUFFER_LEN];
@@ -29,8 +29,6 @@ typedef struct {
 	// Step 3: Serialize and write to USB if enabled, using a DMA.
 	// On frame update: Render with samplebuffer (skip if not ready)
 } SampleBuffer;
-
-SampleBuffer sample_buffer;
 
 void sample_buffer_init(SampleBuffer* sb, int32_t sample_rate);
 void sample_buffer_write_samples(SampleBuffer* sb, const fix9_23* samples, size_t samples_len);

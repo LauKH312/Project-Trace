@@ -10,6 +10,8 @@
 #include <mathdefs.h>
 #include <sample_buffer.h>
 
+SampleBuffer sample_buffer;
+
 void sample_buffer_init(SampleBuffer* sb, int32_t sample_rate) {
 	memset(sb->buf, 0, sizeof(sb->buf));
 	sb->len = 0;
