@@ -10,6 +10,8 @@
 
 #include <bitfont.h>
 
+#include <fixpoint.h>
+
 void graphics_draw_horizontal_line(int x1, int x2, int y);
 void graphics_draw_vertical_line(int x, int y1, int y2);
 
@@ -23,5 +25,7 @@ void graphics_clear(void);
 
 void graphics_draw_glyph(int x, int y, Glyph g);
 void graphics_draw_text(int x0, int y0, char* text);
+void graphics_draw_int(int x0, int y0, int32_t i);
+void graphics_draw_fix9_23(int x0, int y0, fix9_23 fix);
 
 #endif /* INC_GRAPHICS_H_ */

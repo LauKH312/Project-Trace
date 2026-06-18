@@ -237,7 +237,7 @@ fix9_23 fix9_23_add(fix9_23 a, fix9_23 b) {
 }
 
 fix9_23 fix9_23_sum(int argc, ...) {
- fix9_23 acc = fix9_23_int(0);
+ fix9_23 acc = FIX9_23_ZERO;
 
  va_list argptr;
  va_start(argptr, argc);
@@ -594,7 +594,7 @@ fix9_23 fix9_23_exp(fix9_23 x) {
 
     const fix9_23 x0 = fix9_23_frac(-8,1);
     const fix9_23 x1 = fix9_23_frac(-31,10);
-    const fix9_23 x2 = fix9_23_int(0);
+    const fix9_23 x2 = FIX9_23_ZERO;
     const fix9_23 x3 = fix9_23_frac(21,10);
     
     const fix9_23 bound0 = fix9_23_frac(-49,10);

@@ -24,6 +24,7 @@
 #define FIX9_23_DEC_BITS 23LL
 
 #define FIX9_23_RAW(n) ((fix9_23){.raw = (n)})
+#define FIX9_23_ZERO FIX9_23_RAW(0)
 #define FIX9_23_PI ((fix9_23){.raw = 26353589L})
 #define FIX9_23_TAU ((fix9_23){.raw = 52707178L})
 

@@ -6,6 +6,8 @@
  */
 
 
+#include <stdio.h>
+
 #include <graphics.h>
 #include <fixpoint.h>
 #include <hal_oled.h>
@@ -154,4 +156,17 @@ void graphics_draw_text(int x0, int y0, char* text) {
 		graphics_draw_glyph(x,y,gl);
 		x += 8;
 	}
+}
+
+
+void graphics_draw_int(int x0, int y0, int32_t i) {
+    char fmtbuf[16] = {0};
+    (void)snprintf(fmtbuf, 16, "%ld", i);
+    graphics_draw_text(x0, y0, fmtbuf);
+}
+
+void graphics_draw_fix9_23(int x0, int y0, fix9_23 fix) {
+	  char fmt_buf[16] = {0};
+	  (void)fix9_23_format(fix, fmt_buf, sizeof(fmt_buf));
+	  graphics_draw_text(x0,y0, fmt_buf);
 }
