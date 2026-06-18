@@ -142,8 +142,8 @@ int main(void)
 #endif
 
   printf("Init Signal Path\n");
-  hal_signal_path_attenuator_init();
-  hal_signal_path_gain_init();
+  hal_signal_path_init();
+  hal_signal_path_attenuator_set(SignalPathAtten_0db);
   // sample_buffer_init();
   printf("Init ADC\n");
   adc_init();
@@ -463,7 +463,7 @@ static void MX_TIM8_Init(void)
   htim8.Instance = TIM8;
   htim8.Init.Prescaler = 1;
   htim8.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim8.Init.Period = 2;
+  htim8.Init.Period = 3;
   htim8.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim8.Init.RepetitionCounter = 0;
   htim8.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -488,7 +488,7 @@ static void MX_TIM8_Init(void)
     Error_Handler();
   }
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 1;
+  sConfigOC.Pulse = 2;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_ENABLE;
   sConfigOC.OCIdleState = TIM_OCIDLESTATE_RESET;
