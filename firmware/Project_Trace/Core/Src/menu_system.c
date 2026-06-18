@@ -9,6 +9,9 @@
 #include <meas.h>
 #include <hal_signal_path.h>
 
+#include <plotting.h>
+#include <fft.h>
+
 #include <stdio.h>
 
 #include <hal_oled.h>
@@ -26,27 +29,78 @@ void menu_init(void){
     HAL_TIM_Base_Start_IT(&htim1);
 }
 
-void drawframe(fix9_23 *avg_buffer, size_t avg_len){
+#define FFT_SIZE 256
 
-	draw_avg(avg_buffer, avg_len);
+void draw_average_adc(int16_t* buf, size_t buf_len) {
+
+	int32_t avg = 0;
+	for (size_t i = 0; i < buf_len; i++) {
+		avg += buf[i];
+	}
+	avg /= buf_len;
+
+    char fmt_buf[64] = {0};
+    (void)snprintf(fmt_buf, 64, "%ld", avg);
+    graphics_draw_text(80,14, fmt_buf);
+    //printf("Average sample value: %s\n", buffer);
+
+}
+
+void draw_average(fix9_23* buf, size_t buf_len) {
+	fix9_23 avg = meas_average(buf, buf_len);
+	//(void)buf_len;
+	//fix9_23 avg = buf[0];
+
+    char fmt_buf[64] = {0};
+    (void)fix9_23_format(avg, fmt_buf, sizeof(fmt_buf));
+    graphics_draw_text(80,26, fmt_buf);
+    //printf("Average sample value: %s\n", buffer);
+
+}
+
+void drawframe(fix9_23 *buffer, size_t len){
+	assert(len == FFT_SIZE);
+
+	Complex9_23 to_fft[FFT_SIZE];
+	Complex9_23 fft_out[FFT_SIZE] = { 0 };
+	for (int i = 0; i < FFT_SIZE; i++) {
+		to_fft[i] = complex9_23_new(buffer[i], fix9_23_int(0));
+	}
+	fft_fft(to_fft, fft_out, FFT_SIZE);
+
+	draw_average(buffer,len);
+//	draw_average_adc(buffer,len);
+	graphics_draw_text(80, 2, "-20:60");
+
+	plot_fft(fft_out, FFT_SIZE, NULL, -20, 60);
 }
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
     if (htim->Instance == TIM1)
     {
-        fix9_23 test_buf = fix9_23_int(123);
-        drawframe(&test_buf, 5);
-        printf("Update Frame\n");
+    	printf("Clearing Frame\n");
+    	graphics_clear();
+
+        printf("Reading samplebuf...\n");
+        int start_idx = (FFT_SIZE * framecounter) % SAMPLE_BUFFER_LEN;
+        if (start_idx + FFT_SIZE >= SAMPLE_BUFFER_LEN) start_idx = 0;
+
+
+    	fix9_23 current_samplebuf[SAMPLE_BUFFER_LEN];
+    	sample_buffer_peek_samples(&sample_buffer, current_samplebuf, SAMPLE_BUFFER_LEN);
+        printf("Rendering FFT...\n");
+        drawframe(&current_samplebuf[start_idx], FFT_SIZE);
 
         char fmtbuf[64] = {0};
         int ln = snprintf(fmtbuf, 64, "%d", framecounter);
         fmtbuf[ln] = '\0';
         framecounter++;
 
+        printf("Update Frame\n");
         graphics_draw_text(16, 16, fmtbuf);
-
         hal_oled_update_screen();
+
     }
 }
 
