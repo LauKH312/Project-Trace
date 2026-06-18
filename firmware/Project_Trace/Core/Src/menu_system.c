@@ -1,4 +1,4 @@
-#include <stdlib.h>
+// #include <stdlib.h>
 #include <fixpoint.h>
 //#include <stm32h7xx_it.h>
 #include <menu_system.h>
@@ -9,11 +9,17 @@
 #include <meas.h>
 #include <hal_signal_path.h>
 
+#include <stdio.h>
+
+#include <hal_oled.h>
+
 extern TIM_HandleTypeDef htim1;
 
 extern SampleBuffer sample_buffer;
 
 static MenuPage menu = page_main;
+
+static int framecounter = 0;
 
 // call on startup
 void menu_init(void){
@@ -31,6 +37,16 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     {
         fix9_23 test_buf = fix9_23_int(123);
         drawframe(&test_buf, 5);
+        printf("Update Frame\n");
+
+        char fmtbuf[64] = {0};
+        int ln = snprintf(fmtbuf, 64, "%d", framecounter);
+        fmtbuf[ln] = '\0';
+        framecounter++;
+
+        graphics_draw_text(16, 16, fmtbuf);
+
+        hal_oled_update_screen();
     }
 }
 

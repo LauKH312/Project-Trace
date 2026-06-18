@@ -82,8 +82,8 @@ static void MX_TIM2_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_USART3_UART_Init(void);
-static void MX_TIM1_Init(void);
 static void MX_TIM8_Init(void);
+static void MX_TIM1_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -133,8 +133,8 @@ int main(void)
   MX_SPI1_Init();
   MX_TIM3_Init();
   MX_USART3_UART_Init();
-  MX_TIM1_Init();
   MX_TIM8_Init();
+  MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
   //HAL_MspInit();
   //HAL_SPI_MspInit(&hspi1);
@@ -160,13 +160,9 @@ int main(void)
 
   //HAL_TIM_PWM_Start(&htim8, 4);
 
-  printf("DMA  CODE: %d\n", (int)hdma_spi1_rx.State);
-  printf("SPI1 CODE: %d\n", (int)hspi1.State);
-
-  _Bool is_clked = 0;
-
   printf("Start ADC CLK\n");
   HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_4);
+
 
   char* header_labels[1] = { "x" };
   (void)ser_file_write_csv_header(stdout, header_labels, 1);
@@ -174,6 +170,9 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  graphics_draw_rect_rel(5, 5, 10, 10);
+  graphics_draw_text(8, 8, "address me");
+
   printf("Enter Loop\n");
   while (1)
   {
@@ -181,10 +180,9 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-	  graphics_draw_rect_rel(5, 5, 10, 10);
-	  hal_oled_update_screen();
-	  for (uint32_t i = 0; i < 10000000LL; i++){}
-	  printf("Hi!\r\n");
+//	  hal_oled_update_screen();
+//	  for (uint32_t i = 0; i < 10000000LL; i++){}
+//	  printf("Hi!\r\n");
 
   }
   /* USER CODE END 3 */
@@ -316,7 +314,7 @@ static void MX_SPI3_Init(void)
   hspi3.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi3.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi3.Init.NSS = SPI_NSS_SOFT;
-  hspi3.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_256;
+  hspi3.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_4;
   hspi3.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi3.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi3.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
@@ -364,7 +362,7 @@ static void MX_TIM1_Init(void)
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim1.Init.Period = 32768;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-  htim1.Init.RepetitionCounter = 16;
+  htim1.Init.RepetitionCounter = 0;
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim1) != HAL_OK)
   {

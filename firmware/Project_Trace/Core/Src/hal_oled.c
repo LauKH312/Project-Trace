@@ -75,8 +75,10 @@ void hal_oled_init()
 
 
     hal_oled_send_command(0xAE); // Display OFF
-    hal_oled_send_command(0xA1); // Segment re-map
-    hal_oled_send_command(0xC8); // COM scan reversed
+    hal_oled_send_command(0xA0); // Segment re-map
+    hal_oled_send_command(0xC0); // COM scan reversed
+//    hal_oled_send_command(0xA1); // Segment re-map
+//    hal_oled_send_command(0xC8); // COM scan reversed
     hal_oled_send_command(0xA8); // Set multiplex ratio
     hal_oled_send_command(0x3F); // 1/64 duty
     hal_oled_send_command(0xD3); // Display offset
@@ -124,10 +126,10 @@ void hal_oled_update_screen(void){
         hal_oled_send_command(0x10);  // upper column nibble
 
         // Send page
-        for (uint8_t col = 0; col < OLED_WIDTH; col++)
-        {
+        //for (uint8_t col = 0; col < OLED_WIDTH; col++)
+        //{
             //uint8_t data = (uint8_t)framebuffer[page][col];
-            hal_oled_send_data(framebuffer[page], 128);
-        }
+		hal_oled_send_data(framebuffer[page], 128);
+        //}
     }
 }
