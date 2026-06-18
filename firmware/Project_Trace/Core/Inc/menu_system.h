@@ -4,8 +4,9 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <stm32h7xx_hal.h>
 
-#include "main.h"
+#include "fixpoint.h"
 
 
 #define BAREBONES_MODE 1 // currently does nothing
@@ -24,31 +25,22 @@ typedef enum
     volt_menu_Back,
 } MenuPage;
 
+
+
 //initializes the menu setup. To call on system start
 void menu_init(void);
-
-int startpos[10][2] = { 
-    {0,0},  {64,0},
-    {0,12}, {64,12},
-    {0,24}, {64,24},
-    {0,36}, {64,36},
-    {0,48}, {64,48} 
-};
 
 //automatically calls when timer interrupts. Draws a new frame.
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim);
 
-static MenuPage *get_menu(void);
 
 //currently only draws the average value currently measured. WIP to include more stuff for the display
-void drawframe(void);
+void drawframe(fix9_23 *avg_buffer, size_t avg_len);
 
 void draw_avg(fix9_23 *buffer, size_t len);
 
 //statemachine controller for menu system
-void left_push_button(void);
+//void left_push_button(void);
 
 //statemachine controller for menu system
-void right_push_button(void);
-
-static enum SignalPathAtten *get_selected_atten(void);
+//void right_push_button(void);

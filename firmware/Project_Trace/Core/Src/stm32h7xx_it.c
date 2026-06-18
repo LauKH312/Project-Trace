@@ -57,11 +57,8 @@
 /* External variables --------------------------------------------------------*/
 extern DMA_HandleTypeDef hdma_spi1_rx;
 extern SPI_HandleTypeDef hspi1;
-<<<<<<< Updated upstream
-=======
 extern SPI_HandleTypeDef hspi3;
 extern TIM_HandleTypeDef htim1;
->>>>>>> Stashed changes
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */

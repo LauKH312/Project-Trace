@@ -26,6 +26,8 @@
 #include <adc.h>
 #include <stm32h7xx_hal.h>
 #include <stdint.h>
+#include <menu_system.h>
+#include <graphics.h>
 
 #include <hal_oled.h>
 #include <hal_signal_path.h>
@@ -132,6 +134,7 @@ int main(void)
   while(1){}
 #endif
 
+  menu_init();
   adc_init();
   //hal_signal_path_attenuator_init();
   hal_oled_init();
@@ -145,6 +148,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	  hal_oled_update_screen();
+	  graphics_draw_rect_rel(5, 5, 10, 10);
 	  for (uint32_t i = 0; i < 10000000LL; i++){}
 	  printf("Hi!\r\n");
   }

@@ -26,21 +26,12 @@
 #include <hal_gpio.h>
 
 enum SignalPathAtten {
-	SignalPathAtten_0db =  0,
-	SignalPathAtten_20db,
-	SignalPathAtten_40db
+	SignalPathAtten_m20db = 0,
+	SignalPathAtten_0db,
+	SignalPathAtten_p20db,
+	SignalPathAtten_p40db
 };
 
-<<<<<<< Updated upstream
-enum SignalPathGain {
-	SignalPathGain_0db = 0,
-	SignalPathGain_20db
-};
-
-void hal_signal_path_attenuator_init(void);
-void hal_signal_path_attenuator_set(enum SignalPathAtten range);
-void hal_signal_path_gain_set(enum SignalPathGain range);
-=======
 void hal_signal_path_attenuator_init(void);
 
 // enum SignalPathAtten {
@@ -54,9 +45,8 @@ void hal_signal_path_attenuator_init(void);
 // 	SignalPathGain_20db
 // };
 
-void hal_signal_path_attenuator_set(enum SignalPathAtten range, enum SignalPathAtten *current_state);
+void hal_signal_path_attenuator_set(enum SignalPathAtten range);
 // void hal_signal_path_gain_set(enum SignalPathGain range);
->>>>>>> Stashed changes
 
 
 
