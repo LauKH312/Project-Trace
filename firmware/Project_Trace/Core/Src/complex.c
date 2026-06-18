@@ -6,8 +6,11 @@
  */
 
 
-#include <complex.h>
 #include <attounit.h>
+#include <math.h>
+
+#include <complex.h>
+
 
 
 Complex9_23 complex9_23_new(fix9_23 re, fix9_23 im) {
@@ -95,7 +98,15 @@ fix9_23 complex9_23_abs_sqr(Complex9_23 z) {
 }
 
 fix9_23 complex9_23_abs(Complex9_23 z) {
-    return fix9_23_sqrt(complex9_23_abs_sqr(z));
+
+	float zre = fix9_23_to_f32(z.re);
+	float zim = fix9_23_to_f32(z.im);
+
+	return fix9_23_from_f32(sqrtf(zre*zre+zim*zim));
+
+//    return fix9_23_sqrt(complex9_23_abs_sqr(z));
+
+
 }
 
 Complex9_23 complex9_23_euler(fix9_23 x) {
@@ -103,4 +114,23 @@ Complex9_23 complex9_23_euler(fix9_23 x) {
         .re = fix9_23_cos(x),
         .im = fix9_23_sin(x)
     };
+}
+
+#define COMPLEX_FORMAT_BUF_LEN 16
+
+int complex9_23_format(Complex9_23 z, char* buffer, size_t len) {
+    char real_buf[COMPLEX_FORMAT_BUF_LEN];
+    char imag_buf[COMPLEX_FORMAT_BUF_LEN];
+    
+    int real_len = fix9_23_format(z.re, real_buf,COMPLEX_FORMAT_BUF_LEN);
+    int imag_len = fix9_23_format(z.im, imag_buf,COMPLEX_FORMAT_BUF_LEN);
+
+    assert(real_len >= 0);
+    assert(imag_len >= 0);
+
+    if(z.im.raw >= 0) {
+        return snprintf(buffer, len, "%.*s+%.*sj", real_len, real_buf, imag_len, imag_buf);
+    } else { 
+        return snprintf(buffer, len, "%.*s%.*sj", real_len, real_buf, imag_len, imag_buf);
+    }
 }

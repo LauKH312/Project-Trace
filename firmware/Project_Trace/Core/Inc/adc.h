@@ -3,6 +3,7 @@
 #include "main.h"
 #include <stdint.h>
 #include <fixpoint.h>
+#include <stm32h7xx_hal.h>
 
 /* Buffer size in samples */
 #define ADC_BUFFER_SIZE 256
@@ -22,7 +23,7 @@ typedef struct
 
 /* Returns pointer to a full buffer.
  * Returns NULL if no buffer is ready. */
-int16_t *adc_get_sample(void);
+volatile int16_t *adc_get_sample(void);
 
 /* Initializes ADC sampling and DMA */
 void adc_init(void);

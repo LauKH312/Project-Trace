@@ -24,6 +24,7 @@ enum SerResult ser_write_buf9_23(FILE* stream, fix9_23* buf, size_t buf_len);
 
 enum SerDataType {
 	Ser_Fix9_23,
+	Ser_Complex9_23,
 	Ser_Int32,
 	Ser_Uint8,
 	Ser_Float,

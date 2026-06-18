@@ -150,4 +150,6 @@ fix9_23 complex9_23_abs(Complex9_23 z);
  */
 Complex9_23 complex9_23_euler(fix9_23 x);
 
+int complex9_23_format(Complex9_23 z, char* buffer, size_t len);
+
 #endif /* INC_COMPLEX_H_ */
