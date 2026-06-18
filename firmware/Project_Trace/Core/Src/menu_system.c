@@ -29,7 +29,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
     if (htim->Instance == TIM1)
     {
-        fix9_23 test_buf = fix9_23_int(12345);
+        fix9_23 test_buf = fix9_23_int(123);
         drawframe(&test_buf, 5);
     }
 }

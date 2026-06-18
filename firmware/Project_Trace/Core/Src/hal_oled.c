@@ -7,13 +7,36 @@
 #include <hal_oled.h>
 #include <assert.h>
 
-const GPIO_Pin_t hal_oled_CS  = { .bank = GPIOE, .pin = GPIO_PIN_5 };
+const GPIO_Pin_t hal_oled_CS  = { .bank = GPIOE, .pin = GPIO_PIN_3 };
 const GPIO_Pin_t hal_oled_DC  = { .bank = GPIOE, .pin = GPIO_PIN_6 };
-const GPIO_Pin_t hal_oled_RES  = { .bank = GPIOE, .pin = GPIO_PIN_3 };
+const GPIO_Pin_t hal_oled_RES  = { .bank = GPIOE, .pin = GPIO_PIN_5 };
 
 uint8_t framebuffer[OLED_PAGES][OLED_WIDTH];
 
 extern SPI_HandleTypeDef hspi3;
+
+
+#define STACK_SIZE 2048
+
+typedef struct {
+    uint8_t data[STACK_SIZE];
+    size_t sp;
+} Stack;
+
+void stack_init(Stack* stack) {
+    stack->sp = 0;
+}
+
+void stack_push(Stack* stack, uint8_t b) {
+    stack->data[stack->sp] = b;
+    stack->sp++;
+}
+
+void stack_push_bytes(Stack* stack, uint8_t* bytes, size_t len) {
+    memcpy(stack->data, bytes, len);
+    stack->sp += len;
+}
+
 
 void hal_oled_drawpixel(int x, int y, enum HalOledDraw OnOff)
 {
@@ -31,7 +54,7 @@ void hal_oled_drawpixel(int x, int y, enum HalOledDraw OnOff)
 void hal_oled_send_command(uint8_t cmd){
 	HAL_OLED_CS_LOW();   // Command mode
 	HAL_OLED_DC_LOW();
-	HAL_SPI_Transmit_DMA(&hspi3, &cmd, 1);
+	HAL_SPI_Transmit(&hspi3, &cmd, 1, 10);
 	HAL_OLED_CS_HIGH();
 }
 
@@ -39,7 +62,7 @@ void hal_oled_send_data(uint8_t *data, uint16_t len)
 {
 	HAL_OLED_CS_LOW();   // enable, start transmission
 	HAL_OLED_DC_HIGH();  // data mode
-	HAL_SPI_Transmit_DMA(&hspi3, data, len);
+	HAL_SPI_Transmit(&hspi3, data, len, 5);
 	HAL_OLED_CS_HIGH();  // return to idle
 }
 
@@ -91,21 +114,20 @@ void hal_oled_clear(void)
     hal_oled_update_screen();
 }
 void hal_oled_update_screen(void){
+    for (uint8_t page = 0; page < OLED_PAGES; page++)
+    {
+        // page address
+        hal_oled_send_command(0xB0 | page);
 
-	    for (uint8_t page = 0; page < OLED_PAGES; page++)
-	    {
-	        // page address
-	        hal_oled_send_command(0xB0 | page);
+        // Set column address
+        hal_oled_send_command(0x02);  // lower column nibble
+        hal_oled_send_command(0x10);  // upper column nibble
 
-	        // Set column address
-	        hal_oled_send_command(0x00);  // lower column nibble
-	        hal_oled_send_command(0x10);  // upper column nibble
-
-	        // Send page
-	        for (uint8_t col = 0; col < OLED_WIDTH; col++)
-	        {
-	            uint8_t data = (uint8_t)framebuffer[page][col];
-	            hal_oled_send_data(&data, 1);
-	        }
-	    }
+        // Send page
+        for (uint8_t col = 0; col < OLED_WIDTH; col++)
+        {
+            //uint8_t data = (uint8_t)framebuffer[page][col];
+            hal_oled_send_data(framebuffer[page], 128);
+        }
+    }
 }
