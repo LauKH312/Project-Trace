@@ -30,9 +30,8 @@ void menu_init(void){
 }
 
 #define FFT_SIZE 256
-#define FFT_MAX_DB 60
-#define FFT_MIN_DB -20
-#define STRINGIZE(arg) #arg
+#define FFT_MAX_DB 20
+#define FFT_MIN_DB -60
 
 void draw_average(int x, int y, fix9_23* buf, size_t buf_len) {
 	fix9_23 avg = meas_average(buf, buf_len);
@@ -45,12 +44,16 @@ void drawframe(fix9_23 *buffer, size_t len){
 	Complex9_23 to_fft[FFT_SIZE];
 	Complex9_23 fft_out[FFT_SIZE] = { 0 };
 	for (int i = 0; i < FFT_SIZE; i++) {
-		to_fft[i] = complex9_23_new(buffer[i], FIX9_23_ZERO);
+		to_fft[i] = complex9_23_new(fix9_23_mul(buffer[i], fix9_23_blackman_harris(i, FFT_SIZE)), FIX9_23_ZERO);
 	}
 	fft_fft(to_fft, fft_out, FFT_SIZE);
 
 	draw_average(80,26, buffer,len);
-	graphics_draw_text(80, 2,  STRINGIZE(FFT_MIN_DB) ":" STRINGIZE(FFT_MAX_DB));
+
+	char dbrange_buf[32] = {0};
+	(void)snprintf(dbrange_buf, 32, "%d:%d", FFT_MIN_DB, FFT_MAX_DB);
+
+	graphics_draw_text(80, 2, dbrange_buf);
 
 	plot_fft(fft_out, FFT_SIZE, NULL, FFT_MIN_DB, FFT_MAX_DB);
 }
