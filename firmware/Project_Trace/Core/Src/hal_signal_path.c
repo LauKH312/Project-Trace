@@ -67,15 +67,11 @@ void hal_signal_path_attenuator_set(enum SignalPathAtten range){
         case SignalPathAtten_0db:
             HAL_GPIO_WritePin(ATTEN_0DB_PIN.bank, ATTEN_0DB_PIN.pin, GPIO_PIN_RESET);
             break;
-        case SignalPathAtten_p20db:
+        case SignalPathAtten_20db:
             HAL_GPIO_WritePin(ATTEN_20DB_PIN.bank, ATTEN_20DB_PIN.pin, GPIO_PIN_RESET);
             break;
-        case SignalPathAtten_p40db:
+        case SignalPathAtten_40db:
             HAL_GPIO_WritePin(ATTEN_40DB_PIN.bank, ATTEN_40DB_PIN.pin, GPIO_PIN_RESET);
-            break;
-        case SignalPathAtten_m20db:
-            HAL_GPIO_WritePin(ATTEN_0DB_PIN.bank, ATTEN_0DB_PIN.pin, GPIO_PIN_RESET);
-            HAL_GPIO_WritePin(GAIN_20DB_PIN.bank, GAIN_20DB_PIN.pin, GPIO_PIN_SET);
             break;
         default:
             __builtin_unreachable();

@@ -14,10 +14,9 @@
 #include <hal_gpio.h>
 
 enum SignalPathAtten {
-        SignalPathAtten_m20db = 0,
-        SignalPathAtten_0db,
-        SignalPathAtten_p20db,
-        SignalPathAtten_p40db
+        SignalPathAtten_0db = 0,
+        SignalPathAtten_20db,
+        SignalPathAtten_40db
 };
 
 void hal_signal_path_init(void);
