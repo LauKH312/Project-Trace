@@ -38,7 +38,7 @@ void sample_buffer_write_samples(SampleBuffer* sb, const fix9_23* samples, size_
     }
 }
 
-size_t sample_buffer_peek_samples(SampleBuffer* sb, fix9_23* target, size_t target_len) {
+size_t sample_buffer_peek_samples(const SampleBuffer* sb, fix9_23* target, size_t target_len) {
     size_t values_read = MIN(sb->len, target_len);
     
     size_t oldest_sample =

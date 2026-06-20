@@ -36,6 +36,6 @@ typedef struct {
 
 void sample_buffer_init(SampleBuffer* sb, int32_t sample_rate);
 void sample_buffer_write_samples(SampleBuffer* sb, const fix9_23* samples, size_t samples_len);
-size_t sample_buffer_peek_samples(SampleBuffer* sb, fix9_23* target, size_t target_len);
+size_t sample_buffer_peek_samples(const SampleBuffer* sb, fix9_23* target, size_t target_len);
 
 #endif /* INC_SAMPLE_BUFFER_H_ */

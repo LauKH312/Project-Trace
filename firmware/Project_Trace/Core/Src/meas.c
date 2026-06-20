@@ -22,7 +22,8 @@ fix9_23 meas_rms(const fix9_23* buf, size_t buffer_length) {
     int64_t acc = 0;
     for (size_t i = 0; i < buffer_length; i++) {
         const fix9_23 x = buf[i];
-        acc += fix9_23_sqr(x).raw;
+        const int64_t term = (int64_t)x.raw * (int64_t)x.raw;
+        acc += term / (1 << FIX9_23_DEC_BITS);
     }
 
     acc /= buffer_length;

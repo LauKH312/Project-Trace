@@ -111,6 +111,12 @@ enum SerResult ser_file_write_csv_data(FILE* stream, void** column_data, size_t 
 			fmtlen = snprintf(fmt_buf, FMT_BUF_LEN,"%ld", data);
 			break;
 		}
+		case Ser_Int16: {
+			const int16_t* column = column_data[col];
+			const int16_t data = column[i];
+			fmtlen = snprintf(fmt_buf, FMT_BUF_LEN,"%hd", data);
+			break;
+		}
 		case Ser_Uint8: {
 			const uint8_t* column = column_data[col];
 			const uint8_t data = column[i];

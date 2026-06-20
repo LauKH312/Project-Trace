@@ -37,7 +37,7 @@ void plot_fft(Complex9_23* buckets, size_t nbuckets, fix9_23* bucket_frequencies
 	}
 
 	for (int i = 0; i < OLED_WIDTH; i++) {
-		fix9_23 y = fix9_23_map(fix9_23_int(0), fix9_23_int(min_db), fix9_23_int(max_db), fix9_23_int(MINIMUM_Y), fix9_23_int(MAXIMUM_Y));
+		fix9_23 y = fix9_23_map(FIX9_23_ZERO, fix9_23_int(min_db), fix9_23_int(max_db), fix9_23_int(MINIMUM_Y), fix9_23_int(MAXIMUM_Y));
 		int32_t yint = fix9_23_round(y);
 
 		hal_oled_drawpixel(i, yint, (i%2 == 0) ? HalOledDrawOn: HalOledDrawOff);

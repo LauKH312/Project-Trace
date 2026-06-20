@@ -105,7 +105,7 @@ void adc_debug_print(void) {
 	ADCBuffer* active_buffer = &adcbuf;
     int16_t printbuf[ADC_BUFFER_SIZE];
     memcpy(printbuf, (void*) active_buffer->data, ADC_BUFFER_SIZE * sizeof(int16_t));
-    enum SerDataType column_types[1] = {Ser_Int32};
+    enum SerDataType column_types[1] = {Ser_Int16};
     int mean = active_buffer->data[0];
     void* columns[1] = { (void*) &mean};
     enum SerResult res = ser_file_write_csv_data(stdout, columns, 1, column_types, 1);
@@ -116,7 +116,7 @@ void adc_debug_print(void) {
 void adc_dma_done(void)
 {
 	int16_t adc_samples[ADC_BUFFER_SIZE];
-	memcpy(adc_samples, (int16_t *)adcbuf.data, ADC_BUFFER_SIZE);
+	memcpy(adc_samples, (int16_t *)adcbuf.data, ADC_BUFFER_SIZE * sizeof(int16_t));
 	fix9_23 buf[ADC_BUFFER_SIZE];
 	cal_calibrate_buffer(buf, adc_samples, ADC_BUFFER_SIZE);
 	sample_buffer_write_samples(&sample_buffer, buf, ADC_BUFFER_SIZE);

@@ -99,10 +99,16 @@ fix9_23 complex9_23_abs_sqr(Complex9_23 z) {
 
 fix9_23 complex9_23_abs(Complex9_23 z) {
 
-	float zre = fix9_23_to_f32(z.re);
-	float zim = fix9_23_to_f32(z.im);
+	//float zre = fix9_23_to_f32(z.re);
+	//float zim = fix9_23_to_f32(z.im);
 
-	return fix9_23_from_f32(sqrtf(zre*zre+zim*zim));
+	int64_t zre2 = (int64_t)z.re.raw * (int64_t)z.re.raw / (1 << FIX9_23_DEC_BITS);
+	int64_t zim2 = (int64_t)z.im.raw * (int64_t)z.im.raw / (1 << FIX9_23_DEC_BITS);
+
+	float zre2f = (float)zre2 / (float)(1<<FIX9_23_DEC_BITS);
+	float zim2f = (float)zim2 / (float)(1<<FIX9_23_DEC_BITS);
+
+	return fix9_23_from_f32(sqrtf(zre2f+zim2f));
 
 //    return fix9_23_sqrt(complex9_23_abs_sqr(z));
 

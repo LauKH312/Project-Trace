@@ -9,6 +9,10 @@
 #include <meas.h>
 #include <hal_signal_path.h>
 
+#include <serialization.h>
+
+#include <test_suite.h>
+
 #include <plotting.h>
 #include <fft.h>
 
@@ -45,10 +49,10 @@ void drawframe(fix9_23 *buffer, size_t len){
 	Complex9_23 fft_out[FFT_SIZE] = { 0 };
 	for (int i = 0; i < FFT_SIZE; i++) {
 		to_fft[i] = complex9_23_new(fix9_23_mul(buffer[i], fix9_23_blackman_harris(i, FFT_SIZE)), FIX9_23_ZERO);
+		//to_fft[i] = complex9_23_new(buffer[i], FIX9_23_ZERO);
 	}
 	fft_fft(to_fft, fft_out, FFT_SIZE);
-
-	draw_average(80,26, buffer,len);
+	draw_average(2,2, buffer,len);
 
 	char dbrange_buf[32] = {0};
 	(void)snprintf(dbrange_buf, 32, "%d:%d", FFT_MIN_DB, FFT_MAX_DB);
@@ -56,6 +60,9 @@ void drawframe(fix9_23 *buffer, size_t len){
 	graphics_draw_text(80, 2, dbrange_buf);
 
 	plot_fft(fft_out, FFT_SIZE, NULL, FFT_MIN_DB, FFT_MAX_DB);
+
+	test_output_fix923_buffer(buffer, len, 0);
+
 }
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
@@ -63,8 +70,10 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     if (htim->Instance == TIM1)
     {
     	graphics_clear();
-        int start_idx = (FFT_SIZE * framecounter) % SAMPLE_BUFFER_LEN;
-        if (start_idx + FFT_SIZE >= SAMPLE_BUFFER_LEN) start_idx = 0;
+        //int start_idx = (FFT_SIZE * framecounter) % SAMPLE_BUFFER_LEN;
+        //if (start_idx + FFT_SIZE >= SAMPLE_BUFFER_LEN) start_idx = 0;
+        int start_idx = 0;
+
 
     	fix9_23 current_samplebuf[SAMPLE_BUFFER_LEN];
     	sample_buffer_peek_samples(&sample_buffer, current_samplebuf, SAMPLE_BUFFER_LEN);

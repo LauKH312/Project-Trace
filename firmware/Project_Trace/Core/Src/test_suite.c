@@ -253,9 +253,11 @@ void test_fixpoint_performance(void) {
 	printf("exp: fix: %lu cycles, float: %lu cycles\n", exp_dur_fix, exp_dur_float);
 }
 
-void test_output_fix923_buffer(fix9_23* buf, size_t len) {
+void test_output_fix923_buffer(fix9_23* buf, size_t len, _Bool write_header) {
+	if (write_header) {
     char* column_names[1] = { "x" };
     (void)ser_file_write_csv_header(stdout, column_names, 1);
+	}
 
     enum SerDataType column_types[1] = { Ser_Fix9_23 };
 

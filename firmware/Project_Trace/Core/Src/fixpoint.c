@@ -213,8 +213,8 @@ fix9_23 fix9_23_frac(int32_t num, int32_t denom) {
 
 fix9_23 fix9_23_from_f32(float f) {
 //	const float MULTIPLIER = 8388608.0f;
-	const float MULTIPLIER = 1 << 23;
-	return FIX9_23_RAW((int32_t) (f*MULTIPLIER));
+	const float MULTIPLIER = 1 << FIX9_23_DEC_BITS;
+	return FIX9_23_RAW((int32_t)(f*MULTIPLIER));
 }
 
 float fix9_23_to_f32(fix9_23 f) {

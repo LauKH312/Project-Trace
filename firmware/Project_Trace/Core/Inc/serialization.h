@@ -26,6 +26,7 @@ enum SerDataType {
 	Ser_Fix9_23,
 	Ser_Complex9_23,
 	Ser_Int32,
+	Ser_Int16,
 	Ser_Uint8,
 	Ser_Float,
 	Ser_String,
