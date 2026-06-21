@@ -35,7 +35,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim);
 
 
 //currently only draws the average value currently measured. WIP to include more stuff for the display
-void drawframe(fix9_23 *avg_buffer, size_t avg_len);
+void drawframe(const fix9_23 *avg_buffer, size_t avg_len);
 
 void draw_avg(fix9_23 *buffer, size_t len);
 

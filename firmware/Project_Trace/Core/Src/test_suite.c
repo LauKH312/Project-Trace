@@ -80,9 +80,9 @@ void test_suite(void) {
 
 
 void test_output_framebuffer(void) {
-    char* column_names[8] = { "0","1","2","3","4","5","6","7" };
+    const char* column_names[8] = { "0","1","2","3","4","5","6","7" };
     enum SerDataType column_types[8] = { Ser_Uint8,Ser_Uint8,Ser_Uint8,Ser_Uint8,Ser_Uint8,Ser_Uint8,Ser_Uint8,Ser_Uint8 };
-    void* column_data[8] = { 0 };
+    const void* column_data[8] = { 0 };
     for (int i = 0; i < 8; i++) {
         column_data[i] = &framebuffer[i][0];
     }
@@ -93,7 +93,7 @@ void test_output_framebuffer(void) {
 void test_output_fixpoint_table(void) {
 
     /* TEST MATH FUNCTIONS */
-    char* column_names[5] = { "x", "sqrt(x)", "cos(x)", "log2(x)", "exp(x)" };
+    const char* column_names[5] = { "x", "sqrt(x)", "cos(x)", "log2(x)", "exp(x)" };
     (void)ser_file_write_csv_header(stdout, column_names, 5);
 
     enum SerDataType column_types[5] = { Ser_Fix9_23, Ser_Fix9_23, Ser_Fix9_23, Ser_Fix9_23, Ser_Fix9_23 };
@@ -107,7 +107,7 @@ void test_output_fixpoint_table(void) {
         fix9_23 log = fix9_23_log2(x);
         fix9_23 sqrt = fix9_23_sqrt(x);
 
-        void* column_data[5] = { &x, &sqrt, &cos, &log, &exp };
+        const void* column_data[5] = { &x, &sqrt, &cos, &log, &exp };
         (void) ser_file_write_csv_data (stdout, column_data, 1, column_types, 5);
     }
 
@@ -116,7 +116,7 @@ void test_output_fixpoint_table(void) {
 #define TEST_IMPULSE_LEN 512
 
 void test_output_FFT(void) {
-    char* column_names[4] = { "x", "fft(x)", "ifft(x)","ifft(fft(x))" };
+    const char* column_names[4] = { "x", "fft(x)", "ifft(x)","ifft(fft(x))" };
     (void)ser_file_write_csv_header(stdout, column_names, 4);
 
     enum SerDataType column_types[4] = {
@@ -143,7 +143,7 @@ void test_output_FFT(void) {
     fft_ifft(test_impulse, test_ifft_impulse_out, TEST_IMPULSE_LEN);
 
 
-    void* column_data[4] = { test_impulse, test_fft_impulse_out, test_ifft_impulse_out, test_fft_ifft_impulse_out};
+    const void* column_data[4] = { test_impulse, test_fft_impulse_out, test_ifft_impulse_out, test_fft_ifft_impulse_out};
     (void) ser_file_write_csv_data (stdout, column_data, TEST_IMPULSE_LEN, column_types, 4);
 
      // if (fft_fft(test_impulse, test_fft_impulse_out, 512) != 1)
@@ -253,24 +253,24 @@ void test_fixpoint_performance(void) {
 	printf("exp: fix: %lu cycles, float: %lu cycles\n", exp_dur_fix, exp_dur_float);
 }
 
-void test_output_fix923_buffer(fix9_23* buf, size_t len, _Bool write_header) {
+void test_output_fix923_buffer(const fix9_23* buf, size_t len, _Bool write_header) {
 	if (write_header) {
-    char* column_names[1] = { "x" };
+    const char* column_names[1] = { "x" };
     (void)ser_file_write_csv_header(stdout, column_names, 1);
 	}
 
     enum SerDataType column_types[1] = { Ser_Fix9_23 };
 
-	void* column_data[1] = { buf };
+	const void* column_data[1] = { buf };
 	(void) ser_file_write_csv_data (stdout, column_data, len, column_types, 1);
 }
 
 void test_output_complex923_buffer(Complex9_23* buf, size_t len){
-    char* column_names[1] = { "z" };
+	const char* column_names[1] = { "z" };
     (void)ser_file_write_csv_header(stdout, column_names, 1);
 
     enum SerDataType column_types[1] = { Ser_Complex9_23 };
 
-	void* column_data[1] = { buf };
+    const void* column_data[1] = { buf };
 	(void) ser_file_write_csv_data (stdout, column_data, len, column_types, 1);
 }

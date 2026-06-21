@@ -90,6 +90,8 @@ static void MX_TIM1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+extern SampleBuffer sample_buffer;
+
 int __io_putchar(int ch)
   {
    uint8_t c[1];
@@ -152,19 +154,17 @@ int main(void)
   printf("Init Signal Path\n");
   hal_signal_path_init();
   hal_signal_path_attenuator_set(SignalPathAtten_0db);
-  // sample_buffer_init();
+  sample_buffer_init(&sample_buffer, 12300000); // TODO: use precise sample-rate
   printf("Init ADC\n");
   adc_init();
   hal_oled_init();
   menu_init();
 
-  //HAL_TIM_PWM_Start(&htim8, 4);
-
   printf("Start ADC CLK\n");
   HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_4);
 
 
-  char* header_labels[1] = { "x" };
+  const char* header_labels[1] = { "x" };
   (void)ser_file_write_csv_header(stdout, header_labels, 1);
   /* USER CODE END 2 */
 

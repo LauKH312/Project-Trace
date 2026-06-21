@@ -516,7 +516,7 @@ fix9_23 fix9_23_cos(fix9_23 x) {
 	switch (xquad) {
 	case CosQuad1:
 	case CosQuad4:
-		return sum;
+		return (sum);
 		break;
 	case CosQuad2:
 	case CosQuad3:

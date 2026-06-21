@@ -37,12 +37,22 @@ Complex9_23 complex9_23_mul(Complex9_23 z1, Complex9_23 z2) {
     const fix9_23 c = z2.re;
     const fix9_23 d = z2.im;
 
-    const fix9_23 ac = fix9_23_mul(a, c);
-    const fix9_23 bd = fix9_23_mul(b, d);
-    const fix9_23 ad = fix9_23_mul(a, d);
-    const fix9_23 bc = fix9_23_mul(b, c);
+//    const fix9_23 ac = fix9_23_mul(a, c);
+//    const fix9_23 bd = fix9_23_mul(b, d);
+//    const fix9_23 ad = fix9_23_mul(a, d);
+//    const fix9_23 bc = fix9_23_mul(b, c);
+//    return complex9_23_new(fix9_23_sub(ac,bd), fix9_23_add(ad,bc));
 
-    return complex9_23_new(fix9_23_sub(ac,bd), fix9_23_add(ad,bc));
+    const int64_t ac =  (int64_t) a.raw * (int64_t) c.raw;
+    const int64_t bd =  (int64_t) b.raw * (int64_t) d.raw;
+    const int64_t ad =  (int64_t) a.raw * (int64_t) d.raw;
+    const int64_t bc =  (int64_t) b.raw * (int64_t) c.raw;
+
+    const int64_t re = (ac-bd) >> FIX9_23_DEC_BITS;
+    const int64_t im = (ad+bc) >> FIX9_23_DEC_BITS;
+
+
+    return complex9_23_new(FIX9_23_RAW(re),FIX9_23_RAW(im));
 }
 
 Complex9_23 complex9_23_mul_re(Complex9_23 z, fix9_23 x) {

@@ -42,6 +42,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32h7xx_hal.h"
+#include <assert.h>
 
 /** @addtogroup STM32H7xx_HAL_Driver
   * @{
@@ -781,6 +782,7 @@ HAL_StatusTypeDef HAL_UARTEx_ReceiveToIdle(UART_HandleTypeDef *huart, uint8_t *p
       {
         if (pdata8bits == NULL)
         {
+        assert(pdata16bits != NULL);
           *pdata16bits = (uint16_t)(huart->Instance->RDR & uhMask);
           pdata16bits++;
         }

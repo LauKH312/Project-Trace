@@ -53,7 +53,7 @@ enum SerResult ser_write_buf9_23(FILE* stream, fix9_23* buf, size_t buf_len) {
 	return Ser_Ok;
 }
 
-enum SerResult ser_file_write_csv_header(FILE* stream, char** column_names, int ncols) {
+enum SerResult ser_file_write_csv_header(FILE* stream, const char** column_names, int ncols) {
 	char writer_buf[WRITER_BUF_LEN];
 
 	BufferedWriter bw = bw_new(stream, writer_buf, WRITER_BUF_LEN);
@@ -75,7 +75,7 @@ enum SerResult ser_file_write_csv_header(FILE* stream, char** column_names, int 
 	return Ser_Ok;
 }
 
-enum SerResult ser_file_write_csv_data(FILE* stream, void** column_data, size_t column_length, enum SerDataType* types, int ncols) {
+enum SerResult ser_file_write_csv_data(FILE* stream, const void** column_data, size_t column_length, const enum SerDataType* types, int ncols) {
 	char writer_buf[WRITER_BUF_LEN];
 	char fmt_buf[FMT_BUF_LEN] = {0};
 
@@ -124,7 +124,7 @@ enum SerResult ser_file_write_csv_data(FILE* stream, void** column_data, size_t 
 			break;
 		}
 		case Ser_String: {
-			const char** column = column_data[col];
+			const char** column = (const char**) column_data[col];
 			const char* data = column[i];
 			fmtlen = snprintf(fmt_buf, FMT_BUF_LEN,"%s", data);
 			break;

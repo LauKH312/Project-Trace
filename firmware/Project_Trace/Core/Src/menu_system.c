@@ -37,12 +37,12 @@ void menu_init(void){
 #define FFT_MAX_DB 20
 #define FFT_MIN_DB -60
 
-void draw_average(int x, int y, fix9_23* buf, size_t buf_len) {
+void draw_average(int x, int y, const fix9_23* buf, size_t buf_len) {
 	fix9_23 avg = meas_average(buf, buf_len);
 	graphics_draw_fix9_23(x, y, avg);
 }
 
-void drawframe(fix9_23 *buffer, size_t len){
+void drawframe(const fix9_23 *buffer, size_t len){
 	assert(len == FFT_SIZE);
 
 	Complex9_23 to_fft[FFT_SIZE];
@@ -241,16 +241,16 @@ void right_push_button(void){
         menu = volt_menu_Back;
         break;
     case volt_menu_p20:
-        hal_signal_path_attenuator_set(SignalPathAtten_m20db);
+        hal_signal_path_attenuator_set(SignalPathAtten_0db); // TODO: reintroduce plus 20dB
         break;
     case volt_menu_0:
         hal_signal_path_attenuator_set(SignalPathAtten_0db);
         break;
     case volt_menu_m20:
-        hal_signal_path_attenuator_set(SignalPathAtten_p20db);
+        hal_signal_path_attenuator_set(SignalPathAtten_20db);
         break;
     case volt_menu_m40:
-        hal_signal_path_attenuator_set(SignalPathAtten_p40db);
+        hal_signal_path_attenuator_set(SignalPathAtten_40db);
         break;
     case volt_menu_AC:
         break;

@@ -107,7 +107,7 @@ void adc_debug_print(void) {
     memcpy(printbuf, (void*) active_buffer->data, ADC_BUFFER_SIZE * sizeof(int16_t));
     enum SerDataType column_types[1] = {Ser_Int16};
     int mean = active_buffer->data[0];
-    void* columns[1] = { (void*) &mean};
+    const void* columns[1] = { (void*) &mean};
     enum SerResult res = ser_file_write_csv_data(stdout, columns, 1, column_types, 1);
     (void) res;
 }

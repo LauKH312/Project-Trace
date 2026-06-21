@@ -33,8 +33,8 @@ enum SerDataType {
 	Ser_Bool,
 };
 
-enum SerResult ser_file_write_csv_header(FILE* stream, char** column_names, int ncols);
-enum SerResult ser_file_write_csv_data(FILE* stream, void** column_data, size_t column_length, enum SerDataType* types, int ncols);
+enum SerResult ser_file_write_csv_header(FILE* stream, const char** column_names, int ncols);
+enum SerResult ser_file_write_csv_data(FILE* stream, const void** column_data, size_t column_length, const enum SerDataType* types, int ncols);
 
 // enum SerResult ser_write_csv_header(char* destination, size_t destination_len, char** column_names, int ncols);
 // enum SerResult ser_write_csv_data(char* destination, size_t destination_len, void** column_data, size_t column_length, enum SerDataType* types, int ncols);
