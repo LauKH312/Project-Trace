@@ -79,6 +79,11 @@ void hal_signal_path_attenuator_set(enum SignalPathAtten range){
     }
 }
 
+
+void hal_signal_path_accouple_en(_Bool use_accouple) {
+    HAL_GPIO_WritePin(AC_COUPLE_nEN.bank, AC_COUPLE_nEN.pin, (use_accouple) ? GPIO_PIN_RESET : GPIO_PIN_SET);
+}
+
 // void hal_signal_path_gain_init(void){
 //      GPIO_InitTypeDef GPIO_InitStruct = {0};
 //      __HAL_RCC_GPIOC_CLK_ENABLE();

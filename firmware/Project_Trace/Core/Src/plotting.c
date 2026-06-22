@@ -13,18 +13,31 @@
 #include <assert.h>
 #include <stdint.h>
 
+#define BUCKETS_PER_PIXEL 4
+
 void plot_fft(Complex9_23* buckets, size_t nbuckets, fix9_23* bucket_frequencies, int32_t min_db, int32_t max_db) {
 	(void)bucket_frequencies;
 
 	const int32_t MAXIMUM_Y = 20;
 	const int32_t MINIMUM_Y = OLED_HEIGHT;
 
-	for (size_t i = 0; i < nbuckets; i++) {
-		fix9_23 amp = complex9_23_abs(buckets[i]);
+	size_t npixels = nbuckets / BUCKETS_PER_PIXEL;
+
+	for (size_t i = 0; i < npixels; i++) {
+		fix9_23 amp = FIX9_23_ZERO;
+
+		int64_t ampll = 0;
+
+		for (int b = 0; b < BUCKETS_PER_PIXEL; b++) {
+			ampll = ampll + complex9_23_abs(buckets[4*i + b]).raw;
+		}
+		amp = FIX9_23_RAW(ampll / BUCKETS_PER_PIXEL);
+
 
 		if (amp.raw < 1) {
 			amp.raw = 1;
 		}
+
 
 		fix9_23 amp_db = fix9_23_gain_to_db(amp);
 
@@ -41,6 +54,15 @@ void plot_fft(Complex9_23* buckets, size_t nbuckets, fix9_23* bucket_frequencies
 		int32_t yint = fix9_23_round(y);
 
 		hal_oled_drawpixel(i, yint, (i%2 == 0) ? HalOledDrawOn: HalOledDrawOff);
+	}
+
+	for (int gain = 20; gain >= -40; gain-=20) {
+		for (int i = 0; i < 24; i++) {
+			fix9_23 y = fix9_23_map(fix9_23_int(gain), fix9_23_int(min_db), fix9_23_int(max_db), fix9_23_int(MINIMUM_Y), fix9_23_int(MAXIMUM_Y));
+			int32_t yint = fix9_23_round(y);
+
+			hal_oled_drawpixel(i, yint, (i%2 == 0) ? HalOledDrawOn: HalOledDrawOff);
+		}
 	}
 }
 

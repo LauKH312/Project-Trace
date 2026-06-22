@@ -33,6 +33,7 @@ void hal_signal_path_init(void);
 // };
 
 void hal_signal_path_attenuator_set(enum SignalPathAtten range);
+void hal_signal_path_accouple_en(_Bool use_accouple);
 // void hal_signal_path_gain_set(enum SignalPathGain range);
 
 

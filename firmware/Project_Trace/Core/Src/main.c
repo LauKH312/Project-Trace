@@ -156,6 +156,8 @@ int main(void)
   printf("Init Signal Path\n");
   hal_signal_path_init();
   hal_signal_path_attenuator_set(SignalPathAtten_0db);
+  hal_signal_path_accouple_en(0);
+
   sample_buffer_init(&sample_buffer, 12500000); // TODO: use precise sample-rate
   printf("Init ADC\n");
   adc_init();

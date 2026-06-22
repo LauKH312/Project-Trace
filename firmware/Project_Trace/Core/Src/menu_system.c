@@ -33,7 +33,7 @@ void menu_init(void){
     HAL_TIM_Base_Start_IT(&htim1);
 }
 
-#define FFT_SIZE 256
+#define FFT_SIZE 1024
 #define FFT_MAX_DB 20
 #define FFT_MIN_DB -60
 
