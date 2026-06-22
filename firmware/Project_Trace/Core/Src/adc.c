@@ -7,6 +7,8 @@
 #include <fixpoint.h>
 #include <main.h>
 
+#include <menu_system.h>
+
 #include <sample_buffer.h>
 
 #include <meas.h>
@@ -113,11 +115,21 @@ void adc_debug_print(void) {
 }
 
 /* Call when DMA finishes writing to a buffer */
+size_t adc_counter = 0;
+
+
 void adc_dma_done(void)
 {
+	//printf("adc_dma_done\n");
 	int16_t adc_samples[ADC_BUFFER_SIZE];
 	memcpy(adc_samples, (int16_t *)adcbuf.data, ADC_BUFFER_SIZE * sizeof(int16_t));
 	fix9_23 buf[ADC_BUFFER_SIZE];
 	cal_calibrate_buffer(buf, adc_samples, ADC_BUFFER_SIZE);
 	sample_buffer_write_samples(&sample_buffer, buf, ADC_BUFFER_SIZE);
+
+	if (adc_counter == 500) {
+		adc_counter = 0;
+		printf("Fire Frame_Update\n");
+		menu_system_frame_update();
+	} else adc_counter++;
 }

@@ -29,7 +29,7 @@ typedef enum
 
 //initializes the menu setup. To call on system start
 void menu_init(void);
-
+void menu_system_frame_update(void);
 //automatically calls when timer interrupts. Draws a new frame.
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim);
 

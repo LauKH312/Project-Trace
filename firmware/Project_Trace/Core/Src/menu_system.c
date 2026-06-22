@@ -43,7 +43,7 @@ void draw_average(int x, int y, const fix9_23* buf, size_t buf_len) {
 }
 
 void drawframe(const fix9_23 *buffer, size_t len){
-	assert(len == FFT_SIZE);
+	// assert(len == FFT_SIZE);
 
 	Complex9_23 to_fft[FFT_SIZE];
 	Complex9_23 fft_out[FFT_SIZE] = { 0 };
@@ -65,10 +65,30 @@ void drawframe(const fix9_23 *buffer, size_t len){
 
 }
 
+void menu_system_frame_update(void) {
+	graphics_clear();
+    //int start_idx = (FFT_SIZE * framecounter) % SAMPLE_BUFFER_LEN;
+    //if (start_idx + FFT_SIZE >= SAMPLE_BUFFER_LEN) start_idx = 0;
+    int start_idx = 0;
+
+
+	fix9_23 current_samplebuf[SAMPLE_BUFFER_LEN];
+	sample_buffer_peek_samples(&sample_buffer, current_samplebuf, SAMPLE_BUFFER_LEN);
+    drawframe(&current_samplebuf[start_idx], 256);
+
+    graphics_draw_int(16, 16, framecounter);
+    framecounter++;
+
+    hal_oled_update_screen();
+}
+
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
+	printf("HAL_TIM_PERIOD_ELAPSED\n");
     if (htim->Instance == TIM1)
     {
+    	printf("TIM_1\n");
+    	__disable_irq();
     	graphics_clear();
         //int start_idx = (FFT_SIZE * framecounter) % SAMPLE_BUFFER_LEN;
         //if (start_idx + FFT_SIZE >= SAMPLE_BUFFER_LEN) start_idx = 0;
@@ -83,7 +103,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
         framecounter++;
 
         hal_oled_update_screen();
-
+        __enable_irq();
+        printf("TIM_1 finish\n");
     }
 }
 

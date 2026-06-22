@@ -22,7 +22,7 @@ void sample_buffer_init(SampleBuffer* sb, int32_t sample_rate) {
 void sample_buffer_write_samples(SampleBuffer* sb, const fix9_23* samples, size_t samples_len) {
     assert(samples_len <= SAMPLE_BUFFER_LEN);
     assert(sb->write_idx < SAMPLE_BUFFER_LEN);
-    assert(sb->len < SAMPLE_BUFFER_LEN);
+    assert(sb->len <= SAMPLE_BUFFER_LEN);
 
     for (size_t i = 0; i < samples_len; i++) {
         sb->buf[sb->write_idx] = samples[i];
@@ -42,7 +42,7 @@ size_t sample_buffer_peek_samples(const SampleBuffer* sb, fix9_23* target, size_
 }
 
 fix9_23 sample_buffer_get(const SampleBuffer* sb, size_t idx) {
-	return sb->buf[(idx + sb->write_idx) % SAMPLE_BUFFER_LEN];
+	return sb->buf[(sb->write_idx + idx) % SAMPLE_BUFFER_LEN];
 }
 
 size_t sample_buffer_writeidx_offset(const SampleBuffer* sb, size_t offset) {

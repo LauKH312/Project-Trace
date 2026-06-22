@@ -151,21 +151,28 @@ int main(void)
   while(1){}
 #endif
 
+  //__disable_irq();
+
   printf("Init Signal Path\n");
   hal_signal_path_init();
   hal_signal_path_attenuator_set(SignalPathAtten_0db);
-  sample_buffer_init(&sample_buffer, 12300000); // TODO: use precise sample-rate
+  sample_buffer_init(&sample_buffer, 12500000); // TODO: use precise sample-rate
   printf("Init ADC\n");
   adc_init();
+
+  printf("Init OLED\n");
   hal_oled_init();
+  printf("Init Menu\n");
   menu_init();
 
   printf("Start ADC CLK\n");
   HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_4);
 
 
-  const char* header_labels[1] = { "x" };
-  (void)ser_file_write_csv_header(stdout, header_labels, 1);
+  //const char* header_labels[1] = { "x" };
+  //(void)ser_file_write_csv_header(stdout, header_labels, 1);
+
+  //__enable_irq();
   /* USER CODE END 2 */
 
   /* Infinite loop */
