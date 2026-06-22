@@ -20,5 +20,5 @@
  */
 void plot_fft(Complex9_23* buckets, size_t nbuckets, fix9_23* bucket_frequencies, int32_t min_db, int32_t max_db);
 void plot_trace(fix9_23* data, size_t data_len, fix9_23 voltage_div, float horizontal_div, float deltatime);
-
+void plot_fftf(Complexf* buckets, size_t nbuckets, float* bucket_frequencies, int32_t min_db, int32_t max_db);
 #endif /* INC_PLOTTING_H_ */

@@ -24,3 +24,23 @@ void cal_calibrate_buffer(fix9_23* out, const int16_t* input, size_t buffer_leng
 	}
 }
 
+
+float cal_calibrate_inputf(int16_t x) {
+	//const float COEFFS[2] = { 2.14125242e-05, -1.40869303e-03 };
+	//return fix9_23_from_f32(COEFFS[0] * (float) x + COEFFS[1]);
+	float xf = x;
+
+	float xnormish = xf / 1000.0f;
+
+	// const float COEFFS[3] = { -3.49059013e-13 * 1000000,  2.14121482e-05 * 1000, -9.43319572e-04 };
+	const float COEFFS[3] = { -3.49059013e-7,  2.14121482e-02, -9.43319572e-04 };
+	return COEFFS[2] + xnormish * (COEFFS[1] + xnormish * COEFFS[0]);
+}
+
+
+void cal_calibrate_bufferf(float* out, const int16_t* input, size_t buffer_length) {
+	for (size_t i = 0 ; i < buffer_length; i++) {
+		out[i] = cal_calibrate_inputf(input[i]);
+	}
+}
+

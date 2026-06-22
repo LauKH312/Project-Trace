@@ -22,5 +22,10 @@ int next_power_of_two(int n);
 int prepare_buf(Complex9_23 *buf, const Complex9_23 *P, int n, int *out_padded_n);
 int fft_fft(const Complex9_23 *P, Complex9_23 *y, int n);
 int fft_ifft(const Complex9_23 *P, Complex9_23 *y, int n);
+float blackman_harris(int32_t x, int32_t T);
+
+void fft_iterativef(Complexf *buf, int n, int invert);
+void bit_reversef(Complexf *a, int n);
+int fft_fftf(const Complexf *P, Complexf *y, int n);
 
 #endif /* INC_FFT_H */

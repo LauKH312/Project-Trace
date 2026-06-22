@@ -16,6 +16,11 @@ typedef struct
     fix9_23 im;
 } Complex9_23;
 
+typedef struct {
+	float re;
+	float im;
+} Complexf;
+
 /**
  * @brief Creates a new complex9.23 from the real part `re` and the imaginary part `im`.
  * 
@@ -151,5 +156,23 @@ fix9_23 complex9_23_abs(Complex9_23 z);
 Complex9_23 complex9_23_euler(fix9_23 x);
 
 int complex9_23_format(Complex9_23 z, char* buffer, size_t len);
+
+
+// FLOAT
+Complexf complexf_new(float re, float im);
+Complexf complexf_i();
+Complexf complexf_polar(float mag, float angle);
+Complexf complexf_add(Complexf z1, Complexf z2);
+Complexf complexf_sub(Complexf z1, Complexf z2);
+Complexf complexf_mul(Complexf z1, Complexf z2);
+Complexf complexf_mul_re(Complexf z, float x);
+Complexf complexf_div(Complexf z1, Complexf z2);
+Complexf complexf_div_re(Complexf z, float x);
+Complexf complexf_conj(Complexf z);
+float complexf_abs_sqr(Complexf z);
+float complexf_abs(Complexf z);
+Complexf complexf_euler(float x);
+
+int complexf_format(Complexf z, char* buffer, size_t len);
 
 #endif /* INC_COMPLEX_H_ */

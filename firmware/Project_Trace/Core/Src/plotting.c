@@ -44,6 +44,60 @@ void plot_fft(Complex9_23* buckets, size_t nbuckets, fix9_23* bucket_frequencies
 	}
 }
 
+float gain_to_db(float g) {
+	return 20 * log10f(g);
+}
+
+float lerpf(float t, float a, float b) {
+	return a + t*(b-a);
+}
+
+float ilerpf(float v, float a, float b) {
+	return (v - a) / (b - a);
+}
+
+float mapf(float v, float from_a, float from_b, float to_a, float to_b) {
+	return lerpf(ilerpf(v,from_a,from_b), to_a, to_b);
+}
+
+
+void plot_fftf(Complexf* buckets, size_t nbuckets, float* bucket_frequencies, int32_t min_db, int32_t max_db) {
+	(void)bucket_frequencies;
+
+	const int32_t MAXIMUM_Y = 20;
+	const int32_t MINIMUM_Y = OLED_HEIGHT;
+
+	for (size_t i = 0; i < nbuckets / 2; i++) {
+		float amp = complexf_abs(buckets[i]);
+
+		if (amp == 0) amp = 0.00001;
+
+		float amp_db = gain_to_db(amp);
+
+		float y = mapf(amp_db, min_db,max_db, MINIMUM_Y, MAXIMUM_Y);
+		int32_t yint = (int32_t) roundf(y);
+
+		graphics_draw_vertical_line(i, MINIMUM_Y, yint);
+
+		//hal_oled_drawpixel(i, yint, HalOledDrawOn);
+	}
+
+	for (int i = 0; i < OLED_WIDTH; i++) {
+		float y = mapf(0, min_db, max_db, MINIMUM_Y, MAXIMUM_Y);
+		int32_t yint = (int32_t)roundf(y);
+
+		hal_oled_drawpixel(i, yint, (i%2 == 0) ? HalOledDrawOn: HalOledDrawOff);
+	}
+
+	for (int gain = 20; gain >= -40; gain -= 20) {
+		for (int i = 0; i < 16; i++) {
+			float y = mapf(gain, min_db, max_db, MINIMUM_Y, MAXIMUM_Y);
+			int32_t yint = (int32_t)roundf(y);
+			hal_oled_drawpixel(i, yint, (i%2 == 0) ? HalOledDrawOn: HalOledDrawOff);
+		}
+	}
+}
+
 #define NUMBER_HORIZONTAL_DIVS 4
 #define NUMBER_VERTICAL_DIVS 4
 

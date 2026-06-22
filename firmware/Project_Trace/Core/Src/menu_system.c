@@ -22,7 +22,7 @@
 
 extern TIM_HandleTypeDef htim1;
 
-extern SampleBuffer sample_buffer;
+extern SampleBufferf sample_buffer;
 
 static MenuPage menu = page_main;
 
@@ -42,26 +42,28 @@ void draw_average(int x, int y, const fix9_23* buf, size_t buf_len) {
 	graphics_draw_fix9_23(x, y, avg);
 }
 
-void drawframe(const fix9_23 *buffer, size_t len){
+void drawframe(const float *buffer, size_t len){
 	// assert(len == FFT_SIZE);
+	if (len < FFT_SIZE) { return; }
 
-	Complex9_23 to_fft[FFT_SIZE];
-	Complex9_23 fft_out[FFT_SIZE] = { 0 };
+	Complexf to_fft[FFT_SIZE];
+	Complexf fft_out[FFT_SIZE] = { 0 };
 	for (int i = 0; i < FFT_SIZE; i++) {
-		to_fft[i] = complex9_23_new(fix9_23_mul(buffer[i], fix9_23_blackman_harris(i, FFT_SIZE)), FIX9_23_ZERO);
+		to_fft[i] = complexf_new(buffer[i] * blackman_harris(i, FFT_SIZE), 0.0f);
+//to_fft[i] = complexf_new(buffer[i], 0.0f);
 		//to_fft[i] = complex9_23_new(buffer[i], FIX9_23_ZERO);
 	}
-	fft_fft(to_fft, fft_out, FFT_SIZE);
-	draw_average(2,2, buffer,len);
+	fft_fftf(to_fft, fft_out, FFT_SIZE);
+	//draw_average(2,2, buffer,len);
 
 	char dbrange_buf[32] = {0};
 	(void)snprintf(dbrange_buf, 32, "%d:%d", FFT_MIN_DB, FFT_MAX_DB);
 
 	graphics_draw_text(80, 2, dbrange_buf);
 
-	plot_fft(fft_out, FFT_SIZE, NULL, FFT_MIN_DB, FFT_MAX_DB);
+	plot_fftf(fft_out, FFT_SIZE, NULL, FFT_MIN_DB, FFT_MAX_DB);
 
-	test_output_fix923_buffer(buffer, len, 0);
+	//test_output_fix923_buffer(buffer, len, 0);
 
 }
 
@@ -72,9 +74,15 @@ void menu_system_frame_update(void) {
     int start_idx = 0;
 
 
-	fix9_23 current_samplebuf[SAMPLE_BUFFER_LEN];
-	sample_buffer_peek_samples(&sample_buffer, current_samplebuf, SAMPLE_BUFFER_LEN);
-    drawframe(&current_samplebuf[start_idx], 256);
+	float current_samplebuf[SAMPLE_BUFFER_LEN];
+	size_t len = sample_bufferf_peek_samples(&sample_buffer, current_samplebuf, SAMPLE_BUFFER_LEN);
+
+	//void * column_data[1] = { &sample_buffer.buf };
+	//enum SerDataType column_types[1] = { Ser_Float };
+
+	//ser_file_write_csv_data(stdout, (const void**)column_data, len, column_types, 1);
+
+    drawframe(&current_samplebuf[start_idx], len);
 
     graphics_draw_int(16, 16, framecounter);
     framecounter++;
@@ -95,8 +103,11 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
         int start_idx = 0;
 
 
-    	fix9_23 current_samplebuf[SAMPLE_BUFFER_LEN];
-    	sample_buffer_peek_samples(&sample_buffer, current_samplebuf, SAMPLE_BUFFER_LEN);
+//    	fix9_23 current_samplebuf[SAMPLE_BUFFER_LEN];
+//    	sample_buffer_peek_samples(&sample_buffer, current_samplebuf, SAMPLE_BUFFER_LEN);
+
+    	float current_samplebuf[SAMPLE_BUFFER_LEN];
+    	sample_bufferf_peek_samples(&sample_buffer, current_samplebuf, SAMPLE_BUFFER_LEN);
         drawframe(&current_samplebuf[start_idx], FFT_SIZE);
 
         graphics_draw_int(16, 16, framecounter);

@@ -53,7 +53,7 @@ extern DMA_HandleTypeDef hdma_spi1_rx;
 
 ADCBuffer adcbuf = {0};
 
-extern SampleBuffer sample_buffer;
+extern SampleBufferf sample_buffer;
 
 /*
  * Returns pointer to full buffer.
@@ -123,12 +123,18 @@ void adc_dma_done(void)
 	//printf("adc_dma_done\n");
 	int16_t adc_samples[ADC_BUFFER_SIZE];
 	memcpy(adc_samples, (int16_t *)adcbuf.data, ADC_BUFFER_SIZE * sizeof(int16_t));
-	fix9_23 buf[ADC_BUFFER_SIZE];
-	cal_calibrate_buffer(buf, adc_samples, ADC_BUFFER_SIZE);
-	sample_buffer_write_samples(&sample_buffer, buf, ADC_BUFFER_SIZE);
+	float buf[ADC_BUFFER_SIZE];
+	cal_calibrate_bufferf(buf, adc_samples, ADC_BUFFER_SIZE);
+	sample_bufferf_write_samples(&sample_buffer, buf, ADC_BUFFER_SIZE);
 
-	if (adc_counter == 500) {
+	if (adc_counter == 200) {
 		adc_counter = 0;
+
+//		const void* column_data[1] = { &adc_samples };
+//		enum SerDataType column_types[1] = { Ser_Int16 };
+//		(void)ser_file_write_csv_data(stdout, column_data, ADC_BUFFER_SIZE, column_types, 1);
+
+
 		printf("Fire Frame_Update\n");
 		menu_system_frame_update();
 	} else adc_counter++;

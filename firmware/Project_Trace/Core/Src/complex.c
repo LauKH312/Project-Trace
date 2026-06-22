@@ -150,3 +150,81 @@ int complex9_23_format(Complex9_23 z, char* buffer, size_t len) {
         return snprintf(buffer, len, "%.*s%.*sj", real_len, real_buf, imag_len, imag_buf);
     }
 }
+
+// FLOAT
+Complexf complexf_new(float re, float im) {
+	return (Complexf) {.re = re, .im=im};
+}
+
+Complexf complexf_i() {
+	return complexf_new(0,1);
+}
+
+Complexf complexf_polar(float mag, float angle) {
+	return complexf_new(mag * cosf(angle), mag*sinf(angle));
+}
+
+Complexf complexf_add(Complexf z1, Complexf z2) {
+	return complexf_new(z1.re+z2.re, z1.im+z2.im);
+}
+
+Complexf complexf_sub(Complexf z1, Complexf z2) {
+	return complexf_new(z1.re-z2.re, z1.im-z2.im);
+}
+
+Complexf complexf_mul(Complexf z1, Complexf z2) {
+	const float a = z1.re;
+	const float b = z1.im;
+	const float c = z2.re;
+	const float d = z2.im;
+
+    const float re = a*c-b*d;
+    const float im = a*d+b*c;
+
+
+    return complexf_new(re,im);
+}
+
+Complexf complexf_mul_re(Complexf z, float x) {
+	z.re *= x;
+	z.im *= x;
+	return z;
+}
+
+Complexf complexf_div(Complexf z1, Complexf z2) {
+    const float a = z1.re;
+    const float b = z1.im;
+    const float c = z2.re;
+    const float d = z2.im;
+
+    const float c2 = c * c;
+    const float d2 = d * d;
+
+    const float denom = c2 * d2;
+
+    return complexf_new(
+    	(a*c + b*d) / denom,
+		(b*c - a*d) / denom
+    );
+}
+
+Complexf complexf_div_re(Complexf z, float x) {
+	z.re /= x;
+	z.im /= x;
+	return z;
+}
+Complexf complexf_conj(Complexf z) {
+	z.im = -z.im;
+	return z;
+}
+float complexf_abs_sqr(Complexf z) {
+	return complexf_mul(z, complexf_conj(z)).re;
+}
+float complexf_abs(Complexf z) {
+	return sqrtf(complexf_abs_sqr(z));
+}
+Complexf complexf_euler(float x) {
+	return complexf_new(cosf(x), sinf(x));
+}
+
+int complexf_format(Complexf z, char* buffer, size_t len);

@@ -90,7 +90,7 @@ static void MX_TIM1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-extern SampleBuffer sample_buffer;
+extern SampleBufferf sample_buffer;
 
 int __io_putchar(int ch)
   {
@@ -156,7 +156,7 @@ int main(void)
   printf("Init Signal Path\n");
   hal_signal_path_init();
   hal_signal_path_attenuator_set(SignalPathAtten_0db);
-  sample_buffer_init(&sample_buffer, 12500000); // TODO: use precise sample-rate
+  sample_bufferf_init(&sample_buffer, 12500000); // TODO: use precise sample-rate
   printf("Init ADC\n");
   adc_init();
 
@@ -177,9 +177,6 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  graphics_draw_rect_rel(5, 5, 10, 10);
-  graphics_draw_text(8, 8, "address me");
-
   printf("Enter Loop\n");
   while (1)
   {
