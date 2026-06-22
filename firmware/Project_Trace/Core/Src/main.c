@@ -33,6 +33,7 @@
 #include <hal_signal_path.h>
 #include <test_suite.h>
 #include <sample_buffer.h>
+#include <ui.h>
 
 #include <serialization.h>
 
@@ -157,6 +158,7 @@ int main(void)
   adc_init();
   hal_oled_init();
   menu_init();
+  ui_init();
 
   //HAL_TIM_PWM_Start(&htim8, 4);
 
@@ -170,8 +172,6 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  graphics_draw_rect_rel(5, 5, 10, 10);
-  graphics_draw_text(8, 8, "address me");
 
   printf("Enter Loop\n");
   while (1)
@@ -180,10 +180,9 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-//	  hal_oled_update_screen();
-//	  for (uint32_t i = 0; i < 10000000LL; i++){}
-//	  printf("Hi!\r\n");
-
+	  hal_oled_update_screen();
+	  for (uint32_t i = 0; i < 10000000LL; i++){}
+    
   }
   /* USER CODE END 3 */
 }
@@ -685,11 +684,11 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : ADC_FS0_Pin */
-  GPIO_InitStruct.Pin = ADC_FS0_Pin;
+  /*Configure GPIO pins : ADC_FS0_Pin PD3 PD4 */
+  GPIO_InitStruct.Pin = ADC_FS0_Pin|GPIO_PIN_3|GPIO_PIN_4;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(ADC_FS0_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
   /*Configure GPIO pins : Range_gain_20db_Pin Range_att_0db_Pin CLK_EN_Pin */
   GPIO_InitStruct.Pin = Range_gain_20db_Pin|Range_att_0db_Pin|CLK_EN_Pin;
@@ -697,12 +696,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : SW2_Pin SW1_Pin */
-  GPIO_InitStruct.Pin = SW2_Pin|SW1_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
 }
 

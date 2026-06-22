@@ -1,40 +1,55 @@
 #include "main.h"
 #include <stdint.h>
 #include <stdbool.h>
+#include <ui.h>
+#include <ui.h>
 
-#define DEBOUNCE_MS 10
+//#define DEBOUNCE_MS 10
 
-#define MIN_VALUE 0
-#define MAX_VALUE 100
+//#define MIN_VALUE 0
+//#define MAX_VALUE 100
 
-volatile uint32_t last_press_btn1 = 0;
-volatile uint32_t last_press_btn2 = 0;
+//volatile uint32_t last_press_btn1 = 0;
+//volatile uint32_t last_press_btn2 = 0;
 
+void ui_init(void){
+    // Enable GPIOD clock
+    __HAL_RCC_GPIOD_CLK_ENABLE();
 
-// void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-// {
-//     uint32_t now = HAL_GetTick();
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
 
-//     if (GPIO_Pin == GPIO_PIN_13)
-//     {
-//         if ((now - last_press_btn1) > DEBOUNCE_MS)
-//         {
-//             last_press_btn1 = now;
+    // PD3
+    GPIO_InitStruct.Pin = GPIO_PIN_3;
+    GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;   // Button to GND
+    GPIO_InitStruct.Pull = GPIO_PULLUP;
+    HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
-//             left_push_button();
-//         }
-//     }
+    // PD4
+    GPIO_InitStruct.Pin = GPIO_PIN_4;
+    GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
+    GPIO_InitStruct.Pull = GPIO_PULLUP;
+    HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
-//     if (GPIO_Pin == GPIO_PIN_0)
-//     {
-//         if ((now - last_press_btn2) > DEBOUNCE_MS)
-//         {
-//             last_press_btn2 = now;
+    // EXTO setup
+    HAL_NVIC_SetPriority(EXTI3_IRQn, 0, 0);
+    HAL_NVIC_EnableIRQ(EXTI3_IRQn);
 
-//             right_push_button();
-//         }
-//     }
-// }
+    HAL_NVIC_SetPriority(EXTI4_IRQn, 0, 0);
+    HAL_NVIC_EnableIRQ(EXTI4_IRQn);
+}
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+    if(GPIO_Pin == GPIO_PIN_3)
+    {
+        left_push_button();
+    }
+
+    if(GPIO_Pin == GPIO_PIN_4)
+    {
+        right_push_button();
+    }
+}
 
 //--------------------------------------------------------------
 

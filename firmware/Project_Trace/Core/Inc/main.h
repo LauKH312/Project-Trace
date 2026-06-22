@@ -93,10 +93,6 @@ void Error_Handler(void);
 #define CLK_EN_GPIO_Port GPIOC
 #define SPI3_SCK_Pin GPIO_PIN_10
 #define SPI3_SCK_GPIO_Port GPIOC
-#define SW2_Pin GPIO_PIN_3
-#define SW2_GPIO_Port GPIOD
-#define SW1_Pin GPIO_PIN_4
-#define SW1_GPIO_Port GPIOD
 #define ACCoupleEnable_Pin GPIO_PIN_3
 #define ACCoupleEnable_GPIO_Port GPIOB
 #define SPI1_MOSI_Pin GPIO_PIN_5
